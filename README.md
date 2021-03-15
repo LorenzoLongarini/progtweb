@@ -9,6 +9,10 @@ Repository del progetto per il corso di Tecnologie Web 2020/2021, UnivPM.
 
 > Typescript : https://www.typescriptlang.org/
 
+> SASS (CSS) : https://sass-lang.com/
+
+> LESS (CSS) : http://lesscss.org/
+
 > Libreria grafica per il frontend : https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js
 
 > Per altri effetti grafici : https://cdnjs.com/libraries/gsap
@@ -18,6 +22,8 @@ Repository del progetto per il corso di Tecnologie Web 2020/2021, UnivPM.
 > Documentazione sullo sviluppo : https://web.dev/
 
 > Laravel : https://laravel.com/
+
+> Node.js : https://nodejs.org/it/
 
 > XAMPP : https://www.apachefriends.org/it/index.html
 
