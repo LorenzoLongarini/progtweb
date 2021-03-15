@@ -13,9 +13,11 @@ Repository del progetto per il corso di Tecnologie Web 2020/2021, UnivPM.
 
 > Per altri effetti grafici : https://cdnjs.com/libraries/gsap
 
+> Palette colori : https://color.adobe.com/it/create/color-wheel
+
 > Documentazione sullo sviluppo : https://web.dev/
 
->Laravel : https://laravel.com/
+> Laravel : https://laravel.com/
 
 > XAMPP : https://www.apachefriends.org/it/index.html
 
