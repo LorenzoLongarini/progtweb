@@ -21,7 +21,7 @@ Repository del progetto per il corso di Tecnologie Web 2020/2021, UnivPM.
 
 > Palette colori : https://color.adobe.com/it/create/color-wheel
 
-> Documentazione sullo sviluppo : https://web.dev/
+> Documentazione sulle buone norme e ottimizzazioni : https://web.dev/
 
 > Laravel : https://laravel.com/
 
