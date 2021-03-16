@@ -7,11 +7,13 @@ Repository del progetto per il corso di Tecnologie Web 2020/2021, UnivPM.
 
 > Documentazione PHP : https://www.php.net/docs.php
 
-> Typescript : https://www.typescriptlang.org/
+> Documentazione solo CSS : https://css-tricks.com/ : (per il CSS utilizzeremo in produzione i file minimizzati, esempio : style.min.css)
 
 > SASS (CSS) : https://sass-lang.com/
 
-> LESS (CSS) : http://lesscss.org/
+> LESS (CSS) : http://lesscss.org/ 
+
+> Typescript : https://www.typescriptlang.org/
 
 > Libreria grafica per il frontend : https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js
 
