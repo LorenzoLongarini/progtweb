@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row-flex">
           <div class="column-flex">
-                <img src="disegno.svg" width="220px" height="auto"/>
+                <img src="eticket-logo.svg" width="220px" height="auto"/>
           </div>
           <div class="column-flex">
             <h3>Catalogo</h3>
