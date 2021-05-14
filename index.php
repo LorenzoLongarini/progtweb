@@ -4,7 +4,10 @@
 
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
-    <button id="dark-btn" onclick="darkMode()">Dark</button>
+    <button onclick="darkMode()">Acquista</button>
+    <a class="button" href="#">ACQUISTA</a>
+
+    <a href="#">questo è un link</a>
 
     <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus dui vitae nunc iaculis, sit amet maximus mi congue. Vivamus pellentesque risus quis euismod pretium. Aliquam eu posuere metus. Aenean at luctus elit. 
