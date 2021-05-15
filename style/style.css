@@ -57,6 +57,9 @@ a.link:hover, a.link:focus{
     color: var(--link-hover-color);
 }
 
+del {
+    color: #e71531;
+}
 /* Elementi di base (pulsanti, textbox, tabelle, celle ecc.)*/
 
 body{
@@ -69,7 +72,7 @@ body{
 
 section#page-content{
     margin-top: 67px;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 header#masthead{
