@@ -67,7 +67,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
-header.masthead{
+header#masthead{
     display: block;
     position: fixed;
     top: 0;

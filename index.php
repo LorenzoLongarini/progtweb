@@ -5,7 +5,7 @@
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
 
-    <header class="masthead">
+    <header id="masthead">
         <nav id="main-menu">
             <ul>
                 <li>
