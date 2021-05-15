@@ -149,10 +149,31 @@ button:hover, button:focus{
 }
 
 input[type="text"]{
-    font-size: 1.3rem;
-    padding: 5px 10px;
+    font-size: 1.1rem;
+    padding: 8px 10px;
     border: 2px solid var(--input-border-color);
+}
+
+input[type="text"].input-info{
     border-radius: 5px;
+}
+
+#input-credit-card{
+    margin: 5px;
+}
+
+#input-credit-card input[type="text"]{
+    border-radius: 0 5px 5px 0;
+}
+
+.card-logo-area{
+    display: inline-block;
+    height: 46px;
+    background-color: #fff;
+    border: 2px solid var(--input-border-color);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    padding: 5px 10px;
 }
 
 .card{
@@ -180,4 +201,8 @@ input[type="text"]{
 }
 .v-center{
     align-items: center;
+}
+
+.flex{
+    display: flex;
 }
