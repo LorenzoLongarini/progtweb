@@ -65,18 +65,6 @@
         else
             htmlElement.classList.add('dark');
     }
-
-    document.addEventListener("DOMContentLoaded", loadEventsListner());
-
-    function loadEventsListner() {
-        var menuToggle = document.getElementById("main-menu-toggle");
-        menuToggle.addEventListener("click", function () {
-    
-        if (menuToggle.classList.contains("active"))
-            menuToggle.classList.remove("active");
-        else
-            menuToggle.classList.add("active");
-    });    
 }
 
 </script>

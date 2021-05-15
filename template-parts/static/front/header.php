@@ -12,9 +12,4 @@
             </li>
         </ul>
     </nav>  
-    <div id="main-menu-toggle" class="menu-toggle">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-    </div>
 </header>
