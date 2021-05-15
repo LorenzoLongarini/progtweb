@@ -4,11 +4,37 @@
 
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
-    <button onclick="darkMode()">Acquista</button>
-    <a class="button" href="#">ACQUISTA</a>
 
-    <a href="#">questo è un link</a>
+    <header class="masthead">
+        <nav id="main-menu">
+            <ul>
+                <li>
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">CATALOGO</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">CHI SIAMO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Questo è un titolo h1</h1>
+    <h2>Questo è un titolo h2</h2>
+    <h3>Questo è un titolo h3</h3>
+    <h4>Questo è un titolo h4</h4>
+    <h5>Questo è un titolo h5</h5>
+    <h6>Questo è un titolo h6</h6>
 
+    <button onclick="darkMode()">Tema toggle</button>
+
+    <a class="link" href="#">Link1</a>
+
+    <a class="link" href="#">Questo è un link 2</a>
+     
+    <input type="text" name="nome" id="" cols="20" rows="1"></input>
+    <div class="container">
     <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus dui vitae nunc iaculis, sit amet maximus mi congue. Vivamus pellentesque risus quis euismod pretium. Aliquam eu posuere metus. Aenean at luctus elit. 
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla aliquet ultrices sagittis. Quisque quis commodo elit.
@@ -39,6 +65,7 @@
     Duis egestas porta lacus sed rhoncus. Curabitur dignissim felis vel diam tristique, sed sagittis massa semper. Morbi cursus convallis dolor at suscipit.
     </p>
 
+    </div>
     <?php require ('./template-parts/static/front/footer.php')?>
 </body>
 
