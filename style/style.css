@@ -30,7 +30,7 @@ html.dark{
 *{
     box-sizing: border-box;
     font-family: inherit;
-    transition: .3s ease-out;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Tipografia */
@@ -85,6 +85,10 @@ header#masthead{
     background-color: var(--header-bg);
 }
 
+nav#main-menu{
+    display: inline-block;
+}
+
 nav#main-menu ul{
     list-style-type: none;
     padding: 0;
@@ -124,6 +128,47 @@ nav#main-menu ul li a.nav-link::after{
 nav#main-menu ul li a.nav-link:hover::after{
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
+}
+
+.menu-toggle{
+    display: inline-block;
+    height: 14px;
+    transform: scale(1.4);
+}
+
+.menu-toggle span.hamburger-line{
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 2px;
+    border-radius: 6px;
+    background-color: #fff;
+    transform-origin: center;
+}
+
+.menu-toggle:hover span.hamburger-line{
+    background-color: #ffc100;
+}
+
+.menu-toggle span.hamburger-line:nth-child(2){
+    transform: translateY(4px);
+}
+
+.menu-toggle span.hamburger-line:nth-child(3){
+    transform: translateY(8px);
+}
+
+.menu-toggle.active span.hamburger-line:nth-child(1){  
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.menu-toggle.active span.hamburger-line:nth-child(2){
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.menu-toggle.active span.hamburger-line:nth-child(3){
+    transform: translateY(2px) rotate(45deg);
 }
 
 button{

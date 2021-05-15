@@ -5,21 +5,6 @@
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
 
-    <header id="masthead">
-            <nav id="main-menu">
-                <ul>
-                    <li>
-                        <a class="nav-link" href="#">HOME</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">CATALOGO</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">CHI SIAMO</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <section id="page-content">
             <h1>Questo è un titolo h1</h1>
             <h2>Questo è un titolo h2</h2>
@@ -80,5 +65,19 @@
         else
             htmlElement.classList.add('dark');
     }
+
+    document.addEventListener("DOMContentLoaded", loadEventsListner());
+
+    function loadEventsListner() {
+        var menuToggle = document.getElementById("main-menu-toggle");
+        menuToggle.addEventListener("click", function () {
+    
+        if (menuToggle.classList.contains("active"))
+            menuToggle.classList.remove("active");
+        else
+            menuToggle.classList.add("active");
+    });    
+}
+
 </script>
 </html>
