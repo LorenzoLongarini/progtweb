@@ -28,7 +28,7 @@
             <h5>Questo è un titolo h5</h5>
             <h6>Questo è un titolo h6</h6>
 
-            <h3><del>Questo è un testo eliminato</del><h3>
+            <h3><del>Questo è un testo cancellato</del></h3>
     
             <button onclick="darkMode()">Tema toggle</button>
     
