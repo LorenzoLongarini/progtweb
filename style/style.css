@@ -149,6 +149,7 @@ button:hover, button:focus{
 }
 
 input[type="text"]{
+    height: 46px;
     font-size: 1.1rem;
     padding: 8px 10px;
     border: 2px solid var(--input-border-color);
@@ -163,6 +164,10 @@ input[type="text"].input-info{
 }
 
 #input-credit-card input[type="text"]{
+    text-align: center;
+}
+
+input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     border-radius: 0 5px 5px 0;
 }
 
@@ -171,9 +176,16 @@ input[type="text"].input-info{
     height: 46px;
     background-color: #fff;
     border: 2px solid var(--input-border-color);
-    border-right: none;
-    border-radius: 5px 0 0 5px;
     padding: 5px 10px;
+}
+
+#credit-card-number, #credit-card-info{
+    margin: 10px 5px;
+}
+
+.card-logo-area, #card-expiring-date{
+    border-right: none;   
+    border-radius: 5px 0 0 5px;
 }
 
 .card{

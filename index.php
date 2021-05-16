@@ -23,12 +23,19 @@
 
             <input type="text" name="nome" class="input-info" cols="20" rows="1"></input>
 
-            <div id="input-credit-card" class="flex">
-                <div class="card-logo-area">
-                    <img id="bank-logo" src="./img/payments_icon/maestro_logo.svg"/>
+            <div id="input-credit-card">
+                <div id="credit-card-number" class="flex">
+                    <div class="card-logo-area">
+                        <img id="bank-logo" src="./img/payments_icon/maestro_logo.svg"/>
+                    </div>
+                    <input type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
                 </div>
-                <input type="text" id="card-number-area" maxlength="19" rows="1" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
+                <div id="credit-card-info" class="flex">
+                    <input type="text" id="card-expiration-date" maxlength="5" size ="2" rows="1" placeholder="XX/XX"></input>
+                    <input type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX"></input>
+                </div>
             </div>
+
             <div class="container">
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus dui vitae nunc iaculis, sit amet maximus mi congue. Vivamus pellentesque risus quis euismod pretium. Aliquam eu posuere metus. Aenean at luctus elit. 
@@ -72,49 +79,5 @@
         else
             htmlElement.classList.add('dark');
     }
-
-        $("#card-number-area").on("input", function(){
-            let creditCardNumber =  $(this).val().split("-").join("");
-            let regex = new RegExp("^[0-9]*$");
-
-            if(regex.test(creditCardNumber)){
-                changeCardIcon(creditCardNumber.charAt(0));
-                $(this).val(addDashToString(creditCardNumber));
-            }
-            else
-            {   
-                let sanitazedString = $(this).val().replace(/[^0-9]+/g, '');
-                $(this).val(addDashToString(sanitazedString));
-                window.alert("L'identificativo della carta può contenere solo numeri da 0 a 9!")
-            }
-        });
-
-        function addDashToString(creditCardNumber){
-            if (creditCardNumber.length > 0) 
-                creditCardNumber = creditCardNumber.match(new RegExp('.{1,4}', 'g')).join("-");
-            return creditCardNumber;
-        }
-
-        function changeCardIcon(firstNumber){
-            let brandName;
-            switch (firstNumber) {
-                case "4":
-                    brandName = "visa";
-                    break;
-                case "5":
-                    brandName = "mastercard";
-                    break;
-                case "7":
-                    brandName = "am_ex";
-                    break;
-                case "3":
-                    brandName = "jcb";
-                    break;
-                default:
-                    brandName = "maestro";
-                    break;
-            }
-            $("#bank-logo").attr("src", "./img/payments_icon/" + brandName + "_logo.svg");
-        }
 </script>
 </html>
