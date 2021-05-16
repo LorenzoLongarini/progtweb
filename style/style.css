@@ -47,6 +47,11 @@ p{
 a{
     display: inline-block;
     margin: 0.5rem;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 a.link{
@@ -57,9 +62,33 @@ a.link:hover, a.link:focus{
     color: var(--link-hover-color);
 }
 
-del {
+del, .delete {
     color: #de001e;
 }
+
+.delete:hover{
+    color: #a50016;
+}
+
+.notice{
+    padding: 15px 25px;
+    color: #000;
+    border-radius: 7px;
+    background-color: #ffc100;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.delete, button, a.link{
+    cursor: pointer;
+}
+
+button, .delete, nav#main-menu ul li a.nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
 /* Elementi di base (pulsanti, textbox, tabelle, celle ecc.)*/
 
 body{
@@ -101,11 +130,8 @@ nav#main-menu ul li{
 }
 
 nav#main-menu ul li a.nav-link{
-    font-weight: 800;
     font-size: 1rem;
     color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
 }
 
 nav#main-menu ul li a.nav-link:hover{
@@ -131,13 +157,9 @@ nav#main-menu ul li a.nav-link:hover::after{
 }
 
 button{
-    cursor: pointer;
     padding: 12px 35px;
     margin: 10px;
     font-size: 1em;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
     color: var(--button-text);
     border: none;
     border-radius: 30px;
@@ -183,7 +205,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     margin: 10px 5px;
 }
 
-.card-logo-area, #card-expiring-date{
+.card-logo-area, #card-expiration-date{
     border-right: none;   
     border-radius: 5px 0 0 5px;
 }

@@ -36,6 +36,14 @@
                 </div>
             </div>
 
+            <h3 class="notice">
+                Applicato sconto del 15%
+            </h3>
+
+            <a href="#" class="delete">
+                Elimina
+            </a>
+            
             <div class="container">
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus dui vitae nunc iaculis, sit amet maximus mi congue. Vivamus pellentesque risus quis euismod pretium. Aliquam eu posuere metus. Aenean at luctus elit. 
