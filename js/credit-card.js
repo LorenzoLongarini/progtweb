@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     var patternNotNumber = "^[0-9]*$";
 
+    //Convalida il contenuto della textbox per il numero della carta di credito
     $("#card-number-area").on("input", function () {
         let creditCardNumber = $(this).val().split("-").join("");
 
@@ -14,6 +15,7 @@ $(document).ready(function () {
         $(this).val(joinCharacterToString(creditCardNumber, '.{1,4}', '-'));
     });
 
+      //Convalida il contenuto della textbox per la data di scadenza della carta 
     $("#card-expiration-date").on("input", function () {
         let cardExpirationDate = $(this).val().split("/").join("");
     
@@ -28,6 +30,7 @@ $(document).ready(function () {
             validateExpirationDate($(this).val());
     });
 
+    //Convalida il contenuto della textbox per il codice CVV della carta
     $("#card-security-code").on("input", function () {
         if (!validateString($(this).val(), patternNotNumber)) {
             $(this).val(sanitazedString($(this).val(), /[^0-9]+/g, ''));
