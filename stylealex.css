@@ -1,0 +1,41 @@
+
+
+.event-list{
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    
+}
+.event{
+    padding: 20px 0;
+    border: 2px solid grey;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.img-event{
+    margin-left: 25px;
+    width: 250px;
+    height: 140px;
+    border: 2px solid grey;
+    padding: 10px 0;
+}
+.btn{
+    width: 200px;
+    height: 55px;
+    margin-right: 25px;
+
+}
+h1{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
