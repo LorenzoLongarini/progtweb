@@ -248,3 +248,12 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 .flex{
     display: flex;
 }
+aside {
+    position: relative;
+    left: 0;
+    width: 15%;
+    padding-left: 15px;
+    margin-left: 15px;
+    font-style: ubuntu;
+    background-color: lightgray;
+  }
