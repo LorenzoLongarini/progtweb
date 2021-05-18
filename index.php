@@ -5,7 +5,8 @@
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
 
-        <main id="page-content">
+        <main id="page-content" class="container">
+          
             <h1>Questo è un titolo h1</h1>
             <h2>Questo è un titolo h2</h2>
             <h3>Questo è un titolo h3</h3>
@@ -27,7 +28,7 @@
 
             </aside>
             <section>
-                
+
             </section>
             
             <div id="input-credit-card">

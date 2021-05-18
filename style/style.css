@@ -225,9 +225,6 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     width: fit-content;
     width: -moz-fit-content;
 }
-.container{
-    display: block;
-}
 
 .row, .container{
     display: flex;
@@ -237,22 +234,16 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     max-width: 33.3%;
 }
 
-.row{
+.container{
+    display: block;
     max-width: 1100px;
     margin: auto;
 }
-.v-center{
-    align-items: center;
-}
 
-.flex{
-    display: flex;
-}
 aside {
     position: relative;
     left: 0;
     width: 15%;
     padding-left: 15px;
     margin-left: 15px;
-    font-style: ubuntu;
   }
