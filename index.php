@@ -5,14 +5,14 @@
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
 
-        <section id="page-content">
+        <main id="page-content">
             <h1>Questo è un titolo h1</h1>
             <h2>Questo è un titolo h2</h2>
             <h3>Questo è un titolo h3</h3>
             <h4>Questo è un titolo h4</h4>
             <h5>Questo è un titolo h5</h5>
             <h6>Questo è un titolo h6</h6>
-
+            
             <h3><del>Questo è un testo cancellato</del></h3>
     
             <button onclick="darkMode()">Tema toggle</button>
@@ -22,7 +22,14 @@
             <a class="link" href="#">Questo è un link 2</a>
 
             <input type="text" name="nome" class="input-info" cols="20" rows="1"></input>
+            
+            <aside>
 
+            </aside>
+            <section>
+                
+            </section>
+            
             <div id="input-credit-card">
                 <div id="credit-card-number" class="flex">
                     <div class="card-logo-area">
@@ -75,7 +82,7 @@
             Duis egestas porta lacus sed rhoncus. Curabitur dignissim felis vel diam tristique, sed sagittis massa semper. Morbi cursus convallis dolor at suscipit.
             </p>
         </div>
-    </section>
+    </main>
     <?php require ('./template-parts/static/front/footer.php')?>
 </body>
 
