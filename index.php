@@ -5,8 +5,8 @@
     <body>
         <?php require ("./template-parts/static/front/header.php")?>
 
-        <main id="page-content" class="container">
-          
+        <main id="page-content">
+            <section class="container">
             <h1>Questo è un titolo h1</h1>
             <h2>Questo è un titolo h2</h2>
             <h3>Questo è un titolo h3</h3>
@@ -23,13 +23,6 @@
             <a class="link" href="#">Questo è un link 2</a>
 
             <input type="text" name="nome" class="input-info" cols="20" rows="1"></input>
-            
-            <aside>
-
-            </aside>
-            <section>
-
-            </section>
             
             <div id="input-credit-card">
                 <div id="credit-card-number" class="flex">
@@ -83,6 +76,7 @@
             Duis egestas porta lacus sed rhoncus. Curabitur dignissim felis vel diam tristique, sed sagittis massa semper. Morbi cursus convallis dolor at suscipit.
             </p>
         </div>
+            </section>
     </main>
     <?php require ('./template-parts/static/front/footer.php')?>
 </body>
