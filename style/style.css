@@ -6,9 +6,12 @@ html{
     --link-color: #0065e9;
     --link-hover-color: #000;
     --header-bg : #004064;
-    --button-bg : #ffc100;
-    --button-text : #000;
-    --button-bg-hover : #ffd519;
+    --button-default-bg : #ffc100;
+    --button-default-text : #000;
+    --button-default-bg-hover : #ffd519;
+    --button-navuser-bg:#004064;
+    --button-navuser-text : #000000;
+    --button-navuser-bg-hover: #d3d3d3;
     --card-bg : #fff;
     --input-border-color: #868686;
 }
@@ -17,9 +20,12 @@ html.dark{
     --body-bg : #1b1b1b;
     --p-color : #f3f3f3;
     --title-color: #2f84f1;
-    --button-text: #f3f3f3;
-    --button-bg : #0065e9;
-    --button-bg-hover : #0046a1;
+    --button-default-text: #f3f3f3;
+    --button-default-bg : #0065e9;
+    --button-default-bg-hover : #0046a1;
+    --button-navuser-bg:#004064;
+    --button-navuser-text : #fff;
+    --button-navuser-bg-hover: #272727;
     --link-color: #ffc100;
     --link-hover-color: #ffffff;
     --card-bg: #2b2b2b;
@@ -83,7 +89,7 @@ del, .delete {
     cursor: pointer;
 }
 
-button, .delete, nav#main-menu ul li a.nav-link{
+button.default-btn, .delete, nav#main-menu ul li a.nav-link{
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
@@ -122,6 +128,13 @@ header#masthead{
     background-color: #d6d6d6;
 }
 
+/*Site logo*/
+#site-logo{
+    width: 110px;
+}
+
+
+/*Main nav-bar*/
 nav#main-menu{
     margin-top: 2px;
 }
@@ -163,20 +176,43 @@ nav#main-menu ul li a.nav-link:hover::after{
     transform: scale3d(1, 1, 1);
 }
 
-button{
+/* Pulsanti */
+button.default-btn{
     padding: 12px 35px;
     margin: 10px;
     font-size: 1em;
-    color: var(--button-text);
+    color: var(--button-default-text);
     border: none;
     border-radius: 30px;
-    background-color: var(--button-bg);
+    background-color: var(--button-default-bg);
 }
 
 button:hover, button:focus{
-    background-color: var(--button-bg-hover);
+    background-color: var(--button-default-bg-hover);
 }
 
+button.user-nav-btn{
+    width: 100%;
+    padding: 15px 25px;
+    padding-left: 15px;
+    font-size: 1em;
+    text-align: left;
+    border-radius: 7px;
+    border: none;
+    color: var(--button-navuser-text);
+    background-color: transparent;
+}
+
+button.user-nav-btn:hover, button.user-nav-btn:focus{
+    background-color: var(--button-navuser-bg-hover);
+}
+
+button.user-nav-btn.active{
+    color: #fff;
+    background-color: var(--button-navuser-bg);
+}
+
+/* Input area */
 input[type="text"]{
     height: 46px;
     font-size: 1.1rem;
@@ -227,22 +263,16 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 }
 
 /* Layouts */
-
-.container, .card{
-    width: fit-content;
-    width: -moz-fit-content;
-}
-
-.row, .container{
-    display: flex;
-}
-
 .col-3{
     max-width: 33.3%;
 }
 
 .flex{
     display: flex;
+}
+
+.block{
+    display: block;
 }
 
 #masthead .container{
@@ -256,35 +286,40 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 }
 
 .container{
-    display: block;
     width: 100%;
     max-width: 1200px;
     margin: auto;
 }
 
 aside#user-nav{
-    position: relative;
-    left: 0;
-    width: 15%;
-    padding-left: 15px;
-    margin-left: 15px;
     display: inline-block;
-    box-shadow: 0px 0px 3px #0000009e;
-    border-radius: 5px;
-    padding: 40px 30px;
-  }
-
-section#user-section{
-    width: fit-content;
-    display: inline-block;
-    margin-left: 30px;
-    padding: 0 50px;
+    padding: 25px 0;
 }
 
-#site-logo{
-    width: 110px;
+aside#user-nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside#user-nav ul li{
+    margin: 5px;
+}
+
+.user-nav-separator{
+    display: inline-block;
+    width: 1px;
+    height: 50vh;
+    margin: 0 40px;
+    background-color: var(--p-color);
+}
+
+section#user-section{
+    display: inline-block;
+    padding-top: 30px;
 }
 
 #page-content{
     margin-top: 80px;
+    padding: 40px 0;
 }
