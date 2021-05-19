@@ -6,22 +6,30 @@
     <main id="page-content">
     <div class="container flex">
         <aside id="user-nav">
-            <ul>
-                <li><a href="visualizza-dati.php">Dati utente</a></li>
+            <div class = "aside">
+                <ul class="lista">
+                <li class="elem-list"><a href="visualizza-dati.php">Dati utente</a></li>
                 <li><a href>Modifica dati utente</a></li>
                 <li><a href="storico-acquisti.php">Storico transazioni</a></li>
-            </ul>
+                </ul>
+            </div>
         </aside>
         <section style="width: fit-content" id="user-section">
+            <p>
             <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">
             <input type="text" value="" maxlength="20" rows="1" placeholder="Cognome">
+            </p>
+            <p>
             <input type="date" value="" maxlength="20" rows="1" >
-            <input type="text" value="" maxlength="20" rows="1" placeholder="Password">
-            <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">
-            <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">
-            <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">
-            <input type="submit" value="Modifica">
-            <input type="reset" value="Annulla">
+            </p>
+            <p>
+            <input type="text" value="" maxlength="10" rows="1" placeholder="Telefono">
+            <input type="text" value="" maxlength="15" rows="1" placeholder="Email">
+            </p>
+            <p>
+            <button>Modifica</button>
+            <button>Annulla</button>
+            </p>
         </section>
     </div>
 </main>

@@ -6,15 +6,59 @@
     <main id="page-content">
     <div class="container flex">
         <aside id="user-nav">
-            <ul>
+        <div class = "aside">
+            <ul class = "lista">
                 <li><a href="visualizza-dati.php">Dati utente</a></li>
                 <li><a href="modifica-dati.php">Modifica dati utente</a></li>
                 <li><a href>Storico transazioni</a></li>
             </ul>
+        </div>
         </aside>
-        <section style="width: fit-content" id="user-section">
-           
-        </section>
+        <div class="eventi-acquistati">
+            <div class="eventi">
+                <div class="img-event-lollo">
+                    </div>
+                <div class="caratt-evento">
+                    
+                    <h4>Nome evento</h4>
+                    <h5>Data</h5>
+                    <h5>Luogo</h5>
+                </div>
+                <div class="dati-utente">
+                    <h4>Nome - Cognome</h4>
+                    <h5>Totale pagato</h5>
+                    <h5>Codice ricevuta</h5>
+                </div>
+            </div>
+            <div class="eventi">
+                <div class="img-event-lollo">
+                </div>
+                <div class="caratt-evento">
+                    <h4>Nome evento</h4>
+                    <h5>Data</h5>
+                    <h5>Luogo</h5>
+                </div>
+                <div class="dati-utente">
+                    <h4>Nome - Cognome</h4>
+                    <h5>Totale pagato</h5>
+                    <h5>Codice ricevuta</h5>
+                </div>
+            </div>
+            <div class="eventi">
+                <div class="img-event-lollo">
+                </div>
+                <div class="caratt-evento">
+                    <h4>Nome evento</h4>
+                    <h5>Data</h5>
+                    <h5>Luogo</h5>
+                </div>
+                <div class="dati-utente">
+                    <h4>Nome - Cognome</h4>
+                    <h5>Totale pagato</h5>
+                    <h5>Codice ricevuta</h5>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 </body>

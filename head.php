@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet" type="text/css"/>
     <link href="./style/stylealex.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/stylelollo.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/sider.css" rel="stylesheet" type="text/css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
@@ -18,4 +20,5 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>	
     <script src="./js/credit-card.js"></script>
+    <script src="./js/slider.js"></script>
 </head>
