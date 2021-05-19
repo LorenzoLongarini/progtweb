@@ -6,14 +6,19 @@
     <main id="page-content">
     <div class="container flex">
         <aside id="user-nav">
-            <div class = "aside">
-                <ul class="lista">
-                <li class="elem-list"><a href="visualizza-dati.php">Dati utente</a></li>
-                <li><a href>Modifica dati utente</a></li>
-                <li><a href="storico-acquisti.php">Storico transazioni</a></li>
+                <ul>
+                  <li class="user-nav-link">
+                        <button class="user-nav-btn active">Dashboard</button>
+                    </li>
+                    <li class="user-nav-link">
+                        <button class="user-nav-btn">Storico acquisti</button>
+                    </li>
+                    <li class="user-nav-link">
+                        <button class="user-nav-btn">Impostazioni utente</button>
+                    </li>
                 </ul>
-            </div>
         </aside>
+        <div class="user-nav-separator"></div>
         <section style="width: fit-content" id="user-section">
             <p>
             <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">

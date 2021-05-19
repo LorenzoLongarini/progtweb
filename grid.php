@@ -17,13 +17,13 @@
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="./img/favicon/favicon-16x16.png" style="width:15%">
+  <img src="./img/favicon/android-chrome-192x192.png" style="width:15%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="./img/favicon/favicon-16x16.png" style="width:15%">
+  <img src="./img/favicon/mstile-144x144.png" style="width:15%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -45,8 +45,6 @@
         <div class="faces"></div>
         <div class="faces"></div>
     </div>
-
-<script src=".js/slider.js"></script>
 </main>
 </body>
 </html>

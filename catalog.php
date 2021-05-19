@@ -16,7 +16,7 @@
     <h4>17 giu 2022</h4>
     <h4>Milano San Siro</h4>
 </div>
-<button class="btn">VEDI EVENTO</button>
+<button class="btn default-btn">VEDI EVENTO</button>
 
 </div>
 <div class="event">
@@ -28,7 +28,7 @@
     <h4>17 giu 2022</h4>
     <h4>Milano San Siro</h4>
 </div>
-<button class="btn">VEDI EVENTO</button>
+<button class="btn default-btn">VEDI EVENTO</button>
 
 </div>
 <div class="event">
@@ -40,7 +40,7 @@
     <h4>17 giu 2022</h4>
     <h4>Milano San Siro</h4>
 </div>
-<button class="btn">VEDI EVENTO</button>
+<button class="btn default-btn">VEDI EVENTO</button>
 
 </div>
 <div class="event">
@@ -52,7 +52,7 @@
     <h4>17 giu 2022</h4>
     <h4>Milano San Siro</h4>
 </div>
-<button class="btn">VEDI EVENTO</button>
+<button class="btn default-btn">VEDI EVENTO</button>
 </div>
 <div class="event">
 <div class="img-event">
@@ -63,7 +63,7 @@
     <h4>17 giu 2022</h4>
     <h4>Milano San Siro</h4>
 </div>
-<button class="btn">VEDI EVENTO</button>
+<button class="btn default-btn">VEDI EVENTO</button>
 </div>
 </div>
 

@@ -16,7 +16,7 @@
             
             <h3><del>Questo è un testo cancellato</del></h3>
     
-            <button onclick="darkMode()">Tema toggle</button>
+            <button class="default-btn" onclick="darkMode()">Tema toggle</button>
     
             <a class="link" href="#">Link1</a>
     
