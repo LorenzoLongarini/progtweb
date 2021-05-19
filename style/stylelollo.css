@@ -1,0 +1,96 @@
+
+
+section#user-section{
+    flex: content;
+    width: fit-content;
+    display:flexbox;
+    margin-top: 0px;
+    margin-left: 200px;
+    padding: 50px;
+    border: 1px #000;
+}
+.eventi-acquistati{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    flex-direction: column;
+    
+}
+.eventi{
+    padding: 30px 0;
+    border: 1px solid grey;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+#user-section input[type = text]{
+    border: none;
+    border-radius: 15px;
+}
+
+#user-section input[type = date]{
+    border: none;
+    height: 46px;
+    font-size: 1.1rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+}
+
+.lista{
+    display: block;
+    list-style-type: none;
+    initial-letter-align: left;
+    
+}
+
+.elem-list{
+    display: inline;
+}
+.img-event-lollo{
+    margin-left: 25px;
+    width: 200px;
+    height: 100px;
+    border: 2px solid grey;
+    padding: 10px 0;
+}
+.caratt-evento{
+    justify-content: space-between;
+    margin-right: 400px;
+    width: 250px;
+    height: 140px;
+    padding: 10px 0;
+}
+
+.dati-utente{
+    margin-right: 100px;
+    width: 250px;
+    height: 140px;
+    padding: 10px 0;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 2% auto;
+    width: 750px;
+    grid-gap: 1px;
+}
+
+.container-grid > div {
+    overflow: hidden;
+    height: 150px;
+    border: 1px solid;
+}
+
+.faces img {
+    height: 150px;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
