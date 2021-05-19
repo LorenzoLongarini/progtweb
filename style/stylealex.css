@@ -30,11 +30,42 @@ h1{
     color: black;
 }
 
+.hero{
+    border:2px solid red;
+    width: 100%;
+    padding: 200px;
+    display: flex;
+    background: url('http://localhost/progettoweb21/img/immagine1.jpg') no-repeat center center;
+    background-size: cover;
+ 
+    
+}
 
+.hero-content{
+    border: 2px solid blue;
+   padding: 100px;
+   width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/*
+.text-hero{
+    border: 2px solid green;
+}
+.btn-hero{
+    height: 150px;
+    width: 400px;
+    border: 2px solid green;
+}
 
-
-
-
-
-
+.fa{
+    color: red;
+}
+.fa-heart{
+    cursor: pointer;
+    
+    
+}
+*/
 
