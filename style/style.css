@@ -303,7 +303,7 @@ aside#user-nav ul{
 }
 
 aside#user-nav ul li{
-    margin: 5px;
+    margin: 5px 0;
 }
 
 .user-nav-separator{
