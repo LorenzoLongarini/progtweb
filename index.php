@@ -25,13 +25,13 @@
             <input type="text" name="nome" class="input-info" cols="20" rows="1"></input>
             
             <div id="input-credit-card">
-                <div id="credit-card-number" class="flex">
+                <div id="credit-card-number" class="flex-rows">
                     <div class="card-logo-area">
                         <img id="bank-logo" src="./img/payments_icon/maestro_logo.svg"/>
                     </div>
                     <input type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
                 </div>
-                <div id="credit-card-info" class="flex">
+                <div id="credit-card-info" class="flex-rows">
                     <input type="text" id="card-expiration-date" maxlength="5" size ="2" rows="1" placeholder="XX/XX"></input>
                     <input type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX"></input>
                 </div>

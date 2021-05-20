@@ -43,7 +43,7 @@ html.dark{
 
 h1,h2,h3,h4,h5,h6{
     color: var(--title-color);
-    margin: 1.3rem;
+    margin: 1.3rem 0;
 }
 
 p{
@@ -52,7 +52,6 @@ p{
 
 a{
     display: inline-block;
-    margin: 0.5rem;
     text-decoration: none;
 }
 
@@ -92,7 +91,6 @@ del, .delete {
 button.default-btn, .delete, nav#main-menu ul li a.nav-link{
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
 }
 
 /* Elementi di base (pulsanti, textbox, tabelle, celle ecc.)*/
@@ -117,6 +115,7 @@ header#masthead{
     left: 0;
     width: 100%;
     padding: 20px 0;
+    z-index: 999;
     height: auto;
     background-color: var(--header-bg);
 }
@@ -139,14 +138,15 @@ nav#main-menu{
     margin-top: 2px;
 }
 
-nav#main-menu ul{
+nav#main-menu ul, footer ul.footer-links{
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-nav#main-menu ul li{
+nav#main-menu ul li, footer ul.footer-links li{
     display: inline-block;
+    padding: 8px;
 }
 
 nav#main-menu ul li a.nav-link{
@@ -154,15 +154,15 @@ nav#main-menu ul li a.nav-link{
     color: #fff;
 }
 
-nav#main-menu ul li a.nav-link:hover{
+nav#main-menu ul li a.nav-link:hover, nav#main-menu ul li a.nav-link:focus{
     color: #ffc100;
+    text-decoration: none;
 }
 
 nav#main-menu ul li a.nav-link::after{
     content: '';
     display: block;
     position: relative;
-    top: 0;
     width: 100%;
     height: 2px;
     background-color:#ffc100;
@@ -171,11 +171,39 @@ nav#main-menu ul li a.nav-link::after{
     transition: transform 0.3s;
 }
 
-nav#main-menu ul li a.nav-link:hover::after{
+nav#main-menu ul li a.nav-link:hover::after,  nav#main-menu ul li a.nav-link:focus::after{
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
 }
 
+a.login{
+    display: flex;
+    align-items: center;
+}
+
+a.login:hover, a.login:focus{
+    color: #ffc100;
+    text-decoration: none;
+}
+
+a.login:hover span, a.login:focus span{
+    color: inherit;
+}
+
+a.login span{
+    color: #fff;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+a.login .bi-person-circle{
+    width: 25px;
+    fill:#fff;
+}
+
+a.login:hover .bi-person-circle, a.login:focus .bi-person-circle{
+    fill: #ffc100;;
+}
 /* Pulsanti */
 button.default-btn{
     padding: 12px 35px;
@@ -267,8 +295,20 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     max-width: 33.3%;
 }
 
-.flex{
+.flex-rows{
     display: flex;
+    flex-direction: row;
+}
+
+.flex-columns{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .block{
@@ -324,3 +364,29 @@ section#user-section{
     padding: 40px 0;
 }
 
+footer{
+    padding: 50px;
+    background-color: #000000;
+}
+
+footer img{
+    width: 180px;
+}
+
+footer ul.footer-links{
+    margin: 1.3rem 0;
+}
+
+footer ul.footer-links li{
+    padding: 40px 30px;
+}
+
+footer ul.footer-links li a, footer .site-info h4{
+    color: #fff;
+    margin: 0;
+}
+
+footer ul.footer-links li a:hover{
+    color: #b6b6b6;
+    transform: scale(1.1);
+}
