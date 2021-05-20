@@ -48,6 +48,7 @@
     <img src="./img/immagine-grid.png" alt="">
 </div>
 <div class="event-nav-separator"></div>
+    <div class="div-nav-scroll">
     <nav id="event-nav">
         <ul>
             <li class="user-nav-link">
@@ -58,6 +59,7 @@
                 </li>
         </ul>
     </nav>
+    </div>
     <div class="container-grid">
         <div class="faces">
             <img src="./img/immagine-grid.png" alt="">

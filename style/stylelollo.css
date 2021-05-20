@@ -108,6 +108,8 @@ section#user-section{
     margin: 0 40px;
     background-color: var(--p-color);
 }
+
+
 nav#event-nav{
     display: inline-block;
     position: relative;
@@ -122,7 +124,13 @@ nav#event-nav ul li{
     display: inline-block;
 }
 
-div#info-elements{
+.info-elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-nav-scroll{
     display: flex;
     justify-content: center;
     align-items: center;
