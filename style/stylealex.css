@@ -30,10 +30,76 @@ h1{
     color: black;
 }
 
+.hero{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0,0,0,0.6)),
+    url('http://localhost/progettoweb21/img/immagine1.jpg') no-repeat center center;
+    background-size: cover;
+ 
+    
+}
 
+.hero-content{
+   
+    padding: 100px;
+    width: 100%;
+    height: 400px;
+    display: inherit;
+    justify-content: space-between;
 
+    
+}
+.btn-hero{
+    display: inherit;
+    align-items:flex-end;
+}
+.buy-btn{
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 12px 35px;
+    cursor: pointer;
+    background-color: #ffc100;
+}
+.buy-btn:hover{
+    background-color: #ffea00;
 
+}
+.buy-btn:focus{
+    background-color: #ffea00;
 
+}
+h2{
+    font-size: 45px;
+    color: white;
+    
+}
+h4{
+    color: white;
+    font-size: 25px;
+}
+h3{
+    margin-left: 60px;
+    margin-top: 30px;
+    color: black;
+    font-size: 25px;
+}
+.text-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.map{
+   
+   
+    margin-left: 250px;
+
+    
+}
 
 
 
