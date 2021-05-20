@@ -137,14 +137,10 @@ nav#event-nav ul li{
     align-items: center;
 }
   
-  .image {
+.image {
     opacity: 1;
     width: 100%;
     height: auto;
     transition: .5s ease;
    
-  }
-  h3{
-      opacity: 0;
-  }
- 
+}
