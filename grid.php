@@ -11,10 +11,9 @@
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <div class = "format-pic">
-  </div>
+  <img src="./img/Immagine-slider1.png" style="width: 100%">
   <div class="text">Caption Text</div>
-</div>
+  </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
