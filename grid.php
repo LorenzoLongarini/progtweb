@@ -11,19 +11,19 @@
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="./img/Immagine-slider1.png" style="width: 1%">
+  <img src="./img/favicon/favicol-16x16.png" style="width: 1%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="./img/Immagine-slider2.png" style="width:1%">
+  <img src="./img/favicon/favicol-16x16.png" style="width:1%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="./img/Immagine-slider3.png" style="width:1%">
+  <img src="./img/favicon/favicol-16x16.png" style="width:1%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -40,6 +40,24 @@
 <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
+<div class="info-elements">
+    <img src="./img/immagine-grid.png" alt="">
+<div class="info-nav-separator"></div>
+ <img src="./img/immagine-grid.png" alt="">
+<div class="info-nav-separator"></div>
+    <img src="./img/immagine-grid.png" alt="">
+</div>
+<div class="event-nav-separator"></div>
+    <nav id="event-nav">
+        <ul>
+            <li class="user-nav-link">
+                <button class="user-nav-btn active">Tendenza</button>
+                </li>
+            <li class="user-nav-link">
+                 <button class="user-nav-btn">Più venduti</button>
+                </li>
+        </ul>
+    </nav>
     <div class="container-grid">
         <div class="faces">
             <img src="./img/immagine-grid.png" alt="">
@@ -73,8 +91,9 @@
             <img src="./img/immagine-grid.png" alt="">
         </div>
     </div>
-
-    
+    <div style="text-align:center">
+        <a>Visualizza altro</a>
+    </div>
 </main>
 <?php require ('./template-parts/static/front/footer.php')?>
 </body>

@@ -75,7 +75,7 @@ section#user-section{
     grid-template-columns: repeat(5, auto);
     margin: 2% auto;
     width: 750px;
-    grid-gap: 1px;
+    grid-gap: 10px;
 }
 
 .container-grid > div {
@@ -92,5 +92,38 @@ section#user-section{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+}
+.event-nav-separator{
+    display: inline-block;
+    width: 1250px;
+    height: 1px;
+    margin: 0 40px;
+    background-color: var(--p-color);
+}
+.info-nav-separator{
+    display: inline-block;
+    width: 1px;
+    height: 100px;
+    margin: 0 40px;
+    background-color: var(--p-color);
+}
+nav#event-nav{
+    display: inline-block;
+    position: relative;
+    padding: 25px 0;
+}
+nav#event-nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav#event-nav ul li{
+    display: inline-block;
+}
+
+div#info-elements{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
