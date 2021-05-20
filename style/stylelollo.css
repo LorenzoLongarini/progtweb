@@ -84,8 +84,9 @@ section#user-section{
     border: 1px solid;
 }
 
-.faces img {
-    height: 150px;
+.faces  {
+    paddiing: 40px 40px;
+    background-color: brown;
 }
 
 .aside{
@@ -135,3 +136,15 @@ nav#event-nav ul li{
     justify-content: center;
     align-items: center;
 }
+  
+  .image {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+   
+  }
+  h3{
+      opacity: 0;
+  }
+  

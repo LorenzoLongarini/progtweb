@@ -62,35 +62,34 @@
     </div>
     <div class="container-grid">
         <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
         </div>
         <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
+            
         </div>
         <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
-        </div>
-    </div>
-    <div class="container-grid">
-        <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
-        </div>
-        <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
-        </div>
-        <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
+            
         </div>
     </div>
     <div class="container-grid">
         <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
+            
         </div>
         <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
+            
         </div>
         <div class="faces">
-            <img src="./img/immagine-grid.png" alt="">
+           
+        </div>
+    </div>
+    <div class="container-grid">
+        <div class="faces">
+           
+        </div>
+        <div class="faces">
+            
+        </div>
+        <div class="faces">
+            
         </div>
     </div>
     <div style="text-align:center">
