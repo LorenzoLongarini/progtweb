@@ -11,19 +11,19 @@
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="./img/favicon/favicon-16x16.png" style="width:15%">
+  <img src="./img/Immagine-slider1.png" style="width: 1%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="./img/favicon/android-chrome-192x192.png" style="width:15%">
+  <img src="./img/Immagine-slider2.png" style="width:1%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="./img/favicon/mstile-144x144.png" style="width:15%">
+  <img src="./img/Immagine-slider3.png" style="width:1%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -41,10 +41,41 @@
 </div>
 
     <div class="container-grid">
-        <div class="faces"></div>
-        <div class="faces"></div>
-        <div class="faces"></div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
     </div>
+    <div class="container-grid">
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+    </div>
+    <div class="container-grid">
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+        <div class="faces">
+            <img src="./img/immagine-grid.png" alt="">
+        </div>
+    </div>
+
+    
 </main>
+<?php require ('./template-parts/static/front/footer.php')?>
 </body>
 </html>
