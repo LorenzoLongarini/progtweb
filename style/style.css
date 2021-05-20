@@ -13,7 +13,7 @@ html{
     --button-navuser-text : #000000;
     --button-navuser-bg-hover: #d3d3d3;
     --card-bg : #fff;
-    --input-border-color: #868686;
+    --input-border-color: #c8c8c8;
 }
 
 html.dark{
@@ -246,10 +246,7 @@ input[type="text"]{
     font-size: 1.1rem;
     padding: 8px 10px;
     border: 2px solid var(--input-border-color);
-}
-
-input[type="text"].input-info{
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 #input-credit-card{

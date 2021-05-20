@@ -25,10 +25,6 @@ section#user-section{
     margin-bottom: 10px;
 
 }
-#user-section input[type = text]{
-    border: none;
-    border-radius: 15px;
-}
 
 #user-section input[type = date]{
     border: none;
@@ -142,5 +138,4 @@ nav#event-nav ul li{
     width: 100%;
     height: auto;
     transition: .5s ease;
-   
 }
