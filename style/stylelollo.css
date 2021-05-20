@@ -85,7 +85,7 @@ section#user-section{
 }
 
 .faces  {
-    paddiing: 40px 40px;
+    padding: 40px 40px;
     background-color: brown;
 }
 
@@ -147,4 +147,12 @@ nav#event-nav ul li{
   h3{
       opacity: 0;
   }
-  
+  .forma-pic{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0,0,0,0.6)),
+    url('http://localhost/progettoweb21/img/immagine1.jpg') no-repeat center center;
+    background-size: cover;
+  }

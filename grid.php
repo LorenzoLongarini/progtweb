@@ -11,19 +11,20 @@
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="./img/favicon/favicol-16x16.png" style="width: 1%">
+  <div class = "format-pic">
+  </div>
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="./img/favicon/favicol-16x16.png" style="width:1%">
+  <img src="./img/Immagine-slider2.png" style="width:100%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="./img/favicon/favicol-16x16.png" style="width:1%">
+  <img src="./img/Immagine-slider3.png" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
