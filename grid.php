@@ -62,6 +62,9 @@
     </div>
     <div class="container-grid">
         <div class="faces">
+           <div class="middle">
+               <div class="text-middle">Artista</div>
+           </div> 
         </div>
         <div class="faces">
             
