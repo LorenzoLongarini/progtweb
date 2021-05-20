@@ -57,3 +57,20 @@
 .content-hero h4, .content-hero h3{
     color: #fff;
 }
+
+
+.faces:hover .middle{
+    opacity:1;
+}
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    background-color: white;
+    font-size: 14px;
+    padding: 16px 32px;
+}
