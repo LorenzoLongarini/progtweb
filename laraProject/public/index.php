@@ -58,6 +58,4 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
- ?>
-
- <h1>TEST</h1>
+?>

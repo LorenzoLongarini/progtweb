@@ -21,7 +21,6 @@ Route::view('/lavora-con-noi', function () {
 
 Route::view('/privacy', 'privacy')->name('privacy');
 
-
 Route::view('/chi-siamo', function () {
     return view('welcome');
 });
