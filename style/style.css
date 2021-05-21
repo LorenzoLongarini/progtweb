@@ -13,6 +13,7 @@ html{
     --button-navuser-text : #000000;
     --button-navuser-bg-hover: #d3d3d3;
     --card-bg : #fff;
+    --card-box-shadow : #85858530;
     --input-border-color: #c8c8c8;
 }
 
@@ -29,6 +30,7 @@ html.dark{
     --link-color: #ffc100;
     --link-hover-color: #ffffff;
     --card-bg: #2b2b2b;
+    --card-box-shadow : #151515;
     --input-border-color : #2f84f1; 
 }
 
@@ -52,6 +54,12 @@ h1{
 
 p, ul li, strong, i{
     color: var(--p-color);
+}
+
+.price{
+    margin: 1.3rem 0.4rem;
+    font-size: 25px!important;
+    color: #de001e;
 }
 
 a{
@@ -401,4 +409,5 @@ footer ul.footer-links li a, footer .site-info h4{
 footer ul.footer-links li a:hover{
     color: #b6b6b6;
     transform: scale(1.1);
+    text-decoration: none;
 }

@@ -1,3 +1,39 @@
+/* Variabili per temi light e dark */
+html{
+    --body-bg: #F3F3F3;
+    --p-color: #000;
+    --title-color: #1d69cb;
+    --link-color: #0065e9;
+    --link-hover-color: #000;
+    --header-bg : #004064;
+    --button-default-bg : #ffc100;
+    --button-default-text : #000;
+    --button-default-bg-hover : #ffd519;
+    --button-navuser-bg:#004064;
+    --button-navuser-text : #000000;
+    --button-navuser-bg-hover: #d3d3d3;
+    --card-bg : #fff;
+    --card-box-shadow : #85858530;
+    --input-border-color: #c8c8c8;
+}
+
+html.dark{
+    --body-bg : #1b1b1b;
+    --p-color : #f3f3f3;
+    --title-color: #2f84f1;
+    --button-default-text: #f3f3f3;
+    --button-default-bg : #0065e9;
+    --button-default-bg-hover : #0046a1;
+    --button-navuser-bg:#004064;
+    --button-navuser-text : #fff;
+    --button-navuser-bg-hover: #272727;
+    --link-color: #ffc100;
+    --link-hover-color: #ffffff;
+    --card-bg: #2b2b2b;
+    --card-box-shadow : #151515;
+    --input-border-color : #2f84f1; 
+}
+
 .event-list{
     display: flex;
     padding-top: 100px;
@@ -6,12 +42,28 @@
 }
 .event{
     padding: 20px 0;
-    border: 2px solid grey;
+    padding-right: 40px;
     display: inherit;
     justify-content: space-between;
     align-items: center;
-
+    background-color: var(--card-bg);
+    box-shadow: 0px 0px 3px 3px var(--card-box-shadow);
+    border-radius: 15px;
+    margin: 10px 0;
 }
+
+.event div {
+    display: inherit;
+}
+
+.event .event-info{
+    margin-left: 20px;
+}
+
+.event .event-info h2,.event .event-info h4{
+    margin: 10px 0;
+}
+
 .img-event{
     margin-left: 25px;
     width: 250px;
@@ -51,3 +103,6 @@
     color: #fff;
 }
 
+.price{
+    font-size: 1rem;
+}

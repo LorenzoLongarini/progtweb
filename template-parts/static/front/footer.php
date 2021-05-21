@@ -9,6 +9,7 @@
               <li><a href="chi-siamo.php">Contatti</a></li>
               <li><a href="privacy.php">Privacy policy</a></li>
               <li><a href="#">Termini d'uso</a></li>
+              <li><a href="#">Lavora con noi</a></li>
             </ul>
           </div>
         <div class="site-info">

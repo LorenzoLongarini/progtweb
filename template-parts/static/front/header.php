@@ -12,6 +12,9 @@
                             <a class="nav-link" href="catalog.php">CATALOGO</a>
                         </li>
                         <li>
+                            <a class="nav-link" href="chi-siamo.php">SUPPORTO</a>
+                        </li>
+                        <li>
                             <a class="nav-link" href="chi-siamo.php">CHI SIAMO</a>
                         </li>
                     </ul>
