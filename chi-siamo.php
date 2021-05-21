@@ -1,5 +1,5 @@
 <?php require ("head.php"); require ("./template-parts/static/front/header.php")?>
-<div class="hero flex-center"> 
+<div class="hero flex-center" style="background-image:url('./img/privacy-image.jpg')"> 
     <div class="container flex-rows">
         <div class="content-hero">
             <h2>Chi siamo</h2>

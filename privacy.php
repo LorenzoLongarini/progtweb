@@ -1,9 +1,13 @@
 <?php require ("head.php"); require ("./template-parts/static/front/header.php")?>
-<div class="hero flex-center"> 
-    <div class="container flex-rows">
-        <div class="content-hero">
-            <h2>Informativa sulla privacy e GDPR</h2>
-            <h3>Informati su quali dati raccogliamo e come li trattiamo.</h3>
+<main id="page-content">
+
+<div class="hero" style="background-image: url('./img/privacy-image.jpg')"> 
+    <div class="overlay-content flex-center">
+        <div class="container">
+            <div class="content-hero">
+                <h2>Informativa sulla privacy e GDPR</h2>
+                <h3>Informati su quali dati raccogliamo e come li trattiamo.</h3>
+            </div>
         </div>
     </div>
 </div>
@@ -11,7 +15,7 @@
 <article class="container block">
 <p>Ultimo aggiornamento: 21 maggio 2021</p>
 <p>La presente Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti dice i tuoi diritti sulla privacy e come la legge ti protegge.</p>
-<p>Utilizziamo i tuoi dati personali per fornire e migliorare il Servizio. Utilizzando il Servizio, l'utente accetta la raccolta e l'utilizzo delle informazioni in conformità con la presente Informativa sulla privacy. Questa Informativa sulla privacy è stata creata con l'aiuto del <a href="https://www.privacypolicies.com/privacy-policy-generator/" target="_blank">Generatore di norme sulla privacy.</a></p>
+<p>Utilizziamo i tuoi dati personali per fornire e migliorare il Servizio. Utilizzando il Servizio, l'utente accetta la raccolta e l'utilizzo delle informazioni in conformità con la presente Informativa sulla privacy. Questa Informativa sulla privacy è stata creata con l'aiuto del <a class="link" href="https://www.privacypolicies.com/privacy-policy-generator/" target="_blank">Generatore di norme sulla privacy.</a></p>
 <h1>Interpretazione e definizioni</h1>
 <h2>Interpretazione</h2>
 <p>Le parole di cui è maiuscola la lettera iniziale hanno significati definiti nelle seguenti condizioni. Le seguenti definizioni hanno lo stesso significato, indipendentemente dal fatto che appaiano al singolare o al plurale.</p>
@@ -46,7 +50,7 @@
 <p><strong>I dati</strong> di utilizzo si riferiscono ai dati raccolti automaticamente, generati dall'utilizzo del Servizio o dall'infrastruttura di servizio stessa (ad esempio, la durata di una visita di pagina).</p>
 </li>
 <li>
-<p><strong>Il</strong> sito web si riferisce a EasyTickets, accessibile <a href="https://www.easytickets.com" rel="external nofollow noopener" target="_blank">da https://www.easytickets.com</a></p>
+<p><strong>Il</strong> sito web si riferisce a EasyTickets, accessibile <a class="link" href="https://www.easytickets.com" rel="external nofollow noopener" target="_blank">da https://www.easytickets.com</a></p>
 </li>
 <li>
 <p><strong>Per</strong> utente si intende l'individuo che accede o utilizza il Servizio, o la società o altra persona giuridica per conto della quale tale individuo accede o utilizza il Servizio, a seconda dei casi.</p>
@@ -82,10 +86,10 @@
 <p>Utilizziamo cookie e tecnologie di tracciamento simili per tracciare l'attività sul Nostro Servizio e memorizzare determinate informazioni. Le tecnologie di tracciamento utilizzate sono fari, tag e script per raccogliere e tenere traccia delle informazioni e per migliorare e analizzare il nostro servizio. Le tecnologie che utilizziamo possono includere:</p>
 <ul>
 <li><strong>Cookie o cookie del browser.</strong> Un cookie è un piccolo file inserito sul dispositivo dell'utente. Puoi istruire il tuo browser a rifiutare tutti i cookie o a indicare quando viene inviato un Cookie. Tuttavia, se l'utente non accetta i cookie, potrebbe non essere in grado di utilizzare alcune parti del nostro Servizio. A meno che tu non abbia modificato l'impostazione del tuo browser in modo che rifiuti i cookie, il nostro Servizio può utilizzare i cookie.</li>
-<li><strong>Cookie flash.</strong> Alcune funzionalità del nostro Servizio possono utilizzare oggetti memorizzati locali (o cookie Flash) per raccogliere e memorizzare informazioni sulle preferenze dell'utente o sulla sua attività sul nostro Servizio. I cookie Flash non sono gestiti dalle stesse impostazioni del browser utilizzate per i cookie del browser. Per ulteriori informazioni su come eliminare i cookie Flash, leggere "Dove è possibile modificare le impostazioni per la disabilitazione o l'eliminazione di oggetti condivisi locali?" disponibile <a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_" rel="external nofollow noopener" target="_blank">all'https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_</a></li>
+<li><strong>Cookie flash.</strong> Alcune funzionalità del nostro Servizio possono utilizzare oggetti memorizzati locali (o cookie Flash) per raccogliere e memorizzare informazioni sulle preferenze dell'utente o sulla sua attività sul nostro Servizio. I cookie Flash non sono gestiti dalle stesse impostazioni del browser utilizzate per i cookie del browser. Per ulteriori informazioni su come eliminare i cookie Flash, leggere "Dove è possibile modificare le impostazioni per la disabilitazione o l'eliminazione di oggetti condivisi locali?" disponibile <a class="link" href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_" rel="external nofollow noopener" target="_blank">all'https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_</a></li>
 <li><strong>Web Beacon.</strong> Alcune sezioni del nostro Servizio e delle nostre e-mail possono contenere piccoli file elettronici noti come web beacon (indicati anche come gif chiare, pixel tag e gif a pixel singolo) che consentono alla Società, ad esempio, di contare gli utenti che hanno visitato tali pagine o aperto un'e-mail e per altre statistiche del sito Web correlate (ad esempio, registrando la popolarità di una determinata sezione e verificando l'integrità del sistema e del server).</li>
 </ul>
-<p>I cookie possono essere cookie "Persistenti" o "Di sessione". I cookie persistenti rimangono sul tuo personal computer o dispositivo mobile quando vai offline, mentre i cookie di sessione vengono eliminati non appena chiudi il tuo browser web. Ulteriori informazioni sui cookie: <a href="https://www.privacypolicies.com/blog/cookies/" target="_blank">Cosa sono i cookie?</a>.</p>
+<p>I cookie possono essere cookie "Persistenti" o "Di sessione". I cookie persistenti rimangono sul tuo personal computer o dispositivo mobile quando vai offline, mentre i cookie di sessione vengono eliminati non appena chiudi il tuo browser web. Ulteriori informazioni sui cookie: <a class="link" href="https://www.privacypolicies.com/blog/cookies/" target="_blank">Cosa sono i cookie?</a>.</p>
 <p>Utilizziamo cookie di sessione e persistenti per gli scopi di seguito stabiliti:</p>
 <ul>
 <li>
@@ -184,4 +188,5 @@
 <li>Via e-mail: supporto@easytickets.com</li>
 </ul>
 </article>
+</main>
 <?php require("./template-parts/static/front/footer.php")?>

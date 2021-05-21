@@ -6,8 +6,8 @@
           <div class="block">
             <ul class="footer-links">
               <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contatti</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="chi-siamo.php">Contatti</a></li>
+              <li><a href="privacy.php">Privacy policy</a></li>
               <li><a href="#">Termini d'uso</a></li>
             </ul>
           </div>

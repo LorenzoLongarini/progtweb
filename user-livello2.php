@@ -4,7 +4,7 @@
 <body>
     <?php require ("./template-parts/static/front/header.php")?>
     <main id="page-content">
-        <div class="container flex-rows">
+        <div class="container user flex-rows">
             <aside id="user-nav">
                 <ul>
                     <li class="user-nav-link">

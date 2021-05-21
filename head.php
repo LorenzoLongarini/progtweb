@@ -22,4 +22,5 @@
     <script src="./js/credit-card.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/slider-auto.js"></script>
+    <script src="./js/theme.js"></script>
 </head>
