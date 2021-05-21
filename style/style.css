@@ -15,6 +15,7 @@ html{
     --card-bg : #fff;
     --card-box-shadow : #85858530;
     --input-border-color: #c8c8c8;
+    --price : #3d9430;
 }
 
 html.dark{
@@ -32,6 +33,7 @@ html.dark{
     --card-bg: #2b2b2b;
     --card-box-shadow : #151515;
     --input-border-color : #2f84f1; 
+    --price : #6bcc5d;
 }
 
 /*Tutti gli elementi */
@@ -59,7 +61,7 @@ p, ul li, strong, i{
 .price{
     margin: 1.3rem 0.4rem;
     font-size: 25px!important;
-    color: #de001e;
+    color: var(--price);
 }
 
 a{
