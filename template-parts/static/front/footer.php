@@ -12,7 +12,7 @@
             </ul>
           </div>
         <div class="site-info">
-            <h4>&copy; <?php echo date('Y')?> EasyTicket S.p.a.</h4>
+            <h4>&copy; <?php echo date('Y')?> EasyTicket S.r.l.</h4>
         </div>
     </div>
 </footer>
