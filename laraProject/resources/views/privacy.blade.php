@@ -1,6 +1,16 @@
 @extends('layouts.public')
 
 @section('content') 
+<div class="hero" style="background-image: url('{{asset ('/images/privacy-image.jpg')}}')"> 
+    <div class="overlay-content flex-center">
+        <div class="container">
+            <div class="content-hero">
+                <h2>Informativa sulla privacy e GDPR</h2>
+                <h3>Informati su quali dati raccogliamo e come li trattiamo.</h3>
+            </div>
+        </div>
+    </div>
+</div>
 <article class="container block">
 <p>Ultimo aggiornamento: 21 maggio 2021</p>
 <p>La presente Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti dice i tuoi diritti sulla privacy e come la legge ti protegge.</p>

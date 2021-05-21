@@ -1,7 +1,7 @@
 <footer>
     <div class="container flex-columns flex-center">
           <div class="block">
-            <img src="./img/logos/eticket_logo.svg" width="220px" height="auto"/>
+            <img src="{{asset ('/images/logos/eticket_logo.svg')}}" width="220px" height="auto"/>
           </div>
           <div class="block">
             <ul class="footer-links">

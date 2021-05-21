@@ -1,0 +1,144 @@
+
+
+.container.user{
+    padding-top: 40px;
+}
+section#user-section{
+    flex: content;
+    width: fit-content;
+    display:flexbox;
+    margin-top: 0px;
+    margin-left: 200px;
+    padding: 50px;
+    border: 1px #000;
+}
+.eventi-acquistati{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    flex-direction: column;
+    
+}
+.eventi{
+    padding: 30px 0;
+    border: 1px solid grey;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+#user-section input[type = date]{
+    border: none;
+    height: 46px;
+    font-size: 1.1rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+}
+
+.lista{
+    display: block;
+    list-style-type: none;
+    initial-letter-align: left;
+    
+}
+
+.elem-list{
+    display: inline;
+}
+.img-event-lollo{
+    margin-left: 25px;
+    width: 200px;
+    height: 100px;
+    border: 2px solid grey;
+    padding: 10px 0;
+}
+.caratt-evento{
+    justify-content: space-between;
+    margin-right: 400px;
+    width: 250px;
+    height: 140px;
+    padding: 10px 0;
+}
+
+.dati-utente{
+    margin-right: 100px;
+    width: 250px;
+    height: 140px;
+    padding: 10px 0;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 2% auto;
+    width: 750px;
+    grid-gap: 10px;
+}
+
+.container-grid > div {
+    overflow: hidden;
+    height: 150px;
+    border: 1px solid;
+}
+
+.faces  {
+    padding: 40px 40px;
+    background-color: brown;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.event-nav-separator{
+    display: inline-block;
+    width: 1250px;
+    height: 1px;
+    margin: 0 40px;
+    background-color: var(--p-color);
+}
+.info-nav-separator{
+    display: inline-block;
+    width: 1px;
+    height: 100px;
+    margin: 0 40px;
+    background-color: var(--p-color);
+}
+
+
+nav#event-nav{
+    display: inline-block;
+    position: relative;
+    padding: 25px 0;
+}
+nav#event-nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav#event-nav ul li{
+    display: inline-block;
+}
+
+.info-elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-nav-scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.image {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+}

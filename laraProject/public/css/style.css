@@ -388,7 +388,7 @@ section#user-section{
 
 footer{
     padding: 50px;
-    background-color: #000000;
+    background-color:#22303b;
 }
 
 footer img{
@@ -409,7 +409,7 @@ footer ul.footer-links li a, footer .site-info h4{
 }
 
 footer ul.footer-links li a:hover{
-    color: #b6b6b6;
+    color: #ffc100;
     transform: scale(1.1);
     text-decoration: none;
 }
