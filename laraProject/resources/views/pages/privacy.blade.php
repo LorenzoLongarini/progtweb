@@ -1,20 +1,9 @@
 @extends('layouts.public')
 
 @section('title', 'Informativa sulla privacy e GDPR')
-
 @section('description', 'Informati su quali dati raccogliamo e come li trattiamo.')
 
 @section('content') 
-<div class="hero" style="background-image: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.2)),url('{{asset ('/images/privacy-image.jpg')}}');background-position:center center;background-size:cover"> 
-    <div class="overlay-content flex-center">
-        <div class="container">
-            <div class="content-hero">
-                <h2>Informativa sulla privacy e GDPR</h2>
-                <h3>Informati su quali dati raccogliamo e come li trattiamo.</h3>
-            </div>
-        </div>
-    </div>
-</div>
 <article class="container block">
     <p>Ultimo aggiornamento: 21 maggio 2021</p>
     <p>La presente Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti dice i tuoi diritti sulla privacy e come la legge ti protegge.</p>

@@ -14,26 +14,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/privacy', 'pages.privacy')->name('privacy');
 
 
-Route::view('/privacy', 'privacy')
-        ->name('privacy');
-
-Route::view('/about', 'about')
+Route::view('/about', 'pages.about')
         ->name('about');
 
-Route::view('/lavora-con-noi', 'lavora-con-noi')
+Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
         ->name('lavora-con-noi');
 
-Route::view('/termini-e-condizioni', 'termini-e-condizioni')
+Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::view('/event', 'event')->name('event');
+Route::view('/event', 'pages.event')->name('event');
 
-Route::view('/modifica-dati', 'modifica-dati')->name('modifica-dati');
+Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
-Route::view('/faq', 'faq')->name('faq');
+Route::view('/faq', 'pages.faq')->name('faq');
 
-Route::view('/catalog', 'catalog')->name('catalog');
-
+Route::view('/catalog', 'pages.catalog')->name('catalog');
 
