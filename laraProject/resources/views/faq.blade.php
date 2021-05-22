@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+@extends(/layouts.public)
+=======
 @extends('layouts.public')
 
 @section('faq-content')
@@ -10,3 +13,4 @@
     </div>
 </div>
 @endsection
+>>>>>>> 8e043e40a5caca3e6d583ece028248ee28962740
