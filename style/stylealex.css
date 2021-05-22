@@ -104,3 +104,8 @@ html.dark{
 .content-hero h4, .content-hero h3{
     color: #fff;
 }
+
+.hidden-section{
+    display: none;
+
+}
