@@ -15,12 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/lavora-con-noi', function () {
-    return view('welcome');
-});
-
 Route::view('/privacy', 'privacy')->name('privacy');
-
-Route::view('/chi-siamo', function () {
-    return view('welcome');
-});
