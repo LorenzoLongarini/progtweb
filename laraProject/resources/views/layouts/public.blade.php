@@ -34,6 +34,9 @@
             @yield('content')
             @yield('event-content')
             @yield('who-content')
+            @yield('modifica-dati-content')
+            @yield('faq-content')
+            @yield('catalog-content')
         </main>
             
 

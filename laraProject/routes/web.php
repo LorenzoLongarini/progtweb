@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::view('/privacy', 'privacy')->name('privacy');
 Route::view('/event', 'event')->name('event');
 Route::view('/who', 'who')->name('who');
+Route::view('/modifica-dati', 'modifica-dati')->name('modifica-dati');
+Route::view('/faq', 'faq')->name('faq');
+Route::view('/catalog', 'catalog')->name('catalog');
