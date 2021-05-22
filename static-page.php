@@ -1,5 +1,5 @@
 
-<?php require ("head.php"); require ("./template-parts/static/front/header.php>")?>
+<?php require ("head.php"); require ("./template-parts/static/front/header.php")?>
 <div class="hero flex-center"> 
     <div class="container flex-rows">
         <div class="content-hero">
@@ -9,4 +9,4 @@
     </div>
 </div>
 
-<?php require("./template-parts/static/front/footer.php>")?>
+<?php require("./template-parts/static/front/footer.php")?>
