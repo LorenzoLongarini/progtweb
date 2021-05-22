@@ -31,8 +31,9 @@
         @include('layouts/header')
 
         <main id="page-content">
-            @yield('content');
+            @yield('content')
             @yield('event-content')
+            @yield('who-content')
         </main>
             
 
