@@ -10,12 +10,11 @@
         <main id="page-content">
             <?php echo $__env->yieldContent('content'); ?>
         </main>
-        
+            
             <?php echo $__env->yieldContent('event-content'); ?>
-            <?php echo $__env->yieldContent('who-content'); ?>
+            <?php echo $__env->yieldContent('about-content'); ?>
             <?php echo $__env->yieldContent('modifica-dati-content'); ?>
             <?php echo $__env->yieldContent('faq-content'); ?>
-            <?php echo $__env->yieldContent('catalog-content'); ?>
         </main>
             
 

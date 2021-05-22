@@ -14,6 +14,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::view('/privacy', 'privacy')
         ->name('privacy');
 
@@ -33,3 +35,5 @@ Route::view('/modifica-dati', 'modifica-dati')->name('modifica-dati');
 Route::view('/faq', 'faq')->name('faq');
 
 Route::view('/catalog', 'catalog')->name('catalog');
+
+

@@ -10,12 +10,11 @@
         <main id="page-content">
             @yield('content')
         </main>
-        
+            
             @yield('event-content')
-            @yield('who-content')
+            @yield('about-content')
             @yield('modifica-dati-content')
             @yield('faq-content')
-            @yield('catalog-content')
         </main>
             
 
