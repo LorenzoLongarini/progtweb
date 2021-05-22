@@ -9,10 +9,10 @@
                         <a class="nav-link" href="index.php">HOME</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="catalog.php">CATALOGO</a>
+                        <a class="nav-link" href="{{ route('catalog')}}">CATALOGO</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="catalog.php">FAQ</a>
+                        <a class="nav-link" href="{{ route('faq')}}">FAQ</a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ route('about')}}">CHI SIAMO</a>
