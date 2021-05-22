@@ -1,4 +1,5 @@
-<div class="hero" style="b"> 
+@extends('/layouts.public')
+<div class="hero" style="">
     <div class="overlay-content flex-center">
         <div class="container">
             <div class="content-hero">
