@@ -32,7 +32,9 @@
 
         <main id="page-content">
             @yield('content');
+            @yield('event-content')
         </main>
+            
 
         @include('layouts/footer')
     </body>
