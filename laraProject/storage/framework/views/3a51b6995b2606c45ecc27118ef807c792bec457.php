@@ -31,8 +31,14 @@
         <?php echo $__env->make('layouts/header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
         <main id="page-content">
-            <?php echo $__env->yieldContent('content'); ?>;
+            <?php echo $__env->yieldContent('content'); ?>
+            <?php echo $__env->yieldContent('event-content'); ?>
+            <?php echo $__env->yieldContent('who-content'); ?>
+            <?php echo $__env->yieldContent('modifica-dati-content'); ?>
+            <?php echo $__env->yieldContent('faq-content'); ?>
+            <?php echo $__env->yieldContent('catalog-content'); ?>
         </main>
+            
 
         <?php echo $__env->make('layouts/footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </body>

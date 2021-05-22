@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?> 
-<div class="hero" style="background-image: url('<?php echo e(asset ('/images/privacy-image.jpg')); ?>')"> 
+<div class="hero" style="background-image: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.2)),url('<?php echo e(asset ('/images/privacy-image.jpg')); ?>');background-position:center center;background-size:cover"> 
     <div class="overlay-content flex-center">
         <div class="container">
             <div class="content-hero">
