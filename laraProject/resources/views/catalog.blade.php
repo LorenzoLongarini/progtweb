@@ -2,7 +2,7 @@
 
 @section('catalog-content')
 <main id="page-content">
-    <div class="hero" style="background-image: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.5)),url('{{asset ('/images/catalog-cover.png')}}');background-position:center center;background-size:cover;"> 
+    <div class="hero" style="background-image: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.5)),url('{{asset ('/images/catalog-cover.png')}}');background-position:center center;background-size:cover"> 
         <div class="overlay-content flex-center">
             <div class="container">
                 <div class="content-hero">
