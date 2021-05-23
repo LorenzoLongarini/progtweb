@@ -8,7 +8,7 @@
         <aside id="user-nav">
             <ul>
                 <li class="user-nav-link">
-                    <button onclick="activeDashboard()"id="dashboard" class="user-nav-btn active">Dashboard</button>
+                    <button onclick=""id="dashboard" class="user-nav-btn active">Dashboard</button>
                     <h3></h3>
                 </li>
                 <li class="user-nav-link">
@@ -42,6 +42,7 @@
 </main>
 </body>
 <script>
+/*
     function activeDashboard(){
         var elem=document.getElementById("dashboard");
        var elem1=document.getElementById("storico");
@@ -56,7 +57,7 @@
 
 
         if(elem.classList.contains("active"))
-           elem.classList.remove("active");
+            elem3.style.display="block";
            
            
 
@@ -69,14 +70,14 @@
            
     }
 
-
+*/
 
 
 
 
 </script>
 <script>
-/*
+
 function activeStorico(){
         var elem=document.getElementById("storico");
        var elem1=document.getElementById("dashboard");
@@ -93,7 +94,7 @@ function activeStorico(){
 */
 </script>
 <script>
-    /*
+    
 function activeSettings(){
         var elem=document.getElementById("impostazioni-utente");
        var elem1=document.getElementById("dashboard");
@@ -106,6 +107,6 @@ function activeSettings(){
             elem1.classList.remove("active");
             elem2.classList.remove("active");
 }
-*/
+
 </script>
 </html>
