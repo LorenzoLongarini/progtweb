@@ -8,18 +8,20 @@
         <aside id="user-nav">
             <ul>
                 <li class="user-nav-link">
-                    <button class="user-nav-btn active">Dashboard</button>
+                    <button onclick="activeDashboard()"id="dashboard" class="user-nav-btn active">Dashboard</button>
+                    <h3></h3>
                 </li>
                 <li class="user-nav-link">
-                    <button class="user-nav-btn">Storico acquisti</button>
+                    <button onclick="" id="storico" class="user-nav-btn  ">Storico acquisti</button>
                 </li>
                 <li class="user-nav-link">
-                    <button class="user-nav-btn">Impostazioni utente</button>
+                    <button  onclick=""id="impostazioni-utente" class="user-nav-btn ">Impostazioni utente</button>
                 </li>
             </ul>
         </aside>
         <div class="user-nav-separator"></div>
-        <section style="width: fit-content" id="user-section">
+
+        <section class="#" style="width: fit-content" id="user-section">
             <p>
             <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">
             <input type="text" value="" maxlength="20" rows="1" placeholder="Cognome">
@@ -39,4 +41,71 @@
     </div>
 </main>
 </body>
+<script>
+    function activeDashboard(){
+        var elem=document.getElementById("dashboard");
+       var elem1=document.getElementById("storico");
+       var elem2=document.getElementById("impostazioni-utente");
+        var elem3=document.getElementById("user-section");
+
+        if(elem.classList.contains("active"))
+            elem3.style.display="none"
+        else
+            elem3.style.display="block";
+
+
+
+        if(elem.classList.contains("active"))
+           elem.classList.remove("active");
+           
+           
+
+        else 
+            elem.classList.add("active");
+            elem1.classList.remove("active");
+            elem2.classList.remove("active");
+            
+           
+           
+    }
+
+
+
+
+
+
+</script>
+<script>
+/*
+function activeStorico(){
+        var elem=document.getElementById("storico");
+       var elem1=document.getElementById("dashboard");
+       var elem2=document.getElementById("impostazioni-utente");
+
+        if(elem.classList.contains("active"))
+           elem.classList.remove("active");
+        else 
+            elem.classList.add("active");
+            elem1.classList.remove("active");
+            elem2.classList.remove("active");
+           
+    }
+*/
+</script>
+<script>
+    /*
+function activeSettings(){
+        var elem=document.getElementById("impostazioni-utente");
+       var elem1=document.getElementById("dashboard");
+       var elem2=document.getElementById("storico");
+
+        if(elem.classList.contains("active"))
+           elem.classList.remove("active");
+        else 
+            elem.classList.add("active");
+            elem1.classList.remove("active");
+            elem2.classList.remove("active");
+}
+*/
+</script>
 </html>
