@@ -41,11 +41,12 @@
 </div>
 
 <div class="info-elements">
-    <img src="./img/grid-info1.png" alt="">
+    <div class="container-img-grid"><img src="./img/icon1.png" alt="">
+    <h3>Reso gratuito</h3></div>
 <div class="info-nav-separator"></div>
- <img src="./img/grid-info2.png" alt="">
+    <div class="container-img-grid"><i src="./img/icon2.png" style="font-size:48px;color:red;"></i></div>
 <div class="info-nav-separator"></div>
-    <img src="./img/grid-info3.png" alt="">
+    <div class="container-img-grid"><img src="./img/icon3.png" alt=""></div>
 </div>
 <div class="event-nav-separator"></div>
     <div class="div-nav-scroll">
@@ -59,42 +60,67 @@
                 </li>
         </ul>
     </nav>
-    </div>
-    <div class="container-grid">
-        <div class="faces">
-           <div class="middle">
-               <div class="text-middle">Artista</div>
-           </div> 
+</div>
+     <div class="container-grid">
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                    <div class="text">Evento</div>
+                </div>
         </div>
-        <div class="faces">
-            
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                     <div class="text">Evento</div>
+                </div>
         </div>
-        <div class="faces">
-            
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                <div class="text">Evento</div>
+                </div>
         </div>
-    </div>
-    <div class="container-grid">
-        <div class="faces">
-            
+      </div>
+      <div class="container-grid">
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                    <div class="text">Evento</div>
+                </div>
         </div>
-        <div class="faces">
-            
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                     <div class="text">Evento</div>
+                </div>
         </div>
-        <div class="faces">
-           
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                <div class="text">Evento</div>
+                </div>
         </div>
-    </div>
-    <div class="container-grid">
-        <div class="faces">
-           
+      </div>
+      <div class="container-grid">
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                    <div class="text">Evento</div>
+                </div>
         </div>
-        <div class="faces">
-            
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                     <div class="text">Evento</div>
+                </div>
         </div>
-        <div class="faces">
-            
+        <div class="card">
+                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+                <div class="middle">
+                <div class="text">Evento</div>
+                </div>
         </div>
-    </div>
+      </div>
     <div style="text-align:center">
         <a>Visualizza altro</a>
     </div>
