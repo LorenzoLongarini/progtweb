@@ -105,7 +105,16 @@ html.dark{
     color: #fff;
 }
 
-.hidden-section{
-    display: none;
+.storico{
+    
+    border: 2px solid red;
+   margin-left: 200px;
+   margin-top: 40px;
+ 
 
+}
+.acquisto{
+    padding: 100px 200px;
+    border: 2px solid blue;
+    
 }
