@@ -35,11 +35,11 @@ Route::view('/faq', 'pages.faq')->name('faq');
 
 Route::view('/catalog', 'pages.catalog')->name('catalog');
 
-Route::get('/livello3','Livello3Controller')->name('Livello3');
+/*Route::get('/livello3','Livello3Controller')->name('Livello3');
 
 Route::get('/livello3/newEvent', 'Livello3Controller@addEvent')->name('newevent');
 
 Route::post('/livello3/storeEvent', 'Livello3Controller@storeEvent')->name('newevent.store');
 
 
-
+*/
