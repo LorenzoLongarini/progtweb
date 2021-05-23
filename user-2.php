@@ -12,10 +12,10 @@
                     <h3></h3>
                 </li>
                 <li class="user-nav-link">
-                    <button onclick="" id="storico" class="user-nav-btn  ">Storico acquisti</button>
+                    <button onclick="activeStorico()" id="storico" class="user-nav-btn  ">Storico acquisti</button>
                 </li>
                 <li class="user-nav-link">
-                    <button  onclick=""id="impostazioni-utente" class="user-nav-btn ">Impostazioni utente</button>
+                    <button  onclick="activeSettings()"id="impostazioni-utente" class="user-nav-btn ">Impostazioni utente</button>
                 </li>
             </ul>
         </aside>
