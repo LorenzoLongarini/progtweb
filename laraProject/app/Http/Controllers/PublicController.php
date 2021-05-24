@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Faq;
 
 class PublicController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -13,7 +15,8 @@ class PublicController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
+        //$this->middleware('auth');
     }
 
     /**
@@ -24,5 +27,10 @@ class PublicController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function showSiteFaqs(){
+        $faqs = new Faq;
+        return view('pages.faq')->with('faqs', $faqs::all());
     }
 }

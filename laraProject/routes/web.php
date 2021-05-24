@@ -31,7 +31,7 @@ Route::view('/event', 'pages.event')->name('event');
 
 Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
-Route::view('/faq', 'pages.faq')->name('faq');
+Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::view('/catalog', 'pages.catalog')->name('catalog');
 
