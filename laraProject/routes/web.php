@@ -29,17 +29,18 @@ Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
 
 Route::view('/event', 'pages.event')->name('event');
 
-Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
+//Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
 Route::view('/faq', 'pages.faq')->name('faq');
 
 Route::view('/catalog', 'pages.catalog')->name('catalog');
 
-/*Route::get('/livello3','Livello3Controller')->name('Livello3');
+Route::get('/livello2','Livello2Controller@index')
+        ->name('Livello2');
 
-Route::get('/livello3/newEvent', 'Livello3Controller@addEvent')->name('newevent');
+Route::get('/livello2/modifydata', 'Livello2Controller@modifyData')
+        ->name('modifyData');
 
-Route::post('/livello3/storeEvent', 'Livello3Controller@storeEvent')->name('newevent.store');
+Route::post('/livello2/storeEvent', 'Livello2Controller@storeData')
+        ->name('modifyData.store');
 
-
-*/
