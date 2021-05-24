@@ -44,4 +44,8 @@
     <div>
     {{  Form:submit ('Conferma', /*class-type*/)}}
     </div>
+
+    <div>
+    {{  Form:reset ('Annulla', /*class-type*/)}}
+    </div>
 {{Form::close}}
