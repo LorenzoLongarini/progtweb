@@ -65,7 +65,8 @@
 </div>
      <div class="container-grid">
         <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+
+                <img src= "{{ asset('storage/app/public/images/40x40.png') }}" alt="Avatar" style="width:100%">
                 <div class="middle">
                     <div class="text">Evento</div>
                 </div>
@@ -129,3 +130,5 @@
 </main>
 
 @endsection
+
+@yield('home')

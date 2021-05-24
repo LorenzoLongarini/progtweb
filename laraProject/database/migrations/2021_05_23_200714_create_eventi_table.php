@@ -14,12 +14,12 @@ class CreateEventiTable extends Migration
     public function up()
     {
         Schema::create('eventi', function (Blueprint $table) {
-            $table->bigIncrements('eventoId');
+            $table->bigIncrements('eventoId')->primarykey();
             $table->bigInteger('utenteId')->unsigned()->index();
             $table->foreign('utenteId')->references('utenteId')->on('utenti');
             $table->string('titolo', 50);
             $table->string('artista', 50);
-            $table->timestamp('data');
+            $table->date('data');
             $table->string('luogo', 150);
             $table->float('prezzo');
             $table->text('descrizione', 4000);
