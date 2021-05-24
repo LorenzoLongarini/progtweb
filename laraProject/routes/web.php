@@ -14,6 +14,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/login', 'layouts.login')->name('login');
+
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 
 Route::view('/home', 'pages.home')->name('home');

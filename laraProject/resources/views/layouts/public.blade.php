@@ -4,5 +4,6 @@
 @parent
 
 @yield('content')
+@yield('login')
 
 @endsection

@@ -629,3 +629,11 @@ nav#event-nav ul li{
     height: auto;
     transition: .5s ease;
 }
+
+.login-form-container{
+    padding: 200px 400px;
+}
+.login-form{
+    padding: 100px 150px;
+    border: 2px solid grey;
+}
