@@ -335,7 +335,9 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 .overlay-content{
     width: 100%;
     height: 100%;
-    background-color: #00000075;
+    position: relative;
+    z-index: 99;
+    background-color: #0000008a;
 }
 
 #masthead .container{
@@ -468,22 +470,19 @@ footer ul.footer-links li a:hover{
     background-color: #1d69cb;
 }
 
-.hero{
+.cover-page{
     height: 500px;
     width: 100%;
-    background-image:linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.6)) no-repeat center center;
-   
 }
 
-.content-hero h2{
+.content-cover h2{
     font-size: 2.5rem;
     color:#bbd9ff;
 }
 
-.content-hero h4, .content-hero h3{
+.content-cover h4, .content-cover h3{
     color: #fff;
 }
-
 
 /* Style Lollo*/
 
@@ -630,6 +629,13 @@ nav#event-nav ul li{
     transition: .5s ease;
 }
 
+#cover-img{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+}
 .login-form-container{
     padding: 200px 400px;
 }

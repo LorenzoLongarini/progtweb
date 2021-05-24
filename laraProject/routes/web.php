@@ -18,8 +18,7 @@ Route::view('/privacy', 'pages.privacy')->name('privacy');
 
 Route::view('/home', 'pages.home')->name('home');
 
-Route::view('/about', 'pages.about')
-        ->name('about');
+Route::view('/about', 'pages.about')->name('about');
 
 Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
         ->name('lavora-con-noi');

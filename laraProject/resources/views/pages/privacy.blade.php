@@ -1,9 +1,14 @@
 @extends('layouts.public')
 
-@section('title', 'Informativa sulla privacy e GDPR')
-@section('description', 'Informati su quali dati raccogliamo e come li trattiamo.')
+@section('page-title', 'Informativa sulla privacy e GDPR')
 
-@section('content') 
+@section('content')
+
+@include('helpers/cover-page', [
+        'title' => 'Informativa sulla privacy e GDPR', 
+        'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
+        'url' => 'privacy-cover.jpg'])
+        
 <article class="container block">
     <p>Ultimo aggiornamento: 21 maggio 2021</p>
     <p>La presente Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti dice i tuoi diritti sulla privacy e come la legge ti protegge.</p>

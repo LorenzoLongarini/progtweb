@@ -1,18 +1,15 @@
 <header id="masthead">
     <div class="container">
         <div id="left-header">
-            <img id="site-logo" src="{{asset ('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
+            <img id="site-logo" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
             <div class="divider"></div>
             <nav id="main-menu">
                 <ul>
                     <li>
-                        <a class="nav-link" href="index.php">HOME</a>
+                        <a class="nav-link" href="{{ route('home') }}">HOME</a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ route('catalog')}}">CATALOGO</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{ route('faq')}}">FAQ</a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ route('about')}}">CHI SIAMO</a>

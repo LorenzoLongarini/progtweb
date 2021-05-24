@@ -29,8 +29,11 @@ class PublicController extends Controller
         return view('home');
     }
 
+    /**
+     * Restituisce un array di faq prelevate dal db tramite Eloquent ORM
+     */
     public function showSiteFaqs(){
         $faqs = new Faq;
-        return view('pages.faq')->with('faqs', $faqs::all());
+        return view('pages.faq')->with('faqCollection', $faqs::all());
     }
 }
