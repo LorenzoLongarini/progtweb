@@ -17,7 +17,7 @@ class CreateFaqTable extends Migration
             $table->bigIncrements('id');
             $table->string('question', 100);
             $table->string('answer', 1000);
-            $table->timestamps();
+          
         });
     }
 

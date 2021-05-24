@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->integer('IVA', 11);
             $table->integer('phone', 10);
             $table->rememberToken();
-            $table->timestamps();
+            
         });
     }
 

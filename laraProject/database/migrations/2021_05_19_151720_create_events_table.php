@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id')->primary();
             $table->string('title',50);
             $table->string('location',50);
+            $table->string('region',25);
             $table->date('date');
             $table->string('descShort',50);
             $table->string('descLong', 2000);
@@ -27,7 +28,7 @@ class CreateEventsTable extends Migration
             $table->integer('discount')->nullable();
             $table->date('startDisc')->nullable();
             $table->string('host',50);
-            $table->timestamps();
+            
         });
     }
 
