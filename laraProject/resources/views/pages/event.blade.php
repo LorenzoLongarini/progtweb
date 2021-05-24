@@ -38,3 +38,5 @@
 </div>
 
 @endsection
+
+@yield('event-content')

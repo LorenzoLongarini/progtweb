@@ -16,22 +16,25 @@
                 </li>
             </ul>
         </aside>
+        <form class = "" id = "modify-data" name="mod-data" enctype = "multipart/form-data" method = "post" action
+         ="{{ route('modifyData.store') }}">
+         @csfr
         <div class="user-nav-separator"></div>
         <section style="width: fit-content" id="user-section">
             <p>
-            <input type="text" value="" maxlength="20" rows="1" placeholder="Nome">
-            <input type="text" value="" maxlength="20" rows="1" placeholder="Cognome">
+            <input type="text" maxlength="20" rows="1" placeholder="Nome" id="nome" value="{{ old('nome') }}">
+            <input type="text" value="" maxlength="20" rows="1" placeholder="Cognome" id="cognome" value="{{ old('cognome') }}">
             </p>
             <p>
-            <input type="date" value="" maxlength="20" rows="1" >
+            <input type="date" value="" maxlength="20" rows="1" id="date" value="{{ old('date') }}">
             </p>
             <p>
-            <input type="text" value="" maxlength="10" rows="1" placeholder="Telefono">
-            <input type="text" value="" maxlength="15" rows="1" placeholder="Email">
+            <input type="text" value="" maxlength="10" rows="1" placeholder="Telefono" id="tele" value="{{ old('tele') }}">
+            <input type="text" value="" maxlength="15" rows="1" placeholder="Email" id="email" value="{{ old('email') }}">
             </p>
             <p>
-            <button>Modifica</button>
-            <button>Annulla</button>
+            <input type="submit" value="Modifica">
+            <input type="reset" value="Modifica">
             </p>
         </section>
     </div>
