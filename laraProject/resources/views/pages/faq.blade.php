@@ -1,19 +1,17 @@
-@extends('layouts.root')
+@extends('layouts.public')
 
-@section('page-content')
+@section('page-title', 'FAQ')
 
-<div class="hero flex-center"> 
-    <div class="container flex-rows">
-        <div class="content-hero">
-           <h2>FAQ - Frequently asked questions</h2>
-            <h3>Prova a cercare qui le risposte alle tue esigenze prima di contattarci.</h3>
-        </div>
-    </div>
-</div>
+@section('content')
 
-@isset($faqs)
+@include('helpers/cover-page', [
+        'title' => 'FAQ - Frequently asked question', 
+        'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
+        'url' => 'faq-cover.jpg'])
+
+@isset($faqCollection)
     <div class="container flex-columns">
-        @foreach($faqs as $faq)
+        @foreach($faqCollection as $faq)
             <h2>{{ $faq->domanda }}</h2>
             <h2>{{ $faq->risposta }}</h2>
             <br>
@@ -21,7 +19,7 @@
     </div>
 @endisset
 
-@empty($faqs)
+@empty($faqCollection)
     <h1>Niente da visualizzare</h1>
 @endempty
 

@@ -1,7 +1,6 @@
 @extends('layouts.root')
 
-@section('content')
-@parent
+@section('page')
 
 <div class="container user flex-rows">
     <aside id="user-nav">

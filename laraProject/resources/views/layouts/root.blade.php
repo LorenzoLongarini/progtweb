@@ -8,8 +8,7 @@
         @include('includes/header')
 
         <main id="page-content">
-            @section('page-content')
-            @show
+            @yield('page')
         </main>
             
         @include('includes/footer')

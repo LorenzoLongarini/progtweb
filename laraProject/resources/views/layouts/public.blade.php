@@ -1,7 +1,6 @@
 @extends('layouts.root')
 
-@section('page-content')
-@parent
+@section('page')
 
 @yield('content')
 
