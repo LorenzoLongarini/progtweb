@@ -41,5 +41,5 @@
         >> |
     @endif
 </div>
-@else << | < | 1 | > | >>
+
 @endif

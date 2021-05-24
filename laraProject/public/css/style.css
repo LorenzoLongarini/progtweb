@@ -636,3 +636,10 @@ nav#event-nav ul li{
     object-fit: cover;
     z-index: 1;
 }
+.login-form-container{
+    padding: 200px 400px;
+}
+.login-form{
+    padding: 100px 150px;
+    border: 2px solid grey;
+}
