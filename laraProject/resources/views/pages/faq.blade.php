@@ -9,9 +9,9 @@
         'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
         'url' => 'faq-cover.jpg'])
 
-@isset($faqCollection)
+@isset($faqs)
     <div class="container flex-columns">
-        @foreach($faqCollection as $faq)
+        @foreach($faqs as $faq)
             <h2>{{ $faq->domanda }}</h2>
             <h2>{{ $faq->risposta }}</h2>
             <br>
@@ -19,7 +19,7 @@
     </div>
 @endisset
 
-@empty($faqCollection)
+@empty($faqs)
     <h1>Niente da visualizzare</h1>
 @endempty
 

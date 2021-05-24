@@ -19,8 +19,8 @@ class CreateBigliettiTable extends Migration
             $table->foreign('utenteId')->references('utenteId')->on('utenti');
             $table->bigInteger('eventoId')->unsigned()->index();
             $table->foreign('eventoId')->references('eventoId')->on('eventi');
-            $table->float('prezzo_acquisto');
-            $table->date('data_acquisto');
+            $table->float('prezzoAcquisto');
+            $table->date('dataAcquisto');
         });
     }
 

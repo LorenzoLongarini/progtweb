@@ -34,6 +34,6 @@ class PublicController extends Controller
      */
     public function showSiteFaqs(){
         $faqs = new Faq;
-        return view('pages.faq')->with('faqCollection', $faqs::all());
+        return view('pages.faq')->with('faqs', $faqs::all());
     }
 }
