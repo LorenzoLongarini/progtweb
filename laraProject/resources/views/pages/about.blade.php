@@ -5,9 +5,7 @@
 @include('helpers/cover-page', [
         'title' => 'Chi siamo', 
         'description' => 'Tutte le informazioni di cui hai bisogno per contattarci o per assistenza',
-        'url' => 'about-cover.jpg'])
+        'img_url' => '../storage/app/public/images/covers/about-cover.jpg'])
 
-<div>
-    <h1>chi simao</h1>
-</div>
+
 @endsection

@@ -2,7 +2,7 @@
 
 @section('page-title', 'Homepage')
 
-@section('home')
+@section('content')
 
 <main id="page-content">
 
@@ -130,11 +130,6 @@
                 </div>
         </div>
       </div>
-    <div style="text-align:center">
-        <a>Visualizza altro</a>
-    </div>
 </main>
 
 @endsection
-
-@yield('home')
