@@ -738,7 +738,6 @@ nav#event-nav ul li{
     padding: 100px 150px;
     border: 2px solid grey;
 }
-<<<<<<< HEAD
 /* Slideshow container */
 .slideshow-container {
     width: 100%;
@@ -831,7 +830,6 @@ nav#event-nav ul li{
     from {opacity: .4}
     to {opacity: 1}
   }
-=======
 
 .question-box h2, .question svg{
     display: inline-block;
@@ -848,4 +846,27 @@ nav#event-nav ul li{
 .card-faq .question-box, .card-faq .answer-box{
     border-radius: 10px;
 }
->>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
+
+/*rubati a cucchia*/
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 12px;
+  }
+
+  .rs1-wrap-input {
+    width: calc((100% - 30px) / 2);
+  }
+  
+  .contact-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
