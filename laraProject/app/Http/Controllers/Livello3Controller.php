@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Livello3;
+use App\models\Evento;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\EventRequest;
 
 class Livello3Controller extends Controller
 {
     protected $_livello3Model;
 
     public function __construct(){
-        $this->_livello3Model = new livello_3;
+        $this->_livello3Model = new livello3;
 
     }
 
@@ -18,16 +21,16 @@ class Livello3Controller extends Controller
         return view ();
     }
 
-    public function aggiungiProdotto(){
-        return view ('aggiungiProdotto');
+    public function aggiungiEvento(){
+        return view ('aggiungiEvento');
 
     }
 
-    public function modificaProdotto(){
+    public function modificaEvento(){
 
     }
 
-    public function salvaProdotto(EventRequest $request){
+    public function salvaEvento(EventRequest $request){
 
         if ($request->hasFile('immagine')) {
             $immagine = $request->file('immagine');

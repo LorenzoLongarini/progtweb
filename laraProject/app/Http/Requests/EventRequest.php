@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+//use illuminate\validation\rule;
 
 class EventRequest extends FormRequest
 {
@@ -30,7 +31,7 @@ class EventRequest extends FormRequest
                 'regione' => 'required',
                 'data' => 'required|date|after:today',
                 'bigliettiDisp' => 'required|min:0',
-                'prezzo' => 'required|min:0',
+                'prezzo' => 'float|required|min:0',
                 'sconto' => 'integer|min:0|max:100',
                 'descBreve' => 'required|max:200',
                 'programma' => 'required|max:2000'
