@@ -33,7 +33,7 @@
             <p>
             <div>
             <input type="text" id="titolo" value="{{old('titolo')}}" maxlength="20" rows="1" placeholder="Titolo">
-            @if($errors->firs('titolo'))
+            @if($errors->first('titolo'))
                 <ul class="errors">
                     @foreach ($errors->get('titolo') as $message)
                     <li>{{ $message }}</li>

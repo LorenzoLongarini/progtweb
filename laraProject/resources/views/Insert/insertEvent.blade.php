@@ -1,96 +1,84 @@
-@extends('layouts.public')
 
-
-
-{{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => /*nome-funzione*/, 'files' => true, 'class' => /*some-bollocks*/))  }}
+<div class="contact-form">
+{{  Form::open(array('route' => 'aggiungiEvento.store', /*'id' => nome-funzione*/ 'files' => true /*'class' => some-bollocks*/))  }}
    
-   <div>
-    {{  Form:label ('titolo', 'Nome Evento', /*class-type*/)}}
-    {{  Form:text ('titolo', '', /*class-type*/)  }}
-    </div>
-
-    <div>
-    {{  Form:label ('artista', 'Artista', /*class-type*/)  }}
-    {{  Form:text ('artista', '', /*class-type*/)  }}
-    </div>
-
-    <div>
-    {{  Form:label ('immagine', 'Artista', /*class-type*/)  }}
-    {{  Form:image ('immagine', '', /*class-type*/)  }}
-    </div>
-
-    <div>
-
-    {{  Form:label ('luogo', 'Luogo', /*class-type*/)}}
-    {{  Form:text ('luogo', '', /*class-type*/)  }}
-
-    </div>
-    <div>
-    {{  Form:label ('regione', 'Regione', /*class-type*/)}}
-    {{  Form:select ('regione', $regione, '', /*class-type*/)  }
+   
+    <div class="double-input">
+        <div class="wrap-input rs1-wrap-input">
+    {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
+    {{  Form::text ('titolo', '' /*class-type*/)  }}
     
+    {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
+    {{  Form::text ('artista', '' /*class-type*/)  }}
     </div>
+</div>
     <div>
-    {{  Form:label ('data', 'Data', /*class-type*/)}}
-    {{  Form:date ('data', '',  /*class-type*/ ) }}
+    {{  Form::label ('immagine', 'Copertina' /*class-type*/)  }}
+    {{  Form::file ('immagine' /*class-type*/)  }}
+    
+    {{  Form::label ('regione', 'Regione' /*class-type*/)}}
+    {{  Form::select ('regione', ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
+            'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
+            'Marche', 'Lazio', 'Abruzzo', 'Molise',
+            'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'] )  }}
     </div>
-    <div>
-    {{  Form:label ('BigliettiDisp', 'Biglietti Disponibili', /*class-type*/ )}}
-    {{  Form:integer ('BigliettiDisp', '', /*class-type*/) }}
+    </p>
 
+    <p>
+    <div>
+    {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
+    {{  Form::text ('luogo', '' /*class-type*/)  }}
+    &nbsp &nbsp &nbsp &nbsp
+    {{  Form::label ('data', 'Data' /*class-type*/)}}
+    {{  Form::text ('data', '' /*class-type*/ ) }}
     </div>
+    </p>
+    <p>
     <div>
-    {{  Form:label ('prezzo', 'Prezzo Biglietto', /*class-type*/ )}}
-    {{  Form:integer ('prezzo', '', /*class-type*/) }}
-
-    </div>
-    <div>
-    {{  Form:label ('sconto', 'Sconto', /*class-type*/ )}}
-    {{  Form:tinyinteger ('sconto', '', /*class-type*/) }}
-
-    </div>
-    <div>
-
-<<<<<<< HEAD
-    {{  Form:label ('descShort', 'Programma', /*class-type*/)}}
-    {{  Form:text ('descShort', '', /*class-type*/)}}
-=======
-    {{  Form:label ('descBreve', 'Descrizione Breve', /*class-type*/)}}
-    {{  Form:text ('descBreve', '', /*class-type*/)}}
->>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
-
-    </div>
-    <div>
-
-<<<<<<< HEAD
-    {{  Form:label ('descLong', 'Descrizione', /*class-type*/)}}
-    {{  Form:textarea ('descLong', '',  /*class-type*/)}}
-=======
-    {{  Form:label ('programma', 'Descrizione Completa', /*class-type*/)}}
-    {{  Form:textarea ('programma', '',  /*class-type*/)}}
->>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
+    {{  Form::label ('BigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
+    {{  Form::text ('BigliettiDisp', '' /*class-type*/) }}
+    &nbsp &nbsp &nbsp &nbsp
+    {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
+    {{  Form::text ('prezzo', '' /*class-type*/) }}
 
     </div>
-
+    
     <div>
+    {{  Form::label ('sconto', 'Sconto' /*class-type*/ )}}
+    {{  Form::text ('sconto', '' /*class-type*/) }}
 
-    {{  Form:label ('location', 'Sconto', /*class-type*/)}}
-    {{  Form:text ('location', '', /*class-type*/)  }}
+    &nbsp &nbsp &nbsp &nbsp
+
+    {{  Form::label ('descBreve', 'Programma' /*class-type*/)}}
+    {{  Form::text ('descBreve', '' /*class-type*/)}}
 
     </div>
-
     <div>
 
-    {{  Form:label ('location', 'Url', /*class-type*/)}}
-    {{  Form:text ('location', '', /*class-type*/)  }}
+    {{  Form::label ('programma', 'Descrizione Completa' /*class-type*/)}}
+    {{  Form::textarea ('programma', ''  /*class-type*/)}}
 
-    </div>
+    &nbsp &nbsp &nbsp &nbsp
 
-    <div>
-    {{  Form:submit ('Conferma', /*class-type*/)}}
+    {{  Form::label ('location', 'Sconto'/*class-type*/)}}
+    {{  Form::text ('location', '' /*class-type*/)  }}
+
     </div>
 
     <div>
-    {{  Form:reset ('Annulla', /*class-type*/)}}
+
+    {{  Form::label ('location', 'Url' /*class-type*/)}}
+    {{  Form::text ('location', '' /*class-type*/)  }}
+
     </div>
-{{Form::close}}
+
+    <div>
+    {{  Form::submit ('Conferma' /*class-type*/)}}
+    </div>
+
+    <div>
+    {{  Form::reset ('Annulla' /*class-type*/)}}
+    </div>
+{{Form::close()}}
+</div>
+
