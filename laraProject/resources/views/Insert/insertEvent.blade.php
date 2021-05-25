@@ -5,8 +5,13 @@
 {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => /*nome-funzione*/, 'files' => true, 'class' => /*some-bollocks*/))  }}
    
    <div>
+<<<<<<< HEAD
+    {{  Form:label ('name', 'Titolo', /*class-type*/)}}
+    {{  Form:text ('name', '', /*class-type*/)  }}
+=======
     {{  Form:label ('titolo', 'Nome Evento', /*class-type*/)}}
     {{  Form:text ('titolo', '', /*class-type*/)  }}
+>>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
     </div>
 
     <div>
@@ -51,18 +56,46 @@
     </div>
     <div>
 
+<<<<<<< HEAD
+    {{  Form:label ('descShort', 'Programma', /*class-type*/)}}
+    {{  Form:text ('descShort', '', /*class-type*/)}}
+=======
     {{  Form:label ('descBreve', 'Descrizione Breve', /*class-type*/)}}
     {{  Form:text ('descBreve', '', /*class-type*/)}}
+>>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
 
     </div>
     <div>
 
+<<<<<<< HEAD
+    {{  Form:label ('descLong', 'Descrizione', /*class-type*/)}}
+    {{  Form:textarea ('descLong', '',  /*class-type*/)}}
+=======
     {{  Form:label ('programma', 'Descrizione Completa', /*class-type*/)}}
     {{  Form:textarea ('programma', '',  /*class-type*/)}}
+>>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
+
+    </div>
+
+    <div>
+
+    {{  Form:label ('location', 'Sconto', /*class-type*/)}}
+    {{  Form:text ('location', '', /*class-type*/)  }}
+
+    </div>
+
+    <div>
+
+    {{  Form:label ('location', 'Url', /*class-type*/)}}
+    {{  Form:text ('location', '', /*class-type*/)  }}
 
     </div>
 
     <div>
     {{  Form:submit ('Conferma', /*class-type*/)}}
+    </div>
+
+    <div>
+    {{  Form:reset ('Annulla', /*class-type*/)}}
     </div>
 {{Form::close}}

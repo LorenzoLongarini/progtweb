@@ -68,7 +68,11 @@
      <div class="container-grid">
         <div class="card">
 
+<<<<<<< HEAD
+                <img src= "{{ asset('app/public/images/40x40.png') }}" alt="Avatar" style="width:100%">
+=======
                 <img src= "{{ asset('../storage/app/public/images/slides/grid-event3.jpg') }}" alt="Avatar" style="width:100%">
+>>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
                 <div class="middle">
                     <div class="text">Evento</div>
                 </div>
