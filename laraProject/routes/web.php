@@ -43,8 +43,8 @@ Route::get('/livello2/modifydata', 'Livello2Controller@modifyData')
 Route::post('/livello2/storeEvent', 'Livello2Controller@storeData')
         ->name('modifyData.store');
 
-Route::get('/livello3/aggiungiEvento', 'livello3controller@aggiungiEvento')->('aggiungiEvento')
+Route::get('/livello3/aggiungiEvento', 'livello3controller@aggiungiEvento')->name('aggiungiEvento');
 
 Route::post('/livello3/aggiungiEvento', 'livello3controller@aggiungEvento')
-        ->name('aggiungiEvento.store')
+        ->name('aggiungiEvento.store');
 
