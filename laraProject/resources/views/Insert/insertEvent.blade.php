@@ -13,8 +13,8 @@
     </div>
 </div>
     <div>
-    {{  Form::label ('immagine', 'Copertina' /*class-type*/)  }}
-    {{  Form::file ('immagine' /*class-type*/)  }}
+    {{  Form::label ('img_name', 'Copertina' /*class-type*/)  }}
+    {{  Form::file ('img_name' /*class-type*/)  }}
     
     {{  Form::label ('regione', 'Regione' /*class-type*/)}}
     {{  Form::select ('regione', ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
@@ -35,8 +35,8 @@
     </p>
     <p>
     <div>
-    {{  Form::label ('BigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
-    {{  Form::text ('BigliettiDisp', '' /*class-type*/) }}
+    {{  Form::label ('biglietti_disp', 'Biglietti Disponibili' /*class-type*/ )}}
+    {{  Form::text ('biglietti_disp', '' /*class-type*/) }}
     &nbsp &nbsp &nbsp &nbsp
     {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
     {{  Form::text ('prezzo', '' /*class-type*/) }}
@@ -49,26 +49,32 @@
 
     &nbsp &nbsp &nbsp &nbsp
 
-    {{  Form::label ('descBreve', 'Programma' /*class-type*/)}}
-    {{  Form::text ('descBreve', '' /*class-type*/)}}
+    {{  Form::label ('programma', 'Programma' /*class-type*/)}}
+    {{  Form::text ('programma', '' /*class-type*/)}}
 
     </div>
     <div>
 
-    {{  Form::label ('programma', 'Descrizione Completa' /*class-type*/)}}
-    {{  Form::textarea ('programma', ''  /*class-type*/)}}
+    {{  Form::label ('descrizione', 'Descrizione Completa' /*class-type*/)}}
+    {{  Form::textarea ('descrizione', ''  /*class-type*/)}}
 
     &nbsp &nbsp &nbsp &nbsp
 
-    {{  Form::label ('location', 'Sconto'/*class-type*/)}}
-    {{  Form::text ('location', '' /*class-type*/)  }}
+    {{  Form::label ('data_sconto', 'Sconto'/*class-type*/)}}
+    {{  Form::text ('data_sconto', '' /*class-type*/)  }}
 
     </div>
 
     <div>
 
-    {{  Form::label ('location', 'Url' /*class-type*/)}}
-    {{  Form::text ('location', '' /*class-type*/)  }}
+    {{  Form::label ('maps_url', 'Url' /*class-type*/)}}
+    {{  Form::text ('maps_url', '' /*class-type*/)  }}
+
+    </div>
+    <div>
+
+    {{  Form::label ('utenteId', 'id' /*class-type*/)}}
+    {{  Form::text ('utenteId', '' /*class-type*/)  }}
 
     </div>
 

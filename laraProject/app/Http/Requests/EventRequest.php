@@ -25,7 +25,7 @@ class EventRequest extends FormRequest
     public function rules()
     {
         return ['titolo' => 'required|max:50',
-                'artista' => 'required|max:50',
+                /*'artista' => 'required|max:50',
                 'luogo' => 'required|max:100',
                 'immagine' => 'image|max:2048',
                 'regione' => 'required',
@@ -34,7 +34,7 @@ class EventRequest extends FormRequest
                 'prezzo' => 'required|float|min:0',
                 'sconto' => 'integer|min:0|max:100',
                 'descBreve' => 'required|max:200',
-                'programma' => 'required|max:2000'
+                'programma' => 'required|max:2000'*/
             
         ];
     }

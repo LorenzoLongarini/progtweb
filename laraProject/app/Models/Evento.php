@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Evento extends Model
 {
-    protected $table = "eventi";
-    protected $primaryKey = "eventoId";
-    protected $guarded = ['prodId'];
+    protected $table = 'eventi';
+    protected $primaryKey = 'eventoId';
+    protected $guarded = ['eventoId'];
     public $timestamps = false;
 }

@@ -10,9 +10,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PublicController@index')->name('home');
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 
@@ -44,6 +42,6 @@ Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
 Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
         ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungEvento')
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento.store');
 
