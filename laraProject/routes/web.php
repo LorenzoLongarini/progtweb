@@ -41,3 +41,8 @@ Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
 Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
         ->name('user3-insert.store');
 
+Route::get('/livello3/aggiungiEvento', 'livello3controller@aggiungiEvento')->name('aggiungiEvento');
+
+Route::post('/livello3/aggiungiEvento', 'livello3controller@aggiungEvento')
+        ->name('aggiungiEvento.store');
+

@@ -1,5 +1,7 @@
 @extends('layouts.public')
 
+@section('page-title', 'Homepage')
+
 @section('home')
 
 <main id="page-content">
@@ -10,19 +12,19 @@
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="./img/grid-event1.jpg" style="width: 100%">
+  <img src="{{ asset('../storage/app/public/images/grid-event1.jpg') }}" style="width: 100%">
   <div class="text"></div>
   </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="./img/grid-event2.jpg" style="width:100%">
+  <img src="{{ asset('../storage/app/public/images/grid-event2.jpg') }}" style="width: 100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="./img/grid-event3.jpg" style="width:100%">
+  <img src="{{ asset('../storage/app/public/images/grid-event3.jpg') }}" style="width: 100%">
   <div class="text"></div>
 </div>
 
@@ -40,7 +42,7 @@
 </div>
 
 <div class="info-elements">
-    <div class="container-img-grid"><img src="./img/info1.000.jpg" alt="">
+    <div class="container-img-grid"><img src="{{ asset('../storage/app/public/images/img_events/info1.000.jpg') }}" alt="">
     </div>
 <div class="info-nav-separator"></div>
     <div class="container-img-grid"><img src="./img/info2.000.jpg" >
@@ -66,7 +68,11 @@
      <div class="container-grid">
         <div class="card">
 
+<<<<<<< HEAD
                 <img src= "{{ asset('app/public/images/40x40.png') }}" alt="Avatar" style="width:100%">
+=======
+                <img src= "{{ asset('../storage/app/public/images/slides/grid-event3.jpg') }}" alt="Avatar" style="width:100%">
+>>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
                 <div class="middle">
                     <div class="text">Evento</div>
                 </div>

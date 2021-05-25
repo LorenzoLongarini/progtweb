@@ -4,8 +4,3 @@ $(document).ready(function () {
         $('html').toggleClass("dark");
     });
 });
-
-$(document).onload(function () {
-    
-    Cookie.set(
-});
