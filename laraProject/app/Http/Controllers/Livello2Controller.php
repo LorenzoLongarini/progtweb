@@ -24,6 +24,6 @@ class Livello2Controller extends Controller
    }
 
    public function storeData(){
-
+      
    }
 }
