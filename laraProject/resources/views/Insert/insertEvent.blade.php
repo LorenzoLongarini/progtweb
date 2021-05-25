@@ -1,19 +1,17 @@
 
-
+<div class="contact-form">
 {{  Form::open(array('route' => 'aggiungiEvento.store', /*'id' => nome-funzione*/ 'files' => true /*'class' => some-bollocks*/))  }}
    
    
-    <div>
-        <div>
+    <div class="double-input">
+        <div class="wrap-input rs1-wrap-input">
     {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
     {{  Form::text ('titolo', '' /*class-type*/)  }}
-    </div>
-    <div>
+    
     {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
     {{  Form::text ('artista', '' /*class-type*/)  }}
     </div>
-    <br>
-    <p>
+</div>
     <div>
     {{  Form::label ('immagine', 'Copertina' /*class-type*/)  }}
     {{  Form::file ('immagine' /*class-type*/)  }}
@@ -82,4 +80,5 @@
     {{  Form::reset ('Annulla' /*class-type*/)}}
     </div>
 {{Form::close()}}
+</div>
 

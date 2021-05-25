@@ -497,7 +497,6 @@ section#user-section{
     width: fit-content;
     display:flexbox;
     margin-top: 0px;
-    margin-left: 200px;
     padding: 50px;
     border: 1px #000;
 }
@@ -846,20 +845,14 @@ nav#event-nav ul li{
 .card-faq .question-box, .card-faq .answer-box{
     border-radius: 10px;
 }
-<<<<<<< HEAD
-=======
 
-/*rubati a cucchia*/
+/*inventati*/
 
 .wrap-input {
     width: 100%;
     position: relative;
     background-color: transparent;
-    margin-bottom: 12px;
-  }
 
-  .rs1-wrap-input {
-    width: calc((100% - 30px) / 2);
   }
   
   .contact-form {
@@ -872,4 +865,17 @@ nav#event-nav ul li{
     flex-wrap: wrap;
     justify-content: space-between;
   }
->>>>>>> 833f0bbda7164a1c6a0b5cd3072248ad09fb3ec3
+  .contact-form input{
+      width:100%;
+  }
+  .wrap-input label{
+      display: block;
+  }
+
+  .double-input{
+      flex-basis: 100%;
+  }
+
+  .double-input, .single-input{
+      margin: 10px 0;
+  }
