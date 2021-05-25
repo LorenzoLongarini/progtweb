@@ -1,7 +1,4 @@
-@extends('layouts.public')
 
-
-@section('content')
 
 {{  Form::open(array('route' => /*nome-rotta*/, 'id' => /*nome-funzione*/, 'files' => true, 'class' => /*some-bollocks*/))  }}
    
@@ -61,5 +58,3 @@
     {{  Form:submit ('Conferma', /*class-type*/)}}
     </div>
 {{Form::close}}
-
-@section

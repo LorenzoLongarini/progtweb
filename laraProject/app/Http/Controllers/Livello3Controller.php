@@ -22,6 +22,7 @@ class Livello3Controller extends Controller
     }
 
     /*public function aggiungiProdotto(){
+
         return view ('aggiungiProdotto');
 
     }*/
@@ -30,18 +31,18 @@ class Livello3Controller extends Controller
 
     }
 
-    public function salvaEvento(EventRequest $request){
+    public function aggiungiEvento(EventRequest $request){
 
-        if ($request->hasFile('immagine')) {
-            $immagine = $request->file('immagine');
-            $imageName = $image->getClientOriginalName();
+        if ($request->hasFile('img_name')) {
+            $immagine = $request->file('img_name');
+            $imageName = $immagine->getClientOriginalName();
         } else {
             $imageName = NULL;
         }
 
         $evento = new evento;
         $evento->fill($request->validated());
-        $evento->image = $imageName;
+        $evento->img_name = $imageName;
         $evento->save();
 
         if (!is_null($imageName)) {
