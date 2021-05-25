@@ -9,19 +9,19 @@ class Livello3Controller extends Controller
 {
     protected $_livello3Model;
 
-    public function __construct(){
+    /*public function __construct(){
         $this->_livello3Model = new livello_3;
 
-    }
+    }*/
 
     public function index() {
-        return view ();
+        return view ('pages.prova-form');
     }
 
-    public function aggiungiProdotto(){
+    /*public function aggiungiProdotto(){
         return view ('aggiungiProdotto');
 
-    }
+    }*/
 
     public function modificaProdotto(){
 
