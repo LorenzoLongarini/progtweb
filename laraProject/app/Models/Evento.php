@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Events extends Model
+class Evento extends Model
 {
     protected $table = "eventi";
     protected $primaryKey = "eventoId";
-    public $timestamps = true;
+    protected $guarded = ['prodId'];
+    public $timestamps = false;
+
+    
 }

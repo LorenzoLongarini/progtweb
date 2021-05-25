@@ -2,7 +2,7 @@
 
 
 
-{{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => /*nome-funzione*/, 'files' => true, 'class' => /*some-bollocks*/))  }}
+{{  Form::open(array('route' => /*nome-rotta*/, 'id' => /*nome-funzione*/, 'files' => true, 'class' => /*some-bollocks*/))  }}
    
    <div>
     {{  Form:label ('titolo', 'Nome Evento', /*class-type*/)}}
@@ -13,12 +13,6 @@
     {{  Form:label ('artista', 'Artista', /*class-type*/)  }}
     {{  Form:text ('artista', '', /*class-type*/)  }}
     </div>
-
-    <div>
-    {{  Form:label ('immagine', 'Artista', /*class-type*/)  }}
-    {{  Form:image ('immagine', '', /*class-type*/)  }}
-    </div>
-
     <div>
 
     {{  Form:label ('luogo', 'Luogo', /*class-type*/)}}
