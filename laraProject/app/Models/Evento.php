@@ -10,6 +10,4 @@ class Evento extends Model
     protected $primaryKey = "eventoId";
     protected $guarded = ['prodId'];
     public $timestamps = false;
-
-    
 }

@@ -25,7 +25,6 @@ class Livello3Controller extends Controller
 
     public function modificaProdotto(){
 
-
     }
 
     public function salvaProdotto(EventRequest $request){
@@ -48,7 +47,5 @@ class Livello3Controller extends Controller
         };
 
         return redirect()->action('livello3controller@index');
-
-
     }
 }
