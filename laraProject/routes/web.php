@@ -43,3 +43,13 @@ Route::get('/livello2/modifydata', 'Livello2Controller@modifyData')
 Route::post('/livello2/storeEvent', 'Livello2Controller@storeData')
         ->name('modifyData.store');
 
+
+Route::get('/livello3','user3Controller@showInsertEvent')
+        ->name('utente3-insert');
+
+Route::get('/livello3/insertEvent', 'user3Controller@insertEvent')
+        ->name('modifyData');
+
+Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
+        ->name('modifyData.store');
+
