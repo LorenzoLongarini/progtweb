@@ -261,7 +261,7 @@ button.user-nav-btn.active{
 }
 
 /* Input area */
-input[type="text"]{
+input[type="text"], #user-section input[type="date"], select{
     height: 46px;
     font-size: 1.1rem;
     padding: 8px 10px;
@@ -352,7 +352,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 
 .container{
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -375,13 +375,12 @@ aside#user-nav ul li{
     display: inline-block;
     width: 1px;
     height: 50vh;
-    margin: 0 40px;
+    margin: 0 80px;
     background-color: var(--p-color);
 }
 
 section#user-section{
     display: inline-block;
-    padding-top: 30px;
 }
 
 #page-content{
@@ -494,11 +493,6 @@ footer ul.footer-links li a:hover{
 }
 section#user-section{
     flex: content;
-    width: fit-content;
-    display:flexbox;
-    margin-top: 0px;
-    padding: 50px;
-    border: 1px #000;
 }
 .eventi-acquistati{
     display: flex;
@@ -515,14 +509,6 @@ section#user-section{
     align-items: center;
     margin-bottom: 10px;
 
-}
-
-#user-section input[type = date]{
-    border: none;
-    height: 46px;
-    font-size: 1.1rem;
-    padding: 8px 10px;
-    border-radius: 15px;
 }
 
 /* Slideshow container */
@@ -847,8 +833,6 @@ nav#event-nav ul li{
 .card-faq .question-box, .card-faq .answer-box{
     border-radius: 10px;
 }
-<<<<<<< HEAD
-=======
 
 /*inventati*/
 
@@ -859,6 +843,9 @@ nav#event-nav ul li{
 
   }
   
+  .contact-form input[type="file"]{
+      font-size: 1rem;
+  }
   .contact-form {
     width: 100%;
     display: -webkit-box;
@@ -869,18 +856,23 @@ nav#event-nav ul li{
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .contact-form input{
+  .contact-form input, .contact-form select{
       width:100%;
   }
+  .wrap-input{
+    margin: 0 10px;
+  }
+
   .wrap-input label{
       display: block;
+      margin: 5px 0;
+      color: var(--p-color);
   }
 
-  .double-input{
-      flex-basis: 100%;
+  .multiple-input{
+      display: flex;
   }
 
-  .double-input, .single-input{
+  .multiple-input, .single-input{
       margin: 10px 0;
   }
->>>>>>> 9eced42198913dcf43ccea245566bd9a434bc52c
