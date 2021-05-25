@@ -14,12 +14,12 @@ class CreateUtentiTable extends Migration
     public function up()
     {
         Schema::create('utenti', function (Blueprint $table) {
-            $table->bigIncrements('utenteId')->unsigned()->index()->primarykey();
+            $table->bigIncrements('utenteId')->unsigned()->index();
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();
-            $table->string('ragione_sociale', 40)->nullable();
-            $table->string('p_iva/cod_fiscale', 40);
-            $table->date('data_nascita')->nullable();
+            $table->string('ragioneSociale', 40)->nullable();
+            $table->string('ivaFiscale', 40);
+            $table->date('dataNascita')->nullable();
             $table->string('email', 40);
             $table->string('username', 25);
             $table->string('password', 30);
@@ -27,8 +27,7 @@ class CreateUtentiTable extends Migration
             $table->string('via', 50);
             $table->string('cap', 7);
             $table->string('città', 80);
-            $table->set('livello', ['cliente', 'organizzatore', 'admin']);
-            
+            $table->set('livello', ['cliente', 'organizzatore', 'admin']);        
         });
     }
 
