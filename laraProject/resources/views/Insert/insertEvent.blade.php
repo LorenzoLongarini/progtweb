@@ -5,13 +5,8 @@
 {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => /*nome-funzione*/, 'files' => true, 'class' => /*some-bollocks*/))  }}
    
    <div>
-<<<<<<< HEAD
-    {{  Form:label ('name', 'Titolo', /*class-type*/)}}
-    {{  Form:text ('name', '', /*class-type*/)  }}
-=======
     {{  Form:label ('titolo', 'Nome Evento', /*class-type*/)}}
     {{  Form:text ('titolo', '', /*class-type*/)  }}
->>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
     </div>
 
     <div>
