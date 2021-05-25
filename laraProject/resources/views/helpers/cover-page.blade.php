@@ -9,7 +9,7 @@
 
 @empty($event)
 <div class="cover-page"> 
-    <img id="cover-img" src="{{ asset('images/' . $url) }}"/>
+    <img id="cover-img" src="{{ asset($img_url) }}"/>
     <div class="overlay-content flex-center">
         <div class="container">
             <div class="content-cover">

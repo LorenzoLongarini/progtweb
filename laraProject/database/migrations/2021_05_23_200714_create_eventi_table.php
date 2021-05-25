@@ -27,7 +27,7 @@ class CreateEventiTable extends Migration
             'Marche', 'Lazio', 'Abruzzo', 'Molise',
             'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna']);
             $table->float('prezzo');
-            $table->text('descBreve', 200);
+            $table->text('descrizione', 200);
             $table->text('programma', 1500)->nullable();
             $table->integer('bigliettiDisp');
             $table->integer('bigliettiVenduti')->unsigned();

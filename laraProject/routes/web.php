@@ -34,17 +34,16 @@ Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::view('/catalog', 'pages.catalog')->name('catalog');
 
-Route::get('/livello2','Livello2Controller@index')
-        ->name('Livello2');
 
-Route::get('/livello2/modifydata', 'Livello2Controller@modifyData')
-        ->name('modifyData');
+/*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
+        ->name('user3-insert');
 
-Route::post('/livello2/storeEvent', 'Livello2Controller@storeData')
-        ->name('modifyData.store');
+Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
+        ->name('user3-insert.store');*/
 
-Route::get('/livello3/aggiungiEvento', 'livello3controller@aggiungiEvento')->name('aggiungiEvento');
+Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
+        ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'livello3controller@aggiungEvento')
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungEvento')
         ->name('aggiungiEvento.store');
 
