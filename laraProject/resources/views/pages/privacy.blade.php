@@ -1,13 +1,13 @@
 @extends('layouts.public')
 
-@section('page-title', 'Informativa sulla privacy e GDPR')
+@section('page-title', 'Privacy & GDPR')
 
 @section('content')
 
 @include('helpers/cover-page', [
         'title' => 'Informativa sulla privacy e GDPR', 
         'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
-        'url' => 'privacy-cover.jpg'])
+        'img_url' => '../storage/app/public/images/covers/privacy-cover.jpg'])
         
 <article class="container block">
     <p>Ultimo aggiornamento: 21 maggio 2021</p>

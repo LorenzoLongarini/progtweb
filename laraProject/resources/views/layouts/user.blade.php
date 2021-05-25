@@ -13,5 +13,4 @@
         @yield('form')
     </section>
 </div>
-
 @endsection

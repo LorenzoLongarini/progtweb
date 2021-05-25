@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Livello3;
+use App\models\Evento;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\EventRequest;
 
 class Livello3Controller extends Controller
 {
@@ -23,11 +26,11 @@ class Livello3Controller extends Controller
 
     }*/
 
-    public function modificaProdotto(){
+    public function modificaEvento(){
 
     }
 
-    public function salvaProdotto(EventRequest $request){
+    public function salvaEvento(EventRequest $request){
 
         if ($request->hasFile('immagine')) {
             $immagine = $request->file('immagine');
