@@ -859,6 +859,10 @@ nav#event-nav ul li{
   .contact-form input, .contact-form select{
       width:100%;
   }
+
+  textarea{
+      resize : none;
+  }
   .wrap-input{
     margin: 0 10px;
   }
