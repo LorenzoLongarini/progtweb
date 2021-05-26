@@ -13,7 +13,7 @@ class CreateUtentiTable extends Migration
      */
     public function up()
     {
-        Schema::create('utenti', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('utenteId')->unsigned()->index();
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();
@@ -22,12 +22,12 @@ class CreateUtentiTable extends Migration
             $table->date('dataNascita')->nullable();
             $table->string('email', 40);
             $table->string('username', 25);
-            $table->string('password', 30);
+            $table->string('password');
             $table->string('telefono', 10);
             $table->string('via', 50);
             $table->string('cap', 7);
             $table->string('città', 80);
-            $table->set('livello', ['cliente', 'organizzatore', 'admin']);        
+            $table->string('role',20)->default('user');        
         });
     }
 
@@ -38,6 +38,6 @@ class CreateUtentiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('utenti');
+        Schema::dropIfExists('users');
     }
 }

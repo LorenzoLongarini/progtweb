@@ -10,7 +10,32 @@
 |
 */
 
-Route::get('/', 'PublicController@index')->name('home');
+Route::get('/organizzatore', 'OrganizzatoreController@index')
+->name('organiz');
+
+Route::get('/admin', 'AdminController@index')
+->name('admin');//->middleware('can:isAdmin');
+
+Route::get('/client', 'ClientController@index')
+->name('client');//->middleware('can:isClient');
+
+// Rotte per l'autenticazione
+Route::get('login', 'Auth\LoginController@showLoginForm')
+->name('login');
+
+Route::post('login', 'Auth\LoginController@authenticate');
+
+Route::post('logout', 'Auth\LoginController@logout')
+->name('logout');
+
+
+
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 
@@ -24,20 +49,13 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::get('/registrati', 'PublicController@registraUser')
-        ->name('registraUser');
-
-Route::post('/registrati', 'PublicController@salvaUser')
-        ->name('registraUser.store');
-
 Route::view('/event', 'pages.event')->name('event');
-Route::view('/evento', 'pages.evento')->name('evento');
 
-Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
+//Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
-Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
+Route::view('/catalog', 'pages.catalog')->name('catalog');
 
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
@@ -49,11 +67,10 @@ Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
 Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
         ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungEvento')
         ->name('aggiungiEvento.store');
 
-/*Route::get('/catalog/event/{{$evento->EventoID}}/modificaEvento', 'Livello3Controller@modificaEvento')
-        ->name('modificaEvento')
-Route::view('/filter', 'pages.prova-search')
-                ->name('prova-search');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
