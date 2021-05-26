@@ -2,20 +2,20 @@
 html{
     --body-bg: #f5f5f5;
     --p-color: #000;
+    --nav-link-color : #1d69cb; 
     --title-color: #1d69cb;
-    --link-color: #0065e9;
+    --link-color: #1d69cb;
     --link-hover-color: #000;
-    --header-bg : #004064;
+    --container-bg: #ffffff;
     --button-default-bg : #ffc100;
     --button-default-text : #000;
     --button-default-bg-hover : #ffd519;
     --button-navuser-bg:#004064;
     --button-navuser-text : #000000;
     --button-navuser-bg-hover: #d3d3d3;
-    --card-bg : #fff;
     --card-box-shadow : #85858530;
     --input-border-color: #c8c8c8;
-    --price : #3d9430;
+    --price-color : #3d9430;
 }
 
 html.dark{
@@ -135,7 +135,8 @@ header#masthead{
     padding: 20px 0;
     z-index: 999;
     height: auto;
-    background-color: var(--header-bg);
+    background-color: var(--container-bg);
+    box-shadow: 0px 2px 3px #00000026;
 }
 
 .divider{
@@ -169,7 +170,7 @@ nav#main-menu ul li, footer ul.footer-links li{
 
 nav#main-menu ul li a.nav-link{
     font-size: 1rem;
-    color: #fff;
+    color: #22303b;
 }
 
 nav#main-menu ul li a.nav-link:hover, nav#main-menu ul li a.nav-link:focus{
@@ -198,7 +199,7 @@ nav#main-menu ul li a.nav-link:hover::after,  nav#main-menu ul li a.nav-link:foc
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 a.login:hover, a.login:focus{
@@ -211,14 +212,14 @@ a.login:hover span, a.login:focus span{
 }
 
 a.login span{
-    color: #fff;
+    color: #22303b;
     text-decoration: none;
     padding-left: 5px;
 }
 
 #masthead .link-icon svg{
     width: 25px;
-    fill:#fff;
+    fill:#22303b;
 }
 
 #masthead .link-icon:hover svg, #masthead .link-icon:focus svg, #theme-toggle.clicked.link-icon svg{
@@ -826,6 +827,13 @@ nav#event-nav ul li{
     justify-content: space-between;
 }
 
+.card-faq{
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px var(--card-box-shadow);
+    padding: 5px 30px;
+    background-color: var(--card-bg);
+}
+
 .card-faq .question-box svg{
     width: 30px;
 }
@@ -860,7 +868,7 @@ nav#event-nav ul li{
       width:100%;
   }
 
-  textarea{
+  .wrap-input textarea{
       resize : none;
   }
   .wrap-input{
@@ -884,4 +892,13 @@ nav#event-nav ul li{
   .errors {
 	color: #e40909;
     font-size: 12px;
+}
+ol#faq-list li{
+    margin: 60px 0;
+}
+
+ol#faq-list li::marker{
+    font-size: 1.6rem;
+    color: red;
+    font-weight: 800;
 }

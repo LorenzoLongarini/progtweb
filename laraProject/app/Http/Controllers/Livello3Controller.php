@@ -43,15 +43,29 @@ class Livello3Controller extends Controller
         }
 
         $evento = new evento;
-        $evento->fill($request->validated());
-        $evento->img_name = $imageName;
+        //$evento->fill($request->validated());
+        $evento->imgName = $imageName;
+        $evento->utenteId = $request->utenteId;
+        $evento->titolo = $request->titolo;
+        $evento->artista = $request->artista;
+        $evento->regione = $request->regione;
+        $evento->luogo = $request->luogo;
+        $evento->data = $request->data;
+        $evento->mapsUrl = $request->mapsUrl;
+        $evento->descrizione = $request->descrizione;
+        $evento->programma = $request->programma;
+        $evento->bigliettiDisp = $request->bigliettiDisp;
+        $evento->prezzo = $request->prezzo;
+        $evento->sconto = $request->sconto;
+        $evento->dataSconto = $request->dataSconto;
         $evento->save();
 
-        if (!is_null($imageName)) {
+        /*if (!is_null($imageName)) {
             $destinationPath = public_path() . '/images/products';
-            $image->move($destinationPath, $imageName);
-        };
-
-        return redirect()->action('livello3controller@index');
+            $imageName->move($destinationPath, $imageName);
+        };*/
+        return view('pages.prova-form');
+        //return response()->action(['redirect' => route('faq')]);
+        //return redirect()->action('pages.prova-form');
     }
 }

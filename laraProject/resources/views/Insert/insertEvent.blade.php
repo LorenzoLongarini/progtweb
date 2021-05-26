@@ -1,6 +1,6 @@
 
 <div class="contact-form">
-    {{  Form::open(array('route' => 'aggiungiEvento.store', /*'id' => nome-funzione*/ 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => ['aggiungiEvento.store', 'Auth::user()->id'], 'id' =>'addproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
@@ -34,7 +34,7 @@
             {{  Form::select ('regione', ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
                 'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
                 'Marche', 'Lazio', 'Abruzzo', 'Molise',
-                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'] )  }}
+                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'], ['Piemonte'] )  }}
         </div>
         <div class="wrap-input">
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
@@ -51,6 +51,7 @@
             {{  Form::label ('utenteId', 'id' /*class-type*/)}}
             {{  Form::text ('utenteId', '' /*class-type*/)  }}
         </div>
+        
         <div class="wrap-input">
             {{  Form::label ('data', 'Data' /*class-type*/)}}
             {{  Form::date ('data', '' /*class-type*/ ) }}
@@ -77,8 +78,8 @@
                 @endif
         </div>
         <div class="wrap-input">
-            {{  Form::label ('location', 'Url' /*class-type*/)}}
-            {{  Form::text ('location', '' /*class-type*/)  }}
+            {{  Form::label ('mapsUrl', 'Url' /*class-type*/)}}
+            {{  Form::text ('mapsUrl', 'a' /*class-type*/)  }}
         </div>
     </div>
 

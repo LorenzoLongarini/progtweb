@@ -30,7 +30,7 @@ class EventOptions extends FormRequest {
     public function rules() {
         return [
             'titolo'=> 'require|max:25',
-            'artista'=>'required|max:25',
+            /*'artista'=>'required|max:25',
             'data'=>'required',
             'luogo'=>'required',
             'prezzo'=>'required|numeric|min:0',
@@ -41,7 +41,7 @@ class EventOptions extends FormRequest {
             'data_sconto'=>'required',
             'maps_url'=>'required',
             'img_name'=>'file|mimes:jpeg,png|max:1024',
-            'stato_evento'=>'required'];
+        'stato_evento'=>'required'*/];
     }
     
     /**
