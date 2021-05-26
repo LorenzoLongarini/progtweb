@@ -338,7 +338,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     height: 100%;
     position: relative;
     z-index: 99;
-    background-color: #0000008a;
+    background-color: #000000ab;
 }
 
 #masthead .container{

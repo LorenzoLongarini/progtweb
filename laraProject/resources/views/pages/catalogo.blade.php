@@ -7,6 +7,7 @@
             'title' => 'Catalogo eventi', 
             'description' => 'Ti offriamo una vasta scelta per trovare il tuo evento preferito',
             'img_url' => '../storage/app/public/images/covers/catalogo-cover.png'])
+
     <div class="container block">
         <div class="event-list">
             <div class="event">
