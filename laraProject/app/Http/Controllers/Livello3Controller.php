@@ -42,7 +42,7 @@ class Livello3Controller extends Controller
 
         $evento = new evento;
         $evento->fill($request->validated());
-        $evento->img_name = $imageName;
+        $evento->imgName = $imageName;
         $evento->save();
 
         if (!is_null($imageName)) {
