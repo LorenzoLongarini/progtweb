@@ -24,9 +24,15 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
+Route::get('/registrati', 'PublicController@registraUser')
+        ->name('registraUser');
+
+Route::post('/registrati', 'PublicController@salvaUser')
+        ->name('registraUser.store');
+
 Route::view('/event', 'pages.event')->name('event');
 
-//Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
+Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 

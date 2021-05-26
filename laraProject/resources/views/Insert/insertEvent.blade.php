@@ -1,6 +1,6 @@
 
 <div class="contact-form">
-    {{  Form::open(array('route' => ['aggiungiEvento.store', 'Auth::user()->id'], 'id' =>'addproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => ['aggiungiEvento.store', 'Auth::user()->id'], 'id' =>'addproduct' , 'files' => true))  }}
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
