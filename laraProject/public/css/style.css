@@ -2,26 +2,26 @@
 html{
     --body-bg: #f5f5f5;
     --p-color: #000;
+    --nav-link-color : #1d69cb; 
     --title-color: #1d69cb;
-    --link-color: #0065e9;
+    --link-color: #1d69cb;
     --link-hover-color: #000;
-    --header-bg : #004064;
+    --container-bg: #ffffff;
     --button-default-bg : #ffc100;
     --button-default-text : #000;
     --button-default-bg-hover : #ffd519;
     --button-navuser-bg:#004064;
     --button-navuser-text : #000000;
     --button-navuser-bg-hover: #d3d3d3;
-    --card-bg : #fff;
     --card-box-shadow : #85858530;
     --input-border-color: #c8c8c8;
-    --price : #3d9430;
+    --price-color : #3d9430;
 }
 
 html.dark{
     --body-bg : #1b1b1b;
     --p-color : #f3f3f3;
-    --title-color: #2f84f1;
+    --title-color: #bbd9ff;
     --button-default-text: #f3f3f3;
     --button-default-bg : #0065e9;
     --button-default-bg-hover : #0046a1;
@@ -135,7 +135,8 @@ header#masthead{
     padding: 20px 0;
     z-index: 999;
     height: auto;
-    background-color: var(--header-bg);
+    background-color: var(--container-bg);
+    box-shadow: 0px 2px 3px #00000026;
 }
 
 .divider{
@@ -146,7 +147,7 @@ header#masthead{
 }
 
 /*Site logo*/
-#site-logo{
+#site-logo-header{
     width: 110px;
 }
 
@@ -169,7 +170,7 @@ nav#main-menu ul li, footer ul.footer-links li{
 
 nav#main-menu ul li a.nav-link{
     font-size: 1rem;
-    color: #fff;
+    color: #22303b;
 }
 
 nav#main-menu ul li a.nav-link:hover, nav#main-menu ul li a.nav-link:focus{
@@ -198,7 +199,7 @@ nav#main-menu ul li a.nav-link:hover::after,  nav#main-menu ul li a.nav-link:foc
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 a.login:hover, a.login:focus{
@@ -211,14 +212,14 @@ a.login:hover span, a.login:focus span{
 }
 
 a.login span{
-    color: #fff;
+    color: #22303b;
     text-decoration: none;
     padding-left: 5px;
 }
 
 #masthead .link-icon svg{
     width: 25px;
-    fill:#fff;
+    fill:#22303b;
 }
 
 #masthead .link-icon:hover svg, #masthead .link-icon:focus svg, #theme-toggle.clicked.link-icon svg{
@@ -261,7 +262,7 @@ button.user-nav-btn.active{
 }
 
 /* Input area */
-input[type="text"]{
+input[type="text"], #user-section input[type="date"], select{
     height: 46px;
     font-size: 1.1rem;
     padding: 8px 10px;
@@ -337,7 +338,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     height: 100%;
     position: relative;
     z-index: 99;
-    background-color: #0000008a;
+    background-color: #000000ab;
 }
 
 #masthead .container{
@@ -352,7 +353,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 
 .container{
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -375,13 +376,12 @@ aside#user-nav ul li{
     display: inline-block;
     width: 1px;
     height: 50vh;
-    margin: 0 40px;
+    margin: 0 80px;
     background-color: var(--p-color);
 }
 
 section#user-section{
     display: inline-block;
-    padding-top: 30px;
 }
 
 #page-content{
@@ -494,11 +494,6 @@ footer ul.footer-links li a:hover{
 }
 section#user-section{
     flex: content;
-    width: fit-content;
-    display:flexbox;
-    margin-top: 0px;
-    padding: 50px;
-    border: 1px #000;
 }
 .eventi-acquistati{
     display: flex;
@@ -515,14 +510,6 @@ section#user-section{
     align-items: center;
     margin-bottom: 10px;
 
-}
-
-#user-section input[type = date]{
-    border: none;
-    height: 46px;
-    font-size: 1.1rem;
-    padding: 8px 10px;
-    border-radius: 15px;
 }
 
 /* Slideshow container */
@@ -840,6 +827,13 @@ nav#event-nav ul li{
     justify-content: space-between;
 }
 
+.card-faq{
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px var(--card-box-shadow);
+    padding: 5px 30px;
+    background-color: var(--card-bg);
+}
+
 .card-faq .question-box svg{
     width: 30px;
 }
@@ -847,8 +841,6 @@ nav#event-nav ul li{
 .card-faq .question-box, .card-faq .answer-box{
     border-radius: 10px;
 }
-<<<<<<< HEAD
-=======
 
 /*inventati*/
 
@@ -859,6 +851,9 @@ nav#event-nav ul li{
 
   }
   
+  .contact-form input[type="file"]{
+      font-size: 1rem;
+  }
   .contact-form {
     width: 100%;
     display: -webkit-box;
@@ -869,18 +864,41 @@ nav#event-nav ul li{
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .contact-form input{
+  .contact-form input, .contact-form select{
       width:100%;
   }
+
+  .wrap-input textarea{
+      resize : none;
+  }
+  .wrap-input{
+    margin: 0 10px;
+  }
+
   .wrap-input label{
       display: block;
+      margin: 5px 0;
+      color: var(--p-color);
   }
 
-  .double-input{
-      flex-basis: 100%;
+  .multiple-input{
+      display: flex;
   }
 
-  .double-input, .single-input{
+  .multiple-input, .single-input{
       margin: 10px 0;
   }
->>>>>>> 9eced42198913dcf43ccea245566bd9a434bc52c
+
+  .errors {
+	color: #e40909;
+    font-size: 12px;
+}
+ol#faq-list li{
+    margin: 60px 0;
+}
+
+ol#faq-list li::marker{
+    font-size: 1.6rem;
+    color: red;
+    font-weight: 800;
+}

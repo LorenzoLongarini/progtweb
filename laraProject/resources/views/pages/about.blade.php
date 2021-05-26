@@ -1,5 +1,7 @@
 @extends('/layouts.public')
 
+@section('page-title', 'Chi siamo')
+
 @section('content')
 
 @include('helpers/cover-page', [

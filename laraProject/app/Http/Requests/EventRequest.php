@@ -27,13 +27,13 @@ class EventRequest extends FormRequest
         return ['titolo' => 'required|max:50',
                 'artista' => 'required|max:50',
                 'luogo' => 'required|max:100',
-                'immagine' => 'image|max:2048',
+                'imgName' => 'image|max:2048',
                 'regione' => 'required',
                 'data' => 'required|date|after:today',
                 'bigliettiDisp' => 'required|min:0',
-                'prezzo' => 'required|float|min:0',
+                'prezzo' => 'required|numeric|min:0',
                 'sconto' => 'integer|min:0|max:100',
-                'descBreve' => 'required|max:200',
+                'descrizione' => 'required|max:200',
                 'programma' => 'required|max:2000'
             
         ];

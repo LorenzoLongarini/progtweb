@@ -1,16 +1,13 @@
 @extends('layouts.public')
 
-@section('catalog-content')
-<main id="page-content">
-    <div class="hero" style="background-image: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.5)),url('{{asset ('/images/catalog-cover.png')}}');background-position:center center;background-size:cover"> 
-        <div class="overlay-content flex-center">
-            <div class="container">
-                <div class="content-hero">
-                <h2>Catalogo</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+@section('page-title', 'Cerca l\'evento che fa per te!')
+
+@section('content')
+    @include('helpers/cover-page', [
+            'title' => 'Catalogo eventi', 
+            'description' => 'Ti offriamo una vasta scelta per trovare il tuo evento preferito',
+            'img_url' => '../storage/app/public/images/covers/catalogo-cover.png'])
+
     <div class="container block">
         <div class="event-list">
             <div class="event">
@@ -143,6 +140,4 @@
             </div>
         </div>
     </div>
-</main>
-    
 @endsection

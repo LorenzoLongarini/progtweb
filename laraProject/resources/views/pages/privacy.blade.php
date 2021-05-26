@@ -6,7 +6,7 @@
 
 @include('helpers/cover-page', [
         'title' => 'Informativa sulla privacy e GDPR', 
-        'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
+        'description' => 'La protezione dei tuoi dati. Informati quali raccogliamo e come li trattiamo',
         'img_url' => '../storage/app/public/images/covers/privacy-cover.jpg'])
         
 <article class="container block">

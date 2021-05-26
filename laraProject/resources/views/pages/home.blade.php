@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('page-title', 'Homepage')
+@section('page-title', 'Eventi in italia')
 
 @section('content')
 
