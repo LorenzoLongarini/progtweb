@@ -45,6 +45,8 @@ Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
 Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento.store');
 
+/*Route::get('/catalog/event/{{$evento->EventoID}}/modificaEvento', 'Livello3Controller@modificaEvento')
+        ->name('modificaEvento')
 Route::view('/filter', 'pages.prova-search')
                 ->name('prova-search');
 

@@ -889,6 +889,10 @@ nav#event-nav ul li{
       margin: 10px 0;
   }
 
+  .errors {
+	color: #e40909;
+    font-size: 12px;
+}
 ol#faq-list li{
     margin: 60px 0;
 }

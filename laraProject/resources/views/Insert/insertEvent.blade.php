@@ -6,11 +6,25 @@
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
-            {{  Form::text ('titolo', 'a' /*class-type*/)  }}
+            {{  Form::text ('titolo', '' /*class-type*/)  }}
+            @if ($errors->first('titolo'))
+                <ul>
+                    @foreach ($errors->get('titolo') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
         <div class="wrap-input">
             {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
-            {{  Form::text ('artista', 'a' /*class-type*/)  }}
+            {{  Form::text ('artista', '' /*class-type*/)  }}
+          @if ($errors->first('artista'))
+                <ul>
+                    @foreach ($errors->get('artista') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
     </div>
         
@@ -24,12 +38,30 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
-            {{  Form::text ('luogo', 'a' /*class-type*/)  }}
+            {{  Form::text ('luogo', '' /*class-type*/)  }}
+            @if ($errors->first('luogo'))
+                <ul>
+                    @foreach ($errors->get('luogo') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        <div class="wrap-input">
+            {{  Form::label ('utenteId', 'id' /*class-type*/)}}
+            {{  Form::text ('utenteId', '' /*class-type*/)  }}
         </div>
         
         <div class="wrap-input">
             {{  Form::label ('data', 'Data' /*class-type*/)}}
-            {{  Form::date ('data', '22/01/1999' /*class-type*/ ) }}
+            {{  Form::date ('data', '' /*class-type*/ ) }}
+            @if ($errors->first('data'))
+                <ul>
+                    @foreach ($errors->get('data') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
     </div>
 
@@ -37,6 +69,13 @@
         <div class="wrap-input">
             {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
             {{  Form::file ('imgName' /*class-type*/)  }}
+            @if ($errors->first('imgName'))
+                <ul>
+                    @foreach ($errors->get('imgName') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
         <div class="wrap-input">
             {{  Form::label ('mapsUrl', 'Url' /*class-type*/)}}
@@ -47,14 +86,28 @@
     <div class="single-input">
         <div class="wrap-input">
             {{  Form::label ('descrizione', 'Descrizione Completa' /*class-type*/)}}
-            {{  Form::textarea ('descrizione', 'a'  /*class-type*/)}}
+            {{  Form::textarea ('descrizione', ''  /*class-type*/)}}
+            @if ($errors->first('descrizione'))
+                <ul class="errors">
+                    @foreach ($errors->get('descrizione') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
     </div>
 
     <div class="single-input">
         <div class="wrap-input">
             {{  Form::label ('programma', 'Programma' /*class-type*/) }}
-            {{  Form::text ('programma', 'a' /*class-type*/) }}
+            {{  Form::text ('programma', '' /*class-type*/) }}
+            @if ($errors->first('programma'))
+                <ul>
+                    @foreach ($errors->get('programma') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
     </div>
     
@@ -62,24 +115,46 @@
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('bigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
-            {{  Form::text ('bigliettiDisp', '3' /*class-type*/) }}
+            {{  Form::text ('bigliettiDisp', '' /*class-type*/) }}
+            @if ($errors->first('bigliettiDisp'))
+                <ul>
+                    @foreach ($errors->get('bigliettiDisp') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
         <div class="wrap-input">
             {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
-            {{  Form::text ('prezzo', '2' /*class-type*/) }}
-        </div>*
+            {{  Form::text ('prezzo', '' /*class-type*/) }}
+            @if ($errors->first('prezzo'))
+                <ul>
+                    @foreach ($errors->get('prezzo') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+
+        </div>
     </div>
 
     <div>
     {{  Form::label ('sconto', 'Sconto' /*class-type*/ )}}
-    {{  Form::text ('sconto', '2' /*class-type*/) }}
-
+    {{  Form::text ('sconto', '' /*class-type*/) }}
+    @if ($errors->first('sconto'))
+                <ul>
+                    @foreach ($errors->get('sconto') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
     </div>
     <div>
 
 
     {{  Form::label ('dataSconto', 'Data inizio sconto')}}
     {{  Form::date ('dataSconto')  }}
+   
 
     </div>
 
