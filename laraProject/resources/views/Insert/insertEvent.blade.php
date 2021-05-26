@@ -1,6 +1,6 @@
 
 <div class="contact-form">
-    {{  Form::open(array('route' => ['aggiungiEvento.store', 'Auth::user()->id'], 'id' =>'addproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => ['aggiungiEvento.store'], 'id' =>'addproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
@@ -31,10 +31,10 @@
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('regione', 'Regione' /*class-type*/)}}
-            {{  Form::select ('regione', ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
+            {{  Form::select ('regione', [NULL,'Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
                 'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
                 'Marche', 'Lazio', 'Abruzzo', 'Molise',
-                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'], ['Piemonte'] )  }}
+                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'])  }}
         </div>
         <div class="wrap-input">
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
@@ -46,10 +46,6 @@
                     @endforeach
                 </ul>
                 @endif
-        </div>
-        <div class="wrap-input">
-            {{  Form::label ('utenteId', 'id' /*class-type*/)}}
-            {{  Form::text ('utenteId', '' /*class-type*/)  }}
         </div>
         
         <div class="wrap-input">

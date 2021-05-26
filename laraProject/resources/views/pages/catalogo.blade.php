@@ -9,6 +9,7 @@
             'img_url' => '../storage/app/public/images/covers/catalogo-cover.png'])
 
     <div class="container block">
+        @include('Insert.filterEvent')
         <div class="event-list">
             <div class="event">
                 <div class="event-left">

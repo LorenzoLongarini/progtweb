@@ -36,4 +36,8 @@ class PublicController extends Controller
         $faqs = new Faq;
         return view('pages.faq')->with('faqs', $faqs::all());
     }
+
+    public function searchForFilters(Request $request){
+        
+    }
 }
