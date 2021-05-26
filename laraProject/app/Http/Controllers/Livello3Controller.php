@@ -27,7 +27,9 @@ class Livello3Controller extends Controller
 
     }*/
 
-    public function modificaEvento(){
+    public function modificaEvento($eventoID){
+        $evento = find::($eventoID);
+        return view ('modifyEvent')->with('event', $evento)
 
     }
 

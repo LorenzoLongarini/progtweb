@@ -880,3 +880,8 @@ nav#event-nav ul li{
   .multiple-input, .single-input{
       margin: 10px 0;
   }
+
+  .errors {
+	color: #e40909;
+    font-size: 10px;
+}
