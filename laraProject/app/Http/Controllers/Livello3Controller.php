@@ -27,16 +27,16 @@ class Livello3Controller extends Controller
 
     }*/
 
-    public function modificaEvento($eventoID){
+    /*public function modificaEvento($eventoID){
         $evento = find::($eventoID);
         return view ('modifyEvent')->with('event', $evento)
 
-    }
+    }*/
 
     public function aggiungiEvento(EventRequest $request){
 
-        if ($request->hasFile('img_name')) {
-            $immagine = $request->file('img_name');
+        if ($request->hasFile('imgName')) {
+            $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
         } else {
             $imageName = NULL;

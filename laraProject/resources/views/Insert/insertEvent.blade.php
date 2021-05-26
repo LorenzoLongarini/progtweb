@@ -8,9 +8,9 @@
             {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
             {{  Form::text ('titolo', '' /*class-type*/)  }}
             @if ($errors->first('titolo'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('titolo') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -19,9 +19,9 @@
             {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
             {{  Form::text ('artista', '' /*class-type*/)  }}
           @if ($errors->first('artista'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('artista') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -40,9 +40,9 @@
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
             {{  Form::text ('luogo', '' /*class-type*/)  }}
             @if ($errors->first('luogo'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('luogo') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -55,9 +55,9 @@
             {{  Form::label ('data', 'Data' /*class-type*/)}}
             {{  Form::date ('data', '' /*class-type*/ ) }}
             @if ($errors->first('data'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('data') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -69,9 +69,9 @@
             {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
             {{  Form::file ('imgName' /*class-type*/)  }}
             @if ($errors->first('imgName'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('imgName') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -101,9 +101,9 @@
             {{  Form::label ('programma', 'Programma' /*class-type*/) }}
             {{  Form::text ('programma', '' /*class-type*/) }}
             @if ($errors->first('programma'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('programma') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -116,9 +116,9 @@
             {{  Form::label ('bigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
             {{  Form::text ('bigliettiDisp', '' /*class-type*/) }}
             @if ($errors->first('bigliettiDisp'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('bigliettiDisp') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -127,9 +127,9 @@
             {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
             {{  Form::text ('prezzo', '' /*class-type*/) }}
             @if ($errors->first('prezzo'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('prezzo') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -141,9 +141,9 @@
     {{  Form::label ('sconto', 'Sconto' /*class-type*/ )}}
     {{  Form::text ('sconto', '' /*class-type*/) }}
     @if ($errors->first('sconto'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('sconto') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -153,7 +153,7 @@
 
     {{  Form::label ('dataSconto', 'Data inizio sconto')}}
     {{  Form::date ('dataSconto')  }}
-    @if 
+   
 
     </div>
 

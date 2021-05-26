@@ -31,7 +31,7 @@ class EventRequest extends FormRequest
                 'regione' => 'required',
                 'data' => 'required|date|after:today',
                 'bigliettiDisp' => 'required|min:0',
-                'prezzo' => 'required|float|min:0',
+                'prezzo' => 'required|numeric|min:0',
                 'sconto' => 'integer|min:0|max:100',
                 'descrizione' => 'required|max:200',
                 'programma' => 'required|max:2000'
