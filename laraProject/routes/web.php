@@ -10,6 +10,29 @@
 |
 */
 
+Route::get('/organizzatore', 'OrganizzatoreController@index')
+->name('organiz');
+
+Route::get('/admin', 'AdminController@index')
+->name('admin');//->middleware('can:isAdmin');
+
+Route::get('/client', 'ClientController@index')
+->name('client');//->middleware('can:isClient');
+
+// Rotte per l'autenticazione
+Route::get('login', 'Auth\LoginController@showLoginForm')
+->name('login');
+
+Route::post('login', 'Auth\LoginController@authenticate');
+
+Route::post('logout', 'Auth\LoginController@logout')
+->name('logout');
+
+
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -47,3 +70,7 @@ Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
 Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungEvento')
         ->name('aggiungiEvento.store');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
