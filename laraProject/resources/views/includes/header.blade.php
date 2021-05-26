@@ -1,7 +1,7 @@
 <header id="masthead">
     <div class="container">
         <div id="left-header">
-            <img id="site-logo" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
+            <img id="site-logo-header" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
             <div class="divider"></div>
             <nav id="main-menu">
                 <ul>
@@ -9,7 +9,7 @@
                         <a class="nav-link" href="{{ route('home') }}">HOME</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ route('catalog')}}">CATALOGO</a>
+                        <a class="nav-link" href="{{ route('catalogo')}}">CATALOGO</a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ route('about')}}">CHI SIAMO</a>
@@ -18,6 +18,7 @@
             </nav>  
         </div>
         <div id="right-header">   
+          
             <div id="search-icon" class="link-icon" title="Cerca nel catalogo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>

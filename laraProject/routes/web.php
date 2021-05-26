@@ -31,12 +31,13 @@ Route::post('/registrati', 'PublicController@salvaUser')
         ->name('registraUser.store');
 
 Route::view('/event', 'pages.event')->name('event');
+Route::view('/evento', 'pages.evento')->name('evento');
 
 Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
-Route::view('/catalog', 'pages.catalog')->name('catalog');
+Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
 
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')

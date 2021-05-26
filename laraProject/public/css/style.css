@@ -21,7 +21,7 @@ html{
 html.dark{
     --body-bg : #1b1b1b;
     --p-color : #f3f3f3;
-    --title-color: #2f84f1;
+    --title-color: #bbd9ff;
     --button-default-text: #f3f3f3;
     --button-default-bg : #0065e9;
     --button-default-bg-hover : #0046a1;
@@ -147,7 +147,7 @@ header#masthead{
 }
 
 /*Site logo*/
-#site-logo{
+#site-logo-header{
     width: 110px;
 }
 
@@ -338,7 +338,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     height: 100%;
     position: relative;
     z-index: 99;
-    background-color: #0000008a;
+    background-color: #000000ab;
 }
 
 #masthead .container{
