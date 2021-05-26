@@ -45,3 +45,6 @@ Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
 Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento.store');
 
+Route::view('/filter', 'pages.prova-search')
+                ->name('prova-search');
+

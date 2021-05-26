@@ -30,12 +30,12 @@ class CreateEventiTable extends Migration
             $table->text('descrizione', 200);
             $table->text('programma', 1500)->nullable();
             $table->integer('bigliettiDisp');
-            $table->integer('bigliettiVenduti')->unsigned();
+            $table->integer('bigliettiVenduti')->nullable();
             $table->tinyInteger('sconto')->nullable();
             $table->date('dataSconto')->nullable();
             $table->string('mapsUrl', 300);
             $table->string('imgName', 150)->nullable();
-            $table->set('statoEvento', ['attivo', 'sospeso']);
+            $table->set('statoEvento', ['attivo', 'sospeso'])->nullable();
             $table->timestamps();
         });
     }
