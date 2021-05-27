@@ -45,7 +45,7 @@ class Livello3Controller extends Controller
         $evento = new evento;
         //$evento->fill($request->validated());
         $evento->imgName = $imageName;
-        $evento->utenteId = $request->utenteId;
+        //$evento->utenteId = $request->utenteId;
         $evento->titolo = $request->titolo;
         $evento->artista = $request->artista;
         $evento->regione = $request->regione;
@@ -58,6 +58,7 @@ class Livello3Controller extends Controller
         $evento->prezzo = $request->prezzo;
         $evento->sconto = $request->sconto;
         $evento->dataSconto = $request->dataSconto;
+        $evento->bigliettiVenduti = 0;
         $evento->save();
 
         /*if (!is_null($imageName)) {

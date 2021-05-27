@@ -23,15 +23,15 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return ['username' =>'required|unique|max:25';
+        return ['username' =>'required|unique:users,username|max:25';
                 'password' =>'required|min:7|max:30|confirmed';
                 'nome' =>'max:50|string';
                 'cognome' =>'max:50|string';
                 'ragioneSociale' => 'max:40';
-                'ivaFiscale' =>'required|size:15';
+                'ivaFiscale' =>'required|unique:users,ivaFiscale|size:15';
                 'dataNascita' =>'date|before:today';
-                'email'=> 'required|unique|email|max:40';
-                'telefono'=> 'required|numeric|size:10';
+                'email'=> 'required|unique:users,email|email|max:40';
+                'telefono'=> 'required|numeric|unique:users,telefono|size:10';
                 'via'=>'required|max:50';
                 'cap'=>'required|numeric|max:7';
                 'città'=>'required|string|max:80';

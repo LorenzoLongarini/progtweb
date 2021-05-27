@@ -9,135 +9,28 @@
             'img_url' => '../storage/app/public/images/covers/catalogo-cover.png'])
 
     <div class="container block">
-        <div class="event-list">
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-left">
-                    <div class="img-event">
-                        <h3>Immagine</h3>
-                    </div>
-                    <div class="event-info flex-columns">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
-                    </div>
-                </div>
-                <div class="event-right">
-                    <h4 class="price">€ 32,90</h4>
-                    <button class="btn default-btn">VEDI EVENTO</button>
-                </div>
-            </div>
-        </div>
+        @include('Insert.filterEvent')
+
+        @isset($events)
+            <div class="event-list">
+                @foreach($events as $event)
+                    <div class="event">
+                        <div class="event-left">
+                            <div class="img-event">
+                                @include('helpers.img-event', ['imgName' => $event->imgName])
+                            </div>
+                            <div class="event-info flex-columns">
+                                <h2>{{ $event->titolo }}</h2>
+                                <h4>{{ $event->data }}</h4>
+                                <h4>{{ $event->luogo }}, {{ $event ->regione }}</h4>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h4 class="price">{{ $event->prezzo }}</h4>
+                            <button class="btn default-btn">VEDI EVENTO</button>
+                        </div>
+                    </div>           
+            @endforeach
+        @endisset
     </div>
 @endsection

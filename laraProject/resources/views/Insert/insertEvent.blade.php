@@ -1,6 +1,6 @@
 
 <div class="contact-form">
-    {{  Form::open(array('route' => ['aggiungiEvento.store', 'Auth::user()->id'], 'id' =>'addproduct' , 'files' => true))  }}
+    {{  Form::open(array('route' => ['aggiungiEvento.store'], 'id' =>'addproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
@@ -53,10 +53,6 @@
                     @endforeach
                 </ul>
                 @endif
-        </div>
-        <div class="wrap-input">
-            {{  Form::label ('utenteId', 'id' /*class-type*/)}}
-            {{  Form::text ('utenteId', '' /*class-type*/)  }}
         </div>
         
         <div class="wrap-input">
