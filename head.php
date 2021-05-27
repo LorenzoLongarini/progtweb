@@ -11,6 +11,7 @@
     <link href="./style/style.css" rel="stylesheet" type="text/css"/>
     <link href="./style/stylealex.css" rel="stylesheet" type="text/css"/>
     <link href="./style/stylelollo.css" rel="stylesheet" type="text/css"/>
+    <link href="./style-pagamento.css" rel="stylesheet" type="text/css"/>
     <link href="./slider.css" rel="stylesheet" type="text/css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
