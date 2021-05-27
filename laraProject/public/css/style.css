@@ -952,3 +952,13 @@ ol#faq-list li::marker{
 .login-btn:active {
 	transform: scale(0.95);
 }
+
+#user-nav .user-nav-link.clicked{
+    background-color: red;
+}
+#user-section .form.actived{
+    display: block;
+}
+#user-section .form{
+    display: none;
+}
