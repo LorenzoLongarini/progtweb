@@ -12,20 +12,20 @@ class Livello3Controller extends Controller
 {
     protected $_livello3Model;
 
-    /*public function __construct(){
-        $this->_livello3Model = new livello_3;
+    public function __construct(){
+        $this->_livello3Model = new Livello3;
 
-    }*/
+    }
 
     public function index() {
         return view ('pages.prova-form');
     }
 
-    /*public function aggiungiProdotto(){
+    public function aggiungiEvento(){
 
-        return view ('aggiungiProdotto');
+        return view ('pages.prova-form');
 
-    }*/
+    }
 
     /*public function modificaEvento($eventoID){
         $evento = find::($eventoID);
@@ -33,8 +33,8 @@ class Livello3Controller extends Controller
 
     }*/
 
-    public function aggiungiEvento(EventRequest $request){
-
+    public function salvaEvento(EventRequest $request){
+      //   $UserID = $this->_livello3Model->getUserID();
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();

@@ -848,7 +848,8 @@ nav#event-nav ul li{
 
   }
   
-  .contact-form input[type="file"]{
+  
+  .form input[type="file"]{
       font-size: 1rem;
   }
   .contact-form {
@@ -865,12 +866,21 @@ nav#event-nav ul li{
       width:100%;
   }
 
+  .form-blank{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}   
+ 
   .wrap-input textarea{
       resize : none;
   }
   .wrap-input{
     margin: 0 10px;
   }
+
 
   .wrap-input label{
       display: block;
@@ -916,6 +926,13 @@ ol#faq-list li::marker{
   
     align-items: center;
 }
+
+.event .img-event img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+}
+
 
 
 .login-btn{
