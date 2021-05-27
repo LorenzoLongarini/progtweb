@@ -1,21 +1,21 @@
 <div class="form">
-    {{  Form::open(array('route' => ['ricerca'], 'id' =>'filtro' , 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => ['cerca'], 'id' =>'filtri-ricerca'))  }}
    
     <div class="multiple-input">
         <div class="wrap-input">
-            {{  Form::label ('titolo', 'Nome Evento' /*class-type*/) }}
-            {{  Form::text ('titolo', old('titolo') /*class-type*/)  }}
+            {{  Form::label ('titolo', 'Nome Evento') }}
+            {{  Form::text ('titolo', old('titolo'))  }}
         </div>
         <div class="wrap-input">
-            {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
-            {{  Form::text ('artista' /*class-type*/)  }}
+            {{  Form::label ('artista', 'Artista')  }}
+            {{  Form::text ('artista')  }}
         </div>
         <div class="wrap-input">
-            {{  Form::label ('descrizione', 'Descrizione' /*class-type*/) }}
-            {{  Form::text ('descrizione' /*class-type*/)  }}
+            {{  Form::label ('descrizione', 'Descrizione') }}
+            {{  Form::text ('descrizione')  }}
         </div>
         <div class="wrap-input">
-            {{  Form::label ('regione', 'Regione' /*class-type*/)}}
+            {{  Form::label ('regione', 'Regione')}}
             {{  Form::select ('regione', ['' => '', 'Aosta' => 'Aosta', 
                 'Piemonte' => 'Piemonte', 'Liguria' => 'Liguria', 'Lombardia' => 'Lombardia', 
                 'Trentino Alto Adige' => 'Trentino Alto Adige', 'Friuli Venezia Giulia' => 'Friuli Venezia Giulia', 
@@ -26,7 +26,7 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('data', 'Data')}}
-            {{  Form::date ('data','', array('min' => Evento::getMinDate(), 'max' => Evento::getMaxdate()))}}
+            {{  Form::date ('data','', array('min' => date('Y-m-d'))) }}
         </div>
     </div>
     

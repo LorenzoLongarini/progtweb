@@ -28,13 +28,8 @@ Route::post('login', 'Auth\LoginController@authenticate');
 Route::post('logout', 'Auth\LoginController@logout')
 ->name('logout');
 
-
-
-
-
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home')->name('home');
 });
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
@@ -49,13 +44,15 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::view('/event', 'pages.evento')->name('event');
+Route::view('/evento', 'pages.evento')->name('evento');
 
 //Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
+Route::post('/catalogo/cerca', 'PublicController@searchForFilters')->name('cerca');
+
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
-Route::view('/catalog', 'pages.catalogo')->name('catalog');
+Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
 
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
@@ -64,13 +61,16 @@ Route::view('/catalog', 'pages.catalogo')->name('catalog');
 Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
         ->name('user3-insert.store');*/
 
-Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
+Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungEvento')
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
         ->name('aggiungiEvento.store');
 
+route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
+
+route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'publicController@index')->name('home');
