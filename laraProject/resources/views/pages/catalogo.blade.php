@@ -21,7 +21,8 @@
                             </div>
                             <div class="event-info flex-columns">
                                 <h2>{{ $event->titolo }}</h2>
-                                <h4>{{ $event->data }}</h4>
+                                @include('helpers.date-helper', ['eventDate' => $event->data])
+                            
                                 <h4>{{ $event->luogo }}, {{ $event ->regione }}</h4>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 <header id="masthead">
-    <div class="container">
+    <div class="#" style="display: flex;justify-content:space-between">
         <div id="left-header">
             <img id="site-logo-header" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
             <div class="divider"></div>

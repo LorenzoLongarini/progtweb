@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Faq;
 use App\Models\Evento;
+use App\Http\Requests\UserRequest;
 
 class PublicController extends Controller
 {
@@ -35,6 +36,18 @@ class PublicController extends Controller
      */
     public function showSiteFaqs(){
         return view('pages.faq')->with('faqs', Faq::all());
+    }
+
+    public function registraUser(){
+        return view('pages.registrazione');
+    }
+
+    public function salvaUser(UserRequest $request){
+        $user = new User;
+        $user->fill($request->validated());
+        
+        return view('home');
+
     }
 
     public function showCatalogo(){

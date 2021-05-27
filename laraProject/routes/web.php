@@ -10,13 +10,13 @@
 |
 */
 
-Route::get('/organizzatore', 'OrganizzatoreController@index')
+Route::get('/user-level3', 'OrganizzatoreController@index')
 ->name('organiz');
 
-Route::get('/admin', 'AdminController@index')
+Route::get('/user-level4', 'AdminController@index')
 ->name('admin');//->middleware('can:isAdmin');
 
-Route::get('/client', 'ClientController@index')
+Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
 // Rotte per l'autenticazione
@@ -34,7 +34,7 @@ Route::post('logout', 'Auth\LoginController@logout')
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home')->name('home');
 });
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
@@ -64,13 +64,16 @@ Route::view('/catalog', 'pages.catalogo')->name('catalog');
 Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
         ->name('user3-insert.store');*/
 
-Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
+Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungEvento')
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
         ->name('aggiungiEvento.store');
 
+route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
+
+route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'publicController@index')->name('home');
