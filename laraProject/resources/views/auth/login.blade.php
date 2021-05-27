@@ -30,7 +30,7 @@
         {{ Form::submit('Accedi',['class'=> 'login-btn']) }}<br>
         {{ Form::close() }}<br>
         <span>Nuovo utente?</span>
-        <a href="#">Registrati</a>
+        <a href= 'registraUser' >Registrati</a>
     </div>
 </div>
 </div>
