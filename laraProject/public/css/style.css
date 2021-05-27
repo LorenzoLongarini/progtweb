@@ -849,6 +849,7 @@ nav#event-nav ul li{
 
   }
   
+  
   .form input[type="file"]{
       font-size: 1rem;
   }
@@ -862,12 +863,21 @@ nav#event-nav ul li{
       width:100%;
   }
 
+  .form-blank{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}   
+ 
   .wrap-input textarea{
       resize : none;
   }
   .wrap-input{
     margin: 0 10px;
   }
+
 
   .wrap-input label{
       display: block;
@@ -902,3 +912,5 @@ ol#faq-list li::marker{
     object-fit: cover;
     border-radius: 15px 0px 0px 15px;
 }
+
+

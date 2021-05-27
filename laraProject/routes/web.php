@@ -58,13 +58,16 @@ Route::get('/catalogo', 'PublicController@showCatalogo')->name('catalogo');
 Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
         ->name('user3-insert.store');*/
 
-Route::get('/livello3/aggiungiEvento', 'Livello3Controller@index')
+Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
         ->name('aggiungiEvento.store');
 
+route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
+
+route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'publicController@index')->name('home');
