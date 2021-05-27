@@ -262,7 +262,7 @@ button.user-nav-btn.active{
 }
 
 /* Input area */
-input[type="text"],input[type="date"], select{
+input[type="text"], #user-section input[type="date"],input[type=password], select{
     height: 46px;
     font-size: 1.1rem;
     padding: 8px 10px;
@@ -453,6 +453,8 @@ footer ul.footer-links li a:hover{
 .img-event{
     width: 250px;
     height: 170px;
+    border-radius: 15px 0 0 15px;
+    border: 2px solid grey;
 }
 
 .title-section{
@@ -716,14 +718,7 @@ nav#event-nav ul li{
     z-index: 1;
 }
 
-.login-form-container{
-    padding: 200px 400px;
-}
 
-.login-form{
-    padding: 100px 150px;
-    border: 2px solid grey;
-}
 /* Slideshow container */
 .slideshow-container {
     width: 100%;
@@ -849,16 +844,20 @@ nav#event-nav ul li{
 
   }
   
-  .form input[type="file"]{
+  .contact-form input[type="file"]{
       font-size: 1rem;
   }
-  .form {
+  .contact-form {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .form input, .form select{
+  .contact-form input, .contact-form select{
       width:100%;
   }
 
@@ -896,9 +895,40 @@ ol#faq-list li::marker{
     color: red;
     font-weight: 800;
 }
+/* Alex */
+.login-container{
+    border: 2px solid red;
+    display: flex;
+   padding: 100px ;
+   justify-content: center;
+   
+}
+.login-form{
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid grey;
+    padding: 150px 50px;
+    display: inherit;
+    flex-direction: column;
+  
+    align-items: center;
+}
 
-.event .img-event img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px 0px 0px 15px;
+
+.login-btn{
+    margin-left: 40px;
+    border-radius: 20px;
+	border: 1px solid #22303b;
+	background-color: #22303b;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+.login-btn:active {
+	transform: scale(0.95);
 }
