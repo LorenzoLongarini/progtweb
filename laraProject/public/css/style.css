@@ -899,7 +899,7 @@ ol#faq-list li::marker{
 .login-container{
     border: 2px solid red;
     display: flex;
-   padding: 150px;
+   padding: 100px ;
    justify-content: center;
    
 }
@@ -907,7 +907,7 @@ ol#faq-list li::marker{
     background-color: white;
     border-radius: 10px;
     border: 2px solid grey;
-    padding: 200px 50px;
+    padding: 150px 50px;
     display: inherit;
     flex-direction: column;
   
