@@ -453,8 +453,6 @@ footer ul.footer-links li a:hover{
 .img-event{
     width: 250px;
     height: 170px;
-    border-radius: 15px 0 0 15px;
-    border: 2px solid grey;
 }
 
 .title-section{
@@ -901,4 +899,10 @@ ol#faq-list li::marker{
     font-size: 1.6rem;
     color: red;
     font-weight: 800;
+}
+
+.event .img-event img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
 }
