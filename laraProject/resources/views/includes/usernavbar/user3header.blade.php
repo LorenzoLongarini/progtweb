@@ -9,7 +9,7 @@
                         <a class="nav-link" href="{{ route('home') }}">HOME</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ route('catalog')}}">CATALOGO</a>
+                        <a class="nav-link" href="{{ route('catalogo')}}">CATALOGO</a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ route('about')}}">CHI SIAMO</a>

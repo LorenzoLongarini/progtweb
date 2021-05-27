@@ -1,5 +1,5 @@
 
-<div class="contact-form">
+<div class="form">
     {{  Form::open(array(['route' => 'modificaEvento.update', $evento->EventoID ], /*'id' => nome-funzione*/ 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Informazioni generali</h2>

@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 //use illuminate\validation\rule;
 
-class EventRequest extends FormRequest
+class SearchRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,16 +26,8 @@ class EventRequest extends FormRequest
     {
         return ['titolo' => 'required|max:50',
                 'artista' => 'required|max:50',
-                'luogo' => 'required|max:100',
-                'imgName' => 'image|max:2048',
-                'regione' => 'required|not_in:0',
-                'data' => 'required|date|after:today',
-                'bigliettiDisp' => 'required|integer|min:0',
-                'prezzo' => 'required|numeric|min:0',
-                'sconto' => 'integer|min:0|max:100',
-                'descrizione' => 'required|max:200',
-                'programma' => 'required|max:2000'
-            
+                'descrizione' => 'required|max:50',
+                'data' => 'required|date|after:today',      
         ];
     }
 }

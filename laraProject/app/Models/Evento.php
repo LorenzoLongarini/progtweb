@@ -10,4 +10,16 @@ class Evento extends Model
     protected $primaryKey = 'eventoId';
     protected $guarded = ['eventoId'];
     public $timestamps = false;
+
+    public static function getRegioniAsOptions(){
+        return Evento::where('');
+    }
+
+    public static function getMinDate(){
+        return Evento::where('data', '>=')->min('data');
+    }
+
+    public static function getMaxDate(){
+        return Evento::all()->max('data');
+    }
 }
