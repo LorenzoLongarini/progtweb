@@ -16,10 +16,10 @@ class CreateEventiTable extends Migration
         Schema::create('eventi', function (Blueprint $table) {
             $table->bigIncrements('eventoId')->unsigned()->index();
             //$table->bigInteger('utenteId')->unsigned()->index();
-           // $table->foreign('utenteId')->references('utenteId')->on('utenti');
+            //$table->foreign('utenteId')->references('utenteId')->on('utenti');
             $table->string('titolo', 50);
             $table->string('artista', 50);
-            $table->date('data');
+            $table->dateTime('data');
             $table->string('luogo', 150);
             $table->set('regione', 
             ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',

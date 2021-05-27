@@ -9,6 +9,7 @@ class Evento extends Model
     protected $table = 'eventi';
     protected $primaryKey = 'eventoId';
     protected $guarded = ['eventoId'];
+    protected $dateFormat = 'd-m-Y';
     public $timestamps = false;
 
     public static function getRegioniAsOptions(){

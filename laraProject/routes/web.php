@@ -29,7 +29,7 @@ Route::post('logout', 'Auth\LoginController@logout')
 ->name('logout');
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('pages.home')->name('home');
 });
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
