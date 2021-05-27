@@ -488,9 +488,11 @@ footer ul.footer-links li a:hover{
 }
 
 /* Style Lollo*/
-
-.container.user{
-    padding-top: 40px;
+.container{
+    padding-top: 100px;
+}
+.user{
+    padding-top: 100px;
 }
 section#user-section{
     flex: content;
@@ -907,7 +909,6 @@ ol#faq-list li::marker{
 }
 /* Alex */
 .login-container{
-    border: 2px solid red;
     display: flex;
    padding: 100px ;
    justify-content: center;

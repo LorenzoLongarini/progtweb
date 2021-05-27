@@ -50,7 +50,7 @@ class Livello3Controller extends Controller
         $evento->artista = $request->artista;
         $evento->regione = $request->regione;
         $evento->luogo = $request->luogo;
-        $evento->data = $request->data;
+        $evento->data = $request->data . " " . $request->orario;
         $evento->mapsUrl = $request->mapsUrl;
         $evento->descrizione = $request->descrizione;
         $evento->programma = $request->programma;

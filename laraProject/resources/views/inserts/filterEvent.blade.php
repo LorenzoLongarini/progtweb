@@ -26,7 +26,7 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('data', 'Data')}}
-            {{  Form::date ('data','', array('min' => Evento::getMinDate(), 'max' => Evento::getMaxdate()))}}
+            {{  Form::date ('data','', array('min' => date('Y-m-d'))) }}
         </div>
     </div>
     

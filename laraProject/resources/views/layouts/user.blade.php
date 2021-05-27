@@ -4,7 +4,7 @@
 
 <div class="container user flex-rows">
     <aside id="user-nav">
-        @include('includes.usernavbar.user3nav')
+        @yield('user-nav')
     </aside>
     
     <div class="user-nav-separator"></div>
@@ -13,4 +13,7 @@
         @yield('form')
     </section>
 </div>
-@endsection
+
+
+</body>
+</html>

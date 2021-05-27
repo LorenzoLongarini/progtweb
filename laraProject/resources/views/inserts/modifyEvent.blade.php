@@ -59,6 +59,18 @@
                 </ul>
                 @endif
         </div>
+
+        <div class="wrap-input">
+            {{  Form::label ('orario', 'Orario' /*class-type*/)}}
+            {{  Form::time ('orario', '') }}
+            @if ($errors->first('orario'))
+                <ul>
+                    @foreach ($errors->get('orario') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
     </div>
 
     <div class="single-input">

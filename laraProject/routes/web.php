@@ -10,13 +10,13 @@
 |
 */
 
-Route::get('/organizzatore', 'OrganizzatoreController@index')
+Route::get('/user-level3', 'OrganizzatoreController@index')
 ->name('organiz');
 
-Route::get('/admin', 'AdminController@index')
+Route::get('/user-level4', 'AdminController@index')
 ->name('admin');//->middleware('can:isAdmin');
 
-Route::get('/client', 'ClientController@index')
+Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
 // Rotte per l'autenticazione
@@ -34,7 +34,7 @@ Route::post('logout', 'Auth\LoginController@logout')
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home')->name('home');
 });
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
