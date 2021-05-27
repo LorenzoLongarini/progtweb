@@ -49,13 +49,13 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::view('/event', 'pages.event')->name('event');
+Route::view('/event', 'pages.evento')->name('event');
 
 //Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
-Route::view('/catalog', 'pages.catalog')->name('catalog');
+Route::view('/catalog', 'pages.catalogo')->name('catalog');
 
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
