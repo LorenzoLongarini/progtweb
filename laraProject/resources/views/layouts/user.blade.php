@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('includes.head')
-@include('includes.usernavbar.userAuthHeader')
 <body>
-<div class="container  flex-rows" >
-    <aside id="user-nav" style="">
-        @include('includes.usernavbar.user3nav')
-    </aside>
+    @include('includes.usernavbar.userAuthHeader')
+    <div class="container  flex-rows" >
+        <aside id="user-nav" style="">
+            
+           @yield('usernavbar')
+        </aside>
+        
+        <div class="user-nav-separator"></div>
     
-    <div class="user-nav-separator"></div>
-
-    <section style="width: fit-content" id="user-section">
-        @yield('form')
-    </section>
-</div>
-
-
+        <section style="width: fit-content" id="user-section">
+            @yield('form')
+        </section>
+    </div>
 </body>
 </html>
+
+
+
