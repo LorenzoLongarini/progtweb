@@ -28,7 +28,7 @@ class EventRequest extends FormRequest
                 'artista' => 'required|max:50',
                 'luogo' => 'required|max:100',
                 'imgName' => 'image|max:2048',
-                'regione' => 'required',
+                'regione' => 'required|not_in:0',
                 'data' => 'required|date|after:today',
                 'bigliettiDisp' => 'required|integer|min:0',
                 'prezzo' => 'required|numeric|min:0',

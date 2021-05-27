@@ -31,10 +31,17 @@
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('regione', 'Regione' /*class-type*/)}}
-            {{  Form::select ('regione', [NULL,'Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
+            {{  Form::select ('regione', ['','Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
                 'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
                 'Marche', 'Lazio', 'Abruzzo', 'Molise',
-                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'])  }}
+                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'], '' )  }}
+                @if ($errors->first('regione'))
+                <ul>
+                    @foreach ($errors->get('regione') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
         <div class="wrap-input">
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
