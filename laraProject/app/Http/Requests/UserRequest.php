@@ -30,7 +30,7 @@ class UserRequest extends FormRequest
                 'ragioneSociale' => 'max:40',
                 'ivaFiscale' =>'required|unique:users,ivaFiscale|size:15',
                 'dataNascita' =>'date|before:today',
-                'email'=> 'required|unique:users,email|email|max:40',
+                'email'=> 'required|email|unique:users,email|max:40',
                 'telefono'=> 'required|numeric|unique:users,telefono|size:10',
                 'via'=>'required|max:50',
                 'cap'=>'required|numeric|max:7',
