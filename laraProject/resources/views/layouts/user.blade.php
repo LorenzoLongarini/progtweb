@@ -1,9 +1,10 @@
-@extends('layouts.root')
-
-@section('page')
-
-<div class="container user flex-rows">
-    <aside id="user-nav">
+<!DOCTYPE html>
+<html lang="en">
+@include('includes.head')
+@include('includes.usernavbar.userAuthHeader')
+<body>
+<div class="container  flex-rows" >
+    <aside id="user-nav" style="">
         @include('includes.usernavbar.user3nav')
     </aside>
     
@@ -13,4 +14,7 @@
         @yield('form')
     </section>
 </div>
-@endsection
+
+
+</body>
+</html>
