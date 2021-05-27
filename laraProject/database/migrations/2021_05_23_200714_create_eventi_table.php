@@ -35,7 +35,7 @@ class CreateEventiTable extends Migration
             $table->date('dataSconto')->nullable();
             $table->string('mapsUrl', 300);
             $table->string('imgName', 150)->nullable();
-            $table->enum('statoEvento', ['attivo', 'sospeso']);
+            $table->enum('statoEvento', ['attivo', 'sospeso', 'chiuso']);
             $table->timestamps();
         });
     }

@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('form')
-@include('insert.filterEvent')
+@include('inserts.filterEvent')
 @endsection
 
 @yield('form')

@@ -1,5 +1,5 @@
 
-<div class="contact-form">
+<div class="form">
     {{  Form::open(array('route' => 'registraUser.store', 'id' =>'addproduct' , 'files' => true))  }}
    
     <h2>Modulo Registrazione</h2>

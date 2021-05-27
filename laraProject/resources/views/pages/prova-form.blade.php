@@ -1,5 +1,5 @@
 @extends('layouts.user')
 
 @section('form')
-@include('insert.insertEvent')
+@include('inserts.insertEvent')
 @endsection

@@ -1,4 +1,4 @@
-<div class="contact-form">
+<div class="form">
     {{  Form::open(array('route' => ['ricerca'], 'id' =>'filtro' , 'files' => true /*'class' => some-bollocks*/))  }}
    
     <div class="multiple-input">
@@ -22,11 +22,11 @@
                 'Veneto'  => 'Veneto', 'Emilia Romagna' => 'Emilia Romagna', 'Toscana' => 'Toscana', 
                 'Umbria' => 'Umbria', 'Marche' => 'Marche', 'Lazio' => 'Lazio', 'Abruzzo' => 'Abruzzo', 
                 'Molise' => 'Molise', 'Puglia' => 'Puglia', 'Campania' => 'Campania', 'Calabria' => 'Calabria', 
-                'Basilicata' => 'Basilicata', 'Sicilia' => 'Sicilia', 'Sardegna' => 'Sardegna'])  }}
+                'Basilicata' => 'Basilicata', 'Sicilia' => 'Sicilia', 'Sardegna' => 'Sardegna']) }}
         </div>
         <div class="wrap-input">
             {{  Form::label ('data', 'Data')}}
-            {{  Form::date ('data', date('Y-m-d'))}}
+            {{  Form::date ('data','', array('min' => Evento::getMinDate(), 'max' => Evento::getMaxdate()))}}
         </div>
     </div>
     
