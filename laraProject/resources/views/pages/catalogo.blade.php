@@ -9,7 +9,7 @@
             'img_url' => '../storage/app/public/images/covers/catalogo-cover.png'])
 
     <div class="container block">
-        @include('Insert.filterEvent')
+        @include('inserts.filterEvent')
 
         @isset($events)
             <div class="event-list">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="event-right">
-                            <h4 class="price">{{ $event->prezzo }}</h4>
+                            <h4 class="price">€ {{ $event->prezzo }}</h4>
                             <button class="btn default-btn">VEDI EVENTO</button>
                         </div>
                     </div>           

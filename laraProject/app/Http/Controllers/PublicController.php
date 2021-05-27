@@ -42,8 +42,7 @@ class PublicController extends Controller
     }
 
     public function searchForFilters(Request $request){
-        $eventiFiltrati = Evento::query()
-                        ->where('titolo', 'LIKE' , '%' . $request->titolo . '%')
+        $eventiFiltrati = Evento::where('titolo', 'LIKE' , '%' . $request->titolo . '%')
                         ->where('artista', 'LIKE', '%' . $request->artista . '%')
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
                         ->where('regione', 'LIKE', '%' . $request->regione . '%')
