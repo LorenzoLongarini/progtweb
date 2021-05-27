@@ -1,6 +1,6 @@
 
 <div class="form">
-    {{  Form::open(array('route' => ['aggiungiEvento.store'], /*'id' =>''*/ , 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => ['aggiungiEvento.store'], 'id' =>'dashborard-livello3' , 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
@@ -61,18 +61,6 @@
             @if ($errors->first('data'))
                 <ul>
                     @foreach ($errors->get('data') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-        </div>
-
-        <div class="wrap-input">
-            {{  Form::label ('orario', 'Orario' /*class-type*/)}}
-            {{  Form::time ('orario', '', array('min' => date('Y-m-d'))) }}
-            @if ($errors->first('orario'))
-                <ul>
-                    @foreach ($errors->get('orario') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>

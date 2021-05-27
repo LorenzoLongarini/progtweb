@@ -1,5 +1,5 @@
 <header id="masthead">
-    <div class="container">
+    <div class="#" style="display: flex;justify-content:space-between">
         <div id="left-header">
             <img id="site-logo-header" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
             <div class="divider"></div>
@@ -9,7 +9,7 @@
                         <a class="nav-link" href="{{ route('home') }}">HOME</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ route('catalogo')}}">CATALOGO</a>
+                        <a class="nav-link" href="{{ route('catalog')}}">CATALOGO</a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ route('about')}}">CHI SIAMO</a>

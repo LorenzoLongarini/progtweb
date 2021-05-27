@@ -9,7 +9,7 @@ class OrganizzatoreController extends Controller {
     }
 
     public function index() {
-        return view('organizzatore');
+        return view('pages.user-level3');
     }
 
 }

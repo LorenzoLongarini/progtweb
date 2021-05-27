@@ -13,4 +13,7 @@
         @yield('form')
     </section>
 </div>
-@endsection
+
+
+</body>
+</html>
