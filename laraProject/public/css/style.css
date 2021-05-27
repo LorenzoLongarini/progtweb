@@ -262,7 +262,7 @@ button.user-nav-btn.active{
 }
 
 /* Input area */
-input[type="text"], #user-section input[type="date"], select{
+input[type="text"],input[type="date"], select{
     height: 46px;
     font-size: 1.1rem;
     padding: 8px 10px;
@@ -849,20 +849,16 @@ nav#event-nav ul li{
 
   }
   
-  .contact-form input[type="file"]{
+  .form input[type="file"]{
       font-size: 1rem;
   }
-  .contact-form {
+  .form {
     width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .contact-form input, .contact-form select{
+  .form input, .form select{
       width:100%;
   }
 
