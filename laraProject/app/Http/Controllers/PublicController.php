@@ -74,8 +74,13 @@ class PublicController extends Controller
                         ->where('artista', 'LIKE', '%' . $request->artista . '%')
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
                         ->where('regione', 'LIKE', '%' . $request->regione . '%')
-                        ->where('data', '>=', $request->data)->get();
+                        ->where('data', '>=', $request->data)->get(['eventoId', 'titolo', 'data', 'luogo', 'prezzo', 'imgName']);
                         
         return view('pages.catalogo')->with('events', $eventiFiltrati);
+    }
+
+    public function mostraEvento($id){
+        $evento = Evento::where('eventoId', $id)->get()->first();
+        return view('pages.evento')->with('event', $evento);
     }
 }
