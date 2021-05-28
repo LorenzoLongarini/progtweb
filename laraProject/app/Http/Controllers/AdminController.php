@@ -17,6 +17,17 @@ public function index(){
 
 }
 
+    public function inserisciFaq(){
+        return view ('pages.inserisciFaq');
+    }
 
+    public function salvaFaq(FaqRequest $request){
+        $faq = new Faq;
+        $faq->domanda = $request->domanda;
+        $faq->risposta = $request->risposta;
+        $faq->save();
+
+        return view('faq');
+    }
 
 }

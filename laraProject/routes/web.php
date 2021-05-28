@@ -54,6 +54,10 @@ Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
 
+Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
+
+Route::post('/faq/insert', 'AdminController@salvaFaq')->name('salvaFaq');
+
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
         ->name('user3-insert');
