@@ -60,7 +60,7 @@ Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
 
 Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
 
-Route::post('/faq/insert', 'AdminController@salvaFaq')->name('salvaFaq');
+Route::post('/faq/insert', 'AdminController@salvaFaq')->name('inserisciFaq.store');
 
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')

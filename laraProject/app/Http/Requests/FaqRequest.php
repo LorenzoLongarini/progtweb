@@ -23,8 +23,8 @@ class FaqRequest extends FormRequest
      */
     public function rules()
     {
-        return ['domanda' => 'required|max:200';
-                'risposta' => 'required|max:400';
+        return ['domanda' => 'required|max:200',
+                'risposta' => 'required|max:400',
                 
         ];
     }

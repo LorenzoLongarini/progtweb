@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\FaqRequest;
+use App\models\Faq;
 
 class AdminController extends Controller {
 
@@ -27,7 +29,7 @@ public function index(){
         $faq->risposta = $request->risposta;
         $faq->save();
 
-        return view('faq');
+        return redirect()->route('faq');
     }
 
 }
