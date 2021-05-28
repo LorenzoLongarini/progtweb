@@ -154,6 +154,11 @@
                 </ul>
                 @endif
         </div>
+        <div class="wrap-input blank">
+            {{  Form::label ('cap', 'Cap' /*class-type*/)}}
+            {{  Form::text ('cap', ''  /*class-type*/)}}
+           
+        </div>
     </div>
 
     <div>

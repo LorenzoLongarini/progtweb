@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Faq;
 use App\Models\Evento;
+use App\User;
 use App\Http\Requests\UserRequest;
 
 class PublicController extends Controller
@@ -44,9 +46,22 @@ class PublicController extends Controller
 
     public function salvaUser(UserRequest $request){
         $user = new User;
-        $user->fill($request->validated());
+        $user->nome = $request->nome;
+        $user->username = $request->username;
+        $user->cognome = $request->cognome;
+        $user->ragioneSociale = $request->ragioneSociale;
+        $user->ivaFiscale = $request->ivaFiscale;
+        $user->dataNascita = $request->dataNascita;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->telefono = $request->telefono;
+        $user->via = $request->via;
+        $user->cap = $request->cap;
+        $user->città = $request->città;
+        $user->save();
+       // $user->fill($request->validated());
         
-        return view('home');
+        return view('pages.faq');
 
     }
 
