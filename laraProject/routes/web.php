@@ -46,6 +46,10 @@ Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
 
 Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
+Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
+
+Route::get('/home/slider', 'PublicController@slider')->name('slider');
+
 //Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
 Route::post('/catalogo/cerca', 'PublicController@searchForFilters')->name('cerca');

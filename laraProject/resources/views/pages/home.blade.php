@@ -12,22 +12,24 @@
 
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
+@isset($evento)
   <div class="numbertext"></div>
-  <img src="{{ asset('../storage/app/public/images/grid-event1.jpg') }}" style="width: 100%">
+  @include('helpers.img-event', ['imgName' => $eventos->imgName])
   <div class="text"></div>
   </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="{{ asset('../storage/app/public/images/grid-event2.jpg') }}" style="width: 100%">
+  @include('helpers.img-event', ['imgName' => $eventos->imgName])
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="{{ asset('../storage/app/public/images/grid-event3.jpg') }}" style="width: 100%">
+  @include('helpers.img-event', ['imgName' => $eventos->imgName])
   <div class="text"></div>
 </div>
+@endisset
 
 <!-- Next and previous buttons -->
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -65,38 +67,28 @@
                 </li>
         </ul>
     </nav>
-</div>
-@isset($events)
-     @foreach($events as $event)
+
+  
+ @isset($events)
      <div class="container-grid">
-     
+     @for($i = 0; $i < 3; $i++)
         <div class="card">
-        <div>
-        @include('helpers.img-event', ['imgName' => $event->imgName])
-        </div>
-                <div class="middle">
+          <div>{{$events->imgName}}</div>
+          <div class="middle">
                     <div class="text">Evento</div>
-                </div>
+          </div>
                 
       </div>
-      @endforeach
-                @endisset
+      @endfor
+      @endisset
+      </div>
+    
+     
+     
+                
       
        
-      <div class="container-grid">
-      @isset($events)
-     @foreach($events as $event)
-        <div class="card">
-        <div>
-        @include('helpers.img-event', ['imgName' => $event->imgName])
-        </div>
-                <div class="middle">
-                    <div class="text">Evento</div>
-                </div>
-      </div>
-      </div>
-      @endforeach
-        @endisset
+     
       
 </main>
 
