@@ -4,7 +4,7 @@
     @include('includes/head')
 
     <body>
-
+            
         @include('includes/header')
 
         <main id="page-content">
