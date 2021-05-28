@@ -44,7 +44,7 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::view('/evento', 'pages.evento')->name('evento');
+Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
 //Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
 
@@ -67,9 +67,10 @@ Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
 Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
         ->name('aggiungiEvento.store');
 
-route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
+Route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
 
-route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
+Route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
+
 
 Auth::routes();
 

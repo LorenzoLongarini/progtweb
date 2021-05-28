@@ -9,7 +9,7 @@
             'img_url' => '../storage/app/public/images/covers/catalogo-cover.png'])
 
     <div class="container block">
-        @include('inserts.filterEvent')
+        @include('inserts.ricercaEventi')
 
         @isset($events)
             <div class="event-list">
@@ -28,7 +28,7 @@
                         </div>
                         <div class="event-right">
                             <h4 class="price">€ {{ $event->prezzo }}</h4>
-                            <button class="btn default-btn">VEDI EVENTO</button>
+                            {{ link_to_route('evento', 'VEDI EVENTO', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
                         </div>
                     </div>           
             @endforeach
