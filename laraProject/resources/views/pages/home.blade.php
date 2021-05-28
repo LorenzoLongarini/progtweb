@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 <main id="page-content">
 
     <!-- Slideshow container -->
@@ -45,11 +46,11 @@
     <div class="container-img-grid"><img src="{{ asset('../storage/app/public/images/img_events/info1.000.jpg') }}" alt="">
     </div>
 <div class="info-nav-separator"></div>
-    <div class="container-img-grid"><img src="./img/info2.000.jpg" >
+    <div class="container-img-grid"><img src="{{ asset('../storage/app/public/images/img_events/info2.000.jpg') }}" >
     
 </div>
 <div class="info-nav-separator"></div>
-    <div class="container-img-grid"><img src="./img/grid.info3.jpg" alt="">
+    <div class="container-img-grid"><img src="{{ asset('../storage/app/public/images/img_events/grid.info3.jpg') }}" alt="">
 </div>
 </div>
 <div class="event-nav-separator"></div>
@@ -65,71 +66,38 @@
         </ul>
     </nav>
 </div>
+@isset($events)
+     @foreach($events as $event)
      <div class="container-grid">
+     
         <div class="card">
-
-<<<<<<< HEAD
-                <img src= "{{ asset('app/public/images/40x40.png') }}" alt="Avatar" style="width:100%">
-=======
-                <img src= "{{ asset('../storage/app/public/images/slides/grid-event3.jpg') }}" alt="Avatar" style="width:100%">
->>>>>>> 97e0b5b807948cfec4f3fd0f458bac383e2eda82
+        <div>
+        @include('helpers.img-event', ['imgName' => $event->imgName])
+        </div>
                 <div class="middle">
                     <div class="text">Evento</div>
                 </div>
-        </div>
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                     <div class="text">Evento</div>
-                </div>
-        </div>
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                <div class="text">Evento</div>
-                </div>
-        </div>
+                
       </div>
+      @endforeach
+                @endisset
+      
+       
       <div class="container-grid">
+      @isset($events)
+     @foreach($events as $event)
         <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
+        <div>
+        @include('helpers.img-event', ['imgName' => $event->imgName])
+        </div>
                 <div class="middle">
                     <div class="text">Evento</div>
                 </div>
-        </div>
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                     <div class="text">Evento</div>
-                </div>
-        </div>
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                <div class="text">Evento</div>
-                </div>
-        </div>
       </div>
-      <div class="container-grid">
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                    <div class="text">Evento</div>
-                </div>
-        </div>
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                     <div class="text">Evento</div>
-                </div>
-        </div>
-        <div class="card">
-                <img src="./img/40x40.png" alt="Avatar" style="width:100%">
-                <div class="middle">
-                <div class="text">Evento</div>
-                </div>
-        </div>
       </div>
+      @endforeach
+        @endisset
+      
 </main>
 
 @endsection
