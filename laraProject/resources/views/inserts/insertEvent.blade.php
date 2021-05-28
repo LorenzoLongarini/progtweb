@@ -1,6 +1,10 @@
 
 <div class="form">
-    {{  Form::open(array('route' => ['aggiungiEvento.store'], /*'id' =>''*/ , 'files' => true /*'class' => some-bollocks*/))  }}
+<<<<<<< HEAD
+    {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' =>'adproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
+=======
+    {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => 'addproduct', 'files' => true /*'class' => some-bollocks*/))  }}
+>>>>>>> 1ed17472c0a5ef537447e46e6fc72d7af1b24f0a
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">

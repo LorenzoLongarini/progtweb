@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\models\Livello3;
 use App\models\Evento;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\EventRequest;
+use App\Http\Controllers\Auth\LoginController;
 
 class Livello3Controller extends Controller
 {
@@ -32,20 +34,20 @@ class Livello3Controller extends Controller
         return view ('modifyEvent')->with('event', $evento)
 
     }*/
-
+    
     public function salvaEvento(EventRequest $request){
-      //   $UserID = $this->_livello3Model->getUserID();
+        //$UserId = $this->_livello3Model->getUserID();
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
         } else {
             $imageName = NULL;
         }
-
+        //$utenteId = 9;
         $evento = new evento;
         //$evento->fill($request->validated());
+        $evento->utenteId = 9;
         $evento->imgName = $imageName;
-        //$evento->utenteId = $request->utenteId;
         $evento->titolo = $request->titolo;
         $evento->artista = $request->artista;
         $evento->regione = $request->regione;
