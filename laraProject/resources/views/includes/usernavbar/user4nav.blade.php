@@ -1,14 +1,14 @@
 <ul>
     <li class="user-nav-link">
-        <button class="user-nav-btn active">Dashboard</button>
+        <button id="dashboard" class="user-nav-btn active">Dashboard</button>
     </li>
     <li class="user-nav-link">
-        <button class="user-nav-btn">Clienti</button>
+        <button  id="clienti" class="user-nav-btn">Clienti</button>
     </li>
     <li class="user-nav-link">
-        <button class="user-nav-btn">Organizzatori</button>
+        <button  id="organizzazione" class="user-nav-btn">Organizzatori</button>
     </li>
     <li class="user-nav-link">
-        <button class="user-nav-btn">FAQ</button>
+        <button  id="faq" class="user-nav-btn">FAQ</button>
     </li>
 </ul>

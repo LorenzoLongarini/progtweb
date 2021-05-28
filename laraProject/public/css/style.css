@@ -956,9 +956,13 @@ ol#faq-list li::marker{
 #user-nav .user-nav-link.clicked{
     background-color: red;
 }
-#user-section .form.actived{
+#user-section .form.activated{
     display: block;
 }
 #user-section .form{
     display: none;
+}
+
+.container{
+    padding: 100px;
 }
