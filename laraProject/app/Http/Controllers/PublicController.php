@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Faq;
 use App\Models\Evento;
+use App\User;
 use App\Http\Requests\UserRequest;
 
 class PublicController extends Controller
@@ -44,9 +46,22 @@ class PublicController extends Controller
 
     public function salvaUser(UserRequest $request){
         $user = new User;
-        $user->fill($request->validated());
+        $user->nome = $request->nome;
+        $user->username = $request->username;
+        $user->cognome = $request->cognome;
+        $user->ragioneSociale = $request->ragioneSociale;
+        $user->ivaFiscale = $request->ivaFiscale;
+        $user->dataNascita = $request->dataNascita;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->telefono = $request->telefono;
+        $user->via = $request->via;
+        $user->cap = $request->cap;
+        $user->città = $request->città;
+        $user->save();
+       // $user->fill($request->validated());
         
-        return view('home');
+        return view('pages.faq');
 
     }
 
@@ -59,8 +74,35 @@ class PublicController extends Controller
                         ->where('artista', 'LIKE', '%' . $request->artista . '%')
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
                         ->where('regione', 'LIKE', '%' . $request->regione . '%')
-                        ->where('data', '>=', $request->data)->get();
+                        ->where('data', '>=', $request->data)->get(['eventoId', 'titolo', 'data', 'luogo', 'prezzo', 'imgName']);
                         
         return view('pages.catalogo')->with('events', $eventiFiltrati);
+    }
+
+    public function piuVenduti(){
+        $evento = Evento::where('titolo', 'LIKE', 'Evento10')
+         ->get();
+        return view('pages.home')->with('evento', $evento);
+    }
+
+    public function slider(){
+        $evento = DB::table('users')
+         ->orderBy('bigliettiVenduti', 'desc')
+         ->get();
+        return view('pages.home')->with('eventos', $evento);
+    }
+
+    public function aBreve(){
+        $evento = DB::table('users')
+         ->orderBy('data', 'asc')
+         ->get();
+        return view('pages.home')->with('events', $evento);
+    }
+
+    
+
+    public function mostraEvento($id){
+        $evento = Evento::where('eventoId', $id)->get()->first();
+        return view('pages.evento')->with('event', $evento);
     }
 }

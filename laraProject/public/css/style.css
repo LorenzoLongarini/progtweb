@@ -227,7 +227,7 @@ a.login span{
     fill: #ffc100;
 }
 /* Pulsanti */
-button.default-btn{
+.default-btn{
     padding: 12px 35px;
     margin: 10px;
     font-size: 1em;
@@ -263,7 +263,7 @@ button.user-nav-btn.active{
 }
 
 /* Input area */
-input[type="text"], #user-section input[type="date"],input[type=password], select{
+input[type="text"], input[type="date"],input[type=password], select{
     height: 46px;
     font-size: 1.1rem;
     padding: 8px 10px;
@@ -458,8 +458,6 @@ footer ul.footer-links li a:hover{
 .img-event{
     width: 250px;
     height: 170px;
-    border-radius: 15px 0 0 15px;
-    border: 2px solid grey;
 }
 
 .title-section{
@@ -956,9 +954,13 @@ ol#faq-list li::marker{
 #user-nav .user-nav-link.clicked{
     background-color: red;
 }
-#user-section .form.actived{
+#user-section .form.activated{
     display: block;
 }
 #user-section .form{
     display: none;
+}
+
+svg{
+    width: 25px;
 }
