@@ -61,7 +61,7 @@ class PublicController extends Controller
         $user->save();
        // $user->fill($request->validated());
         
-        return view('pages.faq');
+        return view('pages.home');
 
     }
 
