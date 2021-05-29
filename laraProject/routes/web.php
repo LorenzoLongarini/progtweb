@@ -20,12 +20,12 @@ Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
 // Rotte per l'autenticazione
-Route::get('login', 'Auth\LoginController@showLoginForm')
+Route::get('/login', 'Auth\LoginController@showLoginForm')
 ->name('login');
 
-Route::post('login', 'Auth\LoginController@login');
+Route::post('/login', 'Auth\LoginController@authenticate');
 
-Route::post('logout', 'Auth\LoginController@logout')
+Route::post('/logout', 'Auth\LoginController@logout')
 ->name('logout');
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
@@ -78,6 +78,6 @@ Auth::routes();
 
 Route::get('/', 'publicController@index')->name('home');
 
-Route::get('/faq/{faqID}/modify', 'adminController@modificaFaq')->name('modificaFaq');
+Route::get('/faq/{faqId}/modify', 'adminController@modificaFaq')->name('modificaFaq');
 
-Route::patch('/faq/{faqID}/modify', 'adminController@updateFaq')->name('modificaFaq.store');
+Route::patch('/faq/{faqId}/modify', 'adminController@updateFaq')->name('modificaFaq.store');

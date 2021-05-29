@@ -5,11 +5,11 @@
           </div>
           <div class="block">
             <ul class="footer-links">
+              <li><a href="{{ route('catalogo') }}">Catalogo</a></li> 
               <li><a href="{{ route('faq') }}">FAQ</a></li>
-              <li><a href="{{ route('lavora-con-noi') }}">Lavora con noi</a></li>
               <li><a href="{{ route('privacy') }}">Privacy & GDPR</a></li>
-              <li><a href="{{ route('about') }}">Contatti</a></li>
               <li><a href="{{ route('termini-e-condizioni') }}">Termini d'uso</a></li>
+              <li><a href="{{ route('about') }}">Contatti</a></li>
             </ul>
           </div>
         <div class="site-info">

@@ -17,8 +17,8 @@
                     <h2>{{ $faq->domanda }}</h2>
                     <div class="event-right">
                        
-                            <a href="/faq/{{$faq->faqID}}/modify">Modifica Faq</a>
-                        
+                         
+                         {{ link_to_route('modificaFaq', 'VEDI EVENTO', $parameters = ['faqId' => $faq->faqId], $attributes = ['class' => 'link'])}}
                 
                         </div>
                     <div class="card-faq">
