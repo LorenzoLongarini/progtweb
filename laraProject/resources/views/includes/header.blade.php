@@ -1,9 +1,7 @@
 <header id="masthead">
     <div class="container"> 
-        <div id="left-header">
-            <a href= "{{route('home')}}">
+        <div id="left-header">      
             <img id="site-logo-header" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
-            </a>
             <div class="divider"></div>
             <nav id="main-menu">
                 <ul>
