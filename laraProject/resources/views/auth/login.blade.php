@@ -11,33 +11,36 @@
         <h2>Accedi</h2>
         <div>
             {{ Form::open(array('route' => 'login')) }}
-                {{Form::label('username','USERNAME')}}
-                {{ Form::text('username', '', ['placeholder'=>'username','id' => 'username']) }}
 
-                @if ($errors->first('username'))
-                    <ul class="errors">
-                        @foreach ($errors->get('username') as $message)
-                            <li>{{ $message }}</li>
-                        @endforeach
-                    </ul>
-                @endif
+                <div class="wrap-input">
+                    {{ Form::text('username', '', ['placeholder'=>'username','id' => 'username-input']) }}
+                   
+                    @if ($errors->first('username'))
+                        <ul class="errors">
+                            @foreach ($errors->get('username') as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                     @endif
+                </div>
 
-                {{Form::label('password','PASSWORD')}}
-                {{Form::password('password', [ 'placeholder'=>'password','id' => 'password'])}}
-                
-                @if ($errors->first('password'))
-                    <ul class="errors">
-                        @foreach ($errors->get('password') as $message)
-                            <li>{{ $message }}</li>
-                        @endforeach
-                    </ul>
-                @endif
-        </div>
-        <div >
-            {{ Form::submit('Accedi',['class'=> 'login-btn']) }}<br>
-            {{ Form::close() }}<br>
-            <span>Nuovo utente?</span>
-            <a href= "{{route('registraUser')}}" >Registrati</a>
+                <div class="wrap-input">
+                    {{Form::password('password', [ 'placeholder'=>'password','id' => 'password-input'])}}
+                      
+                    @if ($errors->first('password'))
+                        <ul class="errors">
+                            @foreach ($errors->get('password') as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
+            <div style="text-align:center">
+                {{ Form::submit('Accedi',['class'=> 'default-btn']) }}<br>
+                <span>Non hai un account?</span>
+                <a href= "{{route('registraUser')}}" >Registrati</a>
+            </div>
+            {{ Form::close() }}
         </div>
     </div>
 </div>

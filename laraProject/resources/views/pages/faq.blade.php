@@ -10,7 +10,8 @@
         'img_url' => '../storage/app/public/images/covers/faq-cover.jpg'])
 
 <div class="container flex-columns">
-{{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ',  $attributes = ['class' => 'btn default-btn'])}}
+    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ',  $attributes = ['class' => 'btn default-btn'])}}
+
     @isset($faqs)
         <ol id="faq-list">
             @foreach($faqs as $faq)
