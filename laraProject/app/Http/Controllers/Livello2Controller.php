@@ -13,6 +13,7 @@ class Livello2Controller extends Controller
 
    public function _construct(){
         $this->_livello2Model = new Livello2;
+        $this->middleware('auth');
    }
 
    public function index(){
