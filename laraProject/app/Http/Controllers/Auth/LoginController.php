@@ -12,7 +12,7 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    public function logout(Request $request)
+    /*public function logout(Request $request)
     {
         Auth::logout();
     
@@ -22,7 +22,7 @@ class LoginController extends Controller
     
         return redirect('/login');
     }
-    public function authenticate(Request $request)
+   /* public function authenticate(Request $request)
     {
         $credentials = $request->only('username', 'password');
         $datigenerali = $request->only('nome');
@@ -35,8 +35,8 @@ class LoginController extends Controller
         else return redirect()->back()->withErrors([
             'approve' => 'Wrong password or this account not approved yet.',
         ]);
-    
-    }
+    */
+
      
 
 
