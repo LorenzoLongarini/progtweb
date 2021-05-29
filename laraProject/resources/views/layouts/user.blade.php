@@ -2,7 +2,7 @@
 <html lang="en">
 @include('includes.head')
 <body>
-    @include('includes.usernavbar.userAuthHeader')
+    @include('includes.header')s
     <div class="container  flex-rows" >
         <aside id="user-nav" style="">
             

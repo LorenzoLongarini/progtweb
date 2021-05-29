@@ -28,6 +28,7 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')
 ->name('logout');
 
+
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 
 Route::view('/about', 'pages.about')->name('about');
