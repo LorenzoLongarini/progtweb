@@ -17,7 +17,7 @@
                     <h2>{{ $faq->domanda }}</h2>
                     <div class="event-right">
                        
-                            <a href="/faq/3/modify">Modifica Faq</a>
+                            <a href="/faq/{{$faq->faqID}}/modify">Modifica Faq</a>
                         
                 
                         </div>
