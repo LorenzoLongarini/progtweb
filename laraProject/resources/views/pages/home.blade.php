@@ -87,17 +87,17 @@
     </nav>
 
   
- @isset($events)
+ @isset($eventos)
      <div class="container-grid">
-     @for($i = 0; $i < 3; $i++)
+     @foreach($eventos as $event)
         <div class="card">
-          <div>{{$events->imgName}}</div>
+          <div>@include('helpers.img-event', ['imgName' => $event->imgName])</div>
           <div class="middle">
                     <div class="text">Evento</div>
           </div>
                 
       </div>
-      @endfor
+      @endforeach
       @endisset
       </div>
     
