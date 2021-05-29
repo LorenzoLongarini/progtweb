@@ -25,7 +25,8 @@ class LoginController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->only('username', 'password');
-
+        $datigenerali = $request->only('nome');
+        
         if (Auth::attempt($credentials)) {
             return redirectTo();
         

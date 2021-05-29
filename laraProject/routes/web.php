@@ -28,13 +28,7 @@ Route::post('login', 'Auth\LoginController@authenticate');
 Route::post('logout', 'Auth\LoginController@logout')
 ->name('logout');
 
-Route::get('/', function () {
-    return view('pages.home')->name('home');
-});
-
 Route::view('/privacy', 'pages.privacy')->name('privacy');
-
-Route::view('/home', 'pages.home')->name('home');
 
 Route::view('/about', 'pages.about')->name('about');
 
@@ -82,7 +76,7 @@ Route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.st
 
 Auth::routes();
 
-Route::get('/home', 'publicController@index')->name('home');
+Route::get('/', 'publicController@index')->name('home');
 
 Route::get('/faq/{faqID}/modify', 'adminController@modificaFaq')->name('modificaFaq');
 

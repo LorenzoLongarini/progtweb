@@ -16,6 +16,7 @@ class Livello3Controller extends Controller
 
     public function __construct(){
         $this->_livello3Model = new Livello3;
+        $this->middleware('auth');
 
     }
 
@@ -36,7 +37,7 @@ class Livello3Controller extends Controller
     }*/
     
     public function salvaEvento(EventRequest $request){
-        //$UserId = $this->_livello3Model->getUserID();
+    
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
@@ -45,8 +46,7 @@ class Livello3Controller extends Controller
         }
         //$utenteId = 9;
         $evento = new evento;
-        //$evento->fill($request->validated());
-        $evento->utenteId = 9;
+        $evento->utenteId = Auth::id();
         $evento->imgName = $imageName;
         $evento->titolo = $request->titolo;
         $evento->artista = $request->artista;

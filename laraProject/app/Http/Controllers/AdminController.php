@@ -9,8 +9,7 @@ use App\models\Faq;
 class AdminController extends Controller {
 
     public function __construct() {
-        //$this->middleware('can:isAdmin');
-        
+        $this->middleware('can:isAdmin');
     }
 
 public function index(){
@@ -39,7 +38,6 @@ public function index(){
         return redirect()->route('faq');
     }
 
-    }
     public function salvaFaq(FaqRequest $request){
         $faq = new Faq;
         $faq->domanda = $request->domanda;
