@@ -43,7 +43,6 @@ html.dark{
 *{
     box-sizing: border-box;
     font-family: inherit;
-    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Tipografia */
@@ -85,6 +84,7 @@ del, .delete {
 .title{
     margin: 1.3rem;
 }
+
 .price{
     margin: 1.3rem 0.4rem;
     font-size: 25px!important;
@@ -139,10 +139,10 @@ header#masthead{
     left: 0;
     width: 100%;
     padding: 20px 0;
-    z-index: 999;
-    height: auto;
+    z-index: 9999;
     background-color: var(--container-bg);
     box-shadow: 0px 2px 3px #00000026;
+    transition: transform 0.4s cubic-bezier(.33,.21,0,1.01);
 }
 
 .divider{
@@ -206,6 +206,10 @@ nav#main-menu ul li a.nav-link:hover::after,  nav#main-menu ul li a.nav-link:foc
     align-items: center;
     cursor: pointer;
     margin: 0 10px;
+}
+
+.link-icon svg{
+    width: 25px;
 }
 
 a.login:hover, a.login:focus{
@@ -391,7 +395,7 @@ section#user-section{
     display: inline-block;
 }
 
-#page-content{
+#public-page-content{
     margin-top: 80px;
 }
 
@@ -946,8 +950,4 @@ ol#faq-list li::marker{
 }
 #user-section .form{
     display: none;
-}
-
-svg{
-    width: 25px;
 }

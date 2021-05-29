@@ -4,14 +4,7 @@
     @include('includes/head')
 
     <body>
-            
-        @include('includes/header')
-
-        <main id="page-content">
-            @yield('page')
-        </main>
-            
-        @include('includes/footer')
-    
+        @yield('page-body')
     </body>
+
 </html>

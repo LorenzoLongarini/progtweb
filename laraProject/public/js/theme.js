@@ -9,8 +9,6 @@ $(document).ready(function () {
         $(this).addClass("active");
         $('section .form.activated').removeClass('activated');
         $("#" + $(this).attr('id') + ".form").toggleClass("activated");
-
-
     });
 });
 
