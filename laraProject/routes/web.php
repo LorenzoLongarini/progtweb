@@ -58,6 +58,10 @@ Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
 
+Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
+
+Route::post('/faq/insert', 'AdminController@salvaFaq')->name('inserisciFaq.store');
+
 
 /*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
         ->name('user3-insert');
@@ -79,3 +83,7 @@ Route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.st
 Auth::routes();
 
 Route::get('/home', 'publicController@index')->name('home');
+
+Route::get('/faq/{faqID}/modify', 'adminController@modificaFaq')->name('modificaFaq');
+
+Route::patch('/faq/modify', 'adminController@updateFaq')->name('modificaFaq.store');

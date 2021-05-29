@@ -19,7 +19,10 @@ class Livello2Controller extends Controller
        return view('modifica-dati');
    }
 
-   public function modifyData(){
+   public function ModificaDati(){
+       $UserID = auth()->user()->utenteID();
+       return view('pages.modificaUser')->with('utente', $UserID);
+
 
    }
 
