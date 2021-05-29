@@ -9,9 +9,13 @@
             <h3> {{$event->luogo }}</h3>
         </div>
         <div class="btn-hero">
-          
+
+          @auth
             <a href="" class="default-btn">Acquista ora</a>
-            
+           @endauth 
+           @guest
+           <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
+           @endguest
         </div>
     </div>
 </div>

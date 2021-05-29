@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class ClientController extends Controller {
 
     public function __construct() {
-       // $this->middleware('can:isClient');
+       $this->middleware('can:isClient');
     }
 
 public function index(){

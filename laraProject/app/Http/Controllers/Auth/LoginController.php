@@ -12,6 +12,7 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
+
     /*public function logout(Request $request)
     {
         Auth::logout();

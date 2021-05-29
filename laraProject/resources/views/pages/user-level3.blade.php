@@ -1,8 +1,10 @@
 
 @extends('layouts.user')
 
-@section('form')
-<h1>{{Auth::id()}}</h1>
+@section('usernavbar')
+    @include('includes.usernavbar.user-nav')
 
+@endsection
+@section('form')
 @include('inserts.dashboard-livello3')
 @endsection

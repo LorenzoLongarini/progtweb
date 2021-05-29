@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class OrganizzatoreController extends Controller {
 
     public function __construct() {
-        //$this->middleware('can:isOrganizzatore');
+        $this->middleware('can:isOrganiz');
     }
 
     public function index() {
