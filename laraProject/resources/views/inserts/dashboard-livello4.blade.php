@@ -20,7 +20,11 @@
         </div>
         
     </div>
-    
+    <div>
+    {{Form::submit ('Conferma')}}
+    {{Form::reset ('Reset')}}
+    </div>
+
 {{Form::close()}}
 </div>
 @endsection

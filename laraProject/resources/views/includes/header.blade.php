@@ -1,7 +1,9 @@
 <header id="masthead">
     <div class="container"> 
         <div id="left-header">
+            <a href= "{{route('home')}}">
             <img id="site-logo-header" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
+            </a>
             <div class="divider"></div>
             <nav id="main-menu">
                 <ul>
@@ -37,6 +39,9 @@
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>
                  @auth
+                 <a href="{{route('login')}}" class="login link-icon" title="Accedi al tuo account">
+                        <span>Accedi/Registrati</span> 
+                      </a>  
                  <a title="Esci dal sito" class="login link-icon" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                      {{ csrf_field() }}
