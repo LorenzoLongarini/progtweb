@@ -79,6 +79,6 @@ Auth::routes();
 
 Route::get('/', 'publicController@index')->name('home');
 
-Route::get('/faq/{faqID}/modify', 'adminController@modificaFaq')->name('modificaFaq');
+Route::get('/faq/{faqId}/modify', 'adminController@modificaFaq')->name('modificaFaq');
 
 Route::patch('/faq/{faqID}/modify', 'adminController@updateFaq')->name('modificaFaq.store');

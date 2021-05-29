@@ -23,7 +23,7 @@ public function index(){
     }
 
     public function modificaFaq($faqId){
-        $Faq = Faq::find($faqid);
+        $Faq = Faq::find($faqId);
         return view ('pages.modificaFaq')->where('faq', $Faq);
 
     }
