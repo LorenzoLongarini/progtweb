@@ -43,15 +43,12 @@
                     <span>Logout</span> 
                   </a> 
                   @endauth
-                  @guest
+                    @guest
                     <a href="{{route('login')}}" class="login link-icon" title="Accedi al tuo account">
                         <span>Accedi/Registrati</span> 
                       </a>  
-                      @endguest
-                   
-                     
+                    @endguest                 
             </div>
-
         </div>
     </div>
 </header>

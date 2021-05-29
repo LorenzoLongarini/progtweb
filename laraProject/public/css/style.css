@@ -43,6 +43,7 @@ html.dark{
 *{
     box-sizing: border-box;
     font-family: inherit;
+    transition: 0.2s ease-in-out;
 }
 
 /* Tipografia */
@@ -900,16 +901,32 @@ ol#faq-list li::marker{
 }
 /* Alex */
 .login-container{
-    display: flex;
-   padding: 100px ;
-   justify-content: center;
-   
+    background:  linear-gradient(to right, #0000008f, #0000008f), url('../../storage/app/public/images/covers/auth-bg.jpg');
+    background-position: center center;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+.login-container .brand img{
+    width: 250px;
+}
+
+.login-container .brand{
+    text-align: center;
+}
+
+.login-container .brand h3{
+    margin: 1rem 0;
+}
+
 .login-form{
-    background-color: white;
+    background-color: var(--container-bg);
     border-radius: 10px;
-    border: 2px solid grey;
-    padding: 150px 50px;
+    padding: 50px 50px;
     display: inherit;
     flex-direction: column;
   
