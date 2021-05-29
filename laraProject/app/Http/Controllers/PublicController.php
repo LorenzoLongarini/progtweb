@@ -80,17 +80,18 @@ class PublicController extends Controller
     }
 
     public function piuVenduti(){
-        $evento = Evento::where('titolo', 'LIKE', 'Evento10')
-         ->get();
-        return view('pages.home')->with('evento', $evento);
+        $evento = Evento::orderBy('bigliettiVenduti', 'desc')
+        ->take(5)->get();
+       return view('pages.home')->with('eventos', $evento);
+        
     }
 
     public function slider(){
-        $evento = DB::table('users')
-         ->orderBy('bigliettiVenduti', 'desc')
-         ->get();
-        return view('pages.home')->with('eventos', $evento);
+        $evento = Evento::where('titolo', 'LIKE', 'eventolollo')
+        ->get()->first();
+       return view('pages.home')->with('evento', $evento);
     }
+    
 
     public function aBreve(){
         $evento = DB::table('users')
