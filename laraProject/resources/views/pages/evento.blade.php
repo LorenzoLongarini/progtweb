@@ -1,13 +1,12 @@
 @extends('layouts.public')
 
 @section('content')
-<div class="hero flex-center"> 
-    <div class="container flex-rows">
-        <div class="content-hero">
-            <h2>{{ $event->titolo }}</h2>
-            <h3>24 giu 2022</h3>
-            <h3> {{$event->luogo }}</h3>
-        </div>
+
+@include('helpers/cover-page', [
+        'title' => 'FAQ - Frequently asked question', 
+        'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
+        'img_url' => '../storage/app/public/images/covers/' . $event->imgName])
+
         <div class="btn-hero">
 
           @auth

@@ -392,10 +392,6 @@ aside#user-nav ul li{
     background-color: var(--line-color);
 }
 
-section#user-section{
-    display: inline-block;
-}
-
 #public-page-content{
     margin-top: 80px;
 }
@@ -490,8 +486,10 @@ footer ul.footer-links li a:hover{
 .user{
     padding-top: 100px;
 }
-section#user-section{
-    flex: content;
+section#data-section{
+    width: 100%;
+    padding-top: 30px;
+    display: inline-block;
 }
 .eventi-acquistati{
     display: flex;
@@ -834,7 +832,7 @@ nav#event-nav ul li{
 .wrap-input {
     width: 100%;
     position: relative;
-    margin: 30px 0;
+    margin: 30px 10px;
     background-color: transparent;
   }
   
@@ -889,6 +887,7 @@ ul.errors{
 
 ul.errors li {
     color: #e40909;
+    font-size: 13px;
 }
 ol#faq-list li{
     margin: 60px 0;
@@ -926,7 +925,7 @@ ol#faq-list li::marker{
 .login-form{
     background-color: var(--container-bg);
     border-radius: 10px;
-    padding: 50px 50px;
+    padding: 50px 30px;
     display: inherit;
     flex-direction: column;
 }
@@ -960,9 +959,13 @@ ol#faq-list li::marker{
 #user-nav .user-nav-link.clicked{
     background-color: red;
 }
-#user-section .form.activated{
+#data-section .form.activated{
     display: block;
 }
-#user-section .form{
+#data-section .form{
     display: none;
+}
+
+#user-page-content{
+    padding-top: 50px;
 }

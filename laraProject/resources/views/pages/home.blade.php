@@ -74,17 +74,9 @@
     </div>
 </div>
 
-    <div class="div-nav-scroll">
-    <nav id="event-nav">
-        <ul>
-            <li class="user-nav-link">
-                <button class="user-nav-btn active">Tendenza</button>
-                </li>
-            <li class="user-nav-link">
-                 <button class="user-nav-btn">Più venduti</button>
-                </li>
-        </ul>
-    </nav>
+<h1>A breve</h1>
+
+<h1>Di tendenza</h1>
 
   
  @isset($eventos)

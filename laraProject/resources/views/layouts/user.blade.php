@@ -1,12 +1,12 @@
 @extends('layouts.public')
 
 @section('content')
-    <div class="container  flex-rows" >
+    <div id="user-page-content" class="container flex-rows" >
         <aside id="user-nav" style="">    
            @yield('usernavbar')
         </aside>    
         <div class="user-nav-separator"></div>  
-        <section style="width: fit-content" id="user-section">
+        <section id="data-section">
             @yield('form')
         </section>
     </div>
