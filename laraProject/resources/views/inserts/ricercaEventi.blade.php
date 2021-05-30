@@ -3,7 +3,7 @@
    
     <div class="multiple-input">
         <div class="wrap-input">
-            {{  Form::label ('titolo', 'Nome Evento') }}
+            {{  Form::label ('titolo', 'Nome evento') }}
             {{  Form::text ('titolo', old('titolo'))  }}
         </div>
         <div class="wrap-input">
