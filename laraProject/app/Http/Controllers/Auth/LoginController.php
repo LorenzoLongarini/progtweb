@@ -12,35 +12,6 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-
-    /*public function logout(Request $request)
-    {
-        Auth::logout();
-    
-        $request->session()->invalidate();
-    
-        $request->session()->regenerateToken();
-    
-        return redirect('/login');
-    }
-   /* public function authenticate(Request $request)
-    {
-        $credentials = $request->only('username', 'password');
-        $datigenerali = $request->only('nome');
-        
-        if (Auth::attempt($credentials)) {
-            return redirectTo();
-        
-
-        }
-        else return redirect()->back()->withErrors([
-            'approve' => 'Wrong password or this account not approved yet.',
-        ]);
-    */
-
-     
-
-
     protected function redirectTo() {
         $role = auth()->user()->role;
         switch ($role) {
