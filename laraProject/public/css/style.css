@@ -969,3 +969,153 @@ ol#faq-list li::marker{
 #user-page-content{
     padding-top: 50px;
 }
+
+/* stile pagamento e admin lollo*/
+.pagamento-line{
+    display: inline-block;
+    width: 100vh;
+    height: 1px;
+    margin: 0 100px;
+    background-color: var(--p-color);
+}
+
+.pagamento-line-v{
+    display: inline-block;
+    width: 1px;
+    height: 70vh;
+    margin: 0 40px;
+    background-color: var(--p-color);
+
+}
+.contienitutto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+
+.row-direction{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-pagamento{
+    background-color: white;
+    width: 400px;
+    height: 570px;
+    border: transparent;
+    box-shadow: 5px 5px 5px 5px #dedede;
+    border-radius: 10px;
+     
+}
+
+.acquisto-confermato{
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 400px;
+    height: 500px;
+    border: transparent;
+    box-shadow: 5px 5px 5px 5px #dedede;
+    border-radius: 10px;
+    
+    margin: 20px;
+}
+
+
+
+.da-confermare{
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 400px;
+    height: 640px;
+    border: transparent;
+    box-shadow: 5px 5px 5px 5px #dedede;
+    border-radius: 10px;
+    
+    margin: 20px;
+}
+
+.scritte-pagamento2{
+    display: flex;
+    justify-content:left;
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+.scritte-pagamento-titoletto{
+    color: grey;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+.scritte-pagamento-titoletto2{
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.scadenza-scritta{
+    height: 15px;
+    width: 60px;
+}
+
+.elimina{
+    margin-left: 540px;
+    color: red;
+    
+}
+
+.immagine-distance{
+    margin: 20px;
+}
+
+.right-distance{
+    margin-left: 250px;
+    margin-top: 125px;
+}
+
+.quant-dim{
+    margin-top: 18px;
+    margin-left: 30px;
+}
+
+.dim-prezzo-mod{
+    margin-top: 18px;
+    margin-left: 500px;
+}
+.dim-prezzo-mod2{
+    margin-top: 40px;
+    margin-left: 250px;
+}
+.dim-prezzo-mod3{
+    margin-top: 18px;
+    margin-left: 585px;
+}
+
+.esempio-form{
+    margin-left: 35px;
+}
+
+.utenti-liv-2{
+    background-color: white;
+    width: 850px;
+    height: 90px;
+    border: transparent;
+    box-shadow: 5px 5px 5px 5px #dedede;
+    border-radius: 10px;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+
+.elimina2{
+    margin-left: 180px;
+    color: red;
+    margin-top: 35px;
+}
