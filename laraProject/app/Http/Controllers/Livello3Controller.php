@@ -37,7 +37,8 @@ class Livello3Controller extends Controller
     }*/
     
     public function salvaEvento(EventRequest $request){
-    
+        
+        $this->validate($request);
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
