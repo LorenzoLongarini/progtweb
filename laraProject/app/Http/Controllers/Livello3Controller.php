@@ -38,7 +38,7 @@ class Livello3Controller extends Controller
     
     public function salvaEvento(EventRequest $request){
         
-        $this->validate($request);
+        $this->validate($request, ['descrizione'=>'required']);
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
@@ -68,7 +68,7 @@ class Livello3Controller extends Controller
             $destinationPath = public_path() . '/images/products';
             $imageName->move($destinationPath, $imageName);
         };*/
-        return view('pages.prova-form');
+        return view('pages.user-level3');
         //return response()->action(['redirect' => route('faq')]);
         //return redirect()->action('pages.prova-form');
     }
