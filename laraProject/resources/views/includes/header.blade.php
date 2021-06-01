@@ -38,12 +38,23 @@
                 </svg>
                  
                 @auth
-                    <a title="Esci dal sito" class="login link-icon" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                        <span>Logout</span> 
+                   <div class='drop-down'></div>
+                        <button id="drop-down-nav" class="btn-logout login link-icon">Benvenuto,{{ Auth::user()->nome }}! </button>
+                       
+                        
                     </a> 
                     </form>
+                    <div id="drop-down-content"class='drop-down-content'>
+                        <a title="Esci dal sito" class="login link-icon" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                       
+                        
+                    </a> 
+                    </form>
+                    </div>
+                </div>
+                </div>
                 @endauth
                 @guest
                     <a href="{{route('login')}}" class="login link-icon" title="Accedi al tuo account">

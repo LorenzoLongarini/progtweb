@@ -10,5 +10,18 @@ $(document).ready(function () {
         $('section .form.activated').removeClass('activated');
         $("#" + $(this).attr('id') + ".form").toggleClass("activated");
     });
+
+    $(" #drop-down-nav").click(function() {
+        $("#drop-down-content").toggle();
+       
+        
+       
+
+
+    });
+
+
+
+   
 });
 
