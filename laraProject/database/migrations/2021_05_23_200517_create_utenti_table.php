@@ -17,6 +17,7 @@ class CreateUtentiTable extends Migration
             $table->bigIncrements('utenteId')->unsigned()->index();
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();
+            $table->string('nomeOrg', 50)->nullable();
             $table->string('ragioneSociale', 40)->nullable();
             $table->string('ivaFiscale', 40);
             $table->date('dataNascita')->nullable();
