@@ -16,6 +16,10 @@ Route::get('/user-level3', 'OrganizzatoreController@index')
 Route::get('/user-level4', 'AdminController@index')
 ->name('admin');//->middleware('can:isAdmin');
 
+Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
+
+Route::post('/user-level4/registerOrg', 'AdminController@salvaOrg')->name('aggiungiOrg.store');
+
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
@@ -57,12 +61,11 @@ Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
 
 Route::post('/faq/insert', 'AdminController@salvaFaq')->name('inserisciFaq.store');
 
+Route::get('/faq/{faqId}/modify', 'AdminController@modificaFaq')->name('modificaFaq');
 
-/*Route::get('/livello3-insert-event','user3Controller@showInsertEvent')
-        ->name('user3-insert');
+Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFaq.update');
 
-Route::post('/livello3/storeEvent', 'user3Controller@storeEvent')
-        ->name('user3-insert.store');*/
+Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
 Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento');

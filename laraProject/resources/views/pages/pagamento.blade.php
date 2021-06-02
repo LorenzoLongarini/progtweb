@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php require ("head.php")?>
-<body>
-    <?php require ("./template-parts/static/front/header.php")?>
-    <main id="page-content">
+@section('content')
     <div class = "contienitutto">
     <div display="flex" justify-content="center">
         <div class="cont-riepilogo">
@@ -107,6 +102,4 @@
     </div>
     </div>
         
-</main>
-</body>
-</html>
+@endsection

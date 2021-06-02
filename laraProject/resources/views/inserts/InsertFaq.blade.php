@@ -1,5 +1,6 @@
+
 <div class="form-blank">
-    {{  Form::open(array('route' => 'inserisciFaq.store', 'id' =>'addproduct' , 'files' => true))  }}
+    {{  Form::open(array('route' => 'inserisciFaq.store', 'id' =>'insertFaq' , 'files' => true))  }}
    
     <h2>Modulo inserimento FAQ</h2>
         <div class="wrap-input">
@@ -27,11 +28,11 @@
         </div>
 
     <div>
-    {{  Form::submit ('Conferma', ['class'=>''])}}
+    {{  Form::submit ('Conferma')}}
     </div>
 
     <div>
-    {{  Form::reset ('Annulla' /*class-type*/)}}
+    {{  Form::reset ('Annulla', /*class-type*/)}}
     </div>
 {{Form::close()}}
 </div>

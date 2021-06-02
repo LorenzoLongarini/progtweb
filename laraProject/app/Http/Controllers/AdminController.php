@@ -22,22 +22,6 @@ public function index(){
         return view ('pages.inserisciFaq');
     }
 
-    public function modificaFaq($faqId){
-        $Faq = Faq::find($faqId);
-        return view ('pages.modificaFaq')->where('faq', $Faq);
-
-    }
-
-    public function updateFaq(FaqRequest $request, $faqId){
-       
-        $faq = Faq::find($faqid);
-        $faq->domanda = $request->domanda;
-        $faq->risposta = $request->risposta;
-        $faq->save();
-
-        return redirect()->route('faq');
-    }
-
     public function salvaFaq(FaqRequest $request){
         $faq = new Faq;
         $faq->domanda = $request->domanda;
@@ -45,6 +29,54 @@ public function index(){
         $faq->save();
 
         return redirect()->route('faq');
+    }
+
+
+    public function modificaFaq($faqId){
+        $Faq = Faq::find($faqId);
+        return view ('pages.modificaFaq')->with('faq', $Faq);
+
+    }
+
+
+    public function updateFaq(FaqRequest $request, $faqId){
+       
+        $faq = Faq::find($faqId);
+        $faq->domanda = $request->domanda;
+        $faq->risposta = $request->risposta;
+        $faq->save();
+
+        return redirect()->route('faq');
+    }
+
+    public function eliminaFaq($faqId){
+        $faq = Faq::find($faqId);
+        $faq->destroy($faqId);
+        return redirect()->route('faq');
+    }
+
+    public function aggiungiOrg(){
+        return view(pages.inserisciOrg);
+    }
+
+    public function salvaOrg(OrgRequest $request){
+        $org = new User;
+        $org->role = 'organizzazione';
+        $org->username = $request->username;
+        $org->password = Hash::make($request->password);
+        $org->nome = $request->nome;
+        $org->cognome = $request->cognome;
+        $org->ivaFiscale = $request->ivaFiscale;
+        $org->email = $request->email;
+        $org->telefono = $request->telefono;
+        $org->via = $request->via;
+        $org->città = $request->città;
+        $org->cap = $request->cap;
+        $org->save();
+
+        return redirect()->route('admin');
+
+
     }
 
 }
