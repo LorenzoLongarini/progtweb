@@ -1072,6 +1072,11 @@ ol#faq-list li::marker{
     
 }
 
+.delete{
+    box-align: right;
+    
+}
+
 .immagine-distance{
     margin: 20px;
 }

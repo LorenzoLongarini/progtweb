@@ -21,10 +21,10 @@
                     <h2>{{ $faq->domanda }}</h2>
                     <div class="event-right">
                     @can('isAdmin')  
-                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], )}}
+                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], ['class'=>'default-btn'] )}}
                     {!!  Form::open(['action' => ['AdminController@eliminaFaq', $faq->faqId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('DELETE')!!}
+                        {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}
                     @endcan
 
