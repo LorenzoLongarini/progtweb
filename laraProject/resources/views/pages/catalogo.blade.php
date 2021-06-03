@@ -10,7 +10,12 @@
 
     <div class="container block">
         @include('inserts.ricercaEventi')
-
+        
+        @empty($events)
+            <div style="text-align:center">
+                <h1>La ricerca non ha prodotto nessun risultato!</h1>
+            </div>
+        @endempty
         @isset($events)
             <div class="event-list">
                 @foreach($events as $event)

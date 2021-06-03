@@ -278,11 +278,18 @@ button.user-nav-btn.active{
 /* Input area */
 input[type="text"], input[type="date"],input[type="password"], select{
     height: 46px;
+    width: 100%;
     font-size: 1.1rem;
     padding: 8px 10px;
+    color: var(--p-color);
     border: 2px solid var(--input-border-color);
     border-radius: 7px;
     background-color: var(--container-bg);
+}
+
+input[type="submit"]#search-btn{
+    margin:0 10px;
+    width: 100%;
 }
 
 #input-credit-card{
@@ -321,6 +328,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     z-index: 99;
     border-radius: 10px;
     background-color: var(--container-bg);
+    box-shadow: 0px 0px 3px 3px var(--card-shadow);
 }
 
 .alert.card{
@@ -845,6 +853,10 @@ nav#event-nav ul li{
     background-color: transparent;
   }
   
+  #search-form.form.card{
+      padding: 0 20px;
+      margin-bottom: 50px;
+  }
   
   .form input[type="file"]{
       font-size: 1rem;

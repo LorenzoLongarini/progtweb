@@ -11,7 +11,7 @@
 
 <div class="container flex-columns">
 @can('isAdmin')
-    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ',)}}
+    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ')}}
 @endcan
 
     @isset($faqs)
@@ -21,7 +21,7 @@
                     <h2>{{ $faq->domanda }}</h2>
                     <div class="event-right">
                     @can('isAdmin')  
-                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], )}}
+                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId] )}}
                     {!!  Form::open(['action' => ['AdminController@eliminaFaq', $faq->faqId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('DELETE')!!}

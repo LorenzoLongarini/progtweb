@@ -12,12 +12,8 @@ use App\Http\Controllers\Auth\LoginController;
 
 class Livello3Controller extends Controller
 {
-    protected $_livello3Model;
-
     public function __construct(){
-        $this->_livello3Model = new Livello3;
         $this->middleware('auth');
-
     }
 
     public function index() {
@@ -45,8 +41,8 @@ class Livello3Controller extends Controller
         } else {
             $imageName = NULL;
         }
-        //$utenteId = 9;
-        $evento = new evento;
+
+        $evento = new Evento;
         $evento->utenteId = Auth::id();
         $evento->imgName = $imageName;
         $evento->titolo = $request->titolo;
