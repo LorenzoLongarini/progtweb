@@ -12,10 +12,6 @@ class Evento extends Model
     protected $dateFormat = 'd-m-Y';
     public $timestamps = false;
 
-    public static function getRegioniAsOptions(){
-        return Evento::where('');
-    }
-
     public static function getMinDate(){
         return Evento::where('data', '>=')->min('data');
     }

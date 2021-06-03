@@ -92,14 +92,7 @@
       @endforeach
       @endisset
       </div>
-    
-     
-     
-                
-      
-       
-     
-      
+
 </main>
 
 @endsection

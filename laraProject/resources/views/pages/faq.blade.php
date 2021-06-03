@@ -11,7 +11,7 @@
 
 <div class="container flex-columns">
 @can('isAdmin')
-    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ',)}}
+    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ')}}
 @endcan
 
     @isset($faqs)

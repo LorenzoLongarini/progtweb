@@ -1,5 +1,6 @@
 @extends('layouts.public')
 
+@section('page-title', $event->titolo)
 @section('content')
 
 @include('helpers/cover-page', [
@@ -9,12 +10,13 @@
 
         <div class="btn-hero">
 
-          @auth
-          {{ link_to_route('pagamento', 'Acquista Ora', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
-           @endauth 
-           @guest
-           <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
-           @endguest
+            @can('isClient')
+                {{ link_to_route('pagamento', 'Acquista Ora', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
+            @endcan
+            
+            @guest
+                <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
+            @endguest
         </div>
         <div>
             @can('modificaEvento')

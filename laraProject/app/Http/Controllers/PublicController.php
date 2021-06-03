@@ -70,13 +70,12 @@ class PublicController extends Controller
     }
 
     public function searchForFilters(Request $request){
-        $eventiFiltrati = Evento::where('titolo', 'LIKE' , '%' . $request->titolo . '%')
+        $queryRicerca = Evento::where('titolo', 'LIKE' , '%' . $request->titolo . '%')
                         ->where('artista', 'LIKE', '%' . $request->artista . '%')
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
-                        ->where('regione', 'LIKE', '%' . $request->regione . '%')
-                        ->where('data', '>=', $request->data)->get(['eventoId', 'titolo', 'data', 'luogo', 'prezzo', 'imgName']);
-                        
-        return view('pages.catalogo')->with('events', $eventiFiltrati);
+                        ->where('data', '>=', $request->data);
+        $queryRicerca->where('regione', 'LIKE', '%' . $request->regione . '%');
+        return view('pages.catalogo')->with('events', $queryRicerca->get());
     }
 
     public function piuVenduti(){
@@ -99,8 +98,6 @@ class PublicController extends Controller
          ->get();
         return view('pages.home')->with('events', $evento);
     }
-
-    
 
     public function mostraEvento($id){
         $evento = Evento::where('eventoId', $id)->get()->first();
