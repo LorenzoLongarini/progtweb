@@ -71,6 +71,10 @@ Route::get('/faq/{faqId}/modify', 'AdminController@modificaFaq')->name('modifica
 
 Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFaq.update');
 
+Route::get('/evento/{id}/modify', 'Livello3Controller@modificaEvento')->name('modificaEvento');
+
+Route::put('/evento/{id}/modify', 'Livello3Controller@updateEvento')->name('modificaEvento.store');
+
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
 Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
@@ -88,6 +92,3 @@ Auth::routes();
 
 Route::get('/', 'publicController@index')->name('home');
 
-Route::get('/faq/{faqId}/modify', 'adminController@modificaFaq')->name('modificaFaq');
-
-Route::patch('/faq/{faqId}/modify', 'adminController@updateFaq')->name('modificaFaq.store');

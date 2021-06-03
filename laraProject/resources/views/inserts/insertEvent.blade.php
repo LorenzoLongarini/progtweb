@@ -1,10 +1,6 @@
 
 <div class="form">
-<<<<<<< HEAD
-    {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' =>'adproduct' , 'files' => true /*'class' => some-bollocks*/))  }}
-=======
     {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => 'addproduct', 'files' => true /*'class' => some-bollocks*/))  }}
->>>>>>> 1ed17472c0a5ef537447e46e6fc72d7af1b24f0a
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
@@ -107,9 +103,9 @@
             {{  Form::label ('descrizione', 'Descrizione Completa' /*class-type*/)}}
             {{  Form::textarea ('descrizione', ''  /*class-type*/)}}
             @if ($errors->first('descrizione'))
-                <ul class="errors">
+                <ul>
                     @foreach ($errors->get('descrizione') as $message)
-                    <li>{{ $message }}</li>
+                    <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
@@ -172,8 +168,14 @@
 
 
     {{  Form::label ('dataSconto', 'Data inizio sconto')}}
-    {{  Form::date ('dataSconto')  }}
-   
+    {{  Form::date ('dataSconto'),''  }}
+    @if ($errors->first('dataSconto'))
+                <ul>
+                    @foreach ($errors->get('dataSconto') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
 
     </div>
 

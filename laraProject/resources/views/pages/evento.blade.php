@@ -16,6 +16,11 @@
            <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
            @endguest
         </div>
+        <div>
+            @can('modificaEvento')
+            {{ link_to_route('modificaEvento', 'Modifica Evento', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
+            @endcan
+        </div>
     </div>
 </div>
 
