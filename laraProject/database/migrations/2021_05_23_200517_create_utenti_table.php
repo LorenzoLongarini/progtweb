@@ -13,7 +13,7 @@ class CreateUtentiTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('utenti', function (Blueprint $table) {
             $table->bigIncrements('utenteId')->unsigned()->index();
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();

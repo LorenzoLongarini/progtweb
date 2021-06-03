@@ -16,7 +16,7 @@ class CreateEventiTable extends Migration
         Schema::create('eventi', function (Blueprint $table) {
             $table->bigIncrements('eventoId')->unsigned()->index();
             $table->bigInteger('utenteId')->unsigned()->index();
-            $table->foreign('utenteId')->references('utenteId')->on('users');
+            $table->foreign('utenteId')->references('utenteId')->on('utenti');
             $table->string('titolo', 50);
             $table->string('artista', 50);
             $table->dateTime('data');
@@ -25,12 +25,12 @@ class CreateEventiTable extends Migration
             ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
             'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
             'Marche', 'Lazio', 'Abruzzo', 'Molise',
-            'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'])->nullable();
+            'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna']);
             $table->float('prezzo');
             $table->text('descrizione', 200);
             $table->text('programma', 1500)->nullable();
             $table->integer('bigliettiDisp');
-            $table->integer('bigliettiVenduti')->unsigned();
+            //$table->integer('bigliettiVenduti')->unsigned();
             $table->tinyInteger('sconto')->nullable();
             $table->date('dataSconto')->nullable();
             $table->string('mapsUrl', 300);
