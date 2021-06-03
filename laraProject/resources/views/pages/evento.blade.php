@@ -10,7 +10,7 @@
         <div class="btn-hero">
 
           @auth
-            <a href="" class="default-btn">Acquista ora</a>
+          {{ link_to_route('pagamento', 'Acquista Ora', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
            @endauth 
            @guest
            <a href="{{route('login')}}" class="default-btn">Acquista ora</a>

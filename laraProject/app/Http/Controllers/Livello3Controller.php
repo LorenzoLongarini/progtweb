@@ -21,12 +21,12 @@ class Livello3Controller extends Controller
     }
 
     public function index() {
-        return view ('pages.prova-form');
+        return view ('pages.user-level3');
     }
 
     public function aggiungiEvento(){
 
-        return view ('pages.prova-form');
+        return view ('pages.user-level3');
 
     }
 
@@ -38,20 +38,19 @@ class Livello3Controller extends Controller
     
     public function salvaEvento(EventRequest $request){
         
-        $this->validate($request);
+       
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
         } else {
             $imageName = NULL;
         }
-        //$utenteId = 9;
+        
         $evento = new evento;
         $evento->utenteId = Auth::id();
         $evento->imgName = $imageName;
         $evento->titolo = $request->titolo;
         $evento->artista = $request->artista;
-        $evento->nomeOrg = Auth::id()->nomeOrg();
         $evento->regione = $request->regione;
         $evento->luogo = $request->luogo;
         $evento->data = $request->data . " " . $request->orario;
@@ -69,7 +68,7 @@ class Livello3Controller extends Controller
             $destinationPath = public_path() . '/images/products';
             $imageName->move($destinationPath, $imageName);
         };*/
-        return view('pages.prova-form');
+        return view('pages.user-level3');
         //return response()->action(['redirect' => route('faq')]);
         //return redirect()->action('pages.prova-form');
     }

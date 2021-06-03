@@ -45,6 +45,12 @@ Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
 
 Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
+Route::get('/pagamento/{id}/', 'PublicController@pagaEvento')->name('pagamento');
+
+Route::get('/pagamento/acquisto/{id}/', 'PublicController@acquistaEvento')->name('acquisto');
+
+Route::get('/pagamento/acquisto/confermato/{id}/', 'PublicController@acquistoConfermato')->name('confermato');
+
 Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
