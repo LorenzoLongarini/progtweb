@@ -1,4 +1,5 @@
-@sectio('content')
+@extends('layouts.public')
+@section('content')
 <div class="da-confermare">
    <br>
    <br>
@@ -38,9 +39,9 @@
     <br>
     <div class="scritte-pagamento2">€ XX,XX </div>
     <br>
-    <div class="flex-center"> <button class =" btn default-btn"> CONFERMA </button></div>
+    {{ link_to_route('confermato', 'Conferma', $parameters = ['id' => $acquisto->eventoId], $attributes = ['class' => 'btn default-btn'])}}
     <br>
-    <div class = "flex-center"><a> o torna indietro per modificare i dati</a></div>
+    <div class = "flex-center">{{ link_to_route('pagamento', 'o torna indietro per modificare i dati', $parameters = ['id' => $acquisto->eventoId])}} </a></div>
     <br>
 </div>
 @endsection

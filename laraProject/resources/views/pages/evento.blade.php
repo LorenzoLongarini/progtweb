@@ -11,11 +11,11 @@
         <div class="btn-hero">
 
             @can('isClient')
-                {{ link_to_route('home', 'Acquista ora', '', $attributes = ['class' => 'btn default-btn'])}}
+                {{ link_to_route('pagamento', 'Acquista Ora', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
             @endcan
             
             @guest
-                {{ link_to_route('login', 'Acquista ora', '', $attributes = ['class' => 'btn default-btn'])}}
+                <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
             @endguest
         </div>
     </div>
