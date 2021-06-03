@@ -1,5 +1,5 @@
 <div class="form-blank">
-    {{  Form::open(array('route' => ['modificaFaq.store', $faq->faqId] , 'files' => true, 'method'=>'POST'))  }}
+    {{  Form::open(array('route' => ['modificaFaq.update', $faq->faqId] , 'files' => true, 'method'=>'POST'))  }}
    
     <h2>Modifica FAQ</h2>
         <div class="wrap-input">
@@ -31,7 +31,7 @@
     </div>
 
     <div>
-    {{  Form::reset ('Annulla' /*class-type*/)}}
+    {{  Form::reset ('Annulla', /*class-type*/)}}
     </div>
 
     {{  Form::hidden ('_method', 'PUT')}}
