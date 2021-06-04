@@ -1,8 +1,8 @@
-@extends('layouts.blank')
+@extends('layouts.public', ["headerVisible" => false, "footerVisible" => false])
 
 @section('page-title', 'Accedi al tuo account')
 
-@section('content')
+@section('page-content')
 
 <div class="login-container flex-rows">
     <div class="brand">
@@ -11,7 +11,7 @@
     </div>
     <div style="max-width: 373px">
         <div class="alert card">
-            <p>Se rappresenti un organizzatore di eventi <a class="link" href="{{ route('lavora-con-noi') }}">leggi alle nostre modalità di adesione</a>.</p>
+            <p>Se rappresenti un organizzatore di eventi <a class="link" href="{{ route('lavora-con-noi') }}">leggi le nostre modalità di adesione</a>.</p>
         </div>
         <div class="login-form card">
             <h2>Accedi</h2>

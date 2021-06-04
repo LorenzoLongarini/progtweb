@@ -2,7 +2,7 @@
 
 @section('page-title', 'FAQ')
 
-@section('content')
+@section('page-content')
 
 @include('helpers/cover-page', [
         'title' => 'FAQ - Frequently asked question', 
@@ -11,7 +11,7 @@
 
 <div class="container flex-columns">
 @can('isAdmin')
-    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ',)}}
+    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ')}}
 @endcan
 
     @isset($faqs)
@@ -21,10 +21,10 @@
                     <h2>{{ $faq->domanda }}</h2>
                     <div class="event-right">
                     @can('isAdmin')  
-                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], )}}
+                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], ['class'=>'default-btn'] )}}
                     {!!  Form::open(['action' => ['AdminController@eliminaFaq', $faq->faqId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('DELETE')!!}
+                        {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}
                     @endcan
 

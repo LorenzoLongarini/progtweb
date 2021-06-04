@@ -1,13 +1,34 @@
-@extends('layouts.root')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@section('page-body')
+    @include('includes/head')
 
-    @include('includes/header')    
-    
-    <main id="public-page-content">
-        @yield('content')
-    </main>
+    <body>
+        
+        @php
+            $authBtn = false;
+            $searchBtn = false;
 
-    @include('includes/footer')
+            if(!isset($search) || $search == true)
+                $searchBtn = true;
 
-@endsection
+            if(!isset($auth) || $authBtn == true)
+                $authBtn = true;
+        @endphp
+
+        @if(!isset($headerVisible) ||  $headerVisible == true){
+            $withHeaderClass = "class ='withHeader'";
+            @include('includes/header', ["searchBtn" => $searchBtn, "toggleThemeBtn" => true ,"authBtn" => $authBtn]) 
+        @endif
+
+        <main id="page-content" {{ $withHeaderClass ?? '' }}>
+            @yield('page-content')
+        </main>
+        
+        @if(!isset($footerVisible) ||  $footerVisible == true)
+            @include('includes/footer') 
+        @endif
+
+    </body>
+
+</html>

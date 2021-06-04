@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('content')
+@section('page-content')
     <div id="user-page-content" class="container flex-rows" >
         <aside id="user-nav" style="">    
            @yield('usernavbar')

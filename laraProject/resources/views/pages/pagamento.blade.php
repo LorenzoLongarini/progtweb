@@ -1,4 +1,5 @@
-@section('content')
+@extends('layouts.public')
+@section('page-content')
     <div class = "contienitutto">
     <div display="flex" justify-content="center">
         <div class="cont-riepilogo">
@@ -96,7 +97,8 @@
             <input style = "margin-left:0px" class = "esempio-form" type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX"></input>
             </div>
 <br>
-            <button class="btn default-btn" style="margin-left:120px">Acquista</button>
+{{ link_to_route('acquisto', 'Acquista', $parameters = ['id' => $pagamento->eventoId], $attributes = ['class' => 'btn default-btn'])}}
+           
 </div>
     </div>
     </div>

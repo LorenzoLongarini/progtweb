@@ -2,7 +2,7 @@
 
 @section('page-title', 'Chi siamo')
 
-@section('content')
+@section('page-content')
 
 @include('helpers/cover-page', [
         'title' => 'Chi siamo', 

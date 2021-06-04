@@ -1,4 +1,5 @@
-@section('content')
+@extends('layouts.public')
+@section('page-content')
 <div class="acquisto-confermato">
    <br>
    <br>
@@ -11,6 +12,6 @@
     <br>
 <div class="flex-center">Ti ringraziamo per aver acquistato con EasyTicket</div>
 <br>
-<div class="flex-center"> <a>Clicca qui per tornare alla home.</a></div>
+<div class="flex-center"> <a href="{{route('home')}}" >Clicca qui per tornare alla home.</a></div>
 </div>
 @endsection
