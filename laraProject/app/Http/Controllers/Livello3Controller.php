@@ -37,7 +37,8 @@ class Livello3Controller extends Controller
     }*/
     
     public function salvaEvento(EventRequest $request){
-    
+        
+        $this->validate($request);
         if ($request->hasFile('imgName')) {
             $immagine = $request->file('imgName');
             $imageName = $immagine->getClientOriginalName();
@@ -50,6 +51,7 @@ class Livello3Controller extends Controller
         $evento->imgName = $imageName;
         $evento->titolo = $request->titolo;
         $evento->artista = $request->artista;
+        $evento->nomeOrg = Auth::id()->nomeOrg();
         $evento->regione = $request->regione;
         $evento->luogo = $request->luogo;
         $evento->data = $request->data . " " . $request->orario;

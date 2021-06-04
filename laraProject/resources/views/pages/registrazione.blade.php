@@ -1,5 +1,5 @@
-@extends('layouts.forms')
+@extends('layouts.blank')
 
-@section('form')
-@include('inserts.registerUser')
+@section('content')
+    @include('inserts.registerUser')
 @endsection
