@@ -6,22 +6,22 @@
     <body>
         
         @php
-            $authBtn = false;
-            $searchBtn = false;
+            $authBtn = false; $searchBtn = false; $withHeaderClass;
 
             if(!isset($search) || $search == true)
                 $searchBtn = true;
 
             if(!isset($auth) || $authBtn == true)
                 $authBtn = true;
+
+            if(!isset($headerVisible) ||  $headerVisible == true){
+                $withHeaderClass = "withHeader";
+            } 
         @endphp
 
-        @if(!isset($headerVisible) ||  $headerVisible == true){
-            $withHeaderClass = "class ='withHeader'";
-            @include('includes/header', ["searchBtn" => $searchBtn, "toggleThemeBtn" => true ,"authBtn" => $authBtn]) 
-        @endif
+        @include('includes/header', ["searchBtn" => $searchBtn, "toggleThemeBtn" => true ,"authBtn" => $authBtn])
 
-        <main id="page-content" {{ $withHeaderClass ?? '' }}>
+        <main id="page-content" class="{{ $withHeaderClass ?? '' }}">
             @yield('page-content')
         </main>
         

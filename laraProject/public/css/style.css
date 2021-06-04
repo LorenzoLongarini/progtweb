@@ -910,6 +910,10 @@ nav#event-nav ul li{
     right: 15px;
 }
 
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
 svg.bi-x{
     width: 40px;
 }
