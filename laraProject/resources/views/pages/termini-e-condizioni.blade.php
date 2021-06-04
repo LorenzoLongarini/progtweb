@@ -1,7 +1,7 @@
 @extends('/layouts.public')
 
 @section('page-title', 'Termini e condizioni d\'uso')
-@section('content')
+@section('page-content')
 
 @include('helpers/cover-page', [
         'title' => 'Termini e condizioni d\'uso', 

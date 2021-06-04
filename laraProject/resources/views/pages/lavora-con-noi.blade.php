@@ -1,1 +1,1 @@
-@extends('/layouts.public')
+@extends('layouts.public')

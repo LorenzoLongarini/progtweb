@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('page-title', $event->titolo)
-@section('content')
+@section('page-content')
 
 @include('helpers/cover-page', [
         'title' => 'FAQ - Frequently asked question', 
