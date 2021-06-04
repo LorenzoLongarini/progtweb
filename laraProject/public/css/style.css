@@ -13,10 +13,9 @@ html{
     --button-navuser-bg:#004064;
     --button-navuser-text : #000000;
     --button-navuser-bg-hover: #d3d3d3;
-    --card-shadow : #85858530;
-    --card-shadow-hover : #18181830;
+    --card-box-shadow : #85858530;
+    --card-box-shadow-hover : #18181830;
     --input-border-color: #c8c8c8;
-    --input-default-bg: #fff;
     --line-color: #22303b;
     --price-color : #3d9430;
 }
@@ -33,10 +32,9 @@ html.dark{
     --button-navuser-bg-hover: #272727;
     --link-color: #ffc100;
     --link-hover-color: #ffffff;
-    --container-bg: #2b2b2b;
-    --card-shadow : #151515;
-    --input-border-color : #2f84f1;
-    --input-default-bg :#454545; 
+    --card-bg: #2b2b2b;
+    --card-box-shadow : #151515;
+    --input-border-color : #2f84f1; 
     --line-color: #d4d4d4;
     --price : #6bcc5d;
 }
@@ -107,19 +105,15 @@ del, .delete {
     width: -moz-fit-content;
 }
 
-.delete, button, .default-btn, a.link{
+.delete, button, a.link{
     cursor: pointer;
 }
 
-.default-btn, .delete, nav#main-menu ul li a.nav-link{
+button.default-btn, .delete, nav#main-menu ul li a.nav-link{
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.abort-btn{
-    background-color: #de001e;
-    color: white;
-}
 /* Elementi di base (pulsanti, textbox, tabelle, celle ecc.)*/
 
 body{
@@ -208,11 +202,15 @@ nav#main-menu ul li a.nav-link:hover::after,  nav#main-menu ul li a.nav-link:foc
     transform: scale3d(1, 1, 1);
 }
 
-.header-link-icon{
+.link-icon{
     display: flex;
     align-items: center;
     cursor: pointer;
     margin: 0 10px;
+}
+
+.link-icon svg{
+    width: 25px;
 }
 
 a.login:hover, a.login:focus{
@@ -230,12 +228,12 @@ a.login span{
     padding-left: 5px;
 }
 
-#masthead .header-link-icon svg{
+#masthead .link-icon svg{
     width: 25px;
     fill:#22303b;
 }
 
-#masthead .header-link-icon:hover svg, #masthead .header-link-icon:focus svg, #theme-toggle.clicked.header-link-icon svg{
+#masthead .link-icon:hover svg, #masthead .link-icon:focus svg, #theme-toggle.clicked.link-icon svg{
     fill: #ffc100;
 }
 /* Pulsanti */
@@ -243,17 +241,14 @@ a.login span{
     padding: 12px 35px;
     margin: 10px;
     font-size: 1em;
-    height: fit-content;
-    height: -moz-fit-content;
     color: var(--button-default-text);
     border: none;
     border-radius: 30px;
     background-color: var(--button-default-bg);
 }
 
-.default-btn:hover, .default-btn:focus{
+button:hover, button:focus{
     background-color: var(--button-default-bg-hover);
-    text-decoration: none;
 }
 
 button.user-nav-btn{
@@ -277,21 +272,14 @@ button.user-nav-btn.active{
     background-color: var(--button-navuser-bg);
 }
 
-/* Input */
-input[type="text"], input[type="date"],input[type="password"], select{
+/* Input area */
+input[type="text"], input[type="date"],input[type=password], select{
     height: 46px;
-    width: 100%;
     font-size: 1.1rem;
     padding: 8px 10px;
-    color: var(--p-color);
     border: 2px solid var(--input-border-color);
     border-radius: 7px;
-    background-color: var(--input-default-bg);
-}
-
-input[type="submit"]#search-btn{
-    margin: 0;
-    width: 100%;
+    background-color: var(--container-bg);
 }
 
 #input-credit-card{
@@ -327,17 +315,9 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
     display: block;
     position: relative;
     height: auto;
+    padding: 15px 15px;
     z-index: 99;
-    border-radius: 10px;
-    background-color: var(--container-bg);
-    box-shadow: 0px 0px 3px 3px var(--card-shadow);
-}
-
-.alert.card{
-    padding: 10px 10px;
-    margin: 10px 0;
-    text-align: center;
-    border-left: 4px solid #de001e;
+    background-color: var(--card-bg);
 }
 
 /* Layouts */
@@ -380,24 +360,18 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 }
 
 #masthead div{
-    display: flex;
+    display: inherit;
 }
 
 .container{
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
 }
 
 aside#user-nav{
     display: inline-block;
     padding: 25px 0;
-}
-
-aside#user-nav.sticky{
-    position: fixed;
-    top: 140px;
-    left: 110px;
 }
 
 aside#user-nav ul{
@@ -413,11 +387,12 @@ aside#user-nav ul li{
 .user-nav-separator{
     display: inline-block;
     width: 1px;
+    height: 50vh;
     margin: 0 80px;
     background-color: var(--line-color);
 }
 
-#page-content.withHeader{
+#public-page-content{
     margin-top: 80px;
 }
 
@@ -464,13 +439,13 @@ footer ul.footer-links li a:hover{
     justify-content: space-between;
     align-items: center;
     background-color: var(--card-bg);
-    box-shadow: 0px 0px 3px 3px var(--card-shadow);
+    box-shadow: 0px 0px 3px 3px var(--card-box-shadow);
     border-radius: 15px;
     margin: 10px 0;
 }
 
 .event:hover{
-    box-shadow: 0px 0px 3px 3px var(--card-shadow-hover);
+    box-shadow: 0px 0px 3px 3px var(--card-box-shadow-hover);
 }
 
 .event div {
@@ -493,9 +468,9 @@ footer ul.footer-links li a:hover{
 }
 
 .cover-page{
-    margin-bottom: 50px;
     height: 350px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .content-cover h2{
@@ -839,7 +814,7 @@ nav#event-nav ul li{
 
 .card-faq{
     border-radius: 10px;
-    box-shadow: 0px 0px 3px var(--card-shadow);
+    box-shadow: 0px 0px 3px var(--card-box-shadow);
     padding: 5px 30px;
     background-color: var(--card-bg);
 }
@@ -852,11 +827,13 @@ nav#event-nav ul li{
     border-radius: 10px;
 }
 
-/*Search form*/
+/*inventati*/
 
 .wrap-input {
     width: 100%;
+    position: relative;
     margin: 30px 10px;
+    background-color: transparent;
   }
   
   #search-form.form.card{
@@ -966,7 +943,6 @@ svg.bi-x:hover path{
   }
 
 ul.errors{
-    margin: 5px 0;
     list-style-type: none;
     padding-left: 10px;
 }
@@ -985,7 +961,6 @@ ol#faq-list li::marker{
     font-weight: 800;
 }
 
-/* Login page*/
 .login-container{
     background:  linear-gradient(to right, #0000008f, #0000008f), url('../../storage/app/public/images/covers/auth-bg.jpg');
     background-position: center center;
@@ -1009,18 +984,21 @@ ol#faq-list li::marker{
     margin: 1rem 0;
 }
 
-.login-container .login-form{
+.login-form{
     background-color: var(--container-bg);
-    padding: 50px 40px;
+    border-radius: 10px;
+    padding: 50px 30px;
+    display: inherit;
+    flex-direction: column;
 }
 
-.login-container .login-form h2{
-    font-size: 2rem;
+.event .img-event img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
 }
 
-.login-container .login-form  .wrap-input{
-    margin: 30px 0;
-}
+
 
 .login-btn{
     margin-left: 40px;
@@ -1039,13 +1017,6 @@ ol#faq-list li::marker{
 .login-btn:active {
 	transform: scale(0.95);
 }
- /*--------------*/
-
-.event .img-event img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px 0px 0px 15px;
-}
 
 #user-nav .user-nav-link.clicked{
     background-color: red;
@@ -1058,8 +1029,39 @@ ol#faq-list li::marker{
 }
 
 #user-page-content{
+    position:relative;
     padding-top: 50px;
 }
+.drop-down-content{
+    margin-left: 40px;
+    margin-top:100px;
+    position: absolute;
+    padding: 30px 20px;
+    border: 2px solid red;
+    background-color: #f5f5f5;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+}
+.btn-logout{
+    font-size: 15px;
+    border: none;
+    background-color: var(--container-bg);
+    
+    
+}
+.btn-logout:hover {
+    
+    text-decoration: none;
+    color: #ffc100;
+    background-color:var(--container-bg) ;
+    
+    
+}
+
+
+.btn-logout:focus{
+    color: none;
+    background-color: none;
+
 
 /* stile pagamento e admin lollo*/
 .pagamento-line{
@@ -1160,11 +1162,6 @@ ol#faq-list li::marker{
 .elimina{
     margin-left: 540px;
     color: red;
-    
-}
-
-.delete{
-    box-align: right;
     
 }
 
