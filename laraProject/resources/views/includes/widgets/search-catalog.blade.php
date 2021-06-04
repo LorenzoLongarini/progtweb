@@ -1,6 +1,6 @@
 @php
     $visibilityClass;
-    if( isset($searchBtn) && $searchBtn == false)
+    if(isset($searchBtn) && $searchBtn == false)
         $visibilityClass = "hidden";
 @endphp
 

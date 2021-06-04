@@ -19,9 +19,8 @@
             </nav>  
         </div>
         <div id="right-header">   
-            @if($searchBtn == true)
-                @include('includes.widgets.search-catalog', ["searchBtn" => $searchBtn])
-            @endif
+         
+            @include('includes.widgets.search-catalog', ["searchBtn" => $searchBtn])
 
             @if($toggleThemeBtn == true)
                 @include('includes.widgets.theme-toggle')

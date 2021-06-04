@@ -1,19 +1,9 @@
-function stickyElement(element, pageY, className) {
-    
-    let pagePositionY = window.pageYOffset;
-
-    if (element != undefined) {
-        if (pagePositionY > pageY)
-            element.classList.add(className);
-        else
-            element.classList.remove(className);
-    }
-}
-
 $(document).ready(function () {
 
     var searchForm = document.getElementById('search-form');
     var usernNav = document.getElementById('user-nav');
+    var searchBtn = document.querySelector('#search-btn.hidden');
+    var searchFormCatalog = document.querySelector('#page-content #search-form');
   
     $("#theme-toggle").click(function () {
         $("#theme-toggle").toggleClass("clicked");
@@ -38,8 +28,17 @@ $(document).ready(function () {
     });
 
     window.onscroll = function () {
-        stickyElement(usernNav, 100, 'sticky');
-    };
+        let pagePositionY = window.pageYOffset;
+
+        if (searchBtn != undefined) {
+            if (pagePositionY > 507) {
+                searchBtn.classList.remove('hidden');
+                $('#page-content #search-form').addClass('hidden');
+            }
+            else {
+                searchBtn.classList.add('hidden');
+                searchFormCatalog.classList.remove('hidden');
+            }
+        }
+    }
 });
-
-
