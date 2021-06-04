@@ -1062,7 +1062,7 @@ ol#faq-list li::marker{
     color: none;
     background-color: none;
 
-
+}
 /* stile pagamento e admin lollo*/
 .pagamento-line{
     display: inline-block;
