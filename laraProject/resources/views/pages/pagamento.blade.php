@@ -16,16 +16,16 @@
     <br>
                     <div class = "row-direction" >
                     <div class="img-event immagine-distance">
-                        <h3>Immagine</h3>
+                    @include('helpers.img-event', ['imgName' => $pagamento->imgName])
                     </div>
 
                     <div class="event-info flex-columns" style="margin-top:10px">
-                        <h2>Tour Artista</h2>
-                        <h4>17 giu 2022</h4>
-                        <h4>Milano San Siro</h4>
+                        <h2>{{$pagamento->titolo}}</h2>
+                        <h4>{{$pagamento->data}}</h4>
+                        <h4>{{$pagamento->luogo}}</h4>
                         </div>
                 <div class="event-right right-distance">
-                    <h4 class="price">€ 32,90</h4>
+                    <h4 class="price"> {{$pagamento->prezzo}} € </h4>
                 </div>
                 
 </div>
@@ -45,13 +45,13 @@
             <option value="6">6</option>
             </select>
     </div>
-    <div class = "dim-prezzo-mod">Prezzo Modificato</div>
+    <div class = "dim-prezzo-mod">{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</div>
     </div>
     <div class = "row-direction">
     <h3 class="notice quant-dim">
-    Applicato sconto last-minute del 15%
+    Applicato sconto last-minute del {{$pagamento->sconto}}%
             </h3>
-            <div class = "dim-prezzo-mod2">Prezzo Modificato</div>
+            <div class = "dim-prezzo-mod2">{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</div>
     </div>
     <div class = "pagamento-line"></div>
         <div class = "row-direction">
@@ -97,7 +97,7 @@
             <input style = "margin-left:0px" class = "esempio-form" type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX"></input>
             </div>
 <br>
-{{ link_to_route('acquisto', 'Acquista', $parameters = ['id' => $pagamento->eventoId], $attributes = ['class' => 'btn default-btn'])}}
+{{ link_to_route('acquisto', 'Acquista', $parameters = ['id' => $pagamento->eventoId], $attributes = ['class' => 'btn default-btn' , 'style'=>'margin-left:120px'])}}
            
 </div>
     </div>

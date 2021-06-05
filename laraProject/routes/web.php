@@ -45,11 +45,13 @@ Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
 
 Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
-Route::get('/pagamento/{id}/', 'PublicController@pagaEvento')->name('pagamento');
+Route::get('/pagamento/{id}/', 'ClientController@pagaEvento')->name('pagamento');
 
-Route::get('/pagamento/acquisto/{id}/', 'PublicController@acquistaEvento')->name('acquisto');
+Route::post('pagamento/{id}/', 'ClientController@pagaBiglietto')->name('pagamento.store');
 
-Route::get('/pagamento/acquisto/confermato/{id}/', 'PublicController@acquistoConfermato')->name('confermato');
+Route::get('/pagamento/acquisto/{id}/', 'ClientController@acquistaEvento')->name('acquisto');
+
+Route::get('/pagamento/acquisto/confermato/{id}/', 'ClientController@acquistoConfermato')->name('confermato');
 
 Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 

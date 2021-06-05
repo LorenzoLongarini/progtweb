@@ -104,17 +104,5 @@ class PublicController extends Controller
         return view('pages.evento')->with('event', $evento);
     }
 
-    public function pagaEvento($id){
-        $pagamento = Evento::where('eventoId', $id)->get()->first();
-        return view('pages.pagamento')->with('pagamento', $pagamento);
-    }
-
-    public function acquistaEvento($id){
-        $acquisto = Evento::where('eventoId', $id)->get()->first();
-        return view('pages.pag-da-confermare')->with('acquisto', $acquisto);
-    }
-    public function acquistoConfermato($id){
-        $confermato = Evento::where('eventoId', $id)->get()->first();
-        return view('pages.pag-confermato')->with('confermato', $confermato);
-    }
+    
 }

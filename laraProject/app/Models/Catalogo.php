@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Catalog extends Model
 {
     public function getAllEvents(){
-        $event = Evento::all():
+        $event = Evento::all();
     }
 
     public function getEventsByOrg($org){

@@ -60,14 +60,14 @@ class Livello3Controller extends Controller
         $evento->bigliettiVenduti = 0;
         $evento->save();
 
-        
+    } 
     public function modificaEvento($eventoId){
         $evento = find::($eventoId);
         return view ('modifyEvent')->with('event', $evento);
 
     }
 
-    public function updateEvento(EventRequest $request ,$eventoId)
+    public function updateEvento(EventRequest $request ,$eventoId){
 
     if ($request->hasFile('imgName')) {
         $immagine = $request->file('imgName');
@@ -93,4 +93,4 @@ class Livello3Controller extends Controller
     $evento->dataSconto = $request->dataSconto;
     $evento->save();
     }
-}
+    }
