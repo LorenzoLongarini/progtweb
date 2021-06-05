@@ -32,7 +32,7 @@
     </div>
 
     <div>
-    {{  Form::reset ('Annulla', /*class-type*/)}}
+    {{  Form::reset ('Annulla'/*class-type*/)}}
     </div>
 {{Form::close()}}
 </div>

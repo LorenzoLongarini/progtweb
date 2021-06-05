@@ -1,8 +1,8 @@
-@extends('layouts.blank')
+@extends('layouts.public', ["headerVisible" => false, "footerVisible" => false])
 
 @section('page-title', 'Accedi al tuo account')
 
-@section('content')
+@section('page-content')
 
 <div class="login-container flex-rows">
     <div class="brand">

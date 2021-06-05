@@ -1,5 +1,5 @@
 @extends('layouts.public')
-@section('content')
+@section('page-content')
 <div class="acquisto-confermato">
    <br>
    <br>

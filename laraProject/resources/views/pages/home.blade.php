@@ -2,7 +2,7 @@
 
 @section('page-title', 'Eventi in italia')
 
-@section('content')
+@section('page-content')
 
 
 <main id="page-content">

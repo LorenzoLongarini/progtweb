@@ -2,7 +2,7 @@
 
 @section('page-title', 'Privacy & GDPR')
 
-@section('content')
+@section('page-content')
 
 @include('helpers/cover-page', [
         'title' => 'Informativa sulla privacy e GDPR', 

@@ -2,7 +2,7 @@
 
 @section('page-title', 'FAQ')
 
-@section('content')
+@section('page-content')
 
 @include('helpers/cover-page', [
         'title' => 'FAQ - Frequently asked question', 

@@ -1,5 +1,5 @@
 @extends('layouts.blank')
 
-@section('content')
+@section('page-content')
     @include('inserts.registerUser')
 @endsection
