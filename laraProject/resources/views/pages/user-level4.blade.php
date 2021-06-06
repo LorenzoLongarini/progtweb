@@ -7,5 +7,6 @@
 @endsection
 
 @section('form')
+@include('inserts.user-nav-faq')
     @include('inserts.dashboard-livello4')
 @endsection
