@@ -2,6 +2,9 @@
 
 @section('page-title', 'Inserisci FAQ')
 
-@section('form')
+@section('content')
     @include('inserts.insertFaq')
+    <br>
+    <br>
+    <a href="{{ route('faq') }}" >Torna alle FAQ</a>
 @endsection

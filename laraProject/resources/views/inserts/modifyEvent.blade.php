@@ -1,12 +1,12 @@
 
 <div class="form">
-    {{  Form::open(array(['route' => 'modificaEvento.update', $evento->EventoId ], 'id' => 'modificaEvento', 'files' => true 'method'=> 'POST'))  }}
+    {{  Form::open(array('route' => ['modificaEvento.update', $event->eventoId], 'files' => true, 'method'=> 'POST'))  }}
    
-    <h2>Informazioni generali</h2>
+    <h2>Modifica Evento</h2>
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
-            {{  Form::text ('titolo', '$evento->titolo' /*class-type*/)  }}
+            {{  Form::text ('titolo', $event->titolo /*class-type*/)  }}
             @if ($errors->first('titolo'))
                 <ul >
                     @foreach ($errors->get('titolo') as $message)
@@ -17,7 +17,7 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
-            {{  Form::text ('artista', '$evento->artista' /*class-type*/)  }}
+            {{  Form::text ('artista', $event->artista /*class-type*/)  }}
           @if ($errors->first('artista'))
                 <ul >
                     @foreach ($errors->get('artista') as $message)
@@ -34,7 +34,7 @@
             {{  Form::select ('regione', ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
                 'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
                 'Marche', 'Lazio', 'Abruzzo', 'Molise',
-                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'],'$evento->regione' )  }}
+                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'], $event->regione )  }}
        
             @if ($errors->first('regione'))
                 <ul>
@@ -46,7 +46,7 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
-            {{  Form::text ('luogo', '' /*class-type*/)  }}
+            {{  Form::text ('luogo', $event->luogo /*class-type*/)  }}
             @if ($errors->first('luogo'))
                 <ul>
                     @foreach ($errors->get('luogo') as $message)
@@ -58,7 +58,7 @@
         
         <div class="wrap-input">
             {{  Form::label ('data', 'Data' /*class-type*/)}}
-            {{  Form::date ('data', '$evento->data' /*class-type*/ ) }}
+            {{  Form::date ('data', $event->data /*class-type*/ ) }}
             @if ($errors->first('data'))
                 <ul >
                     @foreach ($errors->get('data') as $message)
@@ -70,7 +70,7 @@
 
         <div class="wrap-input">
             {{  Form::label ('orario', 'Orario' /*class-type*/)}}
-            {{  Form::time ('orario', '') }}
+            {{  Form::time ('orario', $event->orario) }}
             @if ($errors->first('orario'))
                 <ul>
                     @foreach ($errors->get('orario') as $message)
@@ -84,7 +84,7 @@
     <div class="single-input">
         <div class="wrap-input">
             {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
-            {{  Form::file ('imgName' /*class-type*/)  }}
+            {{  Form::file ('imgName', $event->imgName /*class-type*/)  }}
             @if ($errors->first('imgName'))
                 <ul >
                     @foreach ($errors->get('imgName') as $message)
@@ -95,7 +95,7 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('mapsUrl', 'Url' /*class-type*/)}}
-            {{  Form::text ('mapsUrl', '$evento->mapsUrl' /*class-type*/)  }}
+            {{  Form::text ('mapsUrl', '$event->mapsUrl' /*class-type*/)  }}
         </div>
         
     </div>
@@ -103,7 +103,7 @@
     <div class="single-input">
         <div class="wrap-input">
             {{  Form::label ('descrizione', 'Descrizione Completa' /*class-type*/)}}
-            {{  Form::textarea ('descrizione', '$evento->descrizione'  /*class-type*/)}}
+            {{  Form::textarea ('descrizione', $event->descrizione  /*class-type*/)}}
             @if ($errors->first('descrizione'))
                 <ul>
                     @foreach ($errors->get('descrizione') as $message)
@@ -117,7 +117,7 @@
     <div class="single-input">
         <div class="wrap-input">
             {{  Form::label ('programma', 'Programma' /*class-type*/) }}
-            {{  Form::text ('programma', '$evento->progamma' /*class-type*/) }}
+            {{  Form::text ('programma', $event->progamma /*class-type*/) }}
             @if ($errors->first('programma'))
                 <ul class="errors">
                     @foreach ($errors->get('programma') as $message)
@@ -132,7 +132,7 @@
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('bigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
-            {{  Form::text ('bigliettiDisp', '$evento->bigliettiDisp' /*class-type*/) }}
+            {{  Form::text ('bigliettiDisp', $event->bigliettiDisp /*class-type*/) }}
             @if ($errors->first('bigliettiDisp'))
                 <ul class="errors">
                     @foreach ($errors->get('bigliettiDisp') as $message)
@@ -144,7 +144,7 @@
         </div>
         <div class="wrap-input">
             {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
-            {{  Form::text ('prezzo', '' /*class-type*/) }}
+            {{  Form::text ('prezzo', $event->prezzo /*class-type*/) }}
             @if ($errors->first('prezzo'))
                 <ul class="errors">
                     @foreach ($errors->get('prezzo') as $message)
@@ -158,7 +158,7 @@
 
     <div>
     {{  Form::label ('sconto', 'Sconto' /*class-type*/ )}}
-    {{  Form::text ('sconto', '' /*class-type*/) }}
+    {{  Form::text ('sconto', $event->sconto /*class-type*/) }}
     @if ($errors->first('sconto'))
                 <ul class="errors">
                     @foreach ($errors->get('sconto') as $message)
@@ -171,7 +171,7 @@
 
 
     {{  Form::label ('dataSconto', 'Data inizio sconto')}}
-    {{  Form::date ('dataSconto'),''  }}
+    {{  Form::date ('dataSconto', $event->dataSconto)  }}
     @if ($errors->first('dataSconto'))
                 <ul>
                     @foreach ($errors->get('dataSconto') as $message)
@@ -184,6 +184,7 @@
 
     <div>
     {{  Form::submit ('Conferma' /*class-type*/)}}
+    {{  Form::hidden ('_method', 'PUT')}}
     </div>
 
     <div>

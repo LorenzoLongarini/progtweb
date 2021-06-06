@@ -55,13 +55,23 @@ Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
 
-//Route::view('/modifica-dati', 'pages.modifica-dati')->name('modifica-dati');
-
 Route::post('/catalogo/cerca', 'PublicController@searchForFilters')->name('cerca');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
+
+Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
+        ->name('aggiungiEvento');
+
+Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
+        ->name('aggiungiEvento.store');
+
+Route::get('/evento/{id}/modify', 'Livello3Controller@modificaEvento')->name('modificaEvento');
+
+Route::put('/evento/{id}/modify', 'Livello3Controller@updateEvento')->name('modificaEvento.update');
+
+Route::delete('evento/{id}', 'Livello3Controller@eliminaEvento')->name('eliminaEvento');
 
 Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
 
@@ -71,17 +81,9 @@ Route::get('/faq/{faqId}/modify', 'AdminController@modificaFaq')->name('modifica
 
 Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFaq.update');
 
-Route::get('/evento/{id}/modify', 'Livello3Controller@modificaEvento')->name('modificaEvento');
-
-Route::put('/evento/{id}/modify', 'Livello3Controller@updateEvento')->name('modificaEvento.store');
-
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
-Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
-        ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
-        ->name('aggiungiEvento.store');
 
 Route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
 
