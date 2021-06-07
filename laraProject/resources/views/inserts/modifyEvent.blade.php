@@ -2,7 +2,7 @@
 <div class="form">
     {{  Form::open(array('route' => ['modificaEvento.update', $event->eventoId], 'files' => true, 'method'=> 'POST'))  }}
    
-    <h2>Modifica Evento</h2>
+    <h2>Modifica Organizzazione</h2>
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}

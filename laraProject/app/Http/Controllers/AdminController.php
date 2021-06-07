@@ -5,6 +5,7 @@ use Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
 use App\models\Faq;
+use App\models\user;
 
 class AdminController extends Controller {
 
@@ -56,7 +57,7 @@ public function index(){
     }
 
     public function aggiungiOrg(){
-        return view(pages.inserisciOrg);
+        return view('pages.inserisciOrg');
     }
 
     public function salvaOrg(OrgRequest $request){
@@ -78,5 +79,29 @@ public function index(){
 
 
     }
+
+    public function modificaOrg($utenteId){
+        $user = User::find($utenteId);
+        return view('pages.ModificaOrg')->with('user', $user);
+
+    }
+
+    public function updateOrg(OrgRequest $request, $utenteId){
+        $org = User::find($utenteId);
+        $org->username = $request->username;
+        $org->password = Hash::make($request->password);
+        $org->nome = $request->nome;
+        $org->cognome = $request->cognome;
+        $org->ivaFiscale = $request->ivaFiscale;
+        $org->email = $request->email;
+        $org->telefono = $request->telefono;
+        $org->via = $request->via;
+        $org->città = $request->città;
+        $org->cap = $request->cap;
+        $org->save();
+
+        return redirect()->route('admin');
+    }
+
 
 }
