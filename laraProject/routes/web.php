@@ -20,6 +20,8 @@ Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('agg
 
 Route::post('/user-level4/registerOrg', 'AdminController@salvaOrg')->name('aggiungiOrg.store');
 
+Route::post('user-level4/elimina-utenti', 'AdminController@eliminaUtente2')->name('eliminaUtente2');
+
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 

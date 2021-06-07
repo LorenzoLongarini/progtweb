@@ -1,10 +1,8 @@
-    <div>
-            
-    <div class = "row-direction">
+{{  Form::open(array('route' => 'pagamento.store', 'id' =>'pagamento-form' , 'files' => true))  }}
         <img src="./img/credit-card.svg" style="width:8%" hspace="20">
         <div style="margin-top: 8px"> <span style="font-weight:bolder"> Metodo di pagamento</div>
     </div>
-    {{  Form::open(array('route' => 'pagamento.store', 'id' =>'pagamento-form' , 'files' => true))  }}
+
             <br>
             <div>
             <label class="esempio-form" for="nome-tit">Nome Titolare</label><br>
@@ -19,12 +17,9 @@
             <input class="esempio-form" id = "codice" type="text" value="" maxlength="20" rows="1" style="width: 70%" >
             <br>
             <label class="esempio-form">Seleziona Metodo di pagamento</label><br>
-             {{Form::radio('Prepagata', 'true') }} 
-             {{Form::radio('Criptovaluta', 'false') }} 
-             {{Form::radio('Paypal', 'false') }}  
-            <input class="esempio-form" id = "carta" type="radio">
-            <input class="esempio-form" id = "carta" type="radio">
-            <input class="esempio-form" id = "carta" type="radio">
+             {{Form::radio('tipo','Prepagata', 'true') }} 
+             {{Form::radio('tipo','Criptovaluta', 'false') }} 
+             {{Form::radio('tipo','Paypal', 'false') }}  
             <br>
             <label class="esempio-form" for="card-number-area">Numero Carta</label><br>
             <input class = "esempio-form" type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
@@ -41,11 +36,10 @@
             </div>
             <div class="quant-dim">
             {{  Form::text ('quantità', '' /*class-type*/)  }}
-    </div>
+            </div>
             
             </div>
 
             {{Form::close()}}
-            
-            </div>          
+          
         

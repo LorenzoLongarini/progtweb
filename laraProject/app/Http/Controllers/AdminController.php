@@ -18,8 +18,14 @@ public function index(){
 
 }
 
+public function eliminaUtente2($utenteId){
+    $utente2 = User::where('utenteId','LIKE' , 'cliente' );
+    $utente2->destroy($utenteId);
+    return view('pages.user-level4');
+}
+
     public function inserisciFaq(){
-        return view ('pages.inserisciFaq');
+        return redirect()->route('admin');
     }
 
     public function salvaFaq(FaqRequest $request){
