@@ -37,8 +37,8 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('organizzatore');
         });
         
-        Gate::define('modificaEvento', function (user $user, evento $evento){
-            return $user->utenteId === $evento->utenteId;
-        });
+        //Gate::define('modificaEvento', function (user $user, evento $evento){
+          //  return $user->utenteId === $evento->utenteId;
+        //});
     }
 }

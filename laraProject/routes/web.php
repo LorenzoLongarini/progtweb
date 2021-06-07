@@ -47,9 +47,10 @@ Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
 Route::get('/pagamento/{id}/', 'ClientController@pagaEvento')->name('pagamento');
 
-Route::post('pagamento/{id}/', 'ClientController@pagaBiglietto')->name('pagamento.store');
+Route::post('pagamento/', 'ClientController@pagaBiglietto')->name('pagamento.store');
 
 Route::get('/pagamento/acquisto/{id}/', 'ClientController@acquistaEvento')->name('acquisto');
+
 
 Route::get('/pagamento/acquisto/confermato/{id}/', 'ClientController@acquistoConfermato')->name('confermato');
 
