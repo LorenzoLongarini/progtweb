@@ -18,12 +18,13 @@ public function index(){
     return view('pages.user-level4');
 
 }
-
 public function eliminaUtente2($utenteId){
     $utente2 = User::where('utenteId','LIKE' , 'cliente' );
     $utente2->destroy($utenteId);
     return view('pages.user-level4');
 }
+  
+   //FAQ 
 
 
 
@@ -34,7 +35,7 @@ public function eliminaUtente3($utenteId){
 }
 
     public function inserisciFaq(){
-        return redirect()->route('admin');
+        return view ('pages.inserisciFaq');
     }
 
     public function salvaFaq(FaqRequest $request){
@@ -117,5 +118,6 @@ public function eliminaUtente3($utenteId){
         return redirect()->route('admin');
     }
 
+   
 
 }
