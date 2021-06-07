@@ -1,5 +1,5 @@
 @extends('layouts.forms')
 
-@section('form')
+@section('content')
 @include('inserts.modifyFaq')
 @endsection

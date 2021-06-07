@@ -18,6 +18,7 @@
             </div>
             <div>
             {!!  Form::open(['action' => ['AdminController@eliminaUtente2', $user2->utenteId] , 'files' => true, 'method'=>'POST'])  !!}
+                        {{  Form::hidden ('_method', 'DELETE')  }}
                         {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
             {!!  Form::close()  !!}
             <a class = "elimina2"> <img src="./img/trash-2.svg" style="width:10%"> </a>

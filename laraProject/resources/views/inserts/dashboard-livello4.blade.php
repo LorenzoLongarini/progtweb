@@ -3,7 +3,7 @@
 
 @section('form')
 <div id="dashboard" class="form">
-    {{  Form::open(array('route' => ['aggiungiEvento.store'], 'id' =>'dashborard-livello4' , 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => ['aggiungiEvento.store'], 'id' =>'dashboard-livello4' , 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Informazioni generali</h2>
     <div class="multiple-input">
