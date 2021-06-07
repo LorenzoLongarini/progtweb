@@ -22,6 +22,10 @@ Route::post('/user-level4/registerOrg', 'AdminController@salvaOrg')->name('aggiu
 
 Route::post('user-level4/elimina-utenti', 'AdminController@eliminaUtente2')->name('eliminaUtente2');
 
+Route::get('/user-level4/modify/{id}', 'AdminController@modificaOrg')->name('modificaOrg');
+
+Route::put('/user-level4', 'AdminController@updateOrg')->name('modificaOrg.update');
+
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
