@@ -25,6 +25,14 @@ public function eliminaUtente2($utenteId){
     return view('pages.user-level4');
 }
 
+
+
+public function eliminaUtente3($utenteId){
+    User::where('utenteId', '=', $utenteId)->delete();
+    //$utente3->destroy($utenteId);
+    return redirect()->route('admin');
+}
+
     public function inserisciFaq(){
         return redirect()->route('admin');
     }

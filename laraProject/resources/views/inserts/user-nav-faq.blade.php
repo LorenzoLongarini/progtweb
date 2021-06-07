@@ -1,6 +1,5 @@
-@extends('layouts.user')
 
-@section('form')
+
     
 
 <div id="faq" class="form">
@@ -32,4 +31,3 @@
 </div>
 
 </div>
-@endsection

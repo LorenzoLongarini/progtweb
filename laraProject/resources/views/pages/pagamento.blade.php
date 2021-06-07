@@ -54,7 +54,8 @@
     <div class = "pagamento-line"></div>
         <div class = "row-direction">
         <div class= "quant-dim">Totale</div>
-        <div class = "dim-prezzo-mod3">Prezzo Modificato</div>
+        
+        <div class = "dim-prezzo-mod3">{{$pagamento->prezzo}}</div>
         </div>
 </div>
     <div class = "pagamento-line-v"></div>

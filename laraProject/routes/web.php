@@ -20,7 +20,9 @@ Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('agg
 
 Route::post('/user-level4/registerOrg', 'AdminController@salvaOrg')->name('aggiungiOrg.store');
 
-Route::post('user-level4/elimina-utenti', 'AdminController@eliminaUtente2')->name('eliminaUtente2');
+Route::get('user-level4/elimina-utenti', 'AdminController@eliminaUtente2')->name('eliminaUtente2');
+
+Route::delete('user-level4/elimina-utenti3/{utenteId}', 'AdminController@eliminaUtente3')->name('eliminaUtente3');
 
 Route::get('/user-level4/modify/{id}', 'AdminController@modificaOrg')->name('modificaOrg');
 

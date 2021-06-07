@@ -11,6 +11,8 @@ $(document).ready(function () {
         $("#" + $(this).attr('id') + ".form").toggleClass("activated");
     });
 
+
+
     $(" #drop-down-nav").click(function() {
         $("#drop-down-content").toggle();
        

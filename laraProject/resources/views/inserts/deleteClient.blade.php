@@ -1,4 +1,4 @@
-@section('content')
+
 @isset($utente2)
 @foreach($utente2 as $user2)
 <div>
@@ -27,4 +27,4 @@
         @endforeach
 
     @endisset
-        @endsection
+      

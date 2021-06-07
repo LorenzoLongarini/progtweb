@@ -35,7 +35,7 @@
                 Quantità
             </div>
             <div class="quant-dim">
-            {{  Form::text ('quantità', '' /*class-type*/)  }}
+            {{  Form::text ('quantità', '' , ['id'=>'num-biglietti'] )}}
             </div>
             
             </div>
