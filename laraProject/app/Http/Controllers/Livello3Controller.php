@@ -22,16 +22,10 @@ class Livello3Controller extends Controller
 
     public function aggiungiEvento(){
 
-        return view ('pages.user-level3');
+        return view ('pages.inserisciEvento');
 
     }
 
-    public function modificaEvento($eventoID){
-        $evento = find::($eventoID);
-        return view ('modifyEvent')->with('event', $evento);
-
-    }
-    
     public function salvaEvento(EventRequest $request){
         
        
@@ -59,15 +53,15 @@ class Livello3Controller extends Controller
         $evento->dataSconto = $request->dataSconto;
         $evento->bigliettiVenduti = 0;
         $evento->save();
-
-    } 
+        return redirect()->route('evento', ['id'=> $evento->eventoId]);
+    }
     public function modificaEvento($eventoId){
-        $evento = find::($eventoId);
-        return view ('modifyEvent')->with('event', $evento);
+        $event = Evento::find($eventoId);
+        return view ('pages.modificaEvento')->with('event', $event);
 
     }
 
-    public function updateEvento(EventRequest $request ,$eventoId){
+    public function updateEvento(EventRequest $request, $eventoId){
 
     if ($request->hasFile('imgName')) {
         $immagine = $request->file('imgName');
@@ -75,7 +69,7 @@ class Livello3Controller extends Controller
     } else {
         $imageName = NULL;
     }
-    $evento = Eventi::find($eventoId);
+    $evento = Evento::find($eventoId);
     
     $evento->utenteId = Auth::id();
     $evento->imgName = $imageName;
@@ -92,5 +86,14 @@ class Livello3Controller extends Controller
     $evento->sconto = $request->sconto;
     $evento->dataSconto = $request->dataSconto;
     $evento->save();
+
+    return redirect()->route('evento', ['id'=>$eventoId]);
+    
+    }
+
+    public function EliminaEvento($eventoId){
+        $evento = Evento::find($eventoId);
+        $evento->destroy($eventoId);
+        return redirect()->route('catalogo');
     }
     }

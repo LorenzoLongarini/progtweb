@@ -1,9 +1,9 @@
-@extends('layouts.root')
+@extends('layouts.public')
 
-@section('page-body')
+@section('page-content')
 <div class="container flex-rows">
     <section style="width: fit-content" id="user-section">
-        @yield('form')
+        @yield('content')
     </section>
 </div>
 

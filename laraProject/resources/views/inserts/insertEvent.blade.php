@@ -1,8 +1,8 @@
 
 <div class="form">
-    {{  Form::open(array('route' => 'aggiungiEvento.store', 'id' => 'addproduct', 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => 'aggiungiEvento.store', 'files' => true /*'class' => some-bollocks*/))  }}
    
-    <h2>Informazioni generali</h2>
+    <h2>Aggiungi Evento</h2>
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
