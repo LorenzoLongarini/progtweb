@@ -61,18 +61,17 @@ Route::post('pagamento/', 'ClientController@pagaBiglietto')->name('pagamento.sto
 
 Route::get('/pagamento/acquisto/{id}/', 'ClientController@acquistaEvento')->name('acquisto');
 
-
 Route::get('/pagamento/acquisto/confermato/{id}/', 'ClientController@acquistoConfermato')->name('confermato');
 
 Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
 
-Route::post('/catalogo/cerca', 'PublicController@searchForFilters')->name('cerca');
+Route::post('/catalogo/cerca', 'PublicController@cercaEventi')->name('cerca');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
-Route::view('/catalogo', 'pages.catalogo')->name('catalogo');
+Route::view('/catalogo', 'PublicController@mostraEventi')->name('catalogo');
 
 Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento');

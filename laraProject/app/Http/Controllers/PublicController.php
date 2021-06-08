@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Faq;
-use App\Models\Evento;
+use App\Models\Resources\Faq;
 use App\User;
+use App\Models\Catalogo;
 use App\Http\Requests\UserRequest;
 
 class PublicController extends Controller
@@ -65,17 +65,12 @@ class PublicController extends Controller
 
     }
 
-    public function showCatalogo(){
-        return view('pages.catalogo')->with('events', Evento::all());
+    public function mostraCatalogo(){
+        return view('pages.catalogo')->with('eventi', Catalogo::mostraCatalogo());
     }
 
-    public function searchForFilters(Request $request){
-        $queryRicerca = Evento::where('titolo', 'LIKE' , '%' . $request->titolo . '%')
-                        ->where('artista', 'LIKE', '%' . $request->artista . '%')
-                        ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
-                        ->where('data', '>=', $request->data);
-        $queryRicerca->where('regione', 'LIKE', '%' . $request->regione . '%');
-        return view('pages.catalogo')->with('events', $queryRicerca->get());
+    public function cercaEventi(Request $request){ 
+        return view('pages.catalogo')->with('eventi', Catalogo::cercaEventi($request));
     }
 
     public function piuVenduti(){
