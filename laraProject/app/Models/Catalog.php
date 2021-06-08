@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Catalog extends Model
 {
     public function getAllEvents(){
-        $event = Evento::all():
+        $event = Event::all():
     }
 
     public function getEventsByOrg($org){
@@ -20,7 +20,7 @@ class Catalog extends Model
 
     public function getSingleEvent($id){
         if($id != null)
-            $event = Eventi::where('eventoId', $id)->get()->first();
+            $event = Event::where('eventoId', $id)->get()->first();
 
         return $event;
     }

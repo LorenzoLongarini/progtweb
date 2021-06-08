@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\User;
+use App\Models\Evento;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -37,8 +39,8 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('organizzatore');
         });
         
-        Gate::define('modificaEvento', function (user $user, evento $evento){
+        /*Gate::define('modificaEvento', function (User $user, Evento $evento){
             return $user->utenteId === $evento->utenteId;
-        });
+        });*/
     }
 }

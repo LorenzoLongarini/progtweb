@@ -5,6 +5,7 @@ namespace App\Models\Enums;
 class Regioni {
 
     const lista_regioni = array(
+        0 => "Tutte le regioni",
         1 => "Valle d' Aosta",
         2 => "Piemonte",
         3 => "Lombardia",
