@@ -15,7 +15,10 @@ $utente3 = User::where('role','=','organizzatore')->get();
         </select>
             
         </div>
-        <div id="bigliettiVenduti"><h3></h3></div>
+        <div id="bigliettiVenduti">
+        <h3 id="totaleBiglietti"></h3>
+        <h3 id="totaleGuadagno"></h3>
+        </div>
     </div>
     <script>
         $(function(){
@@ -31,7 +34,8 @@ $utente3 = User::where('role','=','organizzatore')->get();
           dataType: 'json',
           success: function( result )
           {
-            $('#bigliettiVenduti h3').text(result.bigliettiVenduti);
+            $('#bigliettiVenduti h3#totaleBiglietti').text(result.bigliettiVenduti);
+            $('#bigliettiVenduti h3#totaleGuadagno').text(result.guadagnoTotale);
           },
           error: function()
          {

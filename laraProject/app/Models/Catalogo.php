@@ -22,7 +22,6 @@ class Catalogo extends Model
         return $risultatiRicerca;
     }
 
-
     public static function mostraEvento($id){
         if($id != null)
             $evento = Event::where('eventoId', $id)->get()->first();
