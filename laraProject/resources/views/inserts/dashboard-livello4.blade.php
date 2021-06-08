@@ -15,30 +15,26 @@ $utente3 = User::where('role','=','organizzatore')->get();
         </select>
             
         </div>
-        <div id="bigliettiVenduti">  </div>
+        <div id="bigliettiVenduti"><h3></h3></div>
     </div>
     <script>
         $(function(){
             $('#organizations').change(function(){
-                $("#bigliettiVenduti").remove();
-        var id = $(this).value();
+        var id = $(this).children("option:selected").val();
         $.ajax({
-          url : '{{ route( 'stats' ) }}',
+          url : "{{ route('organizzatoreStats') }}",
           data: {
-            "_token": "{{ csrf_token() }}",
-            "id": id
+            "utenteId": id,
+            "_token": "{{ csrf_token() }}"
             },
-          type: 'post',
+          type: 'POST',
           dataType: 'json',
           success: function( result )
           {
-               $.each( result, function(k, v) {
-                    $('#bigliettiVenduti').append($({value:k, text:v}));
-               });
+            $('#bigliettiVenduti h3').text(result.bigliettiVenduti);
           },
           error: function()
          {
-             
              alert('error');
          }
        });
