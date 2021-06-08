@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Resources\Evento;
 use Illuminate\Database\Eloquent\Model;
 
 class Biglietto extends Model
@@ -14,4 +15,11 @@ class Biglietto extends Model
     public static function getMaxDate(){
         return Biglietto::all()->max('data');
     }
+
+    public static function bigliettiByOrg($orgId){
+        $idEventi = Evento::idEventiByOrg($orgId);
+        $eventiOrg = Biglietto::whereIn('bigliettoId', $idEventi)->get();
+        return $eventiOrg;
+    }
+
 }

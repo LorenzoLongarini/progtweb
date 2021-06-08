@@ -19,4 +19,9 @@ class Evento extends Model
     public static function getMaxDate(){
         return Evento::all()->max('data');
     }
+
+    public static function idEventiByOrg($orgId){
+        $idEventi = Evento::where('utenteId', $orgId)->get()->pluck('eventoId');
+        return $idEventi;
+    }
 }
