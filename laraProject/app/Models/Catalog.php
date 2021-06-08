@@ -20,7 +20,7 @@ class Catalog extends Model
 
     public function getSingleEvent($id){
         if($id != null)
-            $event = Eventi::where('eventoId', $id)->get()->first();
+            $event = Event::where('eventoId', $id)->get()->first();
 
         return $event;
     }

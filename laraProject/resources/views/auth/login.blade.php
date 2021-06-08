@@ -1,4 +1,4 @@
-@extends('layouts.public', ["headerVisible" => false, "footerVisible" => false])
+@extends('layouts.public', ["auth" => false, "footerVisible" => false])
 
 @section('page-title', 'Accedi al tuo account')
 

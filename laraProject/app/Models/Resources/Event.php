@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Resources;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Evento extends Model
+class Event extends Model
 {
     protected $table = 'eventi';
     protected $primaryKey = 'eventoId';
@@ -13,7 +13,7 @@ class Evento extends Model
     public $timestamps = false;
 
     public static function getMinDate(){
-        return Evento::where('data', '>=')->min('data');
+        return Evento::where('data', '>=', date('d-m-Y'))->min('data');
     }
 
     public static function getMaxDate(){

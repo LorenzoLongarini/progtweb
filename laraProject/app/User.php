@@ -40,8 +40,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
-
     public function hasRole($role) {
         $role = (array)$role;
         return in_array($this->role, $role);

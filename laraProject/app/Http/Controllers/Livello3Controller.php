@@ -96,4 +96,4 @@ class Livello3Controller extends Controller
         $evento->destroy($eventoId);
         return redirect()->route('catalogo');
     }
-    }
+}
