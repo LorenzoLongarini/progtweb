@@ -38,4 +38,8 @@ public function acquistoConfermato($id){
     return view('pages.pag-confermato')->with('confermato', $confermato);
 }
 
+public function modifyUser2(){
+    
+}
+
 }

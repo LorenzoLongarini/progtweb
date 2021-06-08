@@ -9,6 +9,7 @@ $utente3 = User::where('role','=','organizzatore')->get();
     <div class="multiple-input">
         <div class="wrap-input">
         <select name="organizations" id="organizations">
+            <option> ---Seleziona---</option>
             @foreach( $utente3 as $user3)
             <option value='{{ $user3->utenteId }}'>{{ $user3->ragioneSociale }}</option>
              @endforeach
@@ -28,7 +29,7 @@ $utente3 = User::where('role','=','organizzatore')->get();
             "_token": "{{ csrf_token() }}",
             "id": id
             },
-          type: 'post',
+          type: 'POST',
           dataType: 'json',
           success: function( result )
           {

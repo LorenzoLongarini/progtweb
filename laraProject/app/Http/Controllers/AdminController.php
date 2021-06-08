@@ -5,8 +5,8 @@ use Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
-use App\models\Faq;
-use App\models\user;
+use App\models\resources\Faq;
+use App\models\resources\user;
 
 class AdminController extends Controller {
 
@@ -119,7 +119,7 @@ public function eliminaUtente3($utenteId){
         $this->validate( $request, [ 'utenteId' => 'required|exists:users, utenteId' ] );
         $stats = Evento::where('utenteId', $request->get('utenteId') )->get();
         $output = $stats->bigliettiVenduti;
-        return response()->json($output);
+        return $output;
     }
    
 
