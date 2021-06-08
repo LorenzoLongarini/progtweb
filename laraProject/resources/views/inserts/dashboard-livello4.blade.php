@@ -1,5 +1,5 @@
 @php 
-use App\models\Resources\User;
+use App\Models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();
 @endphp
 <div id="dashboard" class="form">
