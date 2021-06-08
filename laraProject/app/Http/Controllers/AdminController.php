@@ -119,7 +119,7 @@ public function eliminaUtente3($utenteId){
         $this->validate( $request, [ 'utenteId' => 'required|exists:users, utenteId' ] );
         $stats = Evento::where('utenteId', $request->get('utenteId') )->get();
         $output = $stats->bigliettiVenduti;
-        return $output;
+        return response()->json($output);
     }
    
 

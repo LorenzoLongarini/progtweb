@@ -6,8 +6,7 @@ use App\User;
 use App\Models\Evento;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
-use App\user;
-use App\models\Evento;
+
 //use App\Policies\EventoPolicies;
 
 class AuthServiceProvider extends ServiceProvider

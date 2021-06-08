@@ -1,5 +1,5 @@
 @php 
-use App\models\user;
+use App\models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();
 @endphp
 <div id="dashboard" class="form">
@@ -23,7 +23,7 @@ $utente3 = User::where('role','=','organizzatore')->get();
                 $("#bigliettiVenduti").remove();
         var id = $(this).value();
         $.ajax({
-          url : '{{ route( 'stats' ) }}',
+          url : '{{route('stats')}}',
           data: {
             "_token": "{{ csrf_token() }}",
             "id": id
