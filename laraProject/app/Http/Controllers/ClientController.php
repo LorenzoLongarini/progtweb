@@ -58,7 +58,7 @@ public function updateClient(UserRequest $request, $utenteId){
     $cli->cap = $request->cap;
     $cli->save();
 
-    return redirect()->route('admin');
+    return redirect()->route('client');
 }
 
 }

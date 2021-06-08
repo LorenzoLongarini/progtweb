@@ -35,7 +35,7 @@
         <button class="user-nav-btn">Storico acquisti</button>
     </li>
     <li class="user-nav-link">
-        <button class="user-nav-btn">Impostazioni utente</button>
+        <button class="user-nav-btn" id = "client-modify">Impostazioni utente</button>
     </li>
 </ul>
 @endcan

@@ -7,5 +7,6 @@
 @endsection
     
 @section('form')
+    @include('inserts.modifyUser')
      @include('inserts.dashboard-livello2')
 @endsection
