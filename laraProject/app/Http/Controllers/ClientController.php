@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Evento;
+use App\Models\Resources\Evento;
 
 class ClientController extends Controller {
 

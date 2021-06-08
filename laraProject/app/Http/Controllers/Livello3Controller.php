@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\models\Livello3;
-use App\models\Evento;
+use App\Models\Resources\Evento;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
