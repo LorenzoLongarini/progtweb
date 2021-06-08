@@ -51,6 +51,14 @@
             <div class = "dim-prezzo-mod2">{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</div>
             @endif  
     </div>
+    <div>
+    <select name="organizations" id="organizations">
+            <option> ---Seleziona---</option>
+            @foreach( $pagamento as $pag)
+            <option value='{{ $pag->eventoId }}'>{{ $user3->quantità }}</option>
+             @endforeach
+        </select>
+    </div>
     <div class = "pagamento-line"></div>
         <div class = "row-direction">
         <div class= "quant-dim">Totale</div>
