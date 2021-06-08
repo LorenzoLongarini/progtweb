@@ -38,8 +38,27 @@ public function acquistoConfermato($id){
     return view('pages.pag-confermato')->with('confermato', $confermato);
 }
 
-public function modifyUser2(){
-    
+public function modificaClient($utenteId){
+    $user = User::find($utenteId);
+    return view('pages.ModificaUser')->with('user', $user);
+
+}
+
+public function updateClient(UserRequest $request, $utenteId){
+    $cli = User::find($utenteId);
+    $cli->username = $request->username;
+    $cli->password = Hash::make($request->password);
+    $cli->nome = $request->nome;
+    $cli->cognome = $request->cognome;
+    $cli->ivaFiscale = $request->ivaFiscale;
+    $cli->email = $request->email;
+    $cli->telefono = $request->telefono;
+    $cli->via = $request->via;
+    $cli->città = $request->città;
+    $cli->cap = $request->cap;
+    $cli->save();
+
+    return redirect()->route('admin');
 }
 
 }

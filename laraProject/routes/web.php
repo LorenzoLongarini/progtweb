@@ -33,6 +33,10 @@ Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organiz
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
+Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')->name('modificaClient');
+
+Route::put('/user-level2/modify/{utenteId}', 'ClientController@updateClient')->name('modificaClient.update');
+
 // Rotte per l'autenticazione
 Route::get('/login', 'Auth\LoginController@showLoginForm')
 ->name('login');
