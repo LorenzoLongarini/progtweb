@@ -1,8 +1,4 @@
-
-
-    
-
-<div id="faq" class="form">
+<div id="faq-section" class="form">
 <div class="add-faq">
  
     <h2>Aggiungi una domanda</h2><button class="default-btn">Aggiungi Faq</button>

@@ -1206,8 +1206,6 @@ ol#faq-list li::marker{
     border: transparent;
     box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
     border-radius: 10px;
-    margin-left: 120px;
-    margin-top: 30px;
 }
 
 .elimina2{

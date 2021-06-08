@@ -28,7 +28,7 @@
                                     @include('helpers.img-event', ['imgName' => $evento->imgName])
                                 </div>
                                 <div class="event-info flex-columns">
-                                    <h2>{{ $event->titolo }}</h2>
+                                    <h2>{{ $evento->titolo }}</h2>
                                     @include('helpers.date-helper', ['eventDate' => $evento->data])
 
                                     <h4>{{ $evento->luogo }}, {{ $evento ->regione }}</h4>

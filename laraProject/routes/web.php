@@ -75,7 +75,7 @@ Route::post('/catalogo/cerca', 'PublicController@cercaEventi')->name('cerca');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
-Route::view('/catalogo', 'PublicController@mostraEventi')->name('catalogo');
+Route::get('/catalogo', 'PublicController@mostraCatalogo')->name('catalogo');
 
 Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
         ->name('aggiungiEvento');
