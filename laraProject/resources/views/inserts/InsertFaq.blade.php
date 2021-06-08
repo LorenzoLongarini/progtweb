@@ -32,7 +32,8 @@
     </div>
 
     <div>
-    {{  Form::reset ('Annulla'/*class-type*/)}}
+    {{  Form::reset ('Azzera'/*class-type*/)}}
     </div>
+    
 {{Form::close()}}
 </div>

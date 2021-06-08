@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder {
         'email'=>'fspLimited@ciao.it',
         'username'=>'fspLimited',
         'ragioneSociale'=>'Fossil Spoons Project',
-        'role'=>'organizzatore',
+        'role'=>'admin',
         'telefono'=>'32007139',
         'cap'=>'13',
         'città'=>'Ancona',

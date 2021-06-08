@@ -6,6 +6,9 @@ use App\User;
 use App\Models\Evento;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use App\user;
+use App\models\Evento;
+//use App\Policies\EventoPolicies;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,9 +17,9 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @var array
      */
-    protected $policies = [
-        // 'App\Model' => 'App\Policies\ModelPolicy',
-    ];
+   /* protected $policies = [
+        'App\Models\evento' => 'App\Policies\EventoPolicies'
+    ];*/
 
     /**
      * Register any authentication / authorization services.
@@ -39,8 +42,10 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('organizzatore');
         });
         
-        /*Gate::define('modificaEvento', function (User $user, Evento $evento){
-            return $user->utenteId === $evento->utenteId;
-        });*/
+       Gate::define('CanModificaEvento', function($user, Evento $evento){
+           
+            return $evento->utenteId === $user->utenteId;
+        });
+        
     }
 }

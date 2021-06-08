@@ -6,6 +6,10 @@
     @include('includes.usernavbar.user-nav')
 @endsection
 
+
+
 @section('form')
-    @include('inserts.dashboard-livello4')
+    @include('inserts.user-nav-faq')
+    @include('inserts.dashboard-livello4')   
+    @include('inserts.deleteOrg')
 @endsection

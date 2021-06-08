@@ -39,7 +39,7 @@
     <br>
     <div class="scritte-pagamento2">€ XX,XX </div>
     <br>
-    {{ link_to_route('confermato', 'Conferma', $parameters = ['id' => $acquisto->eventoId], $attributes = ['class' => 'btn default-btn'])}}
+    <div class="flex-center">{{ link_to_route('confermato', 'Conferma', $parameters = ['id' => $acquisto->eventoId], $attributes = ['class' => 'btn default-btn'])}}</div>
     <br>
     <div class = "flex-center">{{ link_to_route('pagamento', 'o torna indietro per modificare i dati', $parameters = ['id' => $acquisto->eventoId])}} </a></div>
     <br>
