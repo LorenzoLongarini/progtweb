@@ -1,6 +1,6 @@
 
 @php 
-use App\models\resources\user;
+use App\Models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();
 @endphp
 <div id = "organizzazione" class = "form">

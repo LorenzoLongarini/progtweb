@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
-use App\models\resources\Faq;
-use App\models\resources\user;
+use App\models\Faq;
+use App\Models\Resources\User;
+use App\Models\Statistiche;
 
 class AdminController extends Controller {
 
@@ -113,14 +114,9 @@ public function eliminaUtente3($utenteId){
         return redirect()->route('admin');
     }
 
-
-    public function stats(Request $request){
-
-        $this->validate( $request, [ 'utenteId' => 'required|exists:users, utenteId' ] );
-        $stats = Evento::where('utenteId', $request->get('utenteId') )->get();
-        $output = $stats->bigliettiVenduti;
-        return $output;
+    public function organizzatoreStats(Request $request){
+        //$this->validate($request, ['utenteId' => 'required|exists:users,utenteId' ] );
+        $bigliettiVenduti = Statistiche::bigliettiVenduti($request->utenteId);
+        return response()->json(["bigliettiVenduti" => $bigliettiVenduti]);
     }
-   
-
 }

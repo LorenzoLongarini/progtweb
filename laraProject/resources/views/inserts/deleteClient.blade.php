@@ -1,5 +1,5 @@
 @php 
-use App\models\resources\user;
+use App\Models\Resources\User;
 $utente2 = User::where('role','=','cliente')->get();
 @endphp
 <div id = "clienti" class = "form">
