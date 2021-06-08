@@ -65,17 +65,19 @@ class PublicController extends Controller
 
     }
 
-    public function showCatalogo(){
-        return view('pages.catalogo')->with('events', Evento::all());
+    public function mostraCatalogo(){
+        $prossimiEventi = Evento::where("stato", "=", "attivo")->get();
+
+        return view('pages.catalogo')->with('eventi', $prossimiEventi);
     }
 
-    public function searchForFilters(Request $request){
-        $queryRicerca = Evento::where('titolo', 'LIKE' , '%' . $request->titolo . '%')
+    public function cercaEventi(Request $request){
+        $risultatiRicerca = Evento::where('titolo', 'LIKE' , '%' . $request->titolo . '%')
                         ->where('artista', 'LIKE', '%' . $request->artista . '%')
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
-                        ->where('data', '>=', $request->data);
-        $queryRicerca->where('regione', 'LIKE', '%' . $request->regione . '%');
-        return view('pages.catalogo')->with('events', $queryRicerca->get());
+                        ->where('regione', 'LIKE', '%' . $request->regione . '%')
+                        ->where('data', '>=', $request->data)->get();
+        return view('pages.catalogo')->with('eventi', $risultatiRicerca);
     }
 
     public function piuVenduti(){

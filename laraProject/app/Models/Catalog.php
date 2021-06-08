@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Resources\Event;
 
 class Catalog extends Model
 {
@@ -14,7 +15,7 @@ class Catalog extends Model
         
     }
 
-    public function searchEvents(Filters $filters){
+    public function searchEvents($request){
         
     }
 
