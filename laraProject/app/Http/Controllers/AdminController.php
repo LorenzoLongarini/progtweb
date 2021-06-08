@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
+use App\Http\Requests\OrgRequest;
 use App\models\Faq;
 use App\models\user;
 
@@ -19,18 +20,12 @@ public function index(){
 
 }
 public function eliminaUtente2($utenteId){
-    $utente2 = User::where('utenteId','LIKE' , 'cliente' );
-    $utente2->destroy($utenteId);
-    return view('pages.user-level4');
+    User::where('utenteId','=' , $utenteId)->delete();
+    return view('admin');
 }
-  
-   //FAQ 
-
-
 
 public function eliminaUtente3($utenteId){
     User::where('utenteId', '=', $utenteId)->delete();
-    //$utente3->destroy($utenteId);
     return redirect()->route('admin');
 }
 
@@ -118,6 +113,14 @@ public function eliminaUtente3($utenteId){
         return redirect()->route('admin');
     }
 
+
+    public function stats(Request $request){
+
+        $this->validate( $request, [ 'utenteId' => 'required|exists:users, utenteId' ] );
+        $stats = Evento::where('utenteId', $request->get('utenteId') )->get();
+        $output = $stats->bigliettiVenduti;
+        return $output;
+    }
    
 
 }

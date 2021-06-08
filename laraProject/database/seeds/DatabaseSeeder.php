@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder {
         'email'=>'jauntAdmin@ciao.it',
         'username'=>'jauntLtd',
         'ragioneSociale'=>'The Jaunt',
-        'role'=>'organizzatore',
+        'role'=>'cliente',
         'telefono'=>'32007447',
         'cap'=>'19',
         'città'=>'Ferrara',
