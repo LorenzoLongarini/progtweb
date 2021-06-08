@@ -2,7 +2,7 @@
 use App\Models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();
 @endphp
-<div id="dashboard" class="form">
+<div id="dashboard-section" class="form">
     
    
     <h2>Statistiche Organizzatori</h2>
@@ -44,8 +44,6 @@ $utente3 = User::where('role','=','organizzatore')->get();
        });
     });
 });
-    
-    </script>
-    
+</script> 
 </div>
 

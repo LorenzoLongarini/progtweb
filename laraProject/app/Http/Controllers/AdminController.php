@@ -47,10 +47,8 @@ public function eliminaUtente3($utenteId){
     public function modificaFaq($faqId){
         $Faq = Faq::find($faqId);
         return view ('pages.modificaFaq')->with('faq', $Faq);
-
     }
-
-
+    
     public function updateFaq(FaqRequest $request, $faqId){
        
         $faq = Faq::find($faqId);

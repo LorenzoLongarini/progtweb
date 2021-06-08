@@ -6,17 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Resources\Faq;
 use App\User;
+use App\Models\Resources\Evento;
 use App\Models\Catalogo;
 use App\Http\Requests\UserRequest;
 
 class PublicController extends Controller
 {
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
 
@@ -66,7 +62,7 @@ class PublicController extends Controller
     }
 
     public function mostraCatalogo(){
-        return view('pages.catalogo')->with('eventi', Catalogo::mostraCatalogo());
+        return view('pages.catalogo')->with('eventi', Catalogo::ottieniEventiCatalogo());
     }
 
     public function cercaEventi(Request $request){ 
@@ -85,7 +81,6 @@ class PublicController extends Controller
         ->get()->first();
        return view('pages.home')->with('evento', $evento);
     }
-    
 
     public function aBreve(){
         $evento = DB::table('users')
@@ -98,6 +93,4 @@ class PublicController extends Controller
         $evento = Evento::where('eventoId', $id)->get()->first();
         return view('pages.evento')->with('event', $evento);
     }
-
-    
 }

@@ -3,7 +3,7 @@
 use App\Models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();
 @endphp
-<div id = "organizzazione" class = "form">
+<div id = "organizzazione-section" class = "form">
 
 {{ link_to_route('aggiungiOrg', 'AGGIUNGI ORGANIZZATORE')}}
 
