@@ -1095,7 +1095,7 @@ ol#faq-list li::marker{
     width: 400px;
     height: 570px;
     border: transparent;
-    box-shadow: 5px 5px 5px 5px #dedede;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
     border-radius: 10px;
      
 }
@@ -1108,7 +1108,7 @@ ol#faq-list li::marker{
     width: 400px;
     height: 500px;
     border: transparent;
-    box-shadow: 5px 5px 5px 5px #dedede;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
     border-radius: 10px;
     
     margin: 20px;
@@ -1124,7 +1124,7 @@ ol#faq-list li::marker{
     width: 400px;
     height: 640px;
     border: transparent;
-    box-shadow: 5px 5px 5px 5px #dedede;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
     border-radius: 10px;
     
     margin: 20px;
@@ -1204,7 +1204,7 @@ ol#faq-list li::marker{
     width: 850px;
     height: 90px;
     border: transparent;
-    box-shadow: 5px 5px 5px 5px #dedede;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
     border-radius: 10px;
     margin-left: 120px;
     margin-top: 30px;

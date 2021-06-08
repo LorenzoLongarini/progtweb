@@ -31,7 +31,7 @@
     </div>
 
     <div>
-    {{  Form::reset ('Annulla', /*class-type*/)}}
+    {{  Form::reset ('Annulla' )}}
     </div>
 
     {{  Form::hidden ('_method', 'PUT')}}

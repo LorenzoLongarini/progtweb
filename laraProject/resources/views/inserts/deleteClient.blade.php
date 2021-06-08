@@ -1,31 +1,31 @@
-
-@isset($utente2)
+@php 
+use App\models\user;
+$utente2 = User::where('role','=','cliente')->get();
+@endphp
+<div id = "clienti" class = "form">
 @foreach($utente2 as $user2)
-<div>
-        <div class = "utenti-liv-2">
-            <div class = "row-direction">
+
+        <div class = "utenti-liv-2" style = " padding: 0px 25px;">
+            <div class = "row-direction" style = "display:flex; justify-content:space-between; align-items:center;">
             <div>
             <div style="margin-left:30px; margin-top:20px;">Nome</div>
-            <div style="margin-left:30px; margin-top:10px;">$user2->nome</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$user2->nome}}</div>
             </div>
             <div>
             <div style="margin-left:30px; margin-top:20px;">Cognome</div>
-            <div style="margin-left:30px; margin-top:10px;">$user2->cognome</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$user2->cognome}}</div>
             </div>
             <div>
             <div style="margin-left:30px; margin-top:20px;">UtenteId</div>
-            <div style="margin-left:30px; margin-top:10px;">$user2->utenteId</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$user2->utenteId}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@eliminaUtente2', $user2->utenteId] , 'files' => true, 'method'=>'POST'])  !!}
+            {!!  Form::open(['action' => ['AdminController@eliminaUtente2', $user2->utenteId], 'method'=>'POST'])  !!}
                         {{  Form::hidden ('_method', 'DELETE')  }}
-                        {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
+                        {!!Form::submit('ELIMINA UTENTE', ['class'=>'delete'])!!}
             {!!  Form::close()  !!}
-            <a class = "elimina2"> <img src="./img/trash-2.svg" style="width:10%"> </a>
             </div>
             </div>
-        </div>
+       
         @endforeach
-
-    @endisset
-      
+        </div>

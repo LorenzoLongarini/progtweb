@@ -1,7 +1,7 @@
 <div class="form-blank">
-    {{  Form::open(array('route' => ['modificaOrg.update', $user['utenteId']] , 'files' => true, 'Method'=>'POST'))  }}
+    {{  Form::open(array('route' => ['modificaOrg.update', $user->utenteId] , 'files' => true, 'Method'=>'POST'))  }}
    
-    <h2>Modulo Registrazione</h2>
+    <h2>Modifica Organizzatore</h2>
         <div class="multiple-input">
             <div class="wrap-input blank">
             {{  Form::label ('username', 'Username' /*class-type*/)}}
