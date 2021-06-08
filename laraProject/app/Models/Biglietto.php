@@ -18,8 +18,7 @@ class Biglietto extends Model
 
     public static function bigliettiByOrg($orgId){
         $idEventi = Evento::idEventiByOrg($orgId);
-        $eventiOrg = Biglietto::whereIn('bigliettoId', $idEventi)->get();
-        return $eventiOrg;
+        $bigliettiOrg = Biglietto::whereIn('eventoId', $idEventi)->get();
+        return $bigliettiOrg;
     }
-
 }
