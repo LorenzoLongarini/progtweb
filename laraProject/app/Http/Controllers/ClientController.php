@@ -30,7 +30,7 @@ public function pagaBiglietto(Request $request, $id){
     $acquisto->metodoPagamento = $request->modalità;
     $prezzo = new Evento($id).prezzo();
     $acquisto->prezzoAcquisto = $prezzo;
-    //$acquisto->dataAcquisto = $request->dataAcquisto;
+    $acquisto->dataAcquisto = $request->dataAcquisto;
     $acquisto->save();
     return redirect()->route('confermato');
 }
