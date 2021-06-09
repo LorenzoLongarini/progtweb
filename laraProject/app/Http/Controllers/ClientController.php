@@ -17,13 +17,13 @@ public function index(){
 }
 
 public function pagaBiglietto(){
-    $acquisto = new Acquisti;
+    $acquisto = new Biglietto;
     $acquisto->utenteId = Auth::id();
-    //$acquisto->eventoId = $id;
     $acquisto->prezzoAcquisto = $request->prezzoAcquisto;
     $acquisto->dataAcquisto = $request->dataAcquisto;
     $acquisto->save();
 }
+
 
 public function pagaEvento($id){
     $pagamento = Evento::where('eventoId', $id)->get()->first();

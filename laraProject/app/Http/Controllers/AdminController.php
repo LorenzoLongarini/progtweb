@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
-use App\models\Faq;
+use App\models\Resources\Faq;
 use App\Models\Resources\User;
 use App\Models\Statistiche;
 
@@ -117,4 +117,6 @@ public function eliminaUtente3($utenteId){
         $guadagnoTotale = Statistiche::guadagnoTotale($request->utenteId);
         return response()->json(["bigliettiVenduti" => $bigliettiVenduti, "guadagnoTotale" => $guadagnoTotale]);
     }
+
+    
 }
