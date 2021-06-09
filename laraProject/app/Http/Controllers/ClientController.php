@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 use App\Models\Resources\Evento;
+use App\Models\Resources\Partecipazioni;
 use App\Http\Requests\ModUserRequest;
 use App\Models\User;
 
@@ -18,13 +20,13 @@ public function index(){
 }
 
 public function pagaBiglietto(){
-    $acquisto = new Acquisti;
+    $acquisto = new Biglietto;
     $acquisto->utenteId = Auth::id();
-    //$acquisto->eventoId = $id;
     $acquisto->prezzoAcquisto = $request->prezzoAcquisto;
     $acquisto->dataAcquisto = $request->dataAcquisto;
     $acquisto->save();
 }
+
 
 public function pagaEvento($id){
     $pagamento = Evento::where('eventoId', $id)->get()->first();
@@ -58,8 +60,19 @@ public function updateClient(UserRequest $request){
     $cli->città = $request->città;
     $cli->cap = $request->cap;
     $cli->save();
-
-    return redirect()->route('client');
 }
 
+    public static function partecipaEvento(Request $request){
+        $partUtente = Partecipazioni::where(['eventoId' => $request->eventoId,'utenteId' => $request->utenteId])->get()->first();
+
+        if($partUtente != null){
+            Partecipazioni::where(['eventoId' => $partUtente->eventoId,'utenteId' => $partUtente->utenteId])->delete();
+        }
+        else{
+            $partecipazione = new Partecipazioni();
+            $partecipazione->add($request->eventoId, $request->utenteId);
+        }
+        
+        return response()->json(['partecipazioni' => Partecipazioni::numPartEvento($request->eventoId)]);
+    }
 }
