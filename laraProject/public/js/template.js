@@ -37,6 +37,10 @@ $(document).ready(function () {
     $("#user-nav .user-nav-link button").click(function () { showSection($(this)) });
 
     $("#user-nav .user-nav-link button").focus(function () { showSection($(this)) });
+
+    $('#price-id').change(function () {
+        $('#prezzo-tot').text($('#prezzo-scontato').val() * $(this).children("option:selected").val());
+    });
 });
 
 
