@@ -1,3 +1,4 @@
+
 @extends('layouts.public')
 
 @section('page-title', $event->titolo)

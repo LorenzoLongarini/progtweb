@@ -79,17 +79,17 @@ Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::get('/catalogo', 'PublicController@mostraCatalogo')->name('catalogo');
 
-Route::get('/livello3/aggiungiEvento', 'Livello3Controller@aggiungiEvento')
+Route::get('/user-level3/aggiungiEvento', 'OrganizzatoreController@aggiungiEvento')
         ->name('aggiungiEvento');
 
-Route::post('/livello3/aggiungiEvento', 'Livello3Controller@salvaEvento')
+Route::post('/user-level3/aggiungiEvento', 'OrganizzatoreController@salvaEvento')
         ->name('aggiungiEvento.store');
 
-Route::get('/evento/{id}/modify', 'Livello3Controller@modificaEvento')->name('modificaEvento');
+Route::get('/evento/{id}/modificaEvento', 'OrganizzatoreController@modificaEvento')->name('modificaEvento');
 
-Route::put('/evento/{id}/modify', 'Livello3Controller@updateEvento')->name('modificaEvento.update');
+Route::put('/evento/{id}/modificaEvento', 'OrganizzatoreController@updateEvento')->name('modificaEvento.update');
 
-Route::delete('evento/{id}', 'Livello3Controller@eliminaEvento')->name('eliminaEvento');
+Route::delete('evento/{id}', 'OrganizzatoreController@eliminaEvento')->name('eliminaEvento');
 
 Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
 

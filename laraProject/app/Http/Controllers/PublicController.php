@@ -90,7 +90,12 @@ class PublicController extends Controller
     }
 
     public function mostraEvento($id){
+
         $evento = Evento::where('eventoId', $id)->get()->first();
-        return view('pages.evento')->with('event', $evento);
+        if(is_null($evento)){
+            return redirect()->route('home');
+        }
+        else{
+        return view('pages.evento')->with('event', $evento);}
     }
 }
