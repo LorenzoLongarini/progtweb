@@ -11,7 +11,7 @@ use App\Models\Enums\Pagamento;
         <div class = "row-direction">
         <img src="./img/shopping-cart.svg" style="width:2.5%" hspace="10"><span style="font-weight:bolder"> RIEPILOGO
         
-        <a class = "elimina">Elimina Ordine <img src="./img/trash-2.svg" style="width:10%"> </a>
+       
         
         
         </div>
@@ -53,7 +53,7 @@ use App\Models\Enums\Pagamento;
             @if(($pagamento->sconto)=== 0)
             <div class = "dim-prezzo-mod2">{{$pagamento->prezzo}} €</div>
             @else
-            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span>{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}}</span></div>
+            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
             @endif  
     </div>
     
@@ -64,7 +64,7 @@ use App\Models\Enums\Pagamento;
         <div class = "row-direction">
         <div class= "quant-dim">Totale</div>
         
-        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span>{{$pagamento->prezzo}}</span></div>
+        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
         </div>
 </div>
     <div class = "pagamento-line-v"></div>
@@ -106,7 +106,7 @@ use App\Models\Enums\Pagamento;
                 Quantità
             </div>
             <div class="quant-dim">
-            {{  Form::select ('quantità', Quantita::quant_biglietti, array('id' => 'price-id'); )}}
+            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
             </div>
 
             <script>

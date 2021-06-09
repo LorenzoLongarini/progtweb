@@ -60,6 +60,7 @@ public function updateClient(UserRequest $request){
     $cli->città = $request->città;
     $cli->cap = $request->cap;
     $cli->save();
+}
 
     public static function partecipaEvento(Request $request){
         $partUtente = Partecipazioni::where(['eventoId' => $request->eventoId,'utenteId' => $request->utenteId])->get()->first();

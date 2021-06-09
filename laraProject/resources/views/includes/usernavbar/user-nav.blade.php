@@ -18,7 +18,7 @@
 @can('isOrganiz')
 <ul>
     <li class="user-nav-link">
-        <button class="user-nav-btn active">Dashboard</button>
+        <button class="user-nav-btn active" id="dashboard">Dashboard</button>
     </li>
     <li class="user-nav-link">
         <button class="user-nav-btn">Eventi</button>
