@@ -62,6 +62,12 @@ use App\Models\Enums\Pagamento;
     </div>
     <div class = "pagamento-line"></div>
         <div class = "row-direction">
+        <div class = "quant-dim">
+                Quantità
+            </div>
+            <div class="quant-dim">
+            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
+            </div>
         <div class= "quant-dim">Totale</div>
         
         <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
@@ -91,6 +97,7 @@ use App\Models\Enums\Pagamento;
             <br>
             <label class="esempio-form">Seleziona Metodo di pagamento</label><br>
             {{  Form::select ('modalità', Pagamento::mod_pagamento )}} 
+            
             <br>
             <label class="esempio-form" for="card-number-area">Numero Carta</label><br>
             <input class = "esempio-form" type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
@@ -102,34 +109,17 @@ use App\Models\Enums\Pagamento;
             <div class = "row-direction">
             <input class = "esempio-form" type="text" id="card-expiration-date" maxlength="5" size ="2" rows="1" placeholder="XX/XX"></input>
             <input style = "margin-left:0px" class = "esempio-form" type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX"></input>
-            <div class = "quant-dim">
-                Quantità
-            </div>
-            <div class="quant-dim">
-            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
-            </div>
-
-            <script>
-            
-            function calc() 
-            {
-                var price = document.getElementById("some").innerHTML;
-                var noTickets = document.getElementById("num").value;
-                var total = parseFloat(price) * noTickets
-                if (!isNaN(total))
-                document.getElementById("total").innerHTML = total
-            }
-            
-            </script>
+        
             
             </div>
 
-            {{Form::close()}}
+           
     
 <br>
-{{ link_to_route('acquisto', 'Acquista', $parameters = ['id' => $pagamento->eventoId], $attributes = ['class' => 'btn default-btn' , 'style'=>'margin-left:120px'])}}
+{{  Form::submit ('Acqusita')}}
 </div>   
 </div>
+{{Form::close()}}
     </div>
     </div>
     </div>
