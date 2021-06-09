@@ -1,6 +1,6 @@
 
 <div class="form-blank">
-    {{  Form::open(array('route' => 'registraUser.store', 'id' =>'addproduct' , 'files' => true))  }}
+    {{  Form::open(array('route' => 'registraUser.store', 'id' =>'registraUser' , 'files' => true))  }}
    
     <h2>Modulo Registrazione</h2>
         <div class="multiple-input">

@@ -11,9 +11,19 @@ class Evento extends Model
     protected $guarded = ['eventoId'];
     protected $dateFormat = 'd-m-Y';
     public $timestamps = false;
+    private $evento;
 
-    public static function getMinDate(){
-        return Evento::where('data', '>=', date('d-m-Y'))->min('data');
+   
+
+    public function prezzo(){
+        
+        $prezzoScontato = $this->prezzo;
+
+        if($this->sconto > 0){
+            $prezzoScontato -= round(($prezzoScontato * $this->sconto) / 100, 2);
+        }
+
+        return $prezzoScontato;
     }
 
     public static function getMaxDate(){

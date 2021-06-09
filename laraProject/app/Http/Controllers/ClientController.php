@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Resources\Evento;
+use App\Models\Resources\Biglietto;
 use App\Models\Resources\Partecipazioni;
 use App\Http\Requests\ModUserRequest;
 use App\Models\User;
@@ -19,12 +22,17 @@ public function index(){
 
 }
 
-public function pagaBiglietto(){
+public function pagaBiglietto(Request $request, $id){
+    for($i = 0; $i < $request->quantità; $i++){
     $acquisto = new Biglietto;
     $acquisto->utenteId = Auth::id();
-    $acquisto->prezzoAcquisto = $request->prezzoAcquisto;
-    $acquisto->dataAcquisto = $request->dataAcquisto;
+    $acquisto->eventoId = $id;
+    $acquisto->metodoPagamento = $request->modalità;
+    $acquisto->prezzoAcquisto = Evento::where('eventoId', $id)->get()->first()->prezzo();
+    $acquisto->dataAcquisto = time();
     $acquisto->save();
+    }
+    return redirect()->route('confermato', $id);
 }
 
 public function pagaEvento($id){
@@ -43,10 +51,9 @@ public function acquistoConfermato($id){
 
 public function modificaClient(){
     return view('pages.ModificaUser');
-
 }
 
-public function updateClient(UserRequest $request){
+public function updateClient(ModUserRequest $request){
     $cli = Auth::user(); 
     $cli->username = $request->username;
     $cli->password = Hash::make($request->password);
@@ -59,11 +66,13 @@ public function updateClient(UserRequest $request){
     $cli->città = $request->città;
     $cli->cap = $request->cap;
     $cli->save();
+
+    return redirect()->route('client');
 }
 
     public static function partecipaEvento(Request $request){
         $partUtente = Partecipazioni::where(['eventoId' => $request->eventoId,'utenteId' => $request->utenteId])->get()->first();
-
+        
         if($partUtente != null){
             Partecipazioni::where(['eventoId' => $partUtente->eventoId,'utenteId' => $partUtente->utenteId])->delete();
         }

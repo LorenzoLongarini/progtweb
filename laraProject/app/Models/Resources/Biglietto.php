@@ -10,4 +10,5 @@ class Biglietto extends Model
     protected $table = 'biglietti';
     protected $dateFormat = 'd-m-Y';
     public $timestamps = false;
+
 }

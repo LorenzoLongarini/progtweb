@@ -1,4 +1,4 @@
-@extends('layouts.public')
+@extends('layouts.public', ['footerVisible' => false, 'headerVisible' => false])
 @section('page-content')
 <div class="acquisto-confermato">
    <br>

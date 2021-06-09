@@ -17,7 +17,7 @@
            
 
             @guest
-                <a href="/{route('login')}}" class="default-btn">Acquista ora</a>
+                <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
             @endguest
         </div>
         
