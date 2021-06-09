@@ -229,6 +229,7 @@ return [
         'Evento' => App\Models\Evento::class,
         'Regioni' => App\Models\Enums\Regioni::class,
         'Catalogo' => App\Models\Enums\Catalogo::class,
+        'Partecipazioni' => App\Models\Resources\Partecipazioni::class,
     ],
 
 ];
