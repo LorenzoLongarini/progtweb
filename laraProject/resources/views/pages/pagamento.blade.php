@@ -62,12 +62,7 @@ use App\Models\Enums\Pagamento;
     </div>
     <div class = "pagamento-line"></div>
         <div class = "row-direction">
-        <div class = "quant-dim">
-                Quantità
-            </div>
-            <div class="quant-dim">
-            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
-            </div>
+        
         <div class= "quant-dim">Totale</div>
         
         <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
@@ -81,6 +76,12 @@ use App\Models\Enums\Pagamento;
         <img src="./img/credit-card.svg" style="width:8%" hspace="20">
         <div style="margin-top: 8px"> <span style="font-weight:bolder"> Metodo di pagamento</div>
     </div>
+    <div class = "quant-dim">
+                Quantità
+            </div>
+            <div class="quant-dim">
+            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
+            </div>
 
             <br>
             <div>

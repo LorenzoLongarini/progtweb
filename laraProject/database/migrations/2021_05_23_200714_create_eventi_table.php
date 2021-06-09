@@ -30,7 +30,6 @@ class CreateEventiTable extends Migration
             $table->text('descrizione', 200);
             $table->text('programma', 1500)->nullable();
             $table->integer('bigliettiTotali')->unsigned();
-            $table->integer('bigliettiVenduti')->unsigned();
             $table->tinyInteger('sconto')->nullable();
             $table->date('dataSconto')->nullable();
             $table->string('mapsUrl', 300);

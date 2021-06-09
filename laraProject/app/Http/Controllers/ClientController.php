@@ -23,6 +23,7 @@ public function index(){
 }
 
 public function pagaBiglietto(Request $request, $id){
+    for($i = 0; $i < $request->quantità; $i++){
     $acquisto = new Biglietto;
     $acquisto->utenteId = Auth::id();
     $acquisto->eventoId = $id;
@@ -31,6 +32,8 @@ public function pagaBiglietto(Request $request, $id){
     $acquisto->prezzoAcquisto = $prezzo;
     $acquisto->dataAcquisto = time();
     $acquisto->save();
+    }
+    $biglietti = Evento::where('eventoId', $id)->get()->first();
     return redirect()->route('confermato', $id);
 }
 
