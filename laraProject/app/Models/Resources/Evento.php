@@ -13,18 +13,15 @@ class Evento extends Model
     public $timestamps = false;
     private $evento;
 
-    function __construct($eventoId){
-        $evento = Evento::find('eventoId', $eventoId);
-    }
-
     public function prezzo(){
-        $prezzoScontato = null;
+        $prezzo = null;
+        $prezzoScontato = null; $prezzoIntero = $this->evento->prezzo;
 
         if($this->evento->sconto > 0){
-            $prezzoScontato -= round(($prezzoScontato * $this->evento->sconto) / 100, 2);
+            $prezzoScontato = $prezzoIntero - round(($prezzoScontato * $this->evento->sconto) / 100, 2);
         }
 
-        return array(['prezzoIntero' => $this->evento->prezzo,'prezzoScontato' => $prezzoScontato]);
+        return array(['prezzoIntero' => $prezzoIntero,'prezzoScontato' => $prezzoScontato]);
     }
 
     public static function getMaxDate(){
