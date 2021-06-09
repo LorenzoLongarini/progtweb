@@ -27,7 +27,6 @@ public function pagaBiglietto(){
     $acquisto->save();
 }
 
-
 public function pagaEvento($id){
     $pagamento = Evento::where('eventoId', $id)->get()->first();
     return view('pages.pagamento')->with('pagamento', $pagamento);
