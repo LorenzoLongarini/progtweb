@@ -16,29 +16,14 @@ class Evento extends Model
    
 
     public function prezzo(){
-        $prezzo = null;
-        $prezzoScontato = null; $prezzoIntero = $this->evento->prezzo;
+        
+        $prezzoScontato = $this->prezzo;
 
         if($this->sconto > 0){
             $prezzoScontato -= round(($prezzoScontato * $this->sconto) / 100, 2);
         }
 
-        return array(['prezzoIntero' => $this->prezzo,'prezzoScontato' => $prezzoScontato]);
-    }
-
-    public function prezzoScont(){
-        $prezzoScontato = null;
-
-        if($this->sconto > 0){
-            $prezzoScontato -= round(($prezzoScontato * $this->sconto) / 100, 2);
-        }
-
-        if($prezzoScontato == null){
-            return $this->prezzo;
-        }else{
-
-        return  $prezzoScontato;
-    }
+        return $prezzoScontato;
     }
 
     public static function getMaxDate(){
