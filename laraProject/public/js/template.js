@@ -41,6 +41,10 @@ $(document).ready(function () {
     $('#price-id').change(function () {
         $('#prezzo-tot').text($('#prezzo-scontato').val() * $(this).children("option:selected").val());
     });
+    $(".dropdown").click(function () {
+        $(".dropdown-nav").toggle();
+    
+    });
 });
 
 
