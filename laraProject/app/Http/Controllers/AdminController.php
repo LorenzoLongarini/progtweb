@@ -5,7 +5,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
-use App\models\Faq;
+use App\Http\Requests\ModOrgRequest;
+use App\Models\Resources\Faq;
 use App\Models\Resources\User;
 use App\Models\Statistiche;
 
@@ -95,7 +96,7 @@ public function eliminaUtente3($utenteId){
 
     }
 
-    public function updateOrg(OrgRequest $request, $utenteId){
+    public function updateOrg(ModOrgRequest $request, $utenteId){
         $org = User::find($utenteId);
         $org->username = $request->username;
         $org->password = Hash::make($request->password);

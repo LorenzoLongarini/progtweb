@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class OrgRequest extends FormRequest
+class ModOrgRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,13 @@ class OrgRequest extends FormRequest
     public function rules()
     {
         return [
-                 'username' =>'required|unique:users,username|max:25',
-                 'password' =>'required|min:7|max:30|confirmed',
+                 'username' =>'required|max:25',
+                 'password' =>'min:7|max:30|confirmed',
                  'nome' =>'max:50|string',
                  'cognome' =>'max:50|string',
-                 'ivaFiscale' =>'required|unique:users,ivaFiscale',
-                 'email'=> 'required|email|unique:users,email|max:50',
-                 'telefono'=> 'required|numeric|unique:users,telefono',
+                 'ivaFiscale' =>'required',
+                 'email'=> 'required|email|max:50',
+                 'telefono'=> 'required|numeric|',
                  'via'=>'required|max:50',
                  'cap'=>'required|numeric|max:7',
                  'città'=>'required|string|max:80',

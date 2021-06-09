@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Resources\Evento;
+use App\Http\Requests\ModUserRequest;
 
 class ClientController extends Controller {
 
@@ -44,7 +45,7 @@ public function modificaClient($utenteId){
 
 }
 
-public function updateClient(UserRequest $request, $utenteId){
+public function updateClient(ModUserRequest $request, $utenteId){
     $cli = User::find($utenteId);
     $cli->username = $request->username;
     $cli->password = Hash::make($request->password);
