@@ -16,7 +16,6 @@ class Evento extends Model
    
 
     public function prezzo(){
-        
         $prezzoScontato = $this->prezzo;
 
         if($this->sconto > 0){

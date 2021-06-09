@@ -3,11 +3,11 @@
 @section('page-content')
     <div id="user-page-content" class="container flex-rows" >
         <aside id="user-nav" style="">    
-           @yield('usernavbar')
+            @include('includes.usernavbar.user-nav')
         </aside>    
         <div class="user-nav-separator"></div>  
         <section id="data-section">
-            @yield('form')
+            @yield('forms')
         </section>
     </div>
 

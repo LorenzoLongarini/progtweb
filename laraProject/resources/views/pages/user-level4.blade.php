@@ -2,13 +2,7 @@
 
 @section('page-title', 'Amministratore')
 
-@section('usernavbar')
-    @include('includes.usernavbar.user-nav')
-@endsection
-
-
-
-@section('form')
+@section('forms')
     @include('inserts.user-nav-faq')
     @include('inserts.dashboard-livello4')   
     @include('inserts.deleteOrg')
