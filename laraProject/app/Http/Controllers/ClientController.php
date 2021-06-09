@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,11 +27,11 @@ public function pagaBiglietto(Request $request, $id){
     $acquisto->utenteId = Auth::id();
     $acquisto->eventoId = $id;
     $acquisto->metodoPagamento = $request->modalità;
-    $prezzo = new Evento($id).prezzo();
+    $prezzo = Evento::where('eventoId', $id)->get()->first()->prezzoScont();
     $acquisto->prezzoAcquisto = $prezzo;
-    $acquisto->dataAcquisto = $request->dataAcquisto;
+    $acquisto->dataAcquisto = time();
     $acquisto->save();
-    return redirect()->route('confermato');
+    return redirect()->route('confermato', $id);
 }
 
 public function pagaEvento($id){
