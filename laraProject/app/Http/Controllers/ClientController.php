@@ -33,7 +33,6 @@ public function pagaBiglietto(Request $request, $id){
     $acquisto->dataAcquisto = time();
     $acquisto->save();
     }
-    $biglietti = Evento::where('eventoId', $id)->get()->first();
     return redirect()->route('confermato', $id);
 }
 
