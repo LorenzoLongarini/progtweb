@@ -20,31 +20,29 @@ $utente3 = User::where('role','=','organizzatore')->get();
     <div id="bigliettiVenduti">
         <h3 id="totaleBiglietti">Numero totale di biglietti venduti: <span></span></h3>
         <h3 id="totaleGuadagno">Incasso totale: € <span></span></h3>
-        </div>
-    <script>
-        $(function(){
-            $('#organizations').change(function(){
+    </div>
+</div>
+<script>
+$(function () {
+    $('#organizations').change(function () {
         var id = $(this).children("option:selected").val();
         $.ajax({
-          url : "{{ route('organizzatoreStats') }}",
-          data: {
-            "utenteId": id,
-            "_token": "{{ csrf_token() }}"
+            url: "{{ route('organizzatoreStats') }}",
+            data: {
+                "utenteId": id,
+                "_token": "{{ csrf_token() }}"
             },
-          type: 'POST',
-          dataType: 'json',
-          success: function( result )
-          {
-            $('#bigliettiVenduti h3#totaleBiglietti span').text(result.bigliettiVenduti);
-            $('#bigliettiVenduti h3#totaleGuadagno span').text(result.guadagnoTotale);
-          },
-          error: function()
-         {
-             alert('error');
-         }
-       });
+            type: 'POST',
+            dataType: 'json',
+            success: function (result) {
+                $('#bigliettiVenduti h3#totaleBiglietti span').text(result.bigliettiVenduti);
+                $('#bigliettiVenduti h3#totaleGuadagno span').text(result.guadagnoTotale);
+            },
+            error: function () {
+                alert('error');
+            }
+        });
     });
 });
-</script> 
-</div>
+</script>
 

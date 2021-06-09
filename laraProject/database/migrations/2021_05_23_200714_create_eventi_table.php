@@ -29,7 +29,7 @@ class CreateEventiTable extends Migration
             $table->float('prezzo');
             $table->text('descrizione', 200);
             $table->text('programma', 1500)->nullable();
-            $table->integer('bigliettiDisp');
+            $table->integer('bigliettiTotali')->unsigned();
             $table->integer('bigliettiVenduti')->unsigned();
             $table->tinyInteger('sconto')->nullable();
             $table->date('dataSconto')->nullable();

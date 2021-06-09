@@ -392,7 +392,6 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 aside#user-nav{
     display: inline-block;
     padding: 25px 0;
-    visibility: hidden;
 }
 
 aside#user-nav.sticky{
