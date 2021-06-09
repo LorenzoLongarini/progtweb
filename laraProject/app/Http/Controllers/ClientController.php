@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Resources\Evento;
+use App\Models\Resources\Biglietto;
 use App\Models\Resources\Partecipazioni;
 use App\Http\Requests\ModUserRequest;
 use App\Models\User;
@@ -19,12 +21,16 @@ public function index(){
 
 }
 
-public function pagaBiglietto(){
+public function pagaBiglietto(Request $request, $id){
     $acquisto = new Biglietto;
     $acquisto->utenteId = Auth::id();
-    $acquisto->prezzoAcquisto = $request->prezzoAcquisto;
-    $acquisto->dataAcquisto = $request->dataAcquisto;
+    $acquisto->eventoId = $id;
+    $acquisto->metodoPagamento = $request->modalità;
+    $prezzo = new Evento($id).prezzo();
+    $acquisto->prezzoAcquisto = $prezzo;
+    //$acquisto->dataAcquisto = $request->dataAcquisto;
     $acquisto->save();
+    return redirect()->route('confermato');
 }
 
 public function pagaEvento($id){

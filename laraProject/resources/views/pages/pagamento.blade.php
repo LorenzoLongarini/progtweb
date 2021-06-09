@@ -77,7 +77,7 @@ use App\Models\Enums\Pagamento;
     <div>
     <div class ="form-pagamento">
     <div class = "row-direction">
-    {{  Form::open(array('route' => 'pagamento.store', 'id' =>'pagamento-form' , 'files' => true))  }}
+    {{  Form::open(array('route' => ['pagamento.store', $pagamento->eventoId], 'id' =>'pagamento-form' , 'files' => true))  }}
         <img src="./img/credit-card.svg" style="width:8%" hspace="20">
         <div style="margin-top: 8px"> <span style="font-weight:bolder"> Metodo di pagamento</div>
     </div>
