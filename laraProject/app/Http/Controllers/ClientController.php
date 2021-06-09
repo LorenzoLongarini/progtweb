@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 use App\Models\Resources\Evento;
+use App\Models\Resources\Partecipazioni;
+use App\Http\Requests\ModUserRequest;
 use App\Models\User;
 
 class ClientController extends Controller {
@@ -58,7 +61,17 @@ public function updateClient(UserRequest $request){
     $cli->cap = $request->cap;
     $cli->save();
 
-    return redirect()->route('client');
-}
+    public static function partecipaEvento(Request $request){
+        $partUtente = Partecipazioni::where(['eventoId' => $request->eventoId,'utenteId' => $request->utenteId])->get()->first();
 
+        if($partUtente != null){
+            Partecipazioni::where(['eventoId' => $partUtente->eventoId,'utenteId' => $partUtente->utenteId])->delete();
+        }
+        else{
+            $partecipazione = new Partecipazioni();
+            $partecipazione->add($request->eventoId, $request->utenteId);
+        }
+        
+        return response()->json(['partecipazioni' => Partecipazioni::numPartEvento($request->eventoId)]);
+    }
 }

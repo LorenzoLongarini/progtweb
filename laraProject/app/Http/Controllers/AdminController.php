@@ -5,9 +5,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
-use App\models\Resources\Faq;
+use App\Http\Requests\ModOrgRequest;
+use App\Models\Resources\Faq;
 use App\Models\Resources\User;
-use App\Models\Statistiche;
+use App\Models\Statistics\OrgStats;
+use App\Models\Statistics\EventoStats;
 
 class AdminController extends Controller {
 
@@ -15,20 +17,20 @@ class AdminController extends Controller {
         $this->middleware('can:isAdmin');
     }
 
-public function index(){
+    public function index(){
 
-    return view('pages.user-level4');
+        return view('pages.user-level4');
 
-}
-public function eliminaUtente2($utenteId){
-    User::where('utenteId','=' , $utenteId)->delete();
-    return view('admin');
-}
+    }
+    public function eliminaUtente2($utenteId){
+        User::where('utenteId','=' , $utenteId)->delete();
+        return view('admin');
+    }
 
-public function eliminaUtente3($utenteId){
-    User::where('utenteId', '=', $utenteId)->delete();
-    return redirect()->route('admin');
-}
+    public function eliminaUtente3($utenteId){
+        User::where('utenteId', '=', $utenteId)->delete();
+        return redirect()->route('admin');
+    }
 
     public function inserisciFaq(){
         return view ('pages.inserisciFaq');
@@ -49,8 +51,7 @@ public function eliminaUtente3($utenteId){
         return view ('pages.modificaFaq')->with('faq', $Faq);
     }
     
-    public function updateFaq(FaqRequest $request, $faqId){
-       
+    public function updateFaq(FaqRequest $request, $faqId){      
         $faq = Faq::find($faqId);
         $faq->domanda = $request->domanda;
         $faq->risposta = $request->risposta;
@@ -85,17 +86,14 @@ public function eliminaUtente3($utenteId){
         $org->save();
 
         return redirect()->route('admin');
-
-
     }
 
     public function modificaOrg($utenteId){
         $user = User::find($utenteId);
         return view('pages.ModificaOrg')->with('user', $user);
-
     }
 
-    public function updateOrg(OrgRequest $request, $utenteId){
+    public function updateOrg(ModOrgRequest $request, $utenteId){
         $org = User::find($utenteId);
         $org->username = $request->username;
         $org->password = Hash::make($request->password);
@@ -113,9 +111,22 @@ public function eliminaUtente3($utenteId){
     }
 
     public function organizzatoreStats(Request $request){
-        $bigliettiVenduti = Statistiche::bigliettiVendutiByOrg($request->utenteId);
-        $guadagnoTotale = Statistiche::guadagnoTotale($request->utenteId);
-        return response()->json(["bigliettiVenduti" => $bigliettiVenduti, "guadagnoTotale" => $guadagnoTotale]);
+        $orgStats = new OrgStats($request->utenteId);
+        
+        return response()->json([
+            "bigliettiVenduti" => $orgStats->bigliettiVendutiTotaleOrg(), 
+            "guadagnoTotale" => $orgStats->incassoTotaleOrg()
+            ]);
+    }
+
+    public function eventoStats(Request $request){
+        $eventoStats = new EventoStats($request->eventoId);
+
+        return response()->json([
+            'bigliettiVenduti' => $eventoStats->bigliettiVenduti(),
+            'quantitàBigliettiPerc' => $eventoStats->quantitàBigliettiPerc(),
+            'incassoTotale' => $eventoStats->incassoTotale()
+            ]);
     }
 
     

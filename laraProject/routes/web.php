@@ -99,14 +99,13 @@ Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFa
 
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
-
-
 Route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
 
 Route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
 
-
 Auth::routes();
 
 Route::get('/', 'publicController@index')->name('home');
+
+Route::post('/partecipazioni', 'clientController@partecipaEvento')->name('partecipazioni');
 

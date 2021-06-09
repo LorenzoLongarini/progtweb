@@ -20,7 +20,7 @@
                     <h1>La ricerca non ha prodotto nessun risultato!</h1>
                 </div>
             @else
-                <div class="event-list">
+                <div class="event-list flex-columns">
                     @foreach($eventi as $evento)
                         <div class="event">
                             <div class="event-left">
@@ -28,14 +28,14 @@
                                     @include('helpers.img-event', ['imgName' => $evento->imgName])
                                 </div>
                                 <div class="event-info flex-columns">
-                                    <h2>{{ $evento->titolo }}</h2>
+                                    <h2>{{ $evento->titolo }}, {{ $evento->artista}}</h2>
                                     @include('helpers.date-helper', ['eventDate' => $evento->data])
 
                                     <h4>{{ $evento->luogo }}, {{ $evento ->regione }}</h4>
                                 </div>
                             </div>
                             <div class="event-right">
-                                <h4 class="price">€ {{ $evento->prezzo }}</h4>
+                                @include('helpers.price')
                                 {{ link_to_route('evento', 'VEDI EVENTO', $parameters = ['id' => $evento->eventoId], $attributes = ['class' => 'btn default-btn'])}}
                             </div>
                         </div>           
