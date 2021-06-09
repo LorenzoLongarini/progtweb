@@ -67,7 +67,15 @@
         </div>
     <div class="multiple-input">
         <div class="wrap-input blank">
-          
+            {{  Form::label ('ragioneSociale', 'Nome Organizzazione' /*class-type*/)}}
+            {{  Form::text ('ragioneSociale', $user->ragioneSociale /*class-type*/)  }}
+            @if ($errors->first('ragioneSociale'))
+                <ul>
+                    @foreach ($errors->get('ragioneSociale') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
         <div class="wrap-input blank">
             {{  Form::label ('ivaFiscale', 'Partita IVA' /*class-type*/)}}
@@ -140,20 +148,24 @@
         <div class="wrap-input blank">
             {{  Form::label ('cap', 'Cap' /*class-type*/)}}
             {{  Form::text ('cap', $user->cap /*class-type*/)}}
-           
+            @if ($errors->first('cap'))
+                <ul>
+                    @foreach ($errors->get('cap') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
     </div>
-     {{  Form::hidden ('_method', 'PUT')}}
+    {{  Form::hidden ('_method', 'PUT')}}
     <div>
-    {{  Form::submit ('Conferma', ['class'=>''])}}
+    {{  Form::submit ('Conferma')}}
     </div>
     <div>
-
-   
-
     <div>
-    {{  Form::reset ('Annulla' /*class-type*/)}}
+    {{  Form::reset ('Annulla')}}
     </div>
+    
 {{Form::close()}}
 </div>
 

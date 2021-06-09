@@ -26,13 +26,14 @@ class ModOrgRequest extends FormRequest
         return [
                  'username' =>'required|max:25',
                  'password' =>'min:7|max:30|confirmed',
-                 'nome' =>'max:50|string',
-                 'cognome' =>'max:50|string',
+                 'nome' =>'max:50|string|nullable',
+                 'cognome' =>'max:50|string|nullable',
                  'ivaFiscale' =>'required',
+                 'ragioneSociale' => 'required|max:40',
                  'email'=> 'required|email|max:50',
                  'telefono'=> 'required|numeric|',
                  'via'=>'required|max:50',
-                 'cap'=>'required|numeric|max:7',
+                 'cap'=>'required|numeric',
                  'città'=>'required|string|max:80',
         ];
     }
