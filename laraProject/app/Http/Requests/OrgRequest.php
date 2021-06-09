@@ -26,9 +26,10 @@ class OrgRequest extends FormRequest
         return [
                  'username' =>'required|unique:users,username|max:25',
                  'password' =>'required|min:7|max:30|confirmed',
-                 'nome' =>'max:50|string',
-                 'cognome' =>'max:50|string',
+                 'nome' =>'max:50|string|nullable',
+                 'cognome' =>'max:50|string|nullable',
                  'ivaFiscale' =>'required|unique:users,ivaFiscale',
+                 'ragioneSociale' => 'required|unique:users,ragioneSociale|max:40',
                  'email'=> 'required|email|unique:users,email|max:50',
                  'telefono'=> 'required|numeric|unique:users,telefono',
                  'via'=>'required|max:50',
