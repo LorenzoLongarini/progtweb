@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Resources\Evento;
@@ -52,7 +54,7 @@ public function modificaClient(){
 
 }
 
-public function updateClient(UserRequest $request){
+public function updateClient(ModUserRequest $request){
     $cli = Auth::user(); 
     $cli->username = $request->username;
     $cli->password = Hash::make($request->password);
@@ -65,6 +67,8 @@ public function updateClient(UserRequest $request){
     $cli->città = $request->città;
     $cli->cap = $request->cap;
     $cli->save();
+
+    return redirect()->route('client');
 }
 
     public static function partecipaEvento(Request $request){
