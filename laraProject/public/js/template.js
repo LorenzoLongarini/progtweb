@@ -1,9 +1,23 @@
 $(document).ready(function () {
-
     let searchForm = document.getElementById('search-form');
     let usernNav = document.getElementById('user-nav');
     let searchBtn = document.querySelector('#search-btn.hidden');
     let searchFormCatalog = document.querySelector('#page-content #search-form');
+
+    window.onscroll = function () {
+        let pagePositionY = window.pageYOffset;
+
+        if (searchBtn != undefined) {
+            if (pagePositionY > 507) {
+                searchBtn.classList.remove('hidden');
+                $('#page-content #search-form').addClass('hidden');
+            }
+            else {
+                searchBtn.classList.add('hidden');
+                searchFormCatalog.classList.remove('hidden');
+            }
+        }
+    }
 
     $("#theme-toggle").click(function () {
         $("#theme-toggle").toggleClass("clicked");
@@ -26,21 +40,6 @@ $(document).ready(function () {
 });
 
 
-window.onscroll = function () {
-    let pagePositionY = window.pageYOffset;
-
-    if (searchBtn != undefined) {
-        if (pagePositionY > 507) {
-            searchBtn.classList.remove('hidden');
-            $('#page-content #search-form').addClass('hidden');
-        }
-        else {
-            searchBtn.classList.add('hidden');
-            searchFormCatalog.classList.remove('hidden');
-        }
-    }
-}
-
 window.onload = function () {
     loadSection();
 };
@@ -48,8 +47,9 @@ window.onload = function () {
 function loadSection() {
     let hashUrl = window.location.hash.replace('-panel', "");
 
-    if (hashUrl != "")
+    if (hashUrl != "") {
         showSection($(hashUrl));
+    }
 }
 
 function showSection(e) {

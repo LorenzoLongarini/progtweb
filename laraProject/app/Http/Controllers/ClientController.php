@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Resources\Evento;
 use App\Http\Requests\ModUserRequest;
+use App\Models\User;
 
 class ClientController extends Controller {
 
@@ -39,14 +40,13 @@ public function acquistoConfermato($id){
     return view('pages.pag-confermato')->with('confermato', $confermato);
 }
 
-public function modificaClient($utenteId){
-    $user = User::find($utenteId);
-    return view('pages.ModificaUser')->with('user', $user);
+public function modificaClient(){
+    return view('pages.ModificaUser');
 
 }
 
-public function updateClient(ModUserRequest $request, $utenteId){
-    $cli = User::find($utenteId);
+public function updateClient(UserRequest $request){
+    $cli = Auth::user(); 
     $cli->username = $request->username;
     $cli->password = Hash::make($request->password);
     $cli->nome = $request->nome;

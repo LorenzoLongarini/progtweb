@@ -96,4 +96,11 @@ class Livello3Controller extends Controller
         $evento->destroy($eventoId);
         return redirect()->route('catalogo');
     }
+
+    public function ottientiStatisticheEvento(Request $request){
+        $bigliettiVenduti = Statistiche::bigliettiVendutiByEvento($request->eventoId);
+        $guadagnoTotale = Statistiche::incassoEvento($request->eventoId);
+        //$bigliettiVendutiPerc = (Evento::where('eventoId', $request->eventoId)->get(['bigliettiDisponibili']));
+        return response()->json(["bigliettiVenduti" => $bigliettiVenduti, "guadagnoTotale" => $guadagnoTotale]);
+    }
 }
