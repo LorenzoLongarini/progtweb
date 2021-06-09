@@ -1,6 +1,6 @@
 
-<div id = "client-modify" class = "form">
-    {{  Form::open(array('route' => ['modificaClient.update', $user->utenteId] , 'Method'=>'POST'))  }}
+<div id = "client-modify-section" class = "form">
+    {{  Form::open(['action'=>['ClientController@updateClient', $user=Auth::user()], 'method'=>'POST'])}}
    
     <h2>Modifica Dati</h2>
         <div class="multiple-input">
@@ -68,7 +68,7 @@
     </div>
     <div class="multiple-input">
         <div class="wrap-input blank">
-            {{  Form::label ('ivaFiscale', 'Codice Fiscale' }}
+            {{  Form::label ('ivaFiscale', 'Codice Fiscale') }}
             {{  Form::text ('ivaFiscale', $user->ivaFiscale)   }}
             @if ($errors->first('ivaFiscale'))
                 <ul>
@@ -120,7 +120,7 @@
         <div class="multiple-input">
         <div class="wrap-input blank">
             {{  Form::label ('via', 'Via' )  }}
-            {{  Form::text ('via',$user->via )  }}
+            {{  Form::text ('via', $user->via )  }}
             @if ($errors->first('via'))
                 <ul>
                     @foreach ($errors->get('via') as $message)
@@ -158,6 +158,7 @@
     <div>
     {{  Form::reset ('Annulla' )}}
     </div>
+   
 {{Form::close()}}
 </div>
 

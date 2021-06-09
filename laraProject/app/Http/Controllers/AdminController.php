@@ -113,7 +113,6 @@ public function eliminaUtente3($utenteId){
     }
 
     public function organizzatoreStats(Request $request){
-        //$this->validate($request, ['utenteId' => 'required|exists:users,utenteId' ] );
         $bigliettiVenduti = Statistiche::bigliettiVendutiByOrg($request->utenteId);
         $guadagnoTotale = Statistiche::guadagnoTotale($request->utenteId);
         return response()->json(["bigliettiVenduti" => $bigliettiVenduti, "guadagnoTotale" => $guadagnoTotale]);
