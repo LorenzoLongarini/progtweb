@@ -44,7 +44,6 @@ class ClientController extends Controller {
     
     public function modificaClient(){
         return view('pages.ModificaUser');
-    
     }
     
     public function updateClient(UserRequest $request){
