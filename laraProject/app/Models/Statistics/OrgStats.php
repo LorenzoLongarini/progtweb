@@ -27,14 +27,10 @@ class OrgStats
     } 
 
     public function bigliettiVendutiTotaleOrg(){
-        $bigliettiVendutiTotale = 0;
-        $bigliettiVenduti = Evento::where('utenteId', $this->org)->get()->pluck(['bigliettiVenduti']);
+        $idEventi = Evento::idEventiByOrg($this->org);
+        $bigliettiVenduti = Biglietto::whereIn('eventoId', $idEventi)->get()->count();
 
-        foreach ($bigliettiVenduti as $numBigliettiEvento) {
-            $bigliettiVendutiTotale += $numBigliettiEvento;
-        }
-
-        return $bigliettiVendutiTotale;
+        return $bigliettiVenduti;
     }
 }
 
