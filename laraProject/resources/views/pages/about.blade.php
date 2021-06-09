@@ -66,7 +66,7 @@
     </ul>
   </section>
 
-<h1 style="margin-left:100px;margin-top:100px">Sei un organizzatore?</h1>
+<h1 id="lavora-con-noi">Sei un organizzatore?</h1>
 <div style="display:flex;align-items:center;justify-content:center;gap:50px;margin-top:100px">
         <div class="recap" >
                 <h2>Contattaci al numero</h2>

@@ -13,10 +13,10 @@
     <p>Ultimo aggiornamento: 21 maggio 2021</p>
     <p>La presente Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti dice i tuoi diritti sulla privacy e come la legge ti protegge.</p>
     <p>Utilizziamo i tuoi dati personali per fornire e migliorare il Servizio. Utilizzando il Servizio, l'utente accetta la raccolta e l'utilizzo delle informazioni in conformità con la presente Informativa sulla privacy. Questa Informativa sulla privacy è stata creata con l'aiuto del <a class="link" href="https://www.privacypolicies.com/privacy-policy-generator/" target="_blank">Generatore di norme sulla privacy.</a></p>
-    <h1>Interpretazione e definizioni</h1>
-    <h2>Interpretazione</h2>
+    <h1 class="title">Interpretazione e definizioni</h1>
+    <h2 class="subtitle">Interpretazione</h2>
     <p>Le parole di cui è maiuscola la lettera iniziale hanno significati definiti nelle seguenti condizioni. Le seguenti definizioni hanno lo stesso significato, indipendentemente dal fatto che appaiano al singolare o al plurale.</p>
-    <h2>Definizioni</h2>
+    <h2 class="subtitle">Definizioni</h2>
     <p>Ai fini della presente Informativa sulla privacy:</p>
     <ul>
         <li>
@@ -53,9 +53,9 @@
             <p><strong>Per</strong> utente si intende l'individuo che accede o utilizza il Servizio, o la società o altra persona giuridica per conto della quale tale individuo accede o utilizza il Servizio, a seconda dei casi.</p>
         </li>
     </ul>
-    <h1>Raccolta e utilizzo dei dati personali dell'utente</h1>
-    <h2>Tipi di dati raccolti</h2>
-    <h3>Dati personali</h3>
+    <h1 class="title">Raccolta e utilizzo dei dati personali dell'utente</h1>
+    <h2 class="subtitle">Tipi di dati raccolti</h2>
+    <h3 class="subtitle">Dati personali</h3>
     <p>Durante l'utilizzo del Nostro Servizio, potremmo chiederti di fornirci alcune informazioni di identificazione personale che possono essere utilizzate per contattarti o identificarti. Le informazioni di identificazione personale possono includere, ma non sono limitate a:</p>
     <ul>
         <li>
@@ -74,12 +74,12 @@
             <p>Dati di utilizzo</p>
         </li>
     </ul>
-    <h3>Dati di utilizzo</h3>
+    <h3 class="subtitle">Dati di utilizzo</h3>
     <p>I dati di utilizzo vengono raccolti automaticamente quando si utilizza il Servizio.</p>
     <p>I dati di utilizzo possono includere informazioni come l'indirizzo del protocollo Internet del dispositivo (ad esempio l'indirizzo IP), il tipo di browser, la versione del browser, le pagine del nostro Servizio che visiti, l'ora e la data della tua visita, il tempo trascorso su tali pagine, identificatori univoci del dispositivo e altri dati diagnostici.</p>
     <p>Quando l'utente accede al Servizio tramite o tramite un dispositivo mobile, potremmo raccogliere automaticamente determinate informazioni, tra cui, a titolo esclusivo, il tipo di dispositivo mobile utilizzato dall'utente, l'ID univoco del dispositivo mobile, l'indirizzo IP del dispositivo mobile, il sistema operativo mobile, il tipo di browser Internet mobile utilizzato dall'utente, gli identificatori univoci del dispositivo e altri dati diagnostici.</p>
     <p>Potremmo anche raccogliere informazioni che il tuo browser invia ogni volta che visiti il nostro Servizio o quando accedi al Servizio tramite o tramite un dispositivo mobile.</p>
-    <h3>Tecnologie di tracciamento e cookie</h3>
+    <h3 class="subtitle">Tecnologie di tracciamento e cookie</h3>
     <p>Utilizziamo cookie e tecnologie di tracciamento simili per tracciare l'attività sul Nostro Servizio e memorizzare determinate informazioni. Le tecnologie di tracciamento utilizzate sono fari, tag e script per raccogliere e tenere traccia delle informazioni e per migliorare e analizzare il nostro servizio. Le tecnologie che utilizziamo possono includere:</p>
     <ul>
         <li><strong>Cookie o cookie del browser.</strong> Un cookie è un piccolo file inserito sul dispositivo dell'utente. Puoi istruire il tuo browser a rifiutare tutti i cookie o a indicare quando viene inviato un Cookie. Tuttavia, se l'utente non accetta i cookie, potrebbe non essere in grado di utilizzare alcune parti del nostro Servizio. A meno che tu non abbia modificato l'impostazione del tuo browser in modo che rifiuti i cookie, il nostro Servizio può utilizzare i cookie.</li>
@@ -109,7 +109,7 @@
         </li>
     </ul>
     <p>Per ulteriori informazioni sui cookie che utilizziamo e sulle tue scelte in merito ai cookie, consulta la nostra Politica sui cookie o la sezione Cookie della nostra Informativa sulla privacy.</p>
-    <h2>Utilizzo dei tuoi dati personali</h2>
+    <h2 class="subtitle">Utilizzo dei tuoi dati personali</h2>
     <p>La Società può utilizzare i Dati Personali per le seguenti finalità:</p>
     <ul>
         <li>
@@ -146,19 +146,19 @@
         <li><strong>Con altri utenti: quando</strong> condividi informazioni personali o interagisci in altro modo nelle aree pubbliche con altri utenti, tali informazioni possono essere visualizzate da tutti gli utenti e possono essere distribuite pubblicamente all'esterno.</li>
         <li><strong>Con il tuo consenso:</strong>potremmo divulgare le tue informazioni personali per qualsiasi altro scopo con il tuo consenso.</li>
     </ul>
-    <h2>Conservazione dei tuoi dati personali</h2>
+    <h2 class="subtitle">Conservazione dei tuoi dati personali</h2>
     <p>La Società conserverà i tuoi dati personali solo per tutto il tempo necessario per le finalità di cui alla presente Informativa sulla privacy. Conserveremo e utilizzeremo i Tuoi Dati Personali nella misura necessaria per adempiere ai nostri obblighi legali (ad esempio, se siamo tenuti a conservare i tuoi dati per rispettare le leggi applicabili), risolvere controversie e far rispettare i nostri accordi e politiche legali.</p>
     <p>La Società conserverà inoltre i dati di utilizzo a fini di analisi interna. I dati di utilizzo vengono generalmente conservati per un periodo di tempo più breve, tranne quando questi dati vengono utilizzati per rafforzare la sicurezza o per migliorare la funzionalità del Nostro Servizio, o siamo legalmente obbligati a conservare questi dati per periodi di tempo più lunghi.</p>
-    <h2>Trasferimento dei tuoi dati personali</h2>
+    <h2 class="subtitle">Trasferimento dei tuoi dati personali</h2>
     <p>Le tue informazioni, compresi i dati personali, vengono trattate presso gli uffici operativi della Società e in qualsiasi altro luogo in cui si trovano le parti coinvolte nel trattamento. Ciò significa che queste informazioni possono essere trasferite e mantenute su computer situati al di fuori del tuo stato, provincia, paese o altra giurisdizione governativa in cui le leggi sulla protezione dei dati possono differire da quelle della Tua giurisdizione.</p>
     <p>Il tuo consenso alla presente Informativa sulla privacy seguito dalla presentazione di tali informazioni rappresenta il tuo accordo su tale trasferimento.</p>
     <p>La Società prenderà tutte le misure ragionevolmente necessarie per garantire che i tuoi dati siano trattati in modo sicuro e in conformità con la presente Informativa sulla privacy e nessun trasferimento dei tuoi dati personali avrà luogo a un'organizzazione o a un paese a meno che non siano in atto controlli adeguati tra cui la sicurezza dei tuoi dati e altre informazioni personali.</p>
-    <h2>Divulgazione dei tuoi dati personali</h2>
-    <h3>Transazioni commerciali</h3>
+    <h2 class="subtitle">Divulgazione dei tuoi dati personali</h2>
+    <h3 class="subtitle">Transazioni commerciali</h3>
     <p>Se la Società è coinvolta in una fusione, acquisizione o vendita di attività, i tuoi dati personali potrebbero essere trasferiti. Forniremo un avviso prima del trasferimento dei tuoi dati personali e saremo soggetti a una diversa Informativa sulla privacy.</p>
-    <h3>Applicazione della legge</h3>
+    <h3 class="subtitle">Applicazione della legge</h3>
     <p>In determinate circostanze, la Società potrebbe essere tenuta a divulgare i Tuoi Dati Personali se richiesto dalla legge o in risposta a richieste valide da parte delle autorità pubbliche (ad esempio un tribunale o un'agenzia governativa).</p>
-    <h3>Altri requisiti legali</h3>
+    <h3 class="subtitle">Altri requisiti legali</h3>
     <p>La Società può divulgare i tuoi dati personali nella convinzione in buona fede che tale azione sia necessaria per:</p>
     <ul>
         <li>Rispettare un obbligo legale</li>
@@ -167,19 +167,19 @@
         <li>Proteggere la sicurezza personale degli Utenti del Servizio o del pubblico</li>
         <li>Protezione contro la responsabilità legale</li>
     </ul>
-    <h2>Sicurezza dei tuoi dati personali</h2>
+    <h2 class="subtitle">Sicurezza dei tuoi dati personali</h2>
     <p>La sicurezza dei tuoi dati personali è importante per noi, ma ricorda che nessun metodo di trasmissione su Internet o metodo di archiviazione elettronica è sicuro al 100%. Mentre ci sforziamo di utilizzare mezzi commercialmente accettabili per proteggere i tuoi dati personali, non possiamo garantire la sua assoluta sicurezza.</p>
-    <h1>Privacy dei bambini</h1>
+    <h1 class="title">Privacy dei bambini</h1>
     <p>Il nostro Servizio non si rivolge a persone di età inferiore ai 13 anni. Non raccogliamo consapevolmente informazioni di identificazione personale da persone di età inferiore ai 13 anni. Se sei un genitore o un tutore e sei a conoscenza che tuo figlio ci ha fornito dati personali, ti preghiamo di contattarci. Se ci viene a conoscenza del fatto che abbiamo raccolto dati personali da persone di età inferiore ai 13 anni senza verifica del consenso dei genitori, prendiamo provvedimenti per rimuovere tali informazioni dai nostri server.</p>
     <p>Se abbiamo bisogno di fare affidamento sul consenso come base giuridica per il trattamento delle tue informazioni e il tuo paese richiede il consenso di un genitore, potremmo richiedere il consenso del tuo genitore prima di raccogliere e utilizzare tali informazioni.</p>
-    <h1>Collegamenti ad altri siti Web</h1>
+    <h1 class="title">Collegamenti ad altri siti Web</h1>
     <p>Il nostro Servizio può contenere link ad altri siti web che non sono gestiti da Noi. Se fai clic su un link di terze parti, sarai indirizzato al sito di quella terza parte. Ti consigliamo vivamente di rivedere l'Informativa sulla privacy di ogni sito che visiti.</p>
     <p>Non abbiamo alcun controllo e non ci assumiamo alcuna responsabilità per i contenuti, le politiche sulla privacy o le pratiche di siti o servizi di terze parti.</p>
-    <h1>Modifiche alla presente Informativa sulla privacy</h1>
+    <h1 class="title">Modifiche alla presente Informativa sulla privacy</h1>
     <p>Potremmo aggiornare la Nostra Informativa sulla privacy di volta in volta. Ti informeremo di eventuali modifiche pubblicando la nuova Informativa sulla privacy in questa pagina.</p>
     <p>Ti faremo sapere via e-mail e / o un avviso importante sul Nostro Servizio, prima che la modifica diventi effettiva e aggiorneremo la data "Ultimo aggiornamento" nella parte superiore della presente Informativa sulla privacy.</p>
     <p>Si consiglia di consultare periodicamente la presente Informativa sulla privacy per eventuali modifiche. Le modifiche alla presente Informativa sulla privacy sono efficaci quando vengono pubblicate in questa pagina.</p>
-    <h1>Contattaci</h1>
+    <h1 class="title">Contattaci</h1>
     <p>In caso di domande sulla presente Informativa sulla privacy, è possibile contattarci:</p>
     <ul>
         <li>Via e-mail: supporto@easytickets.com</li>
