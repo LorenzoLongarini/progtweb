@@ -8,4 +8,6 @@ class User extends Model
 {
     protected $primaryKey = 'utenteid';
     protected $guarded = ['role'];
+
+    public $timestamps = false;
 }
