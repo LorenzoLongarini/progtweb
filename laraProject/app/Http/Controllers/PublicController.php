@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Resources\Faq;
 use App\Models\Resources\Evento;
-use App\User;
+use App\Models\Resources\User;
 use App\Models\Catalogo;
 use App\Http\Requests\UserRequest;
 
@@ -57,7 +57,7 @@ class PublicController extends Controller
         $user->save();
        // $user->fill($request->validated());
         
-        return view('pages.home');
+        return redirect()->route('home');
 
     }
 
