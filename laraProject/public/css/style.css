@@ -690,10 +690,24 @@ section#data-section{
 #info-site .info-col{
     padding: 40px 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
-.info-col svg{
+#info-site .info-col:hover {
+    background-color: var(--container-bg);
+}
+
+#info-site .info-col:hover svg{
+    transform: translateY(-10px);
+}
+
+#info-site .info-col a{
+    text-decoration: none;
+}
+
+#info-site .info-col svg{
     width: 50px;
+    margin: 20px 0;
 }
 
 .info-nav-separator{
