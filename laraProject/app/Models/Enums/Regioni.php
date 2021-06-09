@@ -6,7 +6,7 @@ class Regioni {
 
     const lista_regioni = array(
         "" => "Tutte le regioni",
-        "Valle d'Aosta" => "Valle d'Aosta",
+        "Aosta" => "Valle d'Aosta",
         "Piemonte"=> "Piemonte",
         "Lombardia" => "Lombardia",
         "Liguria" => "Liguria",

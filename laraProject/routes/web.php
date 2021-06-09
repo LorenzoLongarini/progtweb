@@ -30,6 +30,8 @@ Route::put('/user-level4/modify/{utenteId}', 'AdminController@updateOrg')->name(
 
 Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
 
+Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
+
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 

@@ -119,13 +119,7 @@ class AdminController extends Controller {
             ]);
     }
 
-    public function eventoStats(Request $request){
-        $eventoStats = new EventoStats($request->eventoId);
+    
 
-        return response()->json([
-            'bigliettiVenduti' => $eventoStats->bigliettiVenduti(),
-            'quantitàBigliettiPerc' => $eventoStats->quantitàBigliettiPerc(),
-            'incassoTotale' => $eventoStats->incassoTotale()
-            ]);
-    }
+    
 }
