@@ -19,6 +19,8 @@ html{
     --input-default-bg: #fff;
     --line-color: #22303b;
     --price-color : #3d9430;
+    --icon-color : #000;
+    --nav-link : #22303b
 }
 
 html.dark{
@@ -39,6 +41,8 @@ html.dark{
     --input-default-bg :#454545; 
     --line-color: #d4d4d4;
     --price : #6bcc5d;
+    --icon-color: #fff;
+    --nav-link: #fff;
 }
 
 /*Tutti gli elementi */
@@ -84,8 +88,16 @@ del, .delete {
     color: #de001e;
 }
 
+svg{
+    fill: var(--icon-color);
+}
+
 .title{
     margin: 1.3rem 0;
+}
+
+.subtitle{
+    margin: 0.7rem 0;
 }
 
 .price{
@@ -183,7 +195,7 @@ nav#main-menu ul li, footer ul.footer-links li{
 
 nav#main-menu ul li a.nav-link{
     font-size: 1rem;
-    color: #22303b;
+    color:  var(--nav-link);
 }
 
 nav#main-menu ul li a.nav-link:hover, nav#main-menu ul li a.nav-link:focus{
@@ -232,7 +244,7 @@ a.login span{
 
 #masthead .header-link-icon svg{
     width: 25px;
-    fill:#22303b;
+    fill: var(--icon-color);
 }
 
 #masthead .header-link-icon:hover svg, #masthead .header-link-icon:focus svg, #theme-toggle.clicked.header-link-icon svg{
@@ -334,7 +346,7 @@ input[type="text"]#card-number-area, input[type="text"]#card-security-code{
 }
 
 .alert.card{
-    padding: 10px 10px;
+    padding: 20px 10px;
     margin: 10px 0;
     text-align: center;
     border-left: 4px solid #de001e;
@@ -461,7 +473,7 @@ footer ul.footer-links li a:hover{
     display: inherit;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--card-bg);
+    background-color: var(--container-bg);
     box-shadow: 0px 0px 3px 3px var(--card-shadow);
     border-radius: 10px;
     margin: 10px 0;
@@ -601,11 +613,7 @@ section#data-section{
     display: inline-block;
     transition: background-color 0.6s ease;
   }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
+
   /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
@@ -675,8 +683,12 @@ section#data-section{
     background-color: brown;
 }
 
+#info-site{
+    justify-content: space-evenly;
+}
+
 #info-site .info-col{
-    flex-basis: 100%;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -803,10 +815,6 @@ nav#event-nav ul li{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
   }
   
   /* Fading animation */
@@ -988,7 +996,7 @@ ol#faq-list li::marker{
     background:  linear-gradient(to right, #0000008f, #0000008f), url('../../storage/app/public/images/covers/auth-bg.jpg');
     background-position: center center;
     background-size:cover;
-    height: 100%;
+    height: calc(100% - 80px);
     width: 100%;
     position: absolute;
     justify-content: space-evenly;
@@ -1363,12 +1371,11 @@ ol#faq-list li::marker{
     
 }
 .dropdown-nav{
-    background-color: white;
-    padding: 20px 4px;
+    background-color: #fff;
+    padding: 20px 30px;
     position:absolute;
     margin-top:125px;
-    box-shadow: 0px 3px 3px 0px gray
-
+    box-shadow: 0px 3px 3px 0px gray;
 }
 li{
     list-style-type:none;
