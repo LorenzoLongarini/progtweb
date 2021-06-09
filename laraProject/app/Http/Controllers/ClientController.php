@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Resources\Evento;
 use App\Models\Resources\Partecipazioni;
+use App\Http\Requests\ModUserRequest;
 use App\Models\User;
 
 class ClientController extends Controller {

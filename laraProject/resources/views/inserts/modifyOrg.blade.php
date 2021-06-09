@@ -143,13 +143,13 @@
            
         </div>
     </div>
-
+     {{  Form::hidden ('_method', 'PUT')}}
     <div>
     {{  Form::submit ('Conferma', ['class'=>''])}}
     </div>
     <div>
 
-    {{  Form::hidden ('_method', 'PUT')}}
+   
 
     <div>
     {{  Form::reset ('Annulla' /*class-type*/)}}
