@@ -23,6 +23,7 @@
 
         <main id="page-content" class="{{ $withHeaderClass ?? '' }}">
             @yield('page-content')
+            @yield('descrizione')
         </main>
         
         @if(!isset($footerVisible) ||  $footerVisible == true)
