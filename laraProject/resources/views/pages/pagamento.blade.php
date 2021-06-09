@@ -80,7 +80,7 @@ use App\Models\Enums\Pagamento;
                 Quantità
             </div>
             <div class="quant-dim">
-            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
+            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id'] )}}
             </div>
 
             <br>
