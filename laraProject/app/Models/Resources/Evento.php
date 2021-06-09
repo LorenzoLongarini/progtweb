@@ -16,7 +16,8 @@ class Evento extends Model
    
 
     public function prezzo(){
-        $prezzoScontato = null;
+        $prezzo = null;
+        $prezzoScontato = null; $prezzoIntero = $this->evento->prezzo;
 
         if($this->sconto > 0){
             $prezzoScontato -= round(($prezzoScontato * $this->sconto) / 100, 2);

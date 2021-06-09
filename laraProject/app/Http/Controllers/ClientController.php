@@ -50,7 +50,6 @@ public function acquistoConfermato($id){
 
 public function modificaClient(){
     return view('pages.ModificaUser');
-
 }
 
 public function updateClient(ModUserRequest $request){
@@ -72,7 +71,7 @@ public function updateClient(ModUserRequest $request){
 
     public static function partecipaEvento(Request $request){
         $partUtente = Partecipazioni::where(['eventoId' => $request->eventoId,'utenteId' => $request->utenteId])->get()->first();
-
+        
         if($partUtente != null){
             Partecipazioni::where(['eventoId' => $partUtente->eventoId,'utenteId' => $partUtente->utenteId])->delete();
         }
