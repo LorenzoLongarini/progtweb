@@ -31,10 +31,7 @@
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::label ('regione', 'Regione' /*class-type*/)}}
-            {{  Form::select ('regione', ['Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
-                'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
-                'Marche', 'Lazio', 'Abruzzo', 'Molise',
-                'Puglia', 'Campania', 'Calabria', 'Basilicata', 'Sicilia', 'Sardegna'], $event->regione )  }}
+            {{  Form::select ('regione', Regioni::lista_regioni, $event->regione )  }}
        
             @if ($errors->first('regione'))
                 <ul>

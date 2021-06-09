@@ -24,11 +24,13 @@ Route::get('user-level4/elimina-utenti2/{utenteId}', 'AdminController@eliminaUte
 
 Route::delete('user-level4/elimina-utenti3/{utenteId}', 'AdminController@eliminaUtente3')->name('eliminaUtente3');
 
-Route::get('/user-level4/modify/{utenteId}', 'AdminController@modificaOrg')->name('modificaOrg');
+Route::get('/user-level4/{utenteId}/modify', 'AdminController@modificaOrg')->name('modificaOrg');
 
-Route::put('/user-level4/modify/{utenteId}', 'AdminController@updateOrg')->name('modificaOrg.update');
+Route::put('/user-level4/{utenteId}/modify', 'AdminController@updateOrg')->name('modificaOrg.update');
 
 Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
+
+Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
 
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');

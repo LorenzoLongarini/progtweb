@@ -15,12 +15,12 @@ class EventoStats
     }
 
     public function bigliettiVenduti(){
-        return $evento->bigliettiVenduti;
+        return $this->evento->bigliettiVenduti;
     }
 
     public function incassoTotale(){
         $incassoTotale = 0;
-        $biglietti = Biglietto::where('eventoId', $evento->eventoId)->get()->pluck(['prezzoAcquisto']);
+        $biglietti = Biglietto::where('eventoId', $this->evento->eventoId)->get()->pluck(['prezzoAcquisto']);
 
         foreach($biglietti as $prezzoAcquisto){
             $incassoTotale += $prezzoAcquisto;
@@ -30,6 +30,7 @@ class EventoStats
     }
 
     public function quantitàBigliettiPerc(){
-        return $percVendita = ($evento->bigliettiVenduti * 100) / $evento->bigliettiTotali;
+        
+        return $percVendita = round(($this->evento->bigliettiVenduti * 100) / $this->evento->bigliettiTotali, 2);
     }
 }

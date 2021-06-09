@@ -68,7 +68,15 @@
         </div>
     <div class="multiple-input">
         <div class="wrap-input blank">
-          
+            {{  Form::label ('ragioneSociale', 'Nome Organizzazione' /*class-type*/)}}
+            {{  Form::text ('ragioneSociale', '' /*class-type*/)  }}
+            @if ($errors->first('ragioneSociale'))
+                <ul>
+                    @foreach ($errors->get('ragioneSociale') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
         </div>
         <div class="wrap-input blank">
             {{  Form::label ('ivaFiscale', 'Partita IVA' /*class-type*/)}}

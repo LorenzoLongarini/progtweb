@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
 use App\Http\Requests\ModOrgRequest;
@@ -78,6 +79,7 @@ class AdminController extends Controller {
         $org->nome = $request->nome;
         $org->cognome = $request->cognome;
         $org->ivaFiscale = $request->ivaFiscale;
+        $org->ragioneSociale = $request->ragioneSociale;
         $org->email = $request->email;
         $org->telefono = $request->telefono;
         $org->via = $request->via;
@@ -100,6 +102,7 @@ class AdminController extends Controller {
         $org->nome = $request->nome;
         $org->cognome = $request->cognome;
         $org->ivaFiscale = $request->ivaFiscale;
+        $org->ragioneSociale = $request->ragioneSociale;
         $org->email = $request->email;
         $org->telefono = $request->telefono;
         $org->via = $request->via;
@@ -119,13 +122,7 @@ class AdminController extends Controller {
             ]);
     }
 
-    public function eventoStats(Request $request){
-        $eventoStats = new EventoStats($request->eventoId);
+    
 
-        return response()->json([
-            'bigliettiVenduti' => $eventoStats->bigliettiVenduti(),
-            'quantitàBigliettiPerc' => $eventoStats->quantitàBigliettiPerc(),
-            'incassoTotale' => $eventoStats->incassoTotale()
-            ]);
-    }
+    
 }
