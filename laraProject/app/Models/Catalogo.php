@@ -15,7 +15,7 @@ class Catalogo extends Model
     }
 
     public static function ottieniEventiCatalogo($stato = "attivo"){
-        return self::ottieniEventiAsQuery($stato)->get();
+        return self::ottieniEventiAsQuery($stato)->simplePaginate(5);
     }
 
     public static function cercaEventi(Request $request){
@@ -24,7 +24,7 @@ class Catalogo extends Model
                         ->where('utenteId', $request->organizzatore)
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
                         ->where('regione', 'LIKE', '%' . $request->regione . '%')
-                        ->where('data', '>=', $request->data)->get();
+                        ->where('data', '>=', $request->data)->simplePaginate(5);
         return $risultatiRicerca;
     }
 
