@@ -9,7 +9,7 @@ use App\Models\Enums\Pagamento;
     <div display="flex" justify-content="center">
         <div class="cont-riepilogo">
         <div class = "row-direction">
-        <img src="./img/shopping-cart.svg" style="width:2.5%" hspace="10"><span style="font-weight:bolder"> RIEPILOGO
+        <img src="./img/shopping-cart.svg" style="width:2.5%" hspace="10"><span style="font-weight:bolder"> <h2>RIEPILOGO</h2>
         
        
         
@@ -37,9 +37,9 @@ use App\Models\Enums\Pagamento;
 <div class = "pagamento-line"></div>
     <div class = "row-direction">
     {{--@if(($pagamento->sconto)=== 0)
-    <div class = "dim-prezzo-mod">{{$pagamento->prezzo}} €</div>
+    <div class = "dim-prezzo-mod">><h4>{{$pagamento->prezzo}} €</h4></div>
     @else
-    <div class = "dim-prezzo-mod">{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</div>
+    <div class = "dim-prezzo-mod"><h4>{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</h4></div>
     @endif --}}
     </div>
     <div class = "row-direction">
@@ -51,9 +51,9 @@ use App\Models\Enums\Pagamento;
     @endif
             </h3>
             @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2">{{$pagamento->prezzo}} €</div>
+            <div class = "dim-prezzo-mod2"><h4 style = "color:red; margin-left:80px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
             @else
-            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
+            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span><h4 style = "color:red; margin-left:80px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
             @endif  
     </div>
     
@@ -64,8 +64,11 @@ use App\Models\Enums\Pagamento;
         <div class = "row-direction">
         
         <div class= "quant-dim">Totale</div>
-        
-        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
+        @if(($pagamento->sconto)=== 0)
+            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:80px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
+            @else
+        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:80px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
+        @endif
         </div>
 </div>
     <div class = "pagamento-line-v"></div>
@@ -74,34 +77,45 @@ use App\Models\Enums\Pagamento;
     <div class = "row-direction">
     {{  Form::open(array('route' => ['pagamento.store', $pagamento->eventoId], 'id' =>'pagamento-form' , 'files' => true))  }}
         <img src="./img/credit-card.svg" style="width:8%" hspace="20">
-        <div style="margin-top: 8px"> <span style="font-weight:bolder"> Metodo di pagamento</div>
+        <div style="margin-top: 8px"> <span style="font-weight:bolder"><h3> Form di pagamento</h3></div>
     </div>
-    <div class = "quant-dim">
-                Quantità
-            </div>
-            <div class="quant-dim">
-            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id'] )}}
-            </div>
+   
+    <div class = "multiple-input">
+            
+            <div >
 
-            <br>
+            <label class="esempio-form">Quantità</label><br>
+            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id', 'style'=>'width:70%'] )}}
+            </div>
+           <div>
+            <label class="esempio-form">Metodo di pagamento</label><br>
+            {{  Form::select ('modalità', Pagamento::mod_pagamento, ['style'=>'width:70%'])}} 
+            </div>
+            </div>
+            <div class = "multiple-input">
             <div>
             <label class="esempio-form" for="nome-tit">Nome Titolare</label><br>
             <input class="esempio-form" id = "nome-tit" type="text"  value="" maxlength="20" rows="1" style="width: 70%">
             </div>
             <br>
+            <div>
             <label class="esempio-form" for="cognome-tit">Cognome Titolare</label><br>
             <input class="esempio-form" id = "cognome-tit" type="text" value="" maxlength="20" rows="1" style="width: 70%">
+            </div>
+            </div>
             </br>
             <br>
+            
+            <div class = "multiple-input">
+            <div>
             <label class="esempio-form" for="codice">Codice</label><br>
             <input class="esempio-form" id = "codice" type="text" value="" maxlength="20" rows="1" style="width: 70%" >
-            <br>
-            <label class="esempio-form">Seleziona Metodo di pagamento</label><br>
-            {{  Form::select ('modalità', Pagamento::mod_pagamento )}} 
-            
-            <br>
+            </div>
+            <div>
             <label class="esempio-form" for="card-number-area">Numero Carta</label><br>
             <input class = "esempio-form" type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
+            </div>
+            </div>
             <br>
             <div class = "row-direction">
             <label class="esempio-form" for="card-expiration-date">CVV</label>
@@ -117,7 +131,7 @@ use App\Models\Enums\Pagamento;
            
     
 <br>
-{{  Form::submit ('Acqusita')}}
+{{  Form::submit ('Acquista', ["class" => "default-btn", "id" => "search-btn"])}}
 </div>   
 </div>
 {{Form::close()}}
