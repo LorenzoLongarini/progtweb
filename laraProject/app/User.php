@@ -43,5 +43,5 @@ class User extends Authenticatable
     public function hasRole($role) {
         $role = (array)$role;
         return in_array($this->role, $role);
-}
+    }
 }

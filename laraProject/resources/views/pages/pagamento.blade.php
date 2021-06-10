@@ -80,7 +80,7 @@ use App\Models\Enums\Pagamento;
                 Quantità
             </div>
             <div class="quant-dim">
-            {{  Form::select ('quantità', Quantita::quant_biglietti, null, ['id' => 'price-id'] )}}
+            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id'] )}}
             </div>
 
             <br>
@@ -124,4 +124,16 @@ use App\Models\Enums\Pagamento;
     </div>
     </div>
     </div>
-        
+@endsection
+
+@section('js-scripts')
+<script>
+    $('#price-id').change(function () {
+        let prezzo_totale = $('#prezzo-scontato').text() * $(this).children("option:selected").val();
+        $('#prezzo-tot span').text(Math.round(prezzo_totale*100)/100);
+    });
+    $(".dropdown").click(function () {
+        $(".dropdown-nav").toggle();  
+    });
+</script>
+@endsection

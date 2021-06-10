@@ -24,13 +24,13 @@ public function index(){
 
 public function pagaBiglietto(Request $request, $id){
     for($i = 0; $i < $request->quantità; $i++){
-    $acquisto = new Biglietto;
-    $acquisto->utenteId = Auth::id();
-    $acquisto->eventoId = $id;
-    $acquisto->metodoPagamento = $request->modalità;
-    $acquisto->prezzoAcquisto = Evento::where('eventoId', $id)->get()->first()->prezzo();;
-    $acquisto->dataAcquisto = time();
-    $acquisto->save();
+        $acquisto = new Biglietto;
+        $acquisto->utenteId = Auth::id();
+        $acquisto->eventoId = $id;
+        $acquisto->metodoPagamento = $request->modalità;
+        $acquisto->prezzoAcquisto = Evento::where('eventoId', $id)->get()->first()->prezzo();
+        $acquisto->dataAcquisto = time();
+        $acquisto->save();
     }
     return redirect()->route('confermato', $id);
 }
