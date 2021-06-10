@@ -15,7 +15,7 @@ class CreatePartecipazioniTable extends Migration
     {
         Schema::create('partecipazioni', function (Blueprint $table) {
             $table->bigInteger('utenteId')->unsigned()->index();
-            $table->foreign('utenteId')->references('utenteId')->on('users');
+            $table->foreign('utenteId')->references('utenteId')->on('utenti');
             $table->bigInteger('eventoId')->unsigned()->index();
             $table->foreign('eventoId')->references('eventoId')->on('eventi');
         });

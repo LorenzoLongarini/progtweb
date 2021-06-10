@@ -18,15 +18,6 @@ $(document).ready(function () {
         }
     }
 
-    $("#theme-toggle").click(function () {
-        $("#theme-toggle").toggleClass("clicked");
-        $('html').toggleClass("dark");
-        $('#site-logo-header').attr('src', (_, attr) =>
-            attr.includes("/images/logos/eticket_logo.svg")
-                ? "./images/logos/eticket_logo_light.svg"
-                    : "./images/logos/eticket_logo.svg");
-    });
-
     $("#search-btn").click(function () {
         $("#search-box-overlay").toggleClass("opened");
         $('html').css('overflow', 'hidden');

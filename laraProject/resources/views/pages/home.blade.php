@@ -52,7 +52,7 @@
         </a>
     </div>
     
-    <div class="separator"></div>
+    <div class="info-col-separator"></div>
 
     <div class="info-col">
         <a href="{{ route('about') . '#lavora-con-noi' }}">
@@ -63,7 +63,7 @@
         </a>
     </div>
     
-    <div class="separator"></div>
+    <div class="info-col-separator"></div>
     
     <div class="info-col">
         <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">

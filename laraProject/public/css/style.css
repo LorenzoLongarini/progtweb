@@ -17,10 +17,10 @@ html{
     --card-shadow-hover : #18181830;
     --input-border-color: #c8c8c8;
     --input-default-bg: #fff;
-    --line-color: #22303b;
+    --line-color: #c2c2c2;
     --price-color : #3d9430;
     --icon-color : #000;
-    --nav-link : #22303b
+    --nav-link : #22303b;
 }
 
 html.dark{
@@ -422,10 +422,10 @@ aside#user-nav ul li{
     margin: 5px 0;
 }
 
-.user-nav-separator{
+.user-nav-separator, .info-col-separator{
     display: inline-block;
-    width: 1px;
-    margin: 0 80px;
+    width: 2px;
+    margin: 0 20px;
     background-color: var(--line-color);
 }
 
@@ -684,13 +684,14 @@ section#data-section{
 }
 
 #info-site{
-    justify-content: space-evenly;
+   justify-content: space-around;
 }
 
 #info-site .info-col{
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
+    flex-basis: 100%;
 }
 
 #info-site .info-col:hover {

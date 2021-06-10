@@ -10,6 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = "utenti";
     protected $primaryKey = 'utenteId';
     public $timestamps = false;
     

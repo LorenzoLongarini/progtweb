@@ -33,4 +33,9 @@ class Evento extends Model
         $idEventi = Evento::where('utenteId', $orgId)->get()->pluck('eventoId');
         return $idEventi;
     }
+
+    public function listaOrganizzatoriDisp(){
+        $organizzatori = $this::where('stato', "attivo")->distinct()->get()->pluck('utenteId');
+        
+    }
 }
