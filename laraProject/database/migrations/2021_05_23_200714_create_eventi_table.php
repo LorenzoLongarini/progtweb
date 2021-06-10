@@ -32,7 +32,7 @@ class CreateEventiTable extends Migration
             $table->integer('bigliettiTotali')->unsigned();
             $table->tinyInteger('sconto')->nullable();
             $table->date('dataSconto')->nullable();
-            $table->string('mapsUrl', 300);
+            $table->string('mapsUrl', 2000);
             $table->string('imgName', 150)->nullable();
             $table->enum('statoEvento', ['attivo', 'sospeso', 'chiuso']);
             $table->timestamps();
