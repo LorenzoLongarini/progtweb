@@ -5,11 +5,11 @@ use App\Models\Enums\Pagamento;
 
 @extends('layouts.forms')
 @section('page-content')
-    <div class = "contienitutto">
+    <div class = "contienitutto pagamento-div">
     <div display="flex" justify-content="center">
         <div class="cont-riepilogo">
         <div class = "row-direction">
-        <img src="./img/shopping-cart.svg" style="width:2.5%" hspace="10"><span style="font-weight:bolder"> <h2>RIEPILOGO</h2>
+        <span style="font-weight:bolder"> <h2>RIEPILOGO</h2>
         
        
         
@@ -20,7 +20,7 @@ use App\Models\Enums\Pagamento;
     <div class = "pagamento-line"></div>
     <br>
                     <div class = "row-direction" >
-                    <div class="img-event immagine-distance">
+                    <div class="img-event-pagamento immagine-distance">
                     @include('helpers.img-event', ['imgName' => $pagamento->imgName])
                     </div>
 
@@ -63,11 +63,11 @@ use App\Models\Enums\Pagamento;
     <div class = "pagamento-line"></div>
         <div class = "row-direction">
         
-        <div class= "quant-dim">Totale</div>
+        <div class= "quant-dim"><h2>Totale</h2></div>
         @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:80px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
+            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:55px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
             @else
-        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:80px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
+        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:55px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
         @endif
         </div>
 </div>
@@ -76,18 +76,16 @@ use App\Models\Enums\Pagamento;
     <div class ="form-pagamento">
     <div class = "row-direction">
     {{  Form::open(array('route' => ['pagamento.store', $pagamento->eventoId], 'id' =>'pagamento-form' , 'files' => true))  }}
-        <img src="./img/credit-card.svg" style="width:8%" hspace="20">
-        <div style="margin-top: 8px"> <span style="font-weight:bolder"><h3> Form di pagamento</h3></div>
+        
+        <div style="margin-top: 20px; margin-left:30px"> <span style="font-weight:bolder"><h2> Inserisci i tuoi dati</h2></div>
     </div>
    
-    <div class = "multiple-input">
-            
+            <div class = "multiple-input">
             <div >
-
             <label class="esempio-form">Quantità</label><br>
-            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id', 'style'=>'width:70%'] )}}
+            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id', 'style'=>'width:70%; margin-left:30px'] )}}
             </div>
-           <div>
+           <div style = "margin-left:80px;">
             <label class="esempio-form">Metodo di pagamento</label><br>
             {{  Form::select ('modalità', Pagamento::mod_pagamento, ['style'=>'width:70%'])}} 
             </div>
@@ -95,35 +93,34 @@ use App\Models\Enums\Pagamento;
             <div class = "multiple-input">
             <div>
             <label class="esempio-form" for="nome-tit">Nome Titolare</label><br>
-            <input class="esempio-form" id = "nome-tit" type="text"  value="" maxlength="20" rows="1" style="width: 70%">
+            <input class="esempio-form" id = "nome-tit" type="text"  value="Tuo Nome" maxlength="20" rows="1" style="width: 70%">
             </div>
             <br>
             <div>
             <label class="esempio-form" for="cognome-tit">Cognome Titolare</label><br>
-            <input class="esempio-form" id = "cognome-tit" type="text" value="" maxlength="20" rows="1" style="width: 70%">
+            <input class="esempio-form" id = "cognome-tit" type="text" value="Tuo Cognome" maxlength="20" rows="1" style="width: 70%">
             </div>
             </div>
-            </br>
-            <br>
+            
             
             <div class = "multiple-input">
             <div>
             <label class="esempio-form" for="codice">Codice</label><br>
-            <input class="esempio-form" id = "codice" type="text" value="" maxlength="20" rows="1" style="width: 70%" >
+            <input class="esempio-form" id = "codice" type="text" value="Tuo Codice" maxlength="20" rows="1" style="width: 70%" >
             </div>
             <div>
             <label class="esempio-form" for="card-number-area">Numero Carta</label><br>
-            <input class = "esempio-form" type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX"></input>
+            <input class = "esempio-form" type="text" id="card-number-area" maxlength="19" rows="1" size="19" placeholder="XXXX-XXXX-XXXX-XXXX" style="width: 70%"></input>
             </div>
             </div>
             <br>
-            <div class = "row-direction">
+            <div class = "row-direction" style = "margin-left:80px">
             <label class="esempio-form" for="card-expiration-date">CVV</label>
-            <label class="esempio-form" for="card-security-code" style="margin-left:80px">Scadenza</label>
+            <label class="esempio-form" for="card-security-code" style="margin-left:60px">Scadenza</label>
             </div>  
-            <div class = "row-direction">
-            <input class = "esempio-form" type="text" id="card-expiration-date" maxlength="5" size ="2" rows="1" placeholder="XX/XX"></input>
-            <input style = "margin-left:0px" class = "esempio-form" type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX"></input>
+            <div class = "row-direction" style = "margin-left:80px">
+            <input class = "esempio-form" type="text" id="card-expiration-date" maxlength="5" size ="2" rows="1" placeholder="XX/XX" style="width: 25%" ></input>
+            <input style = "margin-left:0px; width:25%" class = "esempio-form" type="text" id="card-security-code" maxlength="3" size="2" rows="1" placeholder="XXX" ></input>
         
             
             </div>
@@ -131,7 +128,7 @@ use App\Models\Enums\Pagamento;
            
     
 <br>
-{{  Form::submit ('Acquista', ["class" => "default-btn", "id" => "search-btn"])}}
+{{  Form::submit ('Acquista', ["class" => "default-btn", "id" => "search-btn", "style"=>"width:50%; margin-left:100px;"])}}
 </div>   
 </div>
 {{Form::close()}}

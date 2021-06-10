@@ -502,6 +502,12 @@ footer ul.footer-links li a:hover{
     height: 170px;
 }
 
+.img-event-pagamento img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+}
+
 .cover-page{
     margin-bottom: 50px;
     height: 350px;
@@ -1109,6 +1115,14 @@ ol#faq-list li::marker{
 .row-direction{
     display: flex;
     flex-direction: row;
+}
+
+.pagamento-div .row-direction{
+    align-items: center;
+}
+
+.pagamento-div .event-info h2, .pagamento-div .event-info h4{
+    margin: 10px 0;
 }
 
 .form-pagamento{
