@@ -11,8 +11,8 @@ class DatabaseSeeder extends Seeder {
       
 
         ['utenteId'=>01,
-        'nome'=>'carlo',
-        'cognome'=>'bianchi',
+        'nome'=>'Carlo',
+        'cognome'=>'Bianchi',
         'ivaFiscale'=>'CRLBNC17PZ129I',
         'email'=>'info@carlobianchi.it',
         'username'=>'clieclie',
@@ -26,8 +26,8 @@ class DatabaseSeeder extends Seeder {
 
         
         ['utenteId'=>02,
-        'nome'=>'marco',
-        'cognome'=>'verdi',
+        'nome'=>'Marco',
+        'cognome'=>'Verdi',
         'ivaFiscale'=>'2000198343',
         'email'=>'info@marcoverdi.it',
         'username'=>'adminadmin',
@@ -41,8 +41,8 @@ class DatabaseSeeder extends Seeder {
 
         ['utenteId'=>03,
         'ivaFiscale'=>'12344554421',
-        'nome'=>'mario',
-        'cognome'=>'rossi',
+        'nome'=>'Mario',
+        'cognome'=>'Rossi',
         'email'=>'info@mariorossi.it',
         'username'=>'orgaorga',
         'ragioneSociale'=>'The Jaunt',
@@ -55,8 +55,8 @@ class DatabaseSeeder extends Seeder {
 
         ['utenteId'=>04,
         'ivaFiscale'=>'FRNN12IN12I12I',
-        'nome'=>'franco',
-        'cognome'=>'neri',
+        'nome'=>'Franco',
+        'cognome'=>'Neri',
         'email'=>'info@franconeri.it',
         'username'=>'franconeri',
         'ragioneSociale'=>'',
@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder {
         ['utenteId'=>05,
         'ivaFiscale'=>'LCACRL',
         'nome'=>'luca',
-        'cognome'=>'carletti',
+        'cognome'=>'Carletti',
         'email'=>'info@lucacarletti.it',
         'username'=>'lucacarletti',
         'ragioneSociale'=>'Carletti SPA',
@@ -83,8 +83,8 @@ class DatabaseSeeder extends Seeder {
 
         ['utenteId'=>06,
         'ivaFiscale'=>'GVNPRV12L123U',
-        'nome'=>'giovanni',
-        'cognome'=>'prova',
+        'nome'=>'Giovanni',
+        'cognome'=>'Prova',
         'email'=>'info@giovanniprova.it',
         'username'=>'giovanniprova',
         'ragioneSociale'=>'',
