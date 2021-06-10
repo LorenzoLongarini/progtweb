@@ -16,7 +16,7 @@ class CreateEventiTable extends Migration
         Schema::create('eventi', function (Blueprint $table) {
             $table->bigIncrements('eventoId')->unsigned()->index();
             $table->bigInteger('utenteId')->unsigned()->index();
-            $table->foreign('utenteId')->references('utenteId')->on('utenti');//->onDelete('cascade');
+            $table->foreign('utenteId')->references('utenteId')->on('users');//->onDelete('cascade');
             $table->string('titolo', 50);
             $table->string('artista', 50);
             $table->dateTime('data');

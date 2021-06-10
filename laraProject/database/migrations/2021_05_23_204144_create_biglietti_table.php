@@ -16,7 +16,7 @@ class CreateBigliettiTable extends Migration
         Schema::create('biglietti', function (Blueprint $table) {
             $table->bigIncrements('bigliettoId');
             $table->bigInteger('utenteId')->unsigned()->index();
-            $table->foreign('utenteId')->references('utenteId')->on('utenti')->onDelete('cascade');
+            $table->foreign('utenteId')->references('utenteId')->on('users')->onDelete('cascade');
             $table->bigInteger('eventoId')->unsigned()->index();
             $table->foreign('eventoId')->references('eventoId')->on('eventi')->onDelete('cascade');
             $table->float('prezzoAcquisto');
