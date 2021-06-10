@@ -5,7 +5,7 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder {
     public function run() {
 
-    DB::table('utenti')->insert([
+    DB::table('users')->insert([
 
 
       
