@@ -228,7 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Evento' => App\Models\Evento::class,
         'Regioni' => App\Models\Enums\Regioni::class,
-        'Catalogo' => App\Models\Enums\Catalogo::class,
+        'Catalogo' => App\Models\Catalogo::class,
         'Partecipazioni' => App\Models\Resources\Partecipazioni::class,
     ],
 
