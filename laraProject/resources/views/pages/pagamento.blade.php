@@ -37,9 +37,9 @@ use App\Models\Enums\Pagamento;
 <div class = "pagamento-line"></div>
     <div class = "row-direction">
     {{--@if(($pagamento->sconto)=== 0)
-    <div class = "dim-prezzo-mod">{{$pagamento->prezzo}} €</div>
+    <div class = "dim-prezzo-mod">><h4>{{$pagamento->prezzo}} €</h4></div>
     @else
-    <div class = "dim-prezzo-mod">{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</div>
+    <div class = "dim-prezzo-mod"><h4>{{$pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto))}} €</h4></div>
     @endif --}}
     </div>
     <div class = "row-direction">
@@ -53,7 +53,7 @@ use App\Models\Enums\Pagamento;
             @if(($pagamento->sconto)=== 0)
             <div class = "dim-prezzo-mod2">{{$pagamento->prezzo}} €</div>
             @else
-            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
+            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span><h4 style = "color:red;">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</h4></span></div>
             @endif  
     </div>
     
@@ -117,7 +117,7 @@ use App\Models\Enums\Pagamento;
            
     
 <br>
-{{  Form::submit ('Acqusita')}}
+{{  Form::submit ('Acqusita', ["class" => "default-btn", "id" => "search-btn"])}}
 </div>   
 </div>
 {{Form::close()}}
