@@ -101,8 +101,8 @@ class DatabaseSeeder extends Seeder {
 
     DB::table('eventi')->insert([
 
-        ['eventoId'=>1,
-        'utenteId'=>03,
+        ['eventoId'=>01,
+        'utenteId'=>06,
         'titolo'=> 'Tour Vasco Rossi',
         'artista'=> 'Vasco Rossi',
         'data'=> '2021-09-04 20:45:00',
@@ -151,6 +151,39 @@ class DatabaseSeeder extends Seeder {
          'mapsUrl'=> 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.586967472369!2d9.121773315418777!3d45.478123579101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c193fa23f19d%3A0x9c7d30c7aeff312!2sStadio%20San%20Siro!5e0!3m2!1sit!2sit!4v1623325167484!5m2!1sit!2sit',
          
         ]
+    ]);
+    /*
+    DB::table('biglietti')->insert([
+        [
+            'bigliettoId'=>02,
+            'utenteId'=>04,
+            'eventoId'=>3,
+            'prezzoAcquisto'=>25,50
+            'dataAcquisto'=>1623329041
+        ]
+    ]);
+    */
+    DB::table('faqs')->insert([
+        
+            ['faqId'=>01,
+            'domanda'=>'Dopo quanto tempo arriva il rimborso in caso di reso?',
+            'risposta'=>'in caso di reso il rimborso verrà effettuato entro 3/4 giorni lavorativi',
+
+        ],
+        
+        ['faqId'=>02,
+            'domanda'=>'Dove posso trovare il biglietto che ho acquistato?',
+            'risposta'=>' i biglietti acquistati vengono inviati tramite e-mail entro 1 giorno dalla data di acquisto',
+            
+        ],
+
+            ['faqId'=>03,
+            'domanda'=>'Quali sono i metodi di pagamento per acquistare un biglietto?',
+            'risposta'=>'i biglietti possono essere acquistati con bonifico bancario,.....',
+            
+        ]
+
+
     ]);
 }
 }
