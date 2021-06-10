@@ -5,7 +5,7 @@
                 </svg>
                 @auth
                 <a class="login dropdown">Ciao,{{Auth::user()->nome}}</a>
-            <div  class="dropdown-nav">
+            <div style="display:none" class="dropdown-nav">
                 <ul> 
                     <div>
                     <li>
@@ -23,13 +23,13 @@
 
                     <li>
                        @can("isAdmin")     
-                       <a href="#"  class="login area-utente ">Area utente</a>
+                       <a href="{{route('admin'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
                        @endcan
-                       @can("isCliente")     
-                       <a href="#" class="login area-utente ">Area utente</a>
+                       @can("isClient")     
+                       <a href="{{route('client'). '#storico-acquisti'}}" class="login area-utente ">Area utente</a>
                        @endcan
                        @can("isOrganiz")     
-                       <a href="#"  class="login area-utente">Area utente</a>
+                       <a href="{{route('organiz'). '#dashboard-panel'}}"  class="login area-utente">Area utente</a>
                        @endcan
                     </li>
                 
