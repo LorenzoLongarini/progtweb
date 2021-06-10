@@ -65,7 +65,7 @@ use App\Models\Enums\Pagamento;
         
         <div class= "quant-dim"><h2>Totale</h2></div>
         @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:55px; font-size:25px">{{$pagamento->prezzo}} </h4> <h3>€</h3></div>
+            <div class = "dim-prezzo-mod3"><h4 style = " margin-left:55px; font-size:25px"><span>{{$pagamento->prezzo}} </span> €</h4> </div>
             @else
             
         <div class = "dim-prezzo-mod3" id = "prezzo-tot"><h4 style = " margin-left:55px; font-size:25px"> <span> {{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} </span>€</h4></div> 
@@ -86,7 +86,7 @@ use App\Models\Enums\Pagamento;
             <div class = "multiple-input">
             <div >
             <label class="esempio-form">Quantità</label><br>
-            {{  Form::select ('quantità', array(1,2,3,4,5,6,7,8,9,10), null, ['id' => 'price-id', 'style'=>'width:70%; margin-left:30px'] )}}
+            {{  Form::select ('quantità', array(1=>1,2=>2,3=>3,4=>4,5=>5,6=>6,7=>7,8=>8,9=>9,10=>10), null, ['id' => 'price-id', 'style'=>'width:70%; margin-left:30px'] )}}
             </div>
            <div style = "margin-left:80px;">
             <label class="esempio-form">Metodo di pagamento</label><br>
