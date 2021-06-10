@@ -10,6 +10,10 @@ $biglietti = Biglietto::where('utenteId','=',Auth::id())->get();
             <div class = "row-direction" style = "display:flex; justify-content:space-between; align-items:center;">
             <div style = "display:inline-block;">
             <div style = "display:inline-block;">
+            <div style="margin-left:30px; margin-top:20px;">Codice biglietto:</div>
+            <div style="margin-left:30px; margin-top:10px;"># {{$biglietto->bigliettoId}}</div>
+            </div>
+            <div style = "display:inline-block;">
             <div style="margin-left:30px; margin-top:20px;">Data di acquisto:</div>
             <div style="margin-left:30px; margin-top:10px;">{{$biglietto->dataAcquisto = date('Y-m-d')}}</div>
             </div>

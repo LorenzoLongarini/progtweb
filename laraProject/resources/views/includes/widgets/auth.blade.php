@@ -5,7 +5,7 @@
                 </svg>
                 @auth
                 <a class="login dropdown">Ciao,{{Auth::user()->nome}}</a>
-            <div  class="dropdown-nav">
+            <div style="display:none" class="dropdown-nav">
                 <ul> 
                     <div>
                     <li>
@@ -25,7 +25,7 @@
                        @can("isAdmin")     
                        <a href="#"  class="login area-utente ">Area utente</a>
                        @endcan
-                       @can("isCliente")     
+                       @can("isClient")     
                        <a href="#" class="login area-utente ">Area utente</a>
                        @endcan
                        @can("isOrganiz")     
