@@ -9,7 +9,7 @@ use App\Models\Enums\Pagamento;
     <div display="flex" justify-content="center">
         <div class="cont-riepilogo">
         <div class = "row-direction">
-        <img src="./img/shopping-cart.svg" style="width:2.5%" hspace="10"><span style="font-weight:bolder"> RIEPILOGO
+        <img src="./img/shopping-cart.svg" style="width:2.5%" hspace="10"><span style="font-weight:bolder"> <h2>RIEPILOGO</h2>
         
        
         
@@ -51,9 +51,9 @@ use App\Models\Enums\Pagamento;
     @endif
             </h3>
             @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2"><h4 style = "color:red; margin-left:85px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
+            <div class = "dim-prezzo-mod2"><h4 style = "color:red; margin-left:80px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
             @else
-            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span><h4 style = "color:red; margin-left:85px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
+            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span><h4 style = "color:red; margin-left:80px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
             @endif  
     </div>
     
@@ -65,9 +65,9 @@ use App\Models\Enums\Pagamento;
         
         <div class= "quant-dim">Totale</div>
         @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:85px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
+            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:80px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
             @else
-        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:85px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
+        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:80px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
         @endif
         </div>
 </div>
@@ -77,7 +77,7 @@ use App\Models\Enums\Pagamento;
     <div class = "row-direction">
     {{  Form::open(array('route' => ['pagamento.store', $pagamento->eventoId], 'id' =>'pagamento-form' , 'files' => true))  }}
         <img src="./img/credit-card.svg" style="width:8%" hspace="20">
-        <div style="margin-top: 8px"> <span style="font-weight:bolder"> Metodo di pagamento</div>
+        <div style="margin-top: 8px"> <span style="font-weight:bolder"><h3> Form di pagamento</h3></div>
     </div>
     <div class = "quant-dim">
                 Quantità
