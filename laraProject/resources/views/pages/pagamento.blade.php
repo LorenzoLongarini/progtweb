@@ -51,9 +51,9 @@ use App\Models\Enums\Pagamento;
     @endif
             </h3>
             @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2">{{$pagamento->prezzo}} €</div>
+            <div class = "dim-prezzo-mod2"><h4 style = "color:red; margin-left:85px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
             @else
-            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span><h4 style = "color:red;">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</h4></span></div>
+            <div class = "dim-prezzo-mod2" id = "prezzo-scontato"><span><h4 style = "color:red; margin-left:85px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
             @endif  
     </div>
     
@@ -64,8 +64,11 @@ use App\Models\Enums\Pagamento;
         <div class = "row-direction">
         
         <div class= "quant-dim">Totale</div>
-        
-        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span>{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}}</span></div>
+        @if(($pagamento->sconto)=== 0)
+            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:85px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
+            @else
+        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:85px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
+        @endif
         </div>
 </div>
     <div class = "pagamento-line-v"></div>
