@@ -32,7 +32,7 @@
         <button class="user-nav-btn active">Dashboard</button>
     </li>
     <li class="user-nav-link">
-        <button class="user-nav-btn">Storico acquisti</button>
+        <button class="user-nav-btn" id = "storico-acquisti">Storico acquisti</button>
     </li>
     <li class="user-nav-link">
         <button class="user-nav-btn" id = "client-modify">Impostazioni utente</button>

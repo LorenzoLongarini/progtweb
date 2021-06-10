@@ -1,6 +1,5 @@
 $(document).ready(function () {
     let searchForm = document.getElementById('search-form');
-    let usernNav = document.getElementById('user-nav');
     let searchBtn = document.querySelector('#search-btn.hidden');
     let searchFormCatalog = document.querySelector('#page-content #search-form');
 
@@ -22,6 +21,10 @@ $(document).ready(function () {
     $("#theme-toggle").click(function () {
         $("#theme-toggle").toggleClass("clicked");
         $('html').toggleClass("dark");
+        $('#site-logo-header').attr('src', (_, attr) =>
+            attr.includes("/images/logos/eticket_logo.svg")
+                ? "./images/logos/eticket_logo_light.svg"
+                    : "./images/logos/eticket_logo.svg");
     });
 
     $("#search-btn").click(function () {
@@ -63,3 +66,4 @@ function showSection(e) {
     $("#" + e.attr('id') + "-section.form").toggleClass("activated");
     window.location.hash = `${e.attr('id')}-panel`;
 };
+
