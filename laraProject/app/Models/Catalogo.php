@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\RicercaRequest;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Resources\Evento;
 use App\Models\Resources\User;
@@ -15,16 +16,17 @@ class Catalogo extends Model
     }
 
     public static function ottieniEventiCatalogo($stato = "attivo"){
-        return self::ottieniEventiAsQuery($stato)->simplePaginate(5);
+        return self::ottieniEventiAsQuery($stato)->orderBy('data', 'ASC')->simplePaginate(5);
     }
 
-    public static function cercaEventi(Request $request){
+    public static function cercaEventi(RicercaRequest $request){
         $risultatiRicerca = self::ottieniEventiAsQuery()
                         ->where('titolo', 'LIKE' , '%' . $request->titolo . '%')
-                        ->where('utenteId', $request->organizzatore)
+                        ->join('users', 'eventi.utenteId', '=', 'users.utenteId')
+                        ->where('users.ragioneSociale','LIKE', '%' . $request->organizzatore . '%')
                         ->where('descrizione', 'LIKE', '%' . $request->descrizione . '%')
                         ->where('regione', 'LIKE', '%' . $request->regione . '%')
-                        ->where('data', '>=', $request->data)->simplePaginate(5);
+                        ->where('data', '>=', $request->data)->orderBy('data', 'ASC')->simplePaginate(5);
         return $risultatiRicerca;
     }
 
