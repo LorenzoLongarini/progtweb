@@ -4,4 +4,5 @@
 
 @section('forms')
     @include('inserts.dashboard-livello3')
+    @include('inserts.insertEvent')
 @endsection

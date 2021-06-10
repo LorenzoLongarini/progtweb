@@ -21,7 +21,7 @@
         <button class="user-nav-btn active" id="dashboard">Dashboard</button>
     </li>
     <li class="user-nav-link">
-        <button class="user-nav-btn">Eventi</button>
+        <button class="user-nav-btn"  id = "eventi">Eventi</button>
     </li>
 </ul>
 @endcan
