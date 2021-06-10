@@ -19,7 +19,7 @@
             } 
         @endphp
 
-        @include('includes/header', ["searchBtn" => $searchBtn, "toggleThemeBtn" => true ,"authBtn" => $authBtn])
+        @include('includes/header', ["searchBtn" => $searchBtn, "authBtn" => $authBtn])
 
         <main id="page-content" class="{{ $withHeaderClass ?? '' }}">
             @yield('page-content')

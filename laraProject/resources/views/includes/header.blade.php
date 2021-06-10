@@ -22,10 +22,6 @@
          
             @include('includes.widgets.search-catalog', ["searchBtn" => $searchBtn])
 
-            @if($toggleThemeBtn == true)
-                @include('includes.widgets.theme-toggle')
-            @endif
-
             @if($authBtn == true)
                 @include('includes.widgets.auth')
             @endif

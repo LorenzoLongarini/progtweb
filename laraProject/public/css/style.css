@@ -23,28 +23,6 @@ html{
     --nav-link : #22303b;
 }
 
-html.dark{
-    --body-bg : #1b1b1b;
-    --p-color : #f3f3f3;
-    --title-color: #bbd9ff;
-    --button-default-text: #f3f3f3;
-    --button-default-bg : #0065e9;
-    --button-default-bg-hover : #0046a1;
-    --button-navuser-bg:#004064;
-    --button-navuser-text : #fff;
-    --button-navuser-bg-hover: #272727;
-    --link-color: #ffc100;
-    --link-hover-color: #ffffff;
-    --container-bg: #2b2b2b;
-    --card-shadow : #151515;
-    --input-border-color : #2f84f1;
-    --input-default-bg :#454545; 
-    --line-color: #d4d4d4;
-    --price : #6bcc5d;
-    --icon-color: #fff;
-    --nav-link: #fff;
-}
-
 /*Tutti gli elementi */
 *{
     box-sizing: border-box;
