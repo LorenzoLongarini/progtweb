@@ -29,7 +29,7 @@ class Catalogo extends Model
 
     public static function mostraEvento($id){
         if($id != null)
-            $evento = self::ottieniEventiAsQuery()->where('eventoId', $id)->get()->first();
+            $evento = self::ottieniEventiAsQuery()->where('eventoId', $id)->only();
         return $evento;
     }
 }

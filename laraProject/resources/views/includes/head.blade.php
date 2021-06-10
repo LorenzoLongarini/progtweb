@@ -17,6 +17,7 @@
     <link rel="mask-icon" href="{{ asset('images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>	
+    <script src="{{ asset('js/js-cookie.min.js')}}"></script>
     <script src="{{ asset('js/credit-card.js') }}"></script>
     <script src="{{ asset('js/slider.js') }}"></script>
     <script src="{{ asset('js/slider-auto.js') }}"></script>
