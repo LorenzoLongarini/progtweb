@@ -18,7 +18,6 @@
         <ol id="faq-list">
             @foreach($faqs as $faq)
                 <li>
-                    <h2>{{ $faq->domanda }}</h2>
                     <div class="event-right">
                     @can('isAdmin')  
                     {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], ['class'=>'default-btn'] )}}
@@ -30,13 +29,11 @@
 
                         </div>
                     <div class="card-faq">
-                        <!--<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>-->
+                        <h2>{{ $faq->domanda }}</h2>
+                    </div>
                     <div class="answer-box">
                         <p>{{ $faq->risposta }}</p>
                     </div>
-                </div>
                 </li>
             @endforeach
         </ol>

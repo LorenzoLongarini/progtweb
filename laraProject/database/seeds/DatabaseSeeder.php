@@ -102,7 +102,7 @@ class DatabaseSeeder extends Seeder {
     DB::table('eventi')->insert([
 
         ['eventoId'=>01,
-        'utenteId'=>06,
+        'utenteId'=>03,
         'titolo'=> 'Tour Vasco Rossi',
         'artista'=> 'Vasco Rossi',
         'data'=> '2021-09-04 20:45:00',
