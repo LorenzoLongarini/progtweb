@@ -25,17 +25,8 @@ class Evento extends Model
         return $prezzoScontato;
     }
 
-    public static function getMaxDate(){
-        return Evento::all()->max('data');
-    }
-
     public static function idEventiByOrg($orgId){
         $idEventi = Evento::where('utenteId', $orgId)->get()->pluck('eventoId');
         return $idEventi;
-    }
-
-    public function listaOrganizzatoriDisp(){
-        $organizzatori = $this::where('stato', "attivo")->distinct()->get()->pluck('utenteId');
-        
     }
 }
