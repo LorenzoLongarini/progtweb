@@ -28,8 +28,7 @@ public function pagaBiglietto(Request $request, $id){
     $acquisto->utenteId = Auth::id();
     $acquisto->eventoId = $id;
     $acquisto->metodoPagamento = $request->modalità;
-    $prezzo = Evento::where('eventoId', $id)->get()->first()->prezzoScont();
-    $acquisto->prezzoAcquisto = $prezzo;
+    $acquisto->prezzoAcquisto = Evento::where('eventoId', $id)->get()->first()->prezzo();;
     $acquisto->dataAcquisto = time();
     $acquisto->save();
     }
