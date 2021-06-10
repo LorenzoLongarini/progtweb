@@ -23,7 +23,7 @@
 
                     <li>
                        @can("isAdmin")     
-                       <a href="#"  class="login area-utente ">Area utente</a>
+                       <a href="{{route('admin')}}"  class="login area-utente ">Area utente</a>
                        @endcan
                        @can("isClient")     
                        <a href="#" class="login area-utente ">Area utente</a>
