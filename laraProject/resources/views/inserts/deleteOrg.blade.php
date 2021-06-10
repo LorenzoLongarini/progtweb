@@ -1,4 +1,3 @@
-
 @php 
 use App\Models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();

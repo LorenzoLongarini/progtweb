@@ -1,10 +1,10 @@
 
-<div class="form">
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
     {{  Form::open(array('route' => 'aggiungiEvento.store', 'files' => true /*'class' => some-bollocks*/))  }}
    
     <h2>Aggiungi Evento</h2>
-    <div class="multiple-input">
-        <div class="wrap-input">
+    <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
             {{  Form::text ('titolo', '' /*class-type*/)  }}
             @if ($errors->first('titolo'))
@@ -15,7 +15,7 @@
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
             {{  Form::text ('artista', '' /*class-type*/)  }}
           @if ($errors->first('artista'))
@@ -28,8 +28,8 @@
         </div>
     </div>
         
-    <div class="multiple-input">
-        <div class="wrap-input">
+    <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('regione', 'Regione' /*class-type*/)}}
             {{  Form::select ('regione', ['','Aosta', 'Piemonte', 'Liguria', 'Lombardia', 'Trentino Alto Adige',
                 'Friuli Venezia Giulia', 'Veneto', 'Emilia Romagna', 'Toscana', 'Umbria', 
@@ -43,7 +43,7 @@
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
             {{  Form::text ('luogo', '' /*class-type*/)  }}
             @if ($errors->first('luogo'))
@@ -55,7 +55,7 @@
                 @endif
         </div>
         
-        <div class="wrap-input">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('data', 'Data' /*class-type*/)}}
             {{  Form::date ('data', '' /*class-type*/ ) }}
             @if ($errors->first('data'))
@@ -67,7 +67,7 @@
                 @endif
         </div>
 
-        <div class="wrap-input">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('orario', 'Orario' /*class-type*/)}}
             {{  Form::time ('orario', '', array('min' => date('Y-m-d'))) }}
             @if ($errors->first('orario'))
@@ -80,8 +80,8 @@
         </div>
     </div>
 
-    <div class="single-input">
-        <div class="wrap-input">
+    <div class="single-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
             {{  Form::file ('imgName' /*class-type*/)  }}
             @if ($errors->first('imgName'))
@@ -92,14 +92,14 @@
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('mapsUrl', 'Url' /*class-type*/)}}
             {{  Form::text ('mapsUrl', 'a' /*class-type*/)  }}
         </div>
     </div>
 
-    <div class="single-input">
-        <div class="wrap-input">
+    <div class="single-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('descrizione', 'Descrizione Completa' /*class-type*/)}}
             {{  Form::textarea ('descrizione', ''  /*class-type*/)}}
             @if ($errors->first('descrizione'))
@@ -112,8 +112,8 @@
         </div>
     </div>
 
-    <div class="single-input">
-        <div class="wrap-input">
+    <div class="single-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('programma', 'Programma' /*class-type*/) }}
             {{  Form::text ('programma', '' /*class-type*/) }}
             @if ($errors->first('programma'))
@@ -127,8 +127,8 @@
     </div>
     
     <h2>Biglietti</h2>
-    <div class="multiple-input">
-        <div class="wrap-input">
+    <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('bigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
             {{  Form::text ('bigliettiDisp', '' /*class-type*/) }}
             @if ($errors->first('bigliettiDisp'))
@@ -139,7 +139,7 @@
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
             {{  Form::text ('prezzo', '' /*class-type*/) }}
             @if ($errors->first('prezzo'))
@@ -178,13 +178,14 @@
                 @endif
 
     </div>
-
+                <div style = "display:flex; justify-content:center">
     <div>
-    {{  Form::submit ('Conferma' /*class-type*/)}}
+    {{  Form::submit ('Conferma' , ['class'=>'default-btn'])}}
     </div>
 
     <div>
-    {{  Form::reset ('Annulla' /*class-type*/)}}
+    {{  Form::reset ('Annulla' , ['class'=>'default-btn'])}}
+    </div>
     </div>
 {{Form::close()}}
 </div>
