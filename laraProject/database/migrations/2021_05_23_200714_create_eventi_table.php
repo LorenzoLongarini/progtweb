@@ -16,7 +16,7 @@ class CreateEventiTable extends Migration
         Schema::create('eventi', function (Blueprint $table) {
             $table->bigIncrements('eventoId')->unsigned()->index();
             $table->bigInteger('utenteId')->unsigned()->index();
-            $table->foreign('utenteId')->references('utenteId')->on('users')->onDelete('cascade');
+            $table->foreign('utenteId')->references('utenteId')->on('users');//->onDelete('cascade');
             $table->string('titolo', 50);
             $table->string('artista', 50);
             $table->dateTime('data');
@@ -32,7 +32,7 @@ class CreateEventiTable extends Migration
             $table->integer('bigliettiTotali')->unsigned();
             $table->tinyInteger('sconto')->nullable();
             $table->date('dataSconto')->nullable();
-            $table->string('mapsUrl', 300);
+            $table->string('mapsUrl', 2000);
             $table->string('imgName', 150)->nullable();
             $table->enum('statoEvento', ['attivo', 'sospeso', 'chiuso']);
             $table->timestamps();

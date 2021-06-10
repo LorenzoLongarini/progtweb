@@ -5,4 +5,5 @@
 @section('forms')
     @include('inserts.modifyUser')
      @include('inserts.dashboard-livello2')
+     @include('inserts.storico-acquisti')
 @endsection

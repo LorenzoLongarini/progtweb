@@ -27,4 +27,34 @@ $(document).ready(function () {
         $("#search-box-overlay").toggleClass("opened");
         $('html').css('overflow', 'auto');
     });
+
+    $("#user-nav .user-nav-link button").click(function () { showSection($(this)) });
+
+    $("#user-nav .user-nav-link button").focus(function () { showSection($(this)) });
+    
+    $(".dropdown").click(function () { 
+        $(".dropdown-nav").toggle();
+    });
 });
+
+
+window.onload = function () {
+    loadSection();
+};
+
+function loadSection() {
+    let hashUrl = window.location.hash.replace('-panel', "");
+
+    if (hashUrl != "") {
+        showSection($(hashUrl));
+    }
+}
+
+function showSection(e) {
+    $("#user-nav .user-nav-link button.active").removeClass("active");
+    e.addClass("active");
+    $('section .form.activated').removeClass('activated');
+    $("#" + e.attr('id') + "-section.form").toggleClass("activated");
+    window.location.hash = `${e.attr('id')}-panel`;
+};
+

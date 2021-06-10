@@ -1,3 +1,4 @@
+
 @extends('layouts.public')
 
 @section('page-title', $event->titolo)
@@ -58,7 +59,7 @@
     <div>
     @can('CanModificaEvento', $event)
     {{ link_to_route('modificaEvento', 'MODIFICA EVENTO', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
-    {!!  Form::open(['action' => ['Livello3Controller@eliminaEvento', $event->eventoId] , 'files' => true, 'method'=>'POST'])  !!}
+    {!!  Form::open(['action' => ['OrganizzatoreController@eliminaEvento', $event->eventoId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA EVENTO', ['class'=>'btn default-btn'])!!}
                     {!!  Form::close()  !!}

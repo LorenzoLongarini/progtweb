@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\OrgRequest;
 use App\Http\Requests\ModOrgRequest;
 use App\Models\Resources\Faq;
 use App\Models\Resources\User;
+use App\Models\Resources\Evento;
 use App\Models\Statistics\OrgStats;
 use App\Models\Statistics\EventoStats;
 
@@ -29,6 +31,7 @@ class AdminController extends Controller {
     }
 
     public function eliminaUtente3($utenteId){
+        Evento::where('utenteId', '=', $utenteId)->delete();
         User::where('utenteId', '=', $utenteId)->delete();
         return redirect()->route('admin');
     }
