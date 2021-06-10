@@ -3,7 +3,7 @@
 use App\Models\Resources\Biglietto;
 $biglietti = Biglietto::where('utenteId','=',Auth::id())->get();
 @endphp
-<div id = "storico-acquisti-section" class = "form">
+<div id = "storico-acquisti-section" class = "form" style = "margin-left:100px">
 
 @foreach($biglietti as $biglietto)
         <div class = "utenti-liv-2" style = " padding: 0px 25px;">

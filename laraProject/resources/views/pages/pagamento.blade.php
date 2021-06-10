@@ -65,9 +65,12 @@ use App\Models\Enums\Pagamento;
         
         <div class= "quant-dim"><h2>Totale</h2></div>
         @if(($pagamento->sconto)=== 0)
-            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:55px; font-size:25px">{{$pagamento->prezzo}} €</h4></div>
+            <div class = "dim-prezzo-mod2"><h4 style = " margin-left:55px; font-size:25px">{{$pagamento->prezzo}} </h4> <h3>€</h3></div>
             @else
-        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:55px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} €</h4></span></div>
+            
+        <div class = "dim-prezzo-mod3" id = "prezzo-tot"><span><h4 style = " margin-left:55px; font-size:25px">{{round($pagamento->prezzo - ($pagamento->prezzo / (100/$pagamento->sconto)),2)}} </h4> </span></div> 
+        <div><h3 style = "font-size: 25px; margin-top: 17px; margin-left: 5px;">€</h3></div>
+        
         @endif
         </div>
 </div>
@@ -141,7 +144,7 @@ use App\Models\Enums\Pagamento;
 <script>
     $('#price-id').change(function () {
         let prezzo_totale = $('#prezzo-scontato').text() * $(this).children("option:selected").val();
-        $('#prezzo-tot span').text(Math.round(prezzo_totale*100)/100);
+        $('#prezzo-tot h4').text(Math.round(prezzo_totale*100)/100);
     });
     $(".dropdown").click(function () {
         $(".dropdown-nav").toggle();  
