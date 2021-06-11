@@ -69,6 +69,8 @@ Route::get('/pagamento/acquisto/{id}/', 'ClientController@acquistaEvento')->name
 
 Route::get('/pagamento/acquisto/confermato/{id}/', 'ClientController@acquistoConfermato')->name('confermato');
 
+Route::get('/pagamento/acquisto/confermato/riepilogo/{id}', 'ClientController@Riepilogo')->name('riepilogo');
+
 Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
