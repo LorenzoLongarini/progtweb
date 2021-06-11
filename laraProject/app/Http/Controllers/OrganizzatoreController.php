@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\FaqRequest;
-use App\Http\Requests\OrgRequest;
+use App\Http\Requests\EventRequest;
 use App\Http\Requests\ModOrgRequest;
 use App\Models\Resources\Faq;
 use App\Models\Resources\User;
@@ -54,11 +54,11 @@ class OrganizzatoreController extends Controller {
         $evento->mapsUrl = $request->mapsUrl;
         $evento->descrizione = $request->descrizione;
         $evento->programma = $request->programma;
-        $evento->bigliettiDisp = $request->bigliettiDisp;
+        $evento->bigliettiTotali = $request->bigliettiTotali;
         $evento->prezzo = $request->prezzo;
         $evento->sconto = $request->sconto;
         $evento->dataSconto = $request->dataSconto;
-        $evento->bigliettiVenduti = 0;
+
         $evento->save();
         return redirect()->route('evento', ['id'=> $evento->eventoId]);
     }

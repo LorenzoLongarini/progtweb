@@ -7,8 +7,11 @@ use App\Models\Enums\Pagamento;
 @section('page-content')
     <div class = "contienitutto pagamento-div">
     <div display="flex" justify-content="center">
+    <div><a href= {{route('catalogo')}}> Torna al Catalogo </a></div>
+       <br>
         <div class="cont-riepilogo">
         <div class = "row-direction">
+       
         <span style="font-weight:bolder"> <h2>RIEPILOGO</h2>
         
        
