@@ -2,15 +2,11 @@
 @extends('layouts.public')
 
 @section('page-title', $event->titolo)
+
 @section('page-content')
 
-@include('helpers/cover-page', [
-        'title' => 'FAQ - Frequently asked question', 
-        'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
-        'img_url' => '../storage/app/public/images/covers/' . $event->imgName])
-
 <div style="display:flex;justify-content:space-between;padding:100px;align-items:center">
-    
+
     <div class="container block">
         <div style="display: flex;flex-direction:column;">
             <div>

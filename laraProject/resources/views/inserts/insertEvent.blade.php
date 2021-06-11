@@ -93,7 +93,7 @@
                 @endif
         </div>
         <div class="wrap-input" style = "margin: 10px 10px;">
-            {{  Form::label ('mapsUrl', 'Url' /*class-type*/)}}
+            {{  Form::label ('mapsUrl', 'Mappa (url)' /*class-type*/)}}
             {{  Form::text ('mapsUrl', '' /*class-type*/)  }}
         </div>
     </div>
