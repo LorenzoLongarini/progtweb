@@ -9,29 +9,37 @@
         'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
         'img_url' => '../storage/app/public/images/covers/' . $event->imgName])
 
-        <div class="btn-hero">
+<div class="cover-page"> 
+    @if (empty({{$event->imgName}}))
+        <img src="default.jpg" alt="">
+    @else
+        <img src="{{$event->imgName}}" alt="">
+    @endif
+    <img id="cover-img" src="{{ asset($img_url) }}"/>
+    <div class="overlay-content flex-center">
+        <div class="container">
+            <div class="content-cover">
 
-            @can('isClient')
-                {{ link_to_route('pagamento', 'Acquista Ora', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn'])}}
-            @endcan
-           
-           
-
-            @guest
-                <a href="{{route('login')}}" class="default-btn">Acquista ora</a>
-            @endguest
-        </div>
-        
-   
-
-
+<div style="display:flex;justify-content:space-between;padding:100px;align-items:center">
+    
     <div class="container block">
-        <h3 class="title-section">Luogo dell'evento</h3>
-           <p> {{$event->luogo}}</p>
+        <div style="display: flex;flex-direction:column;">
+            <div>
+            <p style="font-size: 35px">{{$event->titolo}}</p>
+            <h3 style="margin-top:50px" class="title-section">Artista</h3>
+            <p style="font-size: 25px">{{$event->artista}}</p>
+            <h3 style="margin-top:20px" class="title-section">Luogo dell'evento</h3>
+           <p style="font-size:25px"> {{$event->luogo}}</p>
+           <h3 style="margin-top:20px" class="title-section">Data</h3>
+           <p style="font-size:25px"> {{$event->data}}</p>
+        </div>
+        <div style="margin-top:20px;display:flex;align-items:center;gap:30px">
+            <div>
            @can('isClient')
-                <button id="part-btn">Parteciperò</button>
+                <button style="padding:8px 12px;font-size:12px"class="default-btn" id="part-btn">Parteciperò</button>
            @endcan
-           <h3 id="part-num">Partecipanti: <span>{{ Partecipazioni::numPartEvento($event->eventoId) }}</span></h3>
+        </div>
+           <div><h3 id="part-num">Partecipanti: <span>{{ Partecipazioni::numPartEvento($event->eventoId) }}</span></h3></div>
            <script>
              $('#part-btn').click(function () {
                 $.ajax({
@@ -52,9 +60,46 @@
                 });
             });
            </script>
-        <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11190.555740991489!2d9.12007382938012!3d45.47707686397451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c193fa23f19d%3A0x9c7d30c7aeff312!2sStadio%20San%20Siro!5e0!3m2!1sit!2sit!4v1621464654299!5m2!1sit!2sit" width="1000px" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+           </div>
+        </div>
+           </div>
+           <div class="btn-hero">
 
+            @can('isClient')
+                {{ link_to_route('pagamento', 'Acquista Ora', $parameters = ['id' => $event->eventoId], $attributes = ['class' => 'btn default-btn buy-btn'])}}
+            @endcan
+           
+           
+
+            @guest
+                <a href="{{route('login')}}" class="default-btn" style="width:110%" >Acquista ora</a>
+            @endguest
+        </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+        <div class="event-items">
+            <h3 class="event-items">Mappa del luogo</h3>
+        <div class="map event-items">
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11190.555740991489!2d9.12007382938012!3d45.47707686397451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c193fa23f19d%3A0x9c7d30c7aeff312!2sStadio%20San%20Siro!5e0!3m2!1sit!2sit!4v1621464654299!5m2!1sit!2sit" width="1000px" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+          <div>
+            <h3 class="event-items">Descrizione</h3>
+            <p class="event-items">{{$event->descrizione}}</p>
+
+        </div>
+        <div>
+            <h3 class="event-items">Programma</h3>
+            <p class="event-items">{{$event->programma}}</p>
+
+        </div>
+    
+    
+    </div>
     </div>
     <div>
     @can('CanModificaEvento', $event)

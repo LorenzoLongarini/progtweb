@@ -41,6 +41,7 @@
                         </div>           
                 @endforeach
             @endif 
+            {{$eventi->links()}}
         @endisset
     </div>
 @endsection

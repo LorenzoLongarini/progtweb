@@ -10,9 +10,7 @@
     <li class="user-nav-link">
         <button  id="organizzazione" class="user-nav-btn">Organizzatori</button>
     </li>
-    <li class="user-nav-link">
-        <button  id="faq" class="user-nav-btn">FAQ</button>
-    </li>
+    
 </ul>
 @endcan
 @can('isOrganiz')

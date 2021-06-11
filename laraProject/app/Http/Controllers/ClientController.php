@@ -23,7 +23,7 @@ public function index(){
 }
 
 public function pagaBiglietto(Request $request, $id){
-    for($i = 0; $i < $request->quantità + 1; $i++){
+    for($i = 0; $i < $request->quantità ; $i++){
         $acquisto = new Biglietto;
         $acquisto->utenteId = Auth::id();
         $acquisto->eventoId = $id;

@@ -129,11 +129,11 @@
     <h2>Biglietti</h2>
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
-            {{  Form::label ('bigliettiDisp', 'Biglietti Disponibili' /*class-type*/ )}}
-            {{  Form::text ('bigliettiDisp', '' /*class-type*/) }}
-            @if ($errors->first('bigliettiDisp'))
+            {{  Form::label ('bigliettiTotali', 'Biglietti Disponibili' /*class-type*/ )}}
+            {{  Form::text ('bigliettiTotali', '' /*class-type*/) }}
+            @if ($errors->first('bigliettiTotali'))
                 <ul>
-                    @foreach ($errors->get('bigliettiDisp') as $message)
+                    @foreach ($errors->get('bigliettiTotali') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
