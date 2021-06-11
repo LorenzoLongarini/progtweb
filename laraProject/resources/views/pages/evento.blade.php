@@ -9,17 +9,6 @@
         'description' => 'Domande frequenti sui contenuti venduti e le modalità di acquisto',
         'img_url' => '../storage/app/public/images/covers/' . $event->imgName])
 
-<div class="cover-page"> 
-    @if (empty({{$event->imgName}}))
-        <img src="default.jpg" alt="">
-    @else
-        <img src="{{$event->imgName}}" alt="">
-    @endif
-    <img id="cover-img" src="{{ asset($img_url) }}"/>
-    <div class="overlay-content flex-center">
-        <div class="container">
-            <div class="content-cover">
-
 <div style="display:flex;justify-content:space-between;padding:100px;align-items:center">
     
     <div class="container block">
@@ -77,10 +66,8 @@
         </div>
 
         </div>
-    </div>
-</div>
-</div>
-</div>
+    
+
         <div class="event-items">
             <h3 class="event-items">Mappa del luogo</h3>
         <div class="map event-items">
