@@ -49,6 +49,11 @@ public function acquistoConfermato($id){
     return view('pages.pag-confermato')->with('confermato', $confermato);
 }
 
+public function Riepilogo($id){
+    $riepilogo = Evento::where('eventoId', $id)->get()->first();
+    return view('pages.riepilogo-pagamento')->with('riepilogo', $riepilogo);
+}
+
 public function modificaClient(){
     return view('pages.ModificaUser');
 }

@@ -27,7 +27,8 @@ class PublicController extends Controller
      */
     public function index()
     {
-        return view('pages.home');
+        $eventi = Catalogo::ottieniEventiAsQuery()->orderBy('data', 'ASC')->take(5)->get();
+        return view('pages.home')->with('eventi',$eventi);
     }
 
     /**
@@ -68,31 +69,9 @@ class PublicController extends Controller
 
     public function selezionaEventi(RicercaRequest $request){ 
         return view('pages.catalogo')->with('eventi', Catalogo::cercaEventi($request));
-        return redirect()->route('catalogo')->with;
-    }
-
-    public function piuVenduti(){
-        $evento = Evento::orderBy('bigliettiVenduti', 'desc')
-        ->take(5)->get();
-       return view('pages.home')->with('eventos', $evento);
-        
-    }
-
-    public function slider(){
-        $evento = Evento::where('titolo', 'LIKE', 'eventolollo')
-        ->get()->first();
-       return view('pages.home')->with('evento', $evento);
-    }
-
-    public function aBreve(){
-        $evento = DB::table('users')
-         ->orderBy('data', 'asc')
-         ->get();
-        return view('pages.home')->with('events', $evento);
     }
 
     public function mostraEvento($id){
-
         $evento = Evento::where('eventoId', $id)->get()->first();
         if(is_null($evento)){
             return redirect()->route('home');
@@ -100,4 +79,6 @@ class PublicController extends Controller
         else{
         return view('pages.evento')->with('event', $evento);}
     }
+
+   
 }

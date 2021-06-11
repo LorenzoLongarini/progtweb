@@ -30,7 +30,7 @@ class EventRequest extends FormRequest
                 'imgName' => 'image|max:2048',
                 'regione' => 'required|not_in:0',
                 'data' => 'required|date|after:today',
-                'bigliettiDisp' => 'required|integer|min:0',
+                'bigliettiTotali' => 'required|integer|min:0',
                 'prezzo' => 'required|numeric|min:0',
                 'sconto' => 'integer|min:0|max:100',
                 'descrizione' => 'required|max:200',

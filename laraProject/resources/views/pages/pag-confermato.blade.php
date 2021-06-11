@@ -1,5 +1,7 @@
 @extends('layouts.public', ['footerVisible' => false, 'headerVisible' => false])
 @section('page-content')
+
+
 <div class="acquisto-confermato">
    <div style="text-align:center; padding: 30px">
         <svg id="check-pagamento" xmlns="http://www.w3.org/2000/svg"  width="250px" class="bi bi-check2-circle" viewBox="0 0 16 16">
@@ -13,6 +15,8 @@
     <br>
 <div class="flex-center">Ti ringraziamo per aver acquistato con EasyTicket</div>
 <br>
-<div class="flex-center"> <a href="{{route('home')}}" >Clicca qui per tornare alla home.</a></div>
+
+<div class="flex-center"> {{ link_to_route('client', 'Visualizza lo storico', $attributes = ['class' => ''])}}</a></div>
 </div>
+
 @endsection

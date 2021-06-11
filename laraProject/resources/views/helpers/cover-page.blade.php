@@ -4,7 +4,7 @@
 @endphp
 
 @empty($event)
-<div class="cover-page"> 
+<div class="cover-page" style="position: relative"> 
     <img id="cover-img" src="{{ asset($img_url) }}"/>
     <div class="overlay-content flex-center">
         <div class="container">
