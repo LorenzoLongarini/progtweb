@@ -27,7 +27,7 @@ class AdminController extends Controller {
     }
     public function eliminaUtente2($utenteId){
         User::where('utenteId','=' , $utenteId)->delete();
-        return view('admin');
+        return redirect()->route('admin');
     }
 
     public function eliminaUtente3($utenteId){
@@ -76,7 +76,7 @@ class AdminController extends Controller {
 
     public function salvaOrg(OrgRequest $request){
         $org = new User;
-        $org->role = 'organizzazione';
+        $org->role = 'organizzatore';
         $org->username = $request->username;
         $org->password = Hash::make($request->password);
         $org->nome = $request->nome;

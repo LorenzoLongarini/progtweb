@@ -20,10 +20,10 @@ $utente2 = User::where('role','=','cliente')->get();
             <div style="margin-left:30px; margin-top:10px;">{{$user2->utenteId}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@eliminaUtente2', $user2->utenteId], 'method'=>'POST'])  !!}
-                        {{  Form::hidden ('_method', 'DELETE')  }}
-                        {!!Form::submit('ELIMINA UTENTE', ['class'=>'delete'])!!}
-            {!!  Form::close()  !!}
+            {!!  Form::open(['action' => ['AdminController@eliminaUtente2', $user2->utenteId] , 'files' => true, 'method'=>'POST'])  !!}
+                        {!!Form::hidden('_method','DELETE')!!}
+                        {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
+                    {!!  Form::close()  !!}
             </div>
             </div>
             </div>

@@ -64,12 +64,12 @@ class OrganizzatoreController extends Controller {
     }
 
     public function modificaEvento($eventoId){
-        $evento = Evento::find($eventoId);
-        if(!Gate::allows('CanModificaEvento', $evento)){
+        $event = Evento::find($eventoId);
+        if(!Gate::allows('CanModificaEvento', $event)){
             return redirect()->route('home');
         }
         {
-        return view ('pages.modificaEvento')->with('event', $evento);
+            return view ('pages.modificaEvento')->with('event', $event);
         }
     }
 
