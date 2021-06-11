@@ -73,7 +73,7 @@ Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
 
-Route::post('/catalogo/cerca', 'PublicController@cercaEventi')->name('cerca');
+Route::post('/catalogo', 'PublicController@selezionaEventi')->name('cerca');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
@@ -101,13 +101,13 @@ Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFa
 
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
-Route::get('/registrati', 'publicController@registraUser') ->name('registraUser');
+Route::get('/registrati', 'PublicController@registraUser') ->name('registraUser');
 
-Route::post('/registrati', 'publicController@salvaUser') ->name('registraUser.store');
+Route::post('/registrati', 'PublicController@salvaUser') ->name('registraUser.store');
 
 Auth::routes();
 
-Route::get('/', 'publicController@index')->name('home');
+Route::get('/', 'PublicController@index')->name('home');
 
 Route::post('/partecipazioni', 'clientController@partecipaEvento')->name('partecipazioni');
 

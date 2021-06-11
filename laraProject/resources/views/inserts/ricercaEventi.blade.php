@@ -1,6 +1,6 @@
 
     
-    {{  Form::open(array('route' => ['cerca']))  }}
+    {{  Form::open(array('route' => ['catalogo']))  }}
     <div class="multiple-input">
         <div class="wrap-input">
             {{  Form::text ('titolo', null, array('placeholder' => 'Nome evento'))}}
@@ -11,7 +11,7 @@
         </div>
 
         <div class="wrap-input">
-            {{  Form::select ('organizzatore', Catalogo::listaOrganizzatori())}}
+            {{  Form::text ('organizzatore', null, array('placeholder' => 'Organizzatore'))}}
         </div>
 
         <div class="wrap-input">

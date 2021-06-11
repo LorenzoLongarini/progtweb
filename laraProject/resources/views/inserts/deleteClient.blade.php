@@ -2,7 +2,7 @@
 use App\Models\Resources\User;
 $utente2 = User::where('role','=','cliente')->get();
 @endphp
-<div id = "clienti-section" class = "form">
+<div id = "clienti-section" class = "form" style = "margin-left:50px;">
 @foreach($utente2 as $user2)
 
         <div class = "utenti-liv-2" style = " padding: 0px 25px;">
@@ -26,6 +26,8 @@ $utente2 = User::where('role','=','cliente')->get();
             {!!  Form::close()  !!}
             </div>
             </div>
+            </div>
+       <br>
        
         @endforeach
         </div>

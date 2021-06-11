@@ -25,7 +25,7 @@ $eventi = Evento::where('utenteId','=', Auth::id())->get();
 </div>
 <script>
 $(function () {
-    $('#eventi').change(function () {
+    $('select#eventi').change(function () {
         var id = $(this).children("option:selected").val();
         $.ajax({
             url: "{{ route('eventiStats') }}",

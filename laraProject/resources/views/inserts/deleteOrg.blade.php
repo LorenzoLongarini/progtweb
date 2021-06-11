@@ -2,7 +2,7 @@
 use App\Models\Resources\User;
 $utente3 = User::where('role','=','organizzatore')->get();
 @endphp
-<div id = "organizzazione-section" class = "form">
+<div id = "organizzazione-section" class = "form" style = "margin-left: 50px;">
 
 {{ link_to_route('aggiungiOrg', 'AGGIUNGI ORGANIZZATORE')}}
 
@@ -28,6 +28,7 @@ $utente3 = User::where('role','=','organizzatore')->get();
             </div>
             </div>
             </div>
+            <br>
             @endforeach
         </div>
     

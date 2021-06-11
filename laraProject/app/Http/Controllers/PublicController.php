@@ -9,6 +9,7 @@ use App\Models\Resources\Evento;
 use App\Models\Resources\User;
 use App\Models\Catalogo;
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\RicercaRequest;
 
 class PublicController extends Controller
 {
@@ -65,8 +66,9 @@ class PublicController extends Controller
         return view('pages.catalogo')->with('eventi', Catalogo::ottieniEventiCatalogo());
     }
 
-    public function cercaEventi(Request $request){ 
+    public function selezionaEventi(RicercaRequest $request){ 
         return view('pages.catalogo')->with('eventi', Catalogo::cercaEventi($request));
+        return redirect()->route('catalogo')->with;
     }
 
     public function piuVenduti(){
