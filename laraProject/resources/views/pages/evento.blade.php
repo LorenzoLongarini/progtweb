@@ -64,7 +64,7 @@
         </div>
     
 
-        <div class="event-items">
+        <div class="event-items" style = "margin-left: 250px;">
             <h3 class="event-items">Mappa del luogo</h3>
         <div class="map event-items">
           
