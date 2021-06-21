@@ -1,6 +1,6 @@
 
 <div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
-    {{  Form::open(array('route' => 'aggiungiEvento.store', 'files' => true /*'class' => some-bollocks*/))  }}
+    {{  Form::open(array('route' => 'aggiungiEvento.store', 'files' => true /*'class' => class*/))  }}
    
     <h2>Aggiungi Evento</h2>
     <div class="multiple-input" style = "margin: 10px 0px;">
