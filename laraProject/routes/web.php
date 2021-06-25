@@ -40,13 +40,13 @@ Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')-
 Route::put('/user-level2/modify/{utenteId}', 'ClientController@updateClient')->name('modificaClient.update');
 
 // Rotte per l'autenticazione
-Route::get('/login', 'Auth\LoginController@showLoginForm')
-->name('login');
+//Route::get('/login', 'Auth\LoginController@showLoginForm')
+//->name('login');
 
 Route::post('/login', 'Auth\LoginController@login');
 
-Route::post('/logout', 'Auth\LoginController@logout')
-->name('logout');
+//Route::post('/logout', 'Auth\LoginController@logout')
+//->name('logout');
 
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
