@@ -1,6 +1,6 @@
 
 <div class="form-blank" style = "width: 700px; height: 700px;">
-    {{  Form::open(array('route' => 'registraUser.store', 'id' =>'registraUser' , 'files' => true))  }}
+    {{  Form::open(array('route' => 'registraUser.store', 'id' =>'registraUser' , 'files' => true, 'method' => 'POST'))  }}
    
     <h2>Modulo Registrazione</h2>
         <div class="multiple-input" style = "margin: 10px 0px;">
@@ -146,6 +146,14 @@
         <div class="wrap-input blank" style = "margin: 10px 10px;">
             {{  Form::label ('cap', 'Cap' /*class-type*/)}}
             {{  Form::text ('cap', ''  /*class-type*/)}}
+            
+            @if ($errors->first('cap'))
+                <ul>
+                    @foreach ($errors->get('cap') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+            @endif
            
         </div>
     </div>

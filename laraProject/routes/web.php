@@ -43,7 +43,7 @@ Route::put('/user-level2/modify/{utenteId}', 'ClientController@updateClient')->n
 Route::get('/login', 'Auth\LoginController@showLoginForm')
 ->name('login');
 
-Route::post('/login', 'Auth\LoginController@authenticate');
+Route::post('/login', 'Auth\LoginController@login');
 
 Route::post('/logout', 'Auth\LoginController@logout')
 ->name('logout');
@@ -103,11 +103,11 @@ Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFa
 
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
-Route::get('/registrati', 'PublicController@registraUser') ->name('registraUser');
+Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
 
-Route::post('/registrati', 'PublicController@salvaUser') ->name('registraUser.store');
+Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/', 'PublicController@index')->name('home');
 

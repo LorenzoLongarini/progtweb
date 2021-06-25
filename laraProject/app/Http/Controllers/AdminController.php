@@ -31,7 +31,7 @@ class AdminController extends Controller {
     }
 
     public function eliminaUtente3($utenteId){
-        Evento::where('utenteId', '=', $utenteId)->delete();
+        //Evento::where('utenteId', '=', $utenteId)->delete();
         User::where('utenteId', '=', $utenteId)->delete();
         return redirect()->route('admin');
     }

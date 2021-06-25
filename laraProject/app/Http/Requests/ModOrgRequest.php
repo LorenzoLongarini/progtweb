@@ -31,9 +31,9 @@ class ModOrgRequest extends FormRequest
                  'ivaFiscale' =>'required',
                  'ragioneSociale' => 'required|max:40',
                  'email'=> 'required|email|max:50',
-                 'telefono'=> 'required|numeric|',
+                 'telefono'=> 'required|digits:10',
                  'via'=>'required|max:50',
-                 'cap'=>'required|numeric',
+                 'cap'=>'required|digits:5',
                  'città'=>'required|string|max:80',
         ];
     }

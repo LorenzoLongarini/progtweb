@@ -15,15 +15,15 @@ $(document).ready(function () {
         $(this).val(joinCharacterToString(creditCardNumber, '.{1,4}', '-'));
     });
 
-      //Convalida il contenuto della textbox per la data di scadenza della carta 
+    //Convalida il contenuto della textbox per la data di scadenza della carta 
     $("#card-expiration-date").on("input", function () {
         let cardExpirationDate = $(this).val().split("/").join("");
-    
+
         if (!validateString(cardExpirationDate, patternNotNumber)) {
             cardExpirationDate = sanitazedString($(this).val(), /[^0-9]+/g, '');
             window.alert("La data di scadenza può contenere solo numeri da 0 a 9!");
         }
-    
+
         $(this).val(joinCharacterToString(cardExpirationDate, '.{1,2}', '/'));
 
         if ($(this).val().length > 4)
@@ -56,7 +56,7 @@ $(document).ready(function () {
     }
 
     /* 
-    * Controlla se la strina rispetta l'espressione regolare specificata come parametro
+    * Controlla se la stringa rispetta l'espressione regolare specificata come parametro
     */
     function validateString(stringToTest, pattern) {
         let regex = new RegExp(pattern);

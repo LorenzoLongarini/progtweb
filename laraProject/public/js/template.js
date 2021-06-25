@@ -7,7 +7,7 @@ $(document).ready(function () {
         let pagePositionY = window.pageYOffset;
 
         if (searchBtn != undefined) {
-            if (pagePositionY > 507) {
+            if (pagePositionY >= 507) {
                 searchBtn.classList.remove('hidden');
                 $('#page-content #search-form').addClass('hidden');
             }
@@ -31,8 +31,8 @@ $(document).ready(function () {
     $("#user-nav .user-nav-link button").click(function () { showSection($(this)) });
 
     $("#user-nav .user-nav-link button").focus(function () { showSection($(this)) });
-    
-    $(".dropdown").click(function () { 
+
+    $(".dropdown").click(function () {
         $(".dropdown-nav").toggle();
     });
 });
@@ -57,4 +57,3 @@ function showSection(e) {
     $("#" + e.attr('id') + "-section.form").toggleClass("activated");
     window.location.hash = `${e.attr('id')}-panel`;
 };
-

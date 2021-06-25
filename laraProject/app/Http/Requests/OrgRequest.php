@@ -31,9 +31,9 @@ class OrgRequest extends FormRequest
                  'ivaFiscale' =>'required|unique:users,ivaFiscale',
                  'ragioneSociale' => 'required|unique:users,ragioneSociale|max:40',
                  'email'=> 'required|email|unique:users,email|max:50',
-                 'telefono'=> 'required|numeric|unique:users,telefono',
+                 'telefono'=> 'required|digits:10|unique:users,telefono',
                  'via'=>'required|max:50',
-                 'cap'=>'required|numeric|max:7',
+                 'cap'=>'required|digits:5',
                  'città'=>'required|string|max:80',
         ];
     }

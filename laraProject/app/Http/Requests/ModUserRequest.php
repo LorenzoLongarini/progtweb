@@ -32,9 +32,9 @@ class ModUserRequest extends FormRequest
                 'ivaFiscale' =>'required',
                 'dataNascita' =>'date|before:today',
                 'email'=> 'required|email|max:40',
-                'telefono'=> 'numeric|max:9999999999',
+                'telefono'=> 'digits:10',
                 'via'=>'required|max:50',
-                'cap'=>'required|numeric|max:7',
+                'cap'=>'required|digits:5',
                 'città'=>'required|string|max:80',
         ];
     }

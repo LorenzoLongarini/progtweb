@@ -47,7 +47,7 @@ class PublicController extends Controller
         $user->nome = $request->nome;
         $user->username = $request->username;
         $user->cognome = $request->cognome;
-        $user->ragioneSociale = $request->ragioneSociale;
+        //s$user->ragioneSociale = $request->ragioneSociale;
         $user->ivaFiscale = $request->ivaFiscale;
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
@@ -57,7 +57,6 @@ class PublicController extends Controller
         $user->cap = $request->cap;
         $user->città = $request->città;
         $user->save();
-       // $user->fill($request->validated());
         
         return redirect()->route('home');
 
