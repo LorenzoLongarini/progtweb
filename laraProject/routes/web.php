@@ -10,12 +10,12 @@
 |
 */
 
-Route::get('/user-level3', 'OrganizzatoreController@index')
-->name('organiz');
+Route::get('/user-level3', 'TecnController@index')
+->name('tecn')->middleware('can::isTecn');
 
 Route::get('/user-level4', 'AdminController@index')
-->name('admin');//->middleware('can:isAdmin');
-
+->name('admin')->middleware('can:isAdmin');
+/*
 Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
 
 Route::post('/user-level4/registerOrg', 'AdminController@salvaOrg')->name('aggiungiOrg.store');
@@ -31,22 +31,23 @@ Route::put('/user-level4/{utenteId}/modify', 'AdminController@updateOrg')->name(
 Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
 
 Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
-
-Route::get('/user-level2', 'ClientController@index')
-->name('client');//->middleware('can:isClient');
-
+*/
+Route::get('/', 'StaffController@index')
+->name('client')->middleware('can:isStaff');
+/*
 Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')->name('modificaClient');
 
 Route::put('/user-level2/modify/{utenteId}', 'ClientController@updateClient')->name('modificaClient.update');
+*/
 
 // Rotte per l'autenticazione
-//Route::get('/login', 'Auth\LoginController@showLoginForm')
-//->name('login');
+Route::get('/login', 'Auth\LoginController@showLoginForm')
+->name('login');
 
 Route::post('/login', 'Auth\LoginController@login');
 
-//Route::post('/logout', 'Auth\LoginController@logout')
-//->name('logout');
+Route::post('/logout', 'Auth\LoginController@logout')
+->name('logout');
 
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
@@ -58,7 +59,7 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
-
+/*
 Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
 Route::get('/pagamento/{id}/', 'ClientController@pagaEvento')->name('pagamento');
@@ -106,10 +107,5 @@ Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
 
 Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
-
-//Auth::routes();
-
-Route::get('/', 'PublicController@index')->name('home');
-
-Route::post('/partecipazioni', 'clientController@partecipaEvento')->name('partecipazioni');
+*/
 

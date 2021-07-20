@@ -25,6 +25,7 @@ class AdminController extends Controller {
         return view('pages.user-level4');
 
     }
+    /*
     public function eliminaUtente2($utenteId){
         User::where('utenteId','=' , $utenteId)->delete();
         return redirect()->route('admin');
@@ -125,7 +126,7 @@ class AdminController extends Controller {
             ]);
     }
 
-    
+   */ 
 
     
 }
