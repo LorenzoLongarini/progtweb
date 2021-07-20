@@ -28,10 +28,6 @@ Route::get('/user-level4/{utenteId}/modify', 'AdminController@modificaOrg')->nam
 
 Route::put('/user-level4/{utenteId}/modify', 'AdminController@updateOrg')->name('modificaOrg.update');
 
-Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
-
-Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
-
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
@@ -110,6 +106,4 @@ Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.sto
 //Auth::routes();
 
 Route::get('/', 'PublicController@index')->name('home');
-
-Route::post('/partecipazioni', 'clientController@partecipaEvento')->name('partecipazioni');
 
