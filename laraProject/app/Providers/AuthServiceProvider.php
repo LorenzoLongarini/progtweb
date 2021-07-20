@@ -32,18 +32,18 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('admin');
         });
     
-        Gate::define('isClient', function ($user) {
-            return $user->hasRole('cliente');
+        Gate::define('isStaff', function ($user) {
+            return $user->hasRole('staff');
         });
 
-        Gate::define('isOrganiz', function ($user) {
-            return $user->hasRole('organizzatore');
+        Gate::define('isTecn', function ($user) {
+            return $user->hasRole('tecnico');
         });
-        
+        /*
        Gate::define('CanModificaEvento', function($user, Evento $evento){
            
             return $evento->utenteId === $user->utenteId;
         });
-        
+        */
     }
 }
