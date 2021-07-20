@@ -2,7 +2,7 @@
 <div class="form-blank">
     {{  Form::open(array('route' => 'aggiungiOrg.store', 'id' =>'aggiungiOrg' , 'files' => true))  }}
    
-    <h2>Inserisci un membro dello Staff</h2>
+    <h2>Inserisci un Tecnico</h2>
         <div class="multiple-input">
             <div class="wrap-input blank">
             {{  Form::label ('username', 'Username' /*class-type*/)}}

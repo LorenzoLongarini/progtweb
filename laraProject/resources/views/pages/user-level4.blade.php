@@ -3,7 +3,7 @@
 @section('page-title', 'Amministratore')
 
 @section('forms')
-    @include('inserts.dashboard-livello4')   
-    @include('inserts.deleteOrg')
-    @include('inserts.deleteClient')
+    @include('inserts.insertMalfunction')   
+    @include('inserts.deleteStaff')
+    @include('inserts.deleteTechnician')
 @endsection
