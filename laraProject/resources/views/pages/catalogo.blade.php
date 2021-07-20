@@ -1,16 +1,16 @@
 @extends('layouts.public', ["search" => false])
 
-@section('page-title', 'Cerca l\'evento che fa per te!')
+@section('page-title', 'Cerca il prodotto!')
 
 @section('page-content')
     @include('helpers/cover-page', [
-            'title' => 'Catalogo eventi', 
-            'description' => 'Ti offriamo una vasta scelta per trovare il tuo evento preferito',
+            'title' => 'Catalogo prodotti', 
+            'description' => 'Seleziona il prodotto che vuoi visualizzare!',
             'img_url' => '../storage/app/public/images/covers/catalogo-cover.jpg'])
 
     <div class="container block">
     <div id="search-form" class="form card container">
-        @include('inserts.ricercaEventi')
+        @include('inserts.searchProduct')
     </div>
     </div>
     <div class="container block">

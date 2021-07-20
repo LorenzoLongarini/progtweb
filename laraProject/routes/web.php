@@ -28,11 +28,9 @@ Route::get('/user-level4/{utenteId}/modify', 'AdminController@modificaOrg')->nam
 
 Route::put('/user-level4/{utenteId}/modify', 'AdminController@updateOrg')->name('modificaOrg.update');
 
-<<<<<<< HEAD
 Route::get('/user-level2', 'ClientController@index')
 ->name('client');//->middleware('can:isClient');
 
-=======
 Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
 
 Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
@@ -40,7 +38,6 @@ Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventi
 Route::get('/', 'StaffController@index')
 ->name('client')->middleware('can:isStaff');
 /*
->>>>>>> dc41f9795097bfb4e3beec67749de310d9afe8e6
 Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')->name('modificaClient');
 
 Route::put('/user-level2/modify/{utenteId}', 'ClientController@updateClient')->name('modificaClient.update');
@@ -113,12 +110,9 @@ Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
 
 Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
-<<<<<<< HEAD
 
 //Auth::routes();
 
 Route::get('/', 'PublicController@index')->name('home');
-=======
 */
->>>>>>> dc41f9795097bfb4e3beec67749de310d9afe8e6
 

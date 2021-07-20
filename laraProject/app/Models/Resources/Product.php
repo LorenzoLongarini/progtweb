@@ -4,29 +4,14 @@ namespace App\Models\Resources;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Evento extends Model
+class Product extends Model
 {
-    protected $table = 'eventi';
-    protected $primaryKey = 'eventoId';
-    protected $guarded = ['eventoId'];
+    protected $table = 'products';
+    protected $primaryKey = 'productsId';
+    protected $guarded = ['productsId'];
     protected $dateFormat = 'd-m-Y';
     public $timestamps = false;
-    private $evento;
+    private $products;
 
-   
 
-    public function prezzo(){
-        $prezzoScontato = $this->prezzo;
-
-        if($this->sconto > 0){
-            $prezzoScontato -= round(($prezzoScontato * $this->sconto) / 100, 2);
-        }
-
-        return $prezzoScontato;
-    }
-
-    public static function idEventiByOrg($orgId){
-        $idEventi = Evento::where('utenteId', $orgId)->get()->pluck('eventoId');
-        return $idEventi;
-    }
 }
