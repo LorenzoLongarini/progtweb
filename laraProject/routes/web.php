@@ -28,6 +28,9 @@ Route::get('/user-level4/{utenteId}/modify', 'AdminController@modificaOrg')->nam
 
 Route::put('/user-level4/{utenteId}/modify', 'AdminController@updateOrg')->name('modificaOrg.update');
 
+Route::get('/user-level2', 'ClientController@index')
+->name('client');//->middleware('can:isClient');
+
 Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
 
 Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
@@ -107,5 +110,9 @@ Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
 
 Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
+
+//Auth::routes();
+
+Route::get('/', 'PublicController@index')->name('home');
 */
 

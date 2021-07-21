@@ -13,24 +13,3 @@
     
 </ul>
 @endcan
-@can('isOrganiz')
-<ul>
-    <li class="user-nav-link">
-        <button class="user-nav-btn active" id="dashboard">Dashboard</button>
-    </li>
-    <li class="user-nav-link">
-        <button class="user-nav-btn"  id = "eventi">Eventi</button>
-    </li>
-</ul>
-@endcan
-
-@can('isClient')
-<ul>
-    <li class="user-nav-link">
-        <button class="user-nav-btn" id = "storico-acquisti">Storico acquisti</button>
-    </li>
-    <li class="user-nav-link">
-        <button class="user-nav-btn" id = "client-modify">Impostazioni utente</button>
-    </li>
-</ul>
-@endcan
