@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEventiTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEventiTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('productsId')->unsigned()->index();
             $table->bigInteger('usersId')->unsigned()->index();
             $table->foreign('usersId')->references('usersId')->on('users')->onDelete('cascade');
@@ -38,6 +38,6 @@ class CreateEventiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventi');
+        Schema::dropIfExists('product');
     }
 }

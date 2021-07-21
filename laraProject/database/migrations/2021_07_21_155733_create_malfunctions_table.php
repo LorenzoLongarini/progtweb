@@ -13,7 +13,7 @@ class CreateMalfunctionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('malfunctions', function (Blueprint $table) {
+        Schema::create('malfunction', function (Blueprint $table) {
             $table->bigIncrements('malfunctionsId');
             $table->text('problema', 500);
             $table->text('soluzione', 500);   
@@ -27,6 +27,6 @@ class CreateMalfunctionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('malfunctions');
+        Schema::dropIfExists('malfunction');
     }
 }
