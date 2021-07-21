@@ -24,7 +24,7 @@ class StaffController extends Controller {
     }
 
     public function index() {
-        return view('pages.user-level3');
+        return view('user-staff');
     }
 
     

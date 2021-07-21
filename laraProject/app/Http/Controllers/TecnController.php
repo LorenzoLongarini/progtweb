@@ -18,7 +18,7 @@ class TecnController extends Controller {
 
 public function index(){
 
-    return view('pages.user-level2');
+    return view('user-tecnico');
 
 }
 

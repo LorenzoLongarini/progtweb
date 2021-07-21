@@ -7,13 +7,13 @@
             <nav id="main-menu">
                 <ul>
                     <li>
-                        <a class="nav-link" href="{{ route('home') }}">HOME</a>
+                        <a class="nav-link" >HOME</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ route('catalogo')}}">CATALOGO</a>
+                        <a class="nav-link" >CATALOGO</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ route('about')}}">CHI SIAMO</a>
+                        <a class="nav-link" >CHI SIAMO</a>
                     </li>
                 </ul>
             </nav>  
