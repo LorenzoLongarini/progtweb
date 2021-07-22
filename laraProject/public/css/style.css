@@ -993,7 +993,7 @@ ol#faq-list li::marker{
 
 /* Login page*/
 .login-container{
-    background:  linear-gradient(to right, #0000008f, #0000008f), url('../../storage/app/public/images/covers/auth-bg.jpg');
+    background:  linear-gradient(to right, #0000008f, #0000008f), url('../../public/images/white.jpg');
     background-position: center center;
     background-size:cover;
     height: calc(100% - 80px);
