@@ -6,7 +6,7 @@
 
 <div class="login-container flex-rows">
     <div class="brand">
-        <img src="{{asset('./images/logos/eticket_logo_light.svg')}}"/>
+        <img src="{{asset('./images/logos/logo-sito.svg')}}"/>
         <h3 style="color: white">Accedi o crea un nuovo account</h3>
     </div>
     <div style="max-width: 373px">
