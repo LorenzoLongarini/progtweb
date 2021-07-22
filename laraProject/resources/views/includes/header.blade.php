@@ -2,7 +2,7 @@
 <header id="masthead">
     <div class="container"> 
         <div id="left-header">      
-            <img id="site-logo-header" src="{{ asset('/images/logos/eticket_logo.svg')}}" alt="Easyticket logo">
+            <img id="site-logo-header" src="{{ asset('/images/logos/logo-sito.svg')}}" alt="Easyticket logo">
             <div class="divider"></div>
             <nav id="main-menu">
                 <ul>
