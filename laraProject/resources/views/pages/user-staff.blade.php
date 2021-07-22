@@ -1,6 +1,6 @@
 @extends('layouts.user')
 
-@section('page-title', Auth::user()->ragioneSociale)
+@section('page-title')
 
 @section('forms')
     @include('inserts.insertEvent')
