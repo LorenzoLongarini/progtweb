@@ -16,13 +16,13 @@ use App\Models\Statistics\EventoStats;
 
 class AdminController extends Controller {
 
-    public function __construct() {
+    /*public function __construct() {
         $this->middleware('can:isAdmin');
-    }
+    }*/
 
     public function index(){
 
-        return view('user-admin');
+        return view('pages.user-level4');
 
     }
     /*

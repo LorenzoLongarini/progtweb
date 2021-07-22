@@ -12,13 +12,13 @@ use App\Models\User;
 
 class TecnController extends Controller {
 
-    public function __construct() {
+    /*public function __construct() {
        $this->middleware('can:isTecn');
-    }
+    }*/
 
 public function index(){
 
-    return view('user-tecnico');
+    return view('user-level-2');
 
 }
 

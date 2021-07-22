@@ -12,9 +12,9 @@ use App\Models\User;
 
 class ClientController extends Controller {
 
-    public function __construct() {
+    /*public function __construct() {
        $this->middleware('can:isClient');
-    }
+    }*/
 
 public function index(){
 

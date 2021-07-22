@@ -11,10 +11,10 @@
 */
 
 Route::get('/tecnico', 'TecnController@index')
-->name('tecn')->middleware('can::isTecn');
+->name('tecn');//->middleware('can::isTecn');
 
 Route::get('/admin', 'AdminController@index')
-->name('admin')->middleware('can:isAdmin');
+->name('admin');//->middleware('can:isAdmin');
 /*
 Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
 
@@ -80,11 +80,11 @@ Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
 
 Route::post('/catalogo', 'PublicController@selezionaEventi')->name('cerca');
-
+*/
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::get('/catalogo', 'PublicController@mostraCatalogo')->name('catalogo');
-
+/*
 Route::get('/user-level3/aggiungiEvento', 'OrganizzatoreController@aggiungiEvento')
         ->name('aggiungiEvento');
 
@@ -106,13 +106,13 @@ Route::get('/faq/{faqId}/modify', 'AdminController@modificaFaq')->name('modifica
 Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFaq.update');
 
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
-
+*/
 Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
 
 Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
 
-//Auth::routes();
-
+Auth::routes();
+/*
 Route::get('/', 'PublicController@index')->name('home');
 */
 

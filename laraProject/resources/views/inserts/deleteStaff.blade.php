@@ -1,6 +1,6 @@
 @php 
 use App\Models\Resources\User;
-$utente2 = User::where('role','=','cliente')->get();
+$utente2 = User::where('role','=','tecnico')->get();
 @endphp
 <div id = "clienti-section" class = "form" style = "margin-left:50px;">
 @foreach($utente2 as $user2)
@@ -20,7 +20,7 @@ $utente2 = User::where('role','=','cliente')->get();
             <div style="margin-left:30px; margin-top:10px;">{{$user2->utenteId}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@eliminaUtente2', $user2->utenteId] , 'files' => true, 'method'=>'POST'])  !!}
+            {!!  Form::open(['action' => ['AdminController@index', $user2->utenteId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}
