@@ -17,16 +17,16 @@ use App\Models\Statistics\EventoStats;
 use App\Http\Controllers\Auth\LoginController;
 
 
-class OrganizzatoreController extends Controller {
+class StaffController extends Controller {
 
     public function __construct() {
-        $this->middleware('can:isOrganiz');
+        $this->middleware('can:isStaff');
     }
 
     public function index() {
-        return view('user-staff');
+        return view('pages.user-staff');
     }
-
+/*
     public function aggiungiEvento(){
 
         return view ('pages.inserisciEvento');
@@ -121,5 +121,5 @@ class OrganizzatoreController extends Controller {
             'incassoTotale' => $eventoStats->incassoTotale()
             ]);
     }
-
+*/
 }
