@@ -17,8 +17,8 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('productsId')->unsigned()->index();
             $table->bigInteger('usersId')->unsigned()->index();
             $table->foreign('usersId')->references('usersId')->on('users')->onDelete('cascade');
-            $table->bigInteger('malfunctionsId')->unsigned()->index();
-            $table->foreign('malfunctionsId')->references('malfunctionsId')->on('malfunctions')->onDelete('cascade');
+            /*$table->bigInteger('malfunctionsId')->unsigned()->index();
+            $table->foreign('malfunctionsId')->references('malfunctionsId')->on('malfunctions')->onDelete('cascade');*/
             $table->string('nome', 50);
             $table->dateTime('dataCreazione');
             $table->float('prezzo');
