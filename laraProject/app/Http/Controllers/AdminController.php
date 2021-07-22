@@ -6,17 +6,17 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\FaqRequest;
-use App\Http\Requests\OrgRequest;
+use App\Http\Requests\ProductRequest;
 use App\Http\Requests\ModOrgRequest;
 use App\Models\Resources\Faq;
 use App\Models\Resources\User;
-use App\Models\Resources\Evento;
+use App\Models\Resources\Product;
 use App\Models\Statistics\OrgStats;
 use App\Models\Statistics\EventoStats;
 
 class AdminController extends Controller {
 
-    /*public function __construct() {
+   /* public function __construct() {
         $this->middleware('can:isAdmin');
     }*/
 
@@ -24,6 +24,48 @@ class AdminController extends Controller {
 
         return view('pages.user-admin');
 
+    }
+
+    public function inserisciProd(){
+        
+        return view('inserts.insertProduct');
+
+    }
+
+    public function salvaProd(ProductRequest $request){
+            
+        $product = new Product;
+        $product->nome = $request->nome;
+        $product->prezzo = $request->prezzo;
+        $product->noteTecniche = $request->noteTecniche;
+        $product->modInstallaz = $request->modInstallaz;
+        $product->save();
+        return redirect()->route('inserts.insertProduct');
+
+    }
+
+    public function modificaProd($productsId){
+
+        $Product = Product::find($productsId);
+        return view('inserts.modifyProduct')->with('product', $Product);
+
+    }
+
+    public function updateProd(ProductRequest $request, $productsId){
+
+        $product = Product::find($productsId);
+        $product->nome = $request->nome;
+        $product->prezzo = $request->prezzo;
+        $product->noteTecniche = $request->noteTecniche;
+        $product->modInstallaz = $request->modInstallaz;
+        $product->save();
+        return redirect()->route('admin');
+        
+    }
+
+    public function eliminaProd($productsId){
+        Product::where('productsId', '=', $productsId)->delete();
+        return redirect()->route('admin');
     }
     /*
     public function eliminaUtente2($utenteId){

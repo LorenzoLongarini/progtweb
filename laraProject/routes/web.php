@@ -11,10 +11,20 @@
 */
 
 Route::get('/user-tecnico', 'TecnController@index')
-->name('tecn')->middleware('can::isTecn');
+->name('tecn');//->middleware('can::isTecn');
 
 Route::get('/user-admin', 'AdminController@index')
-->name('admin')->middleware('can:isAdmin');
+->name('admin');//->middleware('can:isAdmin');
+
+Route::get('/user-admin/insert-product', 'AdminController@inserisciProd')->name('insert-product');
+
+Route::post('user-admin/insert-product', 'AdminController@salvaProd')->name('insert-product.store');
+
+Route::get('user-admin/modify/{productsId}', 'AdminController@modificaProd')->name('modificaProd');
+
+Route::put('user-admin/modify/{productsId}', 'AdminController@updateProd')->name('modificaProd.update');
+
+Route::delete('user-admin/elimina-prod/{productsId}', 'AdminController@eliminaProd')->name('elimina-prodotto');
 /*
 Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
 

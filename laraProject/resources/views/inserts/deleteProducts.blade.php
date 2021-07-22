@@ -1,0 +1,37 @@
+@php 
+use App\Models\Resources\Product;
+$products = Product::where('nome','=','monitor')->get();
+@endphp
+<div id = "prodotti-section" class = "form" style = "margin-left:50px;">
+{{ link_to_route('insert-product', 'AGGIUNGI PRODOTTO')}}
+@foreach($products as $product)
+
+        <div class = "utenti-liv-2" style = " padding: 0px 25px;">
+            <div class = "row-direction" style = "display:flex; justify-content:space-between; align-items:center;">
+            <div>
+            <div style="margin-left:30px; margin-top:20px;">Id</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$product->productsId}}</div>
+            </div>
+            <div>
+            <div style="margin-left:30px; margin-top:20px;">Nome</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$product->nome}}</div>
+            </div>
+            <div>
+            <div style="margin-left:30px; margin-top:20px;">Creato il</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$product->dataCreazione}}</div>
+            </div>
+            <div>
+            {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST'])  !!}
+                        {!!Form::hidden('_method','DELETE')!!}
+                        {!!Form::submit('ELIMINA PRODOTTO', ['class'=>'delete'])!!}
+                    {!!  Form::close()  !!}
+            </div>
+            <div>
+            {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId], ['class'=>'default-btn'] )}}
+            </div>
+            </div>
+            </div>
+       <br>
+       
+        @endforeach
+        </div>

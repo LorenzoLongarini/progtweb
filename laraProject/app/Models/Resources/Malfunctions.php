@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Malfunctions extends Model
 {
-    protected $table = 'malfunctions';
+    protected $table = 'malfunction';
     public $timestamps = false;
 
 

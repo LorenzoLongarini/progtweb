@@ -1,15 +1,17 @@
-
-@can('isAdmin')
+<!-- manca il can is admin -->
 <ul>
     <li class="user-nav-link">
-        <button id="dashboard" class="user-nav-btn active">Dashboard</button>
+        <button id="prodotti" class="user-nav-btn active">Prodotti</button>
     </li>
     <li class="user-nav-link">
-        <button  id="clienti" class="user-nav-btn">Clienti</button>
+        <button id="malfunzionamenti" class="user-nav-btn active">Malfunzionamenti</button>
     </li>
     <li class="user-nav-link">
-        <button  id="organizzazione" class="user-nav-btn">Organizzatori</button>
+        <button  id="clienti" class="user-nav-btn">Staff</button>
+    </li>
+    <li class="user-nav-link">
+        <button  id="organizzazione" class="user-nav-btn">Tecnici</button>
     </li>
     
 </ul>
-@endcan
+

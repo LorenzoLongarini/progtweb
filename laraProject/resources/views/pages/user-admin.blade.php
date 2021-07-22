@@ -3,7 +3,9 @@
 @section('page-title', 'Amministratore')
 
 @section('forms')
-    @include('inserts.insertMalfunction')   
-    @include('inserts.deleteStaff')
+    @include('inserts.deleteProducts')   
+    @include('inserts.deleteMalfunctions')
     @include('inserts.deleteTechnician')
+    @include('inserts.deleteStaff')
+    
 @endsection
