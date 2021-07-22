@@ -15,13 +15,13 @@ class CreateProductsTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('productsId')->unsigned()->index();
-            $table->bigInteger('malfunctionsId')->unsigned()->index();
-            $table->foreign('malfunctionsId')->references('malfunctionsId')->on('malfunction')->onDelete('cascade');
             $table->string('nome', 50);
             $table->dateTime('dataCreazione');
             $table->float('prezzo');
             $table->text('noteTecniche', 500);
             $table->text('modInstallaz', 500);
+            $table->text('problema', 500);
+            $table->text('soluzione', 500);  
             $table->text('imgName', 150)->nullable();
             $table->timestamps();
         });
