@@ -10,10 +10,10 @@
 |
 */
 
-Route::get('/tecnico', 'TecnController@index')
+Route::get('/user-tecnico', 'TecnController@index')
 ->name('tecn')->middleware('can::isTecn');
 
-Route::get('/admin', 'AdminController@index')
+Route::get('/user-admin', 'AdminController@index')
 ->name('admin')->middleware('can:isAdmin');
 /*
 Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
@@ -35,7 +35,7 @@ Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organiz
 
 Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
 */
-Route::get('/staff', 'StaffController@index')
+Route::get('/user-staff', 'StaffController@index')
 ->name('staff')->middleware('can:isStaff');
 /*
 Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')->name('modificaClient');
