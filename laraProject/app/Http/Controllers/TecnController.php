@@ -13,7 +13,7 @@ use App\Models\User;
 class TecnController extends Controller {
 
     public function __construct() {
-       $this->middleware('can:isTecn');
+       //$this->middleware('can:isTecn');
     }
 
 public function index(){
