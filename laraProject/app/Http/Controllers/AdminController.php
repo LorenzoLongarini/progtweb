@@ -22,7 +22,7 @@ class AdminController extends Controller {
 
     public function index(){
 
-        return view('user-admin');
+        return view('pages.user-admin');
 
     }
     /*
