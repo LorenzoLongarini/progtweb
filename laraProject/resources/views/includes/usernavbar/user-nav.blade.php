@@ -4,9 +4,6 @@
         <button id="prodotti" class="user-nav-btn active">Prodotti</button>
     </li>
     <li class="user-nav-link">
-        <button id="malfunzionamenti" class="user-nav-btn active">Malfunzionamenti</button>
-    </li>
-    <li class="user-nav-link">
         <button  id="clienti" class="user-nav-btn">Staff</button>
     </li>
     <li class="user-nav-link">

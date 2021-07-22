@@ -17,7 +17,7 @@ use App\Models\Statistics\EventoStats;
 class AdminController extends Controller {
 
     public function __construct() {
-        //$this->middleware('can:isAdmin');
+       // $this->middleware('can:isAdmin');
     }
 
     public function index(){
