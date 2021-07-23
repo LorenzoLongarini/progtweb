@@ -1,6 +1,6 @@
 @php 
 use App\Models\Resources\Product;
-$products = Product::where('nome','=','monitor')->get();
+$products = Product::all();
 @endphp
 <div id = "prodotti-section" class = "form" style = "margin-left:50px;">
 {{ link_to_route('insert-product', 'AGGIUNGI PRODOTTO')}}

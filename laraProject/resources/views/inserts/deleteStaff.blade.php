@@ -3,6 +3,7 @@ use App\Models\Resources\User;
 $staff = User::where('role','=','staff')->get();
 @endphp
 <div id = "clienti-section" class = "form" style = "margin-left:50px;">
+{{ link_to_route('insert-staff', 'AGGIUNGI STAFF')}}
 @foreach($staff as $staf)
 
         <div class = "utenti-liv-2" style = " padding: 0px 25px;">
@@ -17,13 +18,16 @@ $staff = User::where('role','=','staff')->get();
             </div>
             <div>
             <div style="margin-left:30px; margin-top:20px;">UtenteId</div>
-            <div style="margin-left:30px; margin-top:10px;">{{$staf->utenteId}}</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$staf->usersId}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@index', $staf->utenteId] , 'files' => true, 'method'=>'POST'])  !!}
+            {!!  Form::open(['action' => ['AdminController@index', $staf->usersId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA MEMBRO STAFF', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}
+            </div>
+            <div>
+            {{ link_to_route('modificaStaff', 'MODIFICA STAFF', $parameters = ['usersId' => $staff->usersId], ['class'=>'default-btn'] )}}
             </div>
             </div>
             </div>

@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();
             $table->string('ragioneSociale', 40)->nullable();
-            $table->string('iva/cf', 40);
+            $table->string('ivacf', 40);
             $table->date('dataNascita')->nullable();
             $table->string('email', 40);
             $table->string('username', 25);

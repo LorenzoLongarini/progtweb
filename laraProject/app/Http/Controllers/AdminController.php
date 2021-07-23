@@ -69,6 +69,67 @@ class AdminController extends Controller {
         Product::where('productsId', '=', $productsId)->delete();
         return redirect()->route('admin');
     }
+
+
+    public function inserisciStaff(){
+        
+        return view('inserts.insertProduct');
+
+    }
+
+    public function salvaStaff(UserRequest $request){
+            
+        $user = new User;
+        $user->nome = $request->nome;
+        $user->cognome = $request->cognome;
+        $user->ragioneSociale = $request->ragioneSociale;
+        $user->ivacf = $request->ivacf;
+        $user->dataNascita = $request->dataNascita;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->telefono = $request->telefono;
+        $user->via = $request->via;
+        $user->cap = $request->cap;
+        $user->città = $request->città;
+        $user->role = 'staff';      
+        $user->save();
+        return redirect()->route('admin');
+
+    }
+
+    public function modificaStaff($usersId){
+
+        $user = User::find($usersId);
+        return view('inserts.modifyStaff')->with('users', $user);
+
+    }
+
+    public function updateStaff(UserRequest $request, $usersId){
+
+        $user = User::find($usersId);
+        $user->nome = $request->nome;
+        $user->cognome = $request->cognome;
+        $user->ragioneSociale = $request->ragioneSociale;
+        $user->ivacf = $request->ivacf;
+        $user->dataNascita = $request->dataNascita;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->telefono = $request->telefono;
+        $user->via = $request->via;
+        $user->cap = $request->cap;
+        $user->città = $request->città;
+        $user->role = 'staff';      
+        $user->save();
+        return redirect()->route('admin');
+        
+    }
+
+    public function eliminaStaff($usersId){
+        User::where('usersId', '=', $usersId)->delete();
+        return redirect()->route('admin');
+    }
     /*
     public function eliminaUtente2($utenteId){
         User::where('utenteId','=' , $utenteId)->delete();
