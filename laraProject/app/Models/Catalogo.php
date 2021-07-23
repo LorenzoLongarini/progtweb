@@ -10,8 +10,9 @@ use App\Models\Resources\User;
 
 class Catalogo extends Model
 {
+    /*
     public static function ottieniEventiAsQuery($stato = "attivo"){
-        $eventi = Evento::where('statoEvento', $stato);
+        $eventi = Product::where('statoEvento', $stato);
         return $eventi;
     }
 
@@ -41,4 +42,5 @@ class Catalogo extends Model
         $orgsList = User::whereIn('utenteId', $availableId)->get()->pluck('ragioneSociale', 'utenteId');
         return $orgsList;
     }
+    */
 }

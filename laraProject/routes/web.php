@@ -96,9 +96,9 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
-/*
-Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
 
+Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
+/*
 Route::get('/pagamento/{id}/', 'ClientController@pagaEvento')->name('pagamento');
 
 Route::post('pagamento/{id}', 'ClientController@pagaBiglietto')->name('pagamento.store');
@@ -112,9 +112,9 @@ Route::get('/pagamento/acquisto/confermato/riepilogo/{id}', 'ClientController@Ri
 Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
-
-Route::post('/catalogo', 'PublicController@selezionaEventi')->name('cerca');
 */
+Route::post('/catalogo', 'PublicController@selezionaEventi')->name('cerca');
+
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::get('/catalogo', 'PublicController@mostraCatalogo')->name('catalogo');
