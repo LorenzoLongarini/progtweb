@@ -17,7 +17,7 @@ class PublicController extends Controller
     public function __construct()
     {
 
-        //$this->middleware('auth');
+        
     }
 
     /**
@@ -71,7 +71,7 @@ class PublicController extends Controller
     }
 
     public function mostraEvento($id){
-        $evento = Evento::where('eventoId', $id)->get()->first();
+        $evento = Product::where('productsId', $id)->get()->first();
         if(is_null($evento)){
             return redirect()->route('home');
         }
@@ -79,5 +79,5 @@ class PublicController extends Controller
         return view('pages.evento')->with('event', $evento);}
     }
 
-   
+  
 }
