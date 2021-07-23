@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('productsId')->unsigned()->index();
             $table->string('nome', 50);
-            $table->dateTime('dataCreazione');
+            $table->dateTime('dataCreazione')->nullable();
             $table->float('prezzo');
             $table->text('noteTecniche', 500);
             $table->text('modInstallaz', 500);

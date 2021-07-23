@@ -39,8 +39,10 @@ class AdminController extends Controller {
         $product->prezzo = $request->prezzo;
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
+        $product->problema = $request->problema;
+        $product->soluzione = $request->soluzione;
         $product->save();
-        return redirect()->route('inserts.insertProduct');
+        return redirect()->route('admin');
 
     }
 

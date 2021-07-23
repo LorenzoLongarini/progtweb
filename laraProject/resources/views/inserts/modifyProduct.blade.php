@@ -1,183 +1,119 @@
+@extends('layouts.forms')
 
-<div class="form">
-    {{  Form::open(array('route' => ['modificaEvento.update', $event->eventoId], 'files' => true, 'method'=> 'POST'))  }}
+@section('content')
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
+    {{  Form::open(array('route' => ['modificaProd.update', $product->productsId], 'files' => true, 'method'=> 'POST'))  }}
    
-    <h2>Modifica Organizzazione</h2>
-    <div class="multiple-input">
-        <div class="wrap-input">
-            {{  Form::label ('titolo', 'Nome Evento' /*class-type*/)}}
-            {{  Form::text ('titolo', $event->titolo /*class-type*/)  }}
-            @if ($errors->first('titolo'))
-                <ul >
-                    @foreach ($errors->get('titolo') as $message)
+    <h2>Aggiungi Prodotto</h2>
+    <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('nome', 'Nome Prodotto')}}
+            {{  Form::text ('nome', $product-> nome)  }}
+            @if ($errors->first('nome'))
+                <ul>
+                    @foreach ($errors->get('nome') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input">
-            {{  Form::label ('artista', 'Artista'/*class-type*/)  }}
-            {{  Form::text ('artista', $event->artista /*class-type*/)  }}
-          @if ($errors->first('artista'))
-                <ul >
-                    @foreach ($errors->get('artista') as $message)
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('prezzo', 'Prezzo')  }}
+            {{  Form::text ('prezzo', $product-> prezzo)}}
+          @if ($errors->first('prezzo'))
+                <ul>
+                    @foreach ($errors->get('prezzo') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
         </div>
     </div>
-        
-    <div class="multiple-input">
-        <div class="wrap-input">
-            {{  Form::label ('regione', 'Regione' /*class-type*/)}}
-            {{  Form::select ('regione', Regioni::lista_regioni, $event->regione )  }}
-       
-            @if ($errors->first('regione'))
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('noteTecniche', 'Note Tecniche')}}
+            {{  Form::text ('noteTecniche', $product-> noteTecniche)  }}
+            @if ($errors->first('noteTecniche'))
                 <ul>
-                    @foreach ($errors->get('regione') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-            @endif
-        </div>
-        <div class="wrap-input">
-            {{  Form::label ('luogo', 'Luogo' /*class-type*/)}}
-            {{  Form::text ('luogo', $event->luogo /*class-type*/)  }}
-            @if ($errors->first('luogo'))
-                <ul>
-                    @foreach ($errors->get('luogo') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-            @endif
-        </div>
-        
-        <div class="wrap-input">
-            {{  Form::label ('data', 'Data' /*class-type*/)}}
-            {{  Form::date ('data', $event->data /*class-type*/ ) }}
-            @if ($errors->first('data'))
-                <ul >
-                    @foreach ($errors->get('data') as $message)
+                    @foreach ($errors->get('noteTecniche') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
         </div>
-
-        <div class="wrap-input">
-            {{  Form::label ('orario', 'Orario' /*class-type*/)}}
-            {{  Form::time ('orario', $event->orario) }}
-            @if ($errors->first('orario'))
+        
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('modInstallaz', 'Modalità di Installazione')}}
+            {{  Form::text ('modInstallaz', $product-> modInstallaz ) }}
+            @if ($errors->first('modInstallaz'))
                 <ul>
-                    @foreach ($errors->get('orario') as $message)
+                    @foreach ($errors->get('modInstallaz') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
         </div>
-    </div>
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('problema', 'Problematiche')}}
+            {{  Form::text ('problema', $product-> problema)  }}
+            @if ($errors->first('problema'))
+                <ul>
+                    @foreach ($errors->get('problema') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('soluzione', 'Soluzione')}}
+            {{  Form::text ('soluzione', $product-> soluzione ) }}
+            @if ($errors->first('soluzione'))
+                <ul>
+                    @foreach ($errors->get('soluzione') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('noteTecniche', 'Note Tecniche')}}
+            {{  Form::text ('noteTecniche', $product-> noteTecniche)  }}
+            @if ($errors->first('noteTecniche'))
+                <ul>
+                    @foreach ($errors->get('noteTecniche') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('modInstallaz', 'Modalità di Installazione')}}
+            {{  Form::text ('modInstallaz', $product-> modInstallaz ) }}
+            @if ($errors->first('modInstallaz'))
+                <ul>
+                    @foreach ($errors->get('modInstallaz') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+     
 
-    <div class="single-input">
-        <div class="wrap-input">
+    <div class="single-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
-            {{  Form::file ('imgName', $event->imgName /*class-type*/)  }}
+            {{  Form::file ('imgName', $product-> imgName)  }}
             @if ($errors->first('imgName'))
-                <ul >
+                <ul>
                     @foreach ($errors->get('imgName') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input">
-            {{  Form::label ('mapsUrl', 'Mappa (Url)' /*class-type*/)}}
-            {{  Form::text ('mapsUrl', '$event->mapsUrl' /*class-type*/)  }}
-        </div>
-        
     </div>
-
-    <div class="single-input">
-        <div class="wrap-input">
-            {{  Form::label ('descrizione', 'Descrizione Completa' /*class-type*/)}}
-            {{  Form::textarea ('descrizione', $event->descrizione  /*class-type*/)}}
-            @if ($errors->first('descrizione'))
-                <ul>
-                    @foreach ($errors->get('descrizione') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-        </div>
-    </div>
-
-    <div class="single-input">
-        <div class="wrap-input">
-            {{  Form::label ('programma', 'Programma' /*class-type*/) }}
-            {{  Form::text ('programma', $event->progamma /*class-type*/) }}
-            @if ($errors->first('programma'))
-                <ul class="errors">
-                    @foreach ($errors->get('programma') as $message)
-                    <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-        </div>
-    </div>
-    
-    <h2>Biglietti</h2>
-    <div class="multiple-input">
-        <div class="wrap-input">
-            {{  Form::label ('bigliettiTotali', 'Biglietti Disponibili' /*class-type*/ )}}
-            {{  Form::text ('bigliettiTotali', $event->bigliettiTotali /*class-type*/) }}
-            @if ($errors->first('bigliettiTotali'))
-                <ul class="errors">
-                    @foreach ($errors->get('bigliettiTotali') as $message)
-                    <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-             
-        </div>
-        <div class="wrap-input">
-            {{  Form::label ('prezzo', 'Prezzo Biglietto' /*class-type*/ )}}
-            {{  Form::text ('prezzo', $event->prezzo /*class-type*/) }}
-            @if ($errors->first('prezzo'))
-                <ul class="errors">
-                    @foreach ($errors->get('prezzo') as $message)
-                    <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-
-        </div>
-    </div>
-
-    <div>
-    {{  Form::label ('sconto', 'Sconto' /*class-type*/ )}}
-    {{  Form::text ('sconto', $event->sconto /*class-type*/) }}
-    @if ($errors->first('sconto'))
-                <ul class="errors">
-                    @foreach ($errors->get('sconto') as $message)
-                    <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-    </div>
-    <div>
-
-
-    {{  Form::label ('dataSconto', 'Data inizio sconto')}}
-    {{  Form::date ('dataSconto', $event->dataSconto)  }}
-    @if ($errors->first('dataSconto'))
-                <ul>
-                    @foreach ($errors->get('dataSconto') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-
-    </div>
+                <div style = "display:flex; justify-content:center">
 
     <div>
     {{  Form::submit ('Conferma' /*class-type*/)}}
@@ -189,3 +125,4 @@
     </div>
 {{Form::close()}}
 </div>
+@endsection

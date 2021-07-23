@@ -52,7 +52,52 @@
                 </ul>
                 @endif
         </div>
-
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('problema', 'Problematiche')}}
+            {{  Form::text ('problema', '')  }}
+            @if ($errors->first('problema'))
+                <ul>
+                    @foreach ($errors->get('problema') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('soluzione', 'Soluzione')}}
+            {{  Form::text ('soluzione', '' ) }}
+            @if ($errors->first('soluzione'))
+                <ul>
+                    @foreach ($errors->get('soluzione') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('noteTecniche', 'Note Tecniche')}}
+            {{  Form::text ('noteTecniche', '')  }}
+            @if ($errors->first('noteTecniche'))
+                <ul>
+                    @foreach ($errors->get('noteTecniche') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('modInstallaz', 'Modalità di Installazione')}}
+            {{  Form::text ('modInstallaz', '' ) }}
+            @if ($errors->first('modInstallaz'))
+                <ul>
+                    @foreach ($errors->get('modInstallaz') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
      
 
     <div class="single-input" style = "margin: 10px 0px;">
