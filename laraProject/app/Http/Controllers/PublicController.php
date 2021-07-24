@@ -9,7 +9,7 @@ use App\Models\Resources\Evento;
 use App\Models\Resources\User;
 use App\Models\Catalogo;
 use App\Http\Requests\UserRequest;
-use App\Http\Requests\RicercaRequest;
+use App\Http\Requests\SearchRequest;
 
 class PublicController extends Controller
 {
@@ -27,8 +27,8 @@ class PublicController extends Controller
      */
     public function index()
     {
-        $eventi = Catalogo::ottieniEventiAsQuery()->orderBy('data', 'ASC')->take(5)->get();
-        return view('pages.home')->with('eventi',$eventi);
+        $prodotti= Catalogo::listaProdotti();
+        return view('pages.home')->with('prodotti',$prodotti);
     }
 
     /**
@@ -66,7 +66,7 @@ class PublicController extends Controller
         return view('pages.catalogo')->with('prodotti', Catalogo::listaProdotti());
     }
 
-    public function selezionaEventi(RicercaRequest $request){ 
+    public function selezionaProdotti(SearchRequest $request){ 
         return view('pages.catalogo')->with('prodotti', Catalogo::ricercaPerDescrizione($request));
     }
 /*

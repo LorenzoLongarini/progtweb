@@ -3,31 +3,41 @@
 namespace App\Models;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\RicercaRequest;
+use App\Http\Requests\SearchRequest;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Resources\Evento;
+use App\Models\Resources\Product;
 use App\Models\Resources\User;
 
 class Catalogo extends Model
 {
     public static function verificaDescrizione($descrizione){
-       $endStr="*";
-       $counter="/".$endStr."{1}/";
-       $str= "/".$endStr."$/";
-       if(preg_match($counter,$descrizione)){
-           if(preg_match($str,$descrizione))
-           return str_replace("*","",$descrizione);
+       $counter= substr_count($descrizione,"*");
+       if($counter <= 1)
+       {
+           if($counter==1)
+           {
+               if((strlen($descrizione)-1)=="*")
+               {
+                    return str_replace("*","",$descrizione);
+               }
+           }else return $descrizione;
+           
+       }else return null;
+       
+       
 
-       }
+       
 
     }
-    punlic static function listaProdotti(){
-        return Product::all();
+    public static function listaProdotti(){
+        $prodotti = Product::all();
+        return $prodotti;
     }
 
     public static function ricercaPerDescrizione(SearchRequest $request){
+        $desc= self::verificaDescrizione($request->descrizione);
         $risultati=Product::all()
-                    ->where('descrizione','LIKE','%' . verificaDescrizione($request->descrizione) . '%');
+                    ->where('descrizione','LIKE','%' . $desc . '%');
         return $risultati;
 
       

@@ -113,7 +113,7 @@ Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
 
 Route::get('/home/slider', 'PublicController@slider')->name('slider');
 */
-Route::post('/catalogo', 'PublicController@selezionaEventi')->name('cerca');
+Route::post('/catalogo', 'PublicController@selezionaProdotti')->name('cerca');
 
 Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
