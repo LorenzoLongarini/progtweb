@@ -1,4 +1,4 @@
-<!--@php
+<@php
     if(empty($url))
         $url = "default.png"
 @endphp
@@ -15,4 +15,4 @@
         </div>
     </div>
 </div>
-@endempty-->
+@endempty

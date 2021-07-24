@@ -7,10 +7,10 @@
             <nav id="main-menu">
                 <ul>
                     <li>
-                        <a class="nav-link" >HOME</a>
+                        <a class="nav-link"  >HOME</a>
                     </li>
                     <li>
-                        <a class="nav-link" >CATALOGO</a>
+                        <a class="nav-link" href="{{route('catalogo')}}">CATALOGO</a>
                     </li>
                     <li>
                         <a class="nav-link" >CHI SIAMO</a>

@@ -137,8 +137,8 @@ Route::get('/registrati', 'publicController@registraUser')->name('registraUser')
 
 Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
 
-Auth::routes();
-/*
+
+
 Route::get('/', 'PublicController@index')->name('home');
-*/
+
 
