@@ -10,6 +10,42 @@ use App\Models\Resources\User;
 
 class Catalogo extends Model
 {
+    public static function verificaDescrizione($descrizione){
+       $endStr="*";
+       $counter="/".$endStr."{1}/";
+       $str= "/".$endStr."$/";
+       if(preg_match($counter,$descrizione)){
+           if(preg_match($str,$descrizione))
+           return str_replace("*","",$descrizione);
+
+       }
+
+    }
+    punlic static function listaProdotti(){
+        return Product::all();
+    }
+
+    public static function ricercaPerDescrizione(SearchRequest $request){
+        $risultati=Product::all()
+                    ->where('descrizione','LIKE','%' . verificaDescrizione($request->descrizione) . '%');
+        return $risultati;
+
+      
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
     /*
     public static function ottieniEventiAsQuery($stato = "attivo"){
         $eventi = Product::where('statoEvento', $stato);

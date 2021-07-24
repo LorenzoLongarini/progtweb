@@ -63,13 +63,13 @@ class PublicController extends Controller
     }
 
     public function mostraCatalogo(){
-        return view('pages.catalogo')->with('eventi', Catalogo::ottieniEventiCatalogo());
+        return view('pages.catalogo')->with('prodotti', Catalogo::listaProdotti());
     }
 
     public function selezionaEventi(RicercaRequest $request){ 
-        return view('pages.catalogo')->with('eventi', Catalogo::cercaEventi($request));
+        return view('pages.catalogo')->with('prodotti', Catalogo::ricercaPerDescrizione($request));
     }
-
+/*
     public function mostraEvento($id){
         $evento = Product::where('productsId', $id)->get()->first();
         if(is_null($evento)){
@@ -78,6 +78,6 @@ class PublicController extends Controller
         else{
         return view('pages.evento')->with('event', $evento);}
     }
-
+*/
   
 }

@@ -24,10 +24,8 @@ class SearchRequest extends FormRequest
      */
     public function rules()
     {
-        return ['titolo' => 'required|max:50',
-                'artista' => 'required|max:50',
-                'descrizione' => 'required|max:50',
-                'data' => 'required|date|after:today',      
+        return [
+                'descrizione' => 'required|max:50',  
         ];
     }
 }
