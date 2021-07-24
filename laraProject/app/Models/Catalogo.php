@@ -11,6 +11,14 @@ use App\Models\Resources\User;
 class Catalogo extends Model
 {
     public static function verificaDescrizione($descrizione){
+        $counter=substr_count($descrizione,"*");
+        if($counter <= 1){
+            if($counter==1)
+             return str_replace("*","",$descrizione);
+            else return $descrizione;
+
+            
+        }else return;
        
        
 
@@ -32,10 +40,17 @@ class Catalogo extends Model
     }
 
     public static function ricercaPerDescrizione(SearchRequest $request){
-        
-        $prodotti=Product::where('descrizione','LIKE','%' . $request->descrizione . '%')->get();
-        return $prodotti;
-
+       $counter= substr_count($request->descrizione,"*");
+       $strDesc= str_replace("*","",$request->descrizione);
+       if($counter <=1)
+       {
+           if($counter==1)
+           {
+             return $risultati=Product::where('descrizione','LIKE','%' . $strDesc . '%' )->get();
+           }
+           else if($counter == 0) return  $risultati=Product::where('descrizione','LIKE', $request->descrizione)->get();
+       }
+    
 
     }
 
