@@ -10,36 +10,31 @@ use App\Models\Resources\User;
 
 class Catalogo extends Model
 {
-    /*public static function verificaDescrizione($descrizione){
-       $counter= substr_count($descrizione,"*");
-       if($counter <= 1)
-       {
-           if($counter==1)
-           {
-               if((strlen($descrizione)-1)=="*")
-               {
-                    return str_replace("*","",$descrizione);
-               }
-           }else return $descrizione;
+    public static function verificaDescrizione($descrizione){
+       
+       
+
+       
            
-       }else return null;
+          
+               
+           
+     
        
        
 
        
 
-    }*/
+    }
     public static function listaProdotti(){
         $prodotti = Product::all();
         return $prodotti;
     }
 
     public static function ricercaPerDescrizione(SearchRequest $request){
-        $desc= Product::where('descrizione','LIKE','%' . $request->descrizione . '%');
-        return $desc;
-
-      
-
+        
+        $prodotti=Product::where('descrizione','LIKE','%' . $request->descrizione . '%')->get();
+        return $prodotti;
 
 
     }
