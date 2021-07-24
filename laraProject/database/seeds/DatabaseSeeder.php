@@ -50,5 +50,39 @@ class DatabaseSeeder extends Seeder {
         'via'=>'Ferrara',
         'password'=>Hash::make('tecnico')],
     ]);
+    DB::table('product')->insert([
+
+        [   'productsId'=>01,
+            'nome' => 'pcccc',
+            'prezzo'=>'23.4',
+            'noteTecniche'=>'aaaaaaaaaa', 
+            'descrizione'=>'aaaaaaaaaaaaaa computer aaaaaa',
+            'modInstallaz'=>'aaaaaaaaa',  
+            'imgName'=>'aaaaa'],
+
+            [   'productsId'=>02,
+            'nome' => 'telefono',
+            'prezzo'=>'21.4',
+            'noteTecniche'=>'bbbbbbbbb', 
+            'descrizione'=>'bbbbbbbbbbb computer bbbbbbbbbbb',
+            'modInstallaz'=>'bbbbbbbbbbbbb',  
+            'imgName'=>'bbbbbb'],
+
+            [   'productsId'=>03,
+            'nome' => 'dildo',
+            'prezzo'=>'18.4',
+            'noteTecniche'=>'cccccccccccccc', 
+            'descrizione'=>'cccccccccccccccc computer ccccccccccccccccc',
+            'modInstallaz'=>'ccccccccccccccccccccc',  
+            'imgName'=>'ccccccccccc'],
+
+            [   'productsId'=>04,
+            'nome' => 'paolo',
+            'prezzo'=>'11.4',
+            'noteTecniche'=>'dddddddddddddddd', 
+            'descrizione'=>'dddddddddddddddddddddddddd computer dddddddddddddddd dd',
+            'modInstallaz'=>'dddddddddddddddddddddd',  
+            'imgName'=>'ddddddddddddddddd'],
+    ]);
 }
 }

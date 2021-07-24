@@ -25,6 +25,30 @@ Route::get('user-admin/modify/{productsId}', 'AdminController@modificaProd')->na
 Route::put('user-admin/modify/{productsId}', 'AdminController@updateProd')->name('modificaProd.update');
 
 Route::delete('user-admin/elimina-prod/{productsId}', 'AdminController@eliminaProd')->name('elimina-prodotto');
+
+
+Route::get('/user-admin/insert-technician', 'AdminController@inserisciTecn')->name('insert-technician');
+
+Route::post('user-admin/insert-technician', 'AdminController@salvaTecn')->name('insert-technician.store');
+
+Route::get('user-admin/modify/{technicianId}', 'AdminController@modificaTecn')->name('modificaTecn');
+
+Route::put('user-admin/modify/{productsId}', 'AdminController@updateTecn')->name('modificaTecn.update');
+
+Route::delete('user-admin/elimina-technician/{productsId}', 'AdminController@eliminaTecn')->name('elimina-technician');
+
+
+Route::get('/user-admin/insert-staff', 'AdminController@inserisciStaff')->name('insert-staff');
+
+Route::post('user-admin/insert-staff', 'AdminController@salvaStaff')->name('insert-staff.store');
+
+Route::get('user-admin/modify/{technicianId}', 'AdminController@modificaStaff')->name('modificaStaff');
+
+Route::put('user-admin/modify/{productsId}', 'AdminController@updateStaff')->name('modificaStaff.update');
+
+Route::delete('user-admin/elimina-staff/{productsId}', 'AdminController@eliminaStaff')->name('elimina-staff');
+
+
 /*
 Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
 
