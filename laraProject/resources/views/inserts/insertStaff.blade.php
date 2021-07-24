@@ -1,7 +1,7 @@
 @extends('layouts.forms')
 
 @section('content')
-<div class="form-blank">
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
     {{  Form::open(array('route' => 'insert-staff.store', 'id' =>'insertStaff' , 'files' => true))  }}
    
     <h2>Inserisci un membro dello Staff</h2>
@@ -19,8 +19,8 @@
             </div>
             <div class="wrap-input blank">
 
-            {{  Form::text ('password', 'Password')}}
-            {{  Form::password ('password', '' )  }}
+            {{  Form::label ('password', 'Password' /*class-type*/)}}
+            {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)
@@ -32,7 +32,7 @@
             <div class="wrap-input blank">   
                 
             {{  Form::label ('password_confirmation', 'Conferma Password' /*class-type*/)}}
-            {{  Form::text ('password_confirmation', '' /*class-type*/)  }}
+            {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)

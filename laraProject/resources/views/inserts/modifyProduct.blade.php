@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
-    {{  Form::open(array('route' => ['modificaProd.update', $product->productsId], 'files' => true, 'method'=> 'POST'))  }}
+    {{  Form::open(['action' => ['AdminController@updateProd', $product->productsId] , 'files' => true, 'method'=>'POST'])  }}
    
-    <h2>Aggiungi Prodotto</h2>
+    <h2>Modifica Prodotto</h2>
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('nome', 'Nome Prodotto')}}
@@ -103,7 +103,7 @@
     <div class="single-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
-            {{  Form::file ('imgName', $product-> imgName)  }}
+            {{  Form::file ('imgName')   }}
             @if ($errors->first('imgName'))
                 <ul>
                     @foreach ($errors->get('imgName') as $message)

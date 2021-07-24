@@ -21,13 +21,13 @@ $staff = User::where('role','=','staff')->get();
             <div style="margin-left:30px; margin-top:10px;">{{$staf->usersId}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@index', $staf->usersId] , 'files' => true, 'method'=>'POST'])  !!}
+            {!!  Form::open(['action' => ['AdminController@eliminaStaff', $staf->usersId] , 'files' => true, 'method'=>'POST'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA MEMBRO STAFF', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
-            {{ link_to_route('modificaStaff', 'MODIFICA STAFF', $parameters = ['usersId' => $staf->usersId], ['class'=>'default-btn'] )}}
+            {{ link_to_route('modifica-staff', 'MODIFICA STAFF', $parameters = ['usersId' => $staf->usersId], ['class'=>'default-btn'] )}}
             </div>
             </div>
             </div>

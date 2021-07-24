@@ -25,7 +25,7 @@ class SearchRequest extends FormRequest
     public function rules()
     {
         return [
-                'descrizione' => 'required|max:50',  
+                'descrizione' => 'required|max:500',  
         ];
     }
 }
