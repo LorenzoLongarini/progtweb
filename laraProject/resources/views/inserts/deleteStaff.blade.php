@@ -1,8 +1,8 @@
 @php 
-use App\Models\Resources\User;
+use App\User;
 $staff = User::where('role','=','staff')->get();
 @endphp
-<div id = "clienti-section" class = "form" style = "margin-left:50px;">
+<div id = "staff-section" class = "form" style = "margin-left:50px;">
 {{ link_to_route('insert-staff', 'AGGIUNGI STAFF')}}
 @foreach($staff as $staf)
 
@@ -27,7 +27,7 @@ $staff = User::where('role','=','staff')->get();
                     {!!  Form::close()  !!}
             </div>
             <div>
-            {{ link_to_route('modificaStaff', 'MODIFICA STAFF', $parameters = ['usersId' => $staff->usersId], ['class'=>'default-btn'] )}}
+            {{ link_to_route('modificaStaff', 'MODIFICA STAFF', $parameters = ['usersId' => $staf->usersId], ['class'=>'default-btn'] )}}
             </div>
             </div>
             </div>

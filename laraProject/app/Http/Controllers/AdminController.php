@@ -9,7 +9,8 @@ use App\Http\Requests\FaqRequest;
 use App\Http\Requests\ProductRequest;
 use App\Http\Requests\ModOrgRequest;
 use App\Models\Resources\Faq;
-use App\Models\Resources\User;
+//use App\Models\Resources\User;
+use App\User;
 use App\Models\Resources\Product;
 use App\Models\Statistics\OrgStats;
 use App\Models\Statistics\EventoStats;
@@ -73,7 +74,7 @@ class AdminController extends Controller {
 
     public function inserisciStaff(){
         
-        return view('inserts.insertProduct');
+        return view('inserts.insertStaff');
 
     }
 

@@ -42,11 +42,11 @@ Route::get('/user-admin/insert-staff', 'AdminController@inserisciStaff')->name('
 
 Route::post('user-admin/insert-staff', 'AdminController@salvaStaff')->name('insert-staff.store');
 
-Route::get('user-admin/modify/{technicianId}', 'AdminController@modificaStaff')->name('modificaStaff');
+Route::get('user-admin/modify/{usersId}', 'AdminController@modificaStaff')->name('modificaStaff');
 
-Route::put('user-admin/modify/{productsId}', 'AdminController@updateStaff')->name('modificaStaff.update');
+Route::put('user-admin/modify/{usersId}', 'AdminController@updateStaff')->name('modificaStaff.update');
 
-Route::delete('user-admin/elimina-staff/{productsId}', 'AdminController@eliminaStaff')->name('elimina-staff');
+Route::delete('user-admin/elimina-staff/{usersId}', 'AdminController@eliminaStaff')->name('elimina-staff');
 
 
 /*

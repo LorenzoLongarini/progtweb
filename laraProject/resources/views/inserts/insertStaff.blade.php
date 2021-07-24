@@ -1,12 +1,14 @@
+@extends('layouts.forms')
 
+@section('content')
 <div class="form-blank">
-    {{  Form::open(array('route' => 'aggiungiOrg.store', 'id' =>'aggiungiOrg' , 'files' => true))  }}
+    {{  Form::open(array('route' => 'insert-staff.store', 'id' =>'insertStaff' , 'files' => true))  }}
    
     <h2>Inserisci un membro dello Staff</h2>
         <div class="multiple-input">
             <div class="wrap-input blank">
-            {{  Form::label ('username', 'Username' /*class-type*/)}}
-            {{  Form::text ('username', '' /*class-type*/)  }}
+            {{  Form::label ('username', 'Username' )}}
+            {{  Form::text ('username', '' )  }}
             @if ($errors->first('username'))
                 <ul>
                     @foreach ($errors->get('username') as $message)
@@ -17,8 +19,8 @@
             </div>
             <div class="wrap-input blank">
 
-            {{  Form::label ('password', 'Password' /*class-type*/)}}
-            {{  Form::text ('password', '' /*class-type*/)  }}
+            {{  Form::text ('password', 'Password')}}
+            {{  Form::password ('password', '' )  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)
@@ -162,4 +164,4 @@
     </div>
 {{Form::close()}}
 </div>
-
+@endsection
