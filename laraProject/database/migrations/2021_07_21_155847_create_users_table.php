@@ -27,6 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('via', 50);
             $table->string('cap', 7);
             $table->string('città', 80);
+            $table->set('sottocategoria', 
+            ['telefonia', 'televisori', 'computers', 'stampanti']);
             $table->string('role',20)->default('tecnico');        
         });
     }

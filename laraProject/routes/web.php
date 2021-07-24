@@ -20,9 +20,9 @@ Route::get('/user-admin/insert-product', 'AdminController@inserisciProd')->name(
 
 Route::post('user-admin/insert-product', 'AdminController@salvaProd')->name('insert-product.store');
 
-Route::get('user-admin/modify/{productsId}', 'AdminController@modificaProd')->name('modificaProd');
+Route::get('user-admin/modify-prod/{productsId}', 'AdminController@modificaProd')->name('modificaProd');
 
-Route::put('user-admin/modify/{productsId}', 'AdminController@updateProd')->name('modificaProd.update');
+Route::put('user-admin/modify-prod/{productsId}', 'AdminController@updateProd')->name('modificaProd.update');
 
 Route::delete('user-admin/elimina-prod/{productsId}', 'AdminController@eliminaProd')->name('elimina-prodotto');
 
@@ -34,9 +34,9 @@ Route::get('/user-admin/insert-staff', 'AdminController@inserisciStaff')->name('
 
 Route::post('user-admin/insert-staff', 'AdminController@salvaStaff')->name('insert-staff.store');
 
-Route::get('user-admin/modify/{usersId}', 'AdminController@modificaStaff')->name('modifica-staff');
+Route::get('user-admin/modify-staff/{usersId}', 'AdminController@modificaStaff')->name('modifica-staff');
 
-Route::put('user-admin/modify/{usersId}', 'AdminController@updateStaff')->name('modifica-staff.update');
+Route::put('user-admin/modify-staff/{usersId}', 'AdminController@updateStaff')->name('modifica-staff.update');
 
 Route::delete('user-admin/elimina-staff/{usersId}', 'AdminController@eliminaStaff')->name('elimina-staff');
 
