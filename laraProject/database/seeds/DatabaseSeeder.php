@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder {
         'via'=>'Ferrara',
         'password'=>Hash::make('tecnico')],
     ]);
-    DB::table('product')->insert([
+    DB::table('products')->insert([
 
         [   'productsId'=>01,
             'nome' => 'pcccc',

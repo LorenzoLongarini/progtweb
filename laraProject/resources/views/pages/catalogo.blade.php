@@ -28,12 +28,11 @@
                                   
                                 </div>
                                 <div class="event-info flex-columns">
-                                    <h2>{{ $prodotto->nome }}, {{ $prodotto->prezzo}}</h2>
+                                    <h2>{{ $prodotto->nome }}, {{ $prodotto->descrizione}}</h2>
                                     
                                 </div>
                             </div>
                             <div class="event-right">
-                                @include('helpers.price')
                                 {{ link_to_route('evento', 'VEDI EVENTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'btn default-btn'])}}
                             </div>
                         </div>           
