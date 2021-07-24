@@ -1,14 +1,14 @@
 @extends('layouts.forms')
 
 @section('content')
-<div class="form-blank">
-{{  Form::open(['action' => ['AdminController@updateStaff', $staff->usersId] , 'files' => true, 'method'=>'POST'])  }}
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
+{{  Form::open(['action' => ['AdminController@updateStaff', $users->usersId] , 'files' => true, 'method'=>'POST'])  }}
 
     <h2>Modifica un membro dello Staff</h2>
         <div class="multiple-input">
             <div class="wrap-input blank">
             {{  Form::label ('username', 'Username' )}}
-            {{  Form::text ('username', $staff->username )  }}
+            {{  Form::text ('username', $users->username )  }}
             @if ($errors->first('username'))
                 <ul>
                     @foreach ($errors->get('username') as $message)
