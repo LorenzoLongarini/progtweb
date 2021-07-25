@@ -4,9 +4,10 @@ namespace App\Models\Resources;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Malfunctions extends Model
+class Malfunction extends Model
 {
     protected $table = 'malfunctions';
+    protected $primaryKey = 'malfunctionsId';
     public $timestamps = false;
 
 

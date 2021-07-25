@@ -56,4 +56,14 @@ function showSection(e) {
     $('section .form.activated').removeClass('activated');
     $("#" + e.attr('id') + "-section.form").toggleClass("activated");
     window.location.hash = `${e.attr('id')}-panel`;
-};
+}
+
+
+function ConfirmDelete()
+  {
+  var x = confirm("Sei sicuro? I dati verranno persi se procedi");
+  if (x)
+    return true;
+  else
+    return false;
+  };

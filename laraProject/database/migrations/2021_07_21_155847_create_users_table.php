@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('usersId')->unsigned()->index();
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();
-            $table->string('ragioneSociale', 40)->nullable();
             $table->string('ivacf', 40);
             $table->date('dataNascita')->nullable();
             $table->string('email', 40);
@@ -28,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('cap', 7);
             $table->string('città', 80);
             $table->set('sottocategoria', 
-            ['telefonia', 'televisori', 'computers', 'stampanti']);
+            ['','telefonia', 'televisori', 'computers', 'stampanti'])->nullable();
             $table->string('role',20)->default('tecnico');        
         });
     }

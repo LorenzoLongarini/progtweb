@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\ProductRequest;
 use App\Http\Requests\ModOrgRequest;
+use App\Http\Requests\UserRequest;
+use App\Http\Requests\MalfunctionRequest;
 use App\Models\Resources\Faq;
-//use App\Models\Resources\User;
+use App\Models\Resources\Malfunction;
 use App\User;
 use App\Models\Resources\Product;
 use App\Models\Statistics\OrgStats;
@@ -72,6 +74,105 @@ class AdminController extends Controller {
     }
 
 
+    public function inserisciMalf($productsId){
+        $Product = Product::find($productsId);
+        return view('inserts.insertMalfunctions')->with('product', $Product);
+
+    }
+
+    public function salvaMalf(MalfunctionRequest $request, $productsId){
+        $Product = Product::find($productsId);
+        $malf = new Malfunction;
+        $malf->productsId = $Product->productsId;
+        $malf->problema = $request->problema;
+        $malf->soluzione = $request->soluzione;
+        $malf->save();
+        return redirect()->route('admin');
+
+    }
+
+    public function modificaMalf($malfunctionsId){
+        $Malfunction = Malfunction::find($malfunctionsId);
+        return view('inserts.modifyMalfunctions')->with('malfunction', $Malfunction);
+
+    }
+
+    public function updateMalf(MalfunctionRequest $request, $malfunctionsId){
+
+        $malfunct = Malfunction::find($malfunctionsId);
+        $malfunct->problema = $request->problema;
+        $malfunct->soluzione = $request->soluzione;
+        $malfunct->save();
+        return redirect()->route('admin');
+        
+    }
+
+    public function eliminaMalf($productsId){
+        Product::where('productsId', '=', $productsId)->delete();
+        return redirect()->route('admin');
+    }
+
+    public function inserisciTecnico(){
+        
+        return view('inserts.insertTechnician');
+
+    }
+
+    public function salvaTecnico(UserRequest $request){
+            
+        $user = new User;
+        $user->nome = $request->nome;
+        $user->cognome = $request->cognome;
+        $user->ivacf = $request->ivacf;
+        $user->dataNascita = $request->dataNascita;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->telefono = $request->telefono;
+        $user->via = $request->via;
+        $user->cap = $request->cap;
+        $user->città = $request->città;
+        $user->sottocategoria = '';
+        $user->role = 'tecnico';      
+        $user->save();
+        return redirect()->route('admin');
+
+    }
+
+    public function modificaTecnico($usersId){
+
+        $user = User::find($usersId);
+        return view('inserts.modifyTechnician')->with('users', $user);
+
+    }
+
+    public function updateTecnico(UserRequest $request, $usersId){
+
+        $user = User::find($usersId);
+        $user->nome = $request->nome;
+        $user->cognome = $request->cognome;
+        $user->ivacf = $request->ivacf;
+        $user->dataNascita = $request->dataNascita;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->telefono = $request->telefono;
+        $user->via = $request->via;
+        $user->cap = $request->cap;
+        $user->città = $request->città;
+        $user->sottocategoria = '';
+        $user->role = 'tecnico';      
+        $user->save();
+        return redirect()->route('admin');
+        
+    }
+
+    public function eliminaTecnico($usersId){
+        User::where('usersId', '=', $usersId)->delete();
+        return redirect()->route('admin');
+    }
+
+
     public function inserisciStaff(){
         
         return view('inserts.insertStaff');
@@ -83,7 +184,6 @@ class AdminController extends Controller {
         $user = new User;
         $user->nome = $request->nome;
         $user->cognome = $request->cognome;
-        $user->ragioneSociale = $request->ragioneSociale;
         $user->ivacf = $request->ivacf;
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
@@ -93,6 +193,7 @@ class AdminController extends Controller {
         $user->via = $request->via;
         $user->cap = $request->cap;
         $user->città = $request->città;
+        $user->sottocategoria = $request->sottocategoria;
         $user->role = 'staff';      
         $user->save();
         return redirect()->route('admin');
@@ -111,7 +212,6 @@ class AdminController extends Controller {
         $user = User::find($usersId);
         $user->nome = $request->nome;
         $user->cognome = $request->cognome;
-        $user->ragioneSociale = $request->ragioneSociale;
         $user->ivacf = $request->ivacf;
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
@@ -121,6 +221,7 @@ class AdminController extends Controller {
         $user->via = $request->via;
         $user->cap = $request->cap;
         $user->città = $request->città;
+        $user->sottocategoria = $request->sottocategoria;
         $user->role = 'staff';      
         $user->save();
         return redirect()->route('admin');

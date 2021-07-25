@@ -44,7 +44,7 @@
         </div>
         <div class = "multiple-input">
             <div class="wrap-input blank">
-             {{  Form::label ('nome', 'Nome (opzionale)'/*class-type*/)  }}
+             {{  Form::label ('nome', 'Nome'/*class-type*/)  }}
              {{  Form::text ('nome', '' /*class-type*/)  }}
                   @if ($errors->first('nome'))
                       <ul>
@@ -57,7 +57,7 @@
         
         
              <div class="wrap-input blank">
-                 {{  Form::label ('cognome', 'Cognome (opzionale)'/*class-type*/)  }}
+                 {{  Form::label ('cognome', 'Cognome '/*class-type*/)  }}
                  {{  Form::text ('cognome', '' /*class-type*/)  }}
                       @if ($errors->first('cognome'))
                          <ul>
@@ -68,24 +68,13 @@
                       @endif
             </div>
         </div>
-    <div class="multiple-input">
+       
         <div class="wrap-input blank">
-            {{  Form::label ('ragioneSociale', 'Nome Organizzazione' /*class-type*/)}}
-            {{  Form::text ('ragioneSociale', '' /*class-type*/)  }}
-            @if ($errors->first('ragioneSociale'))
+            {{  Form::label ('ivacf', 'Partita IVA' /*class-type*/)}}
+            {{  Form::text ('ivacf', '' /*class-type*/)  }}
+            @if ($errors->first('ivacf'))
                 <ul>
-                    @foreach ($errors->get('ragioneSociale') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-        </div>
-        <div class="wrap-input blank">
-            {{  Form::label ('ivaFiscale', 'Partita IVA' /*class-type*/)}}
-            {{  Form::text ('ivaFiscale', '' /*class-type*/)  }}
-            @if ($errors->first('ivaFiscale'))
-                <ul>
-                    @foreach ($errors->get('ivaFiscale') as $message)
+                    @foreach ($errors->get('ivacf') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -134,9 +123,25 @@
                 </ul>
                 @endif
         </div>
-   
+        <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('sottocategoria', 'Ruolo' )}}
+            {{  Form::select ('sottocategoria', ['','telefonia', 'televisori', 'computers', 'stampanti'], '' )  }}
+        </div>
 
-    
+        <div class="multiple-input" style = "margin: 10px 0px;">
+            <div class="wrap-input blank" style = "margin: 10px 10px;">
+            {{  Form::label ('dataNascita', 'Data di Nascita' )}}
+            {{  Form::date ('dataNascita','' )  }}
+            @if ($errors->first('dataNascita'))
+                <ul>
+                    @foreach ($errors->get('dataNascita') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+            @endif
+            </div>
+            </div>
         <div class="wrap-input blank">
             {{  Form::label ('città', 'Città' /*class-type*/)}}
             {{  Form::text ('città', ''  /*class-type*/)}}

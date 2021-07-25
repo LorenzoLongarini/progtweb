@@ -21,13 +21,14 @@ $products = Product::all();
             <div style="margin-left:30px; margin-top:10px;">{{$product->dataCreazione}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST'])  !!}
+            {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA PRODOTTO', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
-            {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId], ['class'=>'default-btn'] )}}
+            {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId] )}}
+            {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId] )}}
             </div>
             </div>
             </div>

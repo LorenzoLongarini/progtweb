@@ -1,12 +1,14 @@
+@extends('layouts.forms')
 
-<div class="form-blank">
-    {{  Form::open(array('route' => 'aggiungiOrg.store', 'id' =>'aggiungiOrg' , 'files' => true))  }}
+@section('content')
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
+    {{  Form::open(array('route' => 'insert-technician.store', 'id' =>'insertTecn' , 'files' => true))  }}
    
     <h2>Inserisci un Tecnico</h2>
         <div class="multiple-input">
             <div class="wrap-input blank">
-            {{  Form::label ('username', 'Username' /*class-type*/)}}
-            {{  Form::text ('username', '' /*class-type*/)  }}
+            {{  Form::label ('username', 'Username' )}}
+            {{  Form::text ('username', '' )  }}
             @if ($errors->first('username'))
                 <ul>
                     @foreach ($errors->get('username') as $message)
@@ -18,7 +20,7 @@
             <div class="wrap-input blank">
 
             {{  Form::label ('password', 'Password' /*class-type*/)}}
-            {{  Form::text ('password', '' /*class-type*/)  }}
+            {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)
@@ -30,7 +32,7 @@
             <div class="wrap-input blank">   
                 
             {{  Form::label ('password_confirmation', 'Conferma Password' /*class-type*/)}}
-            {{  Form::text ('password_confirmation', '' /*class-type*/)  }}
+            {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)
@@ -42,7 +44,7 @@
         </div>
         <div class = "multiple-input">
             <div class="wrap-input blank">
-             {{  Form::label ('nome', 'Nome (opzionale)'/*class-type*/)  }}
+             {{  Form::label ('nome', 'Nome'/*class-type*/)  }}
              {{  Form::text ('nome', '' /*class-type*/)  }}
                   @if ($errors->first('nome'))
                       <ul>
@@ -55,7 +57,7 @@
         
         
              <div class="wrap-input blank">
-                 {{  Form::label ('cognome', 'Cognome (opzionale)'/*class-type*/)  }}
+                 {{  Form::label ('cognome', 'Cognome '/*class-type*/)  }}
                  {{  Form::text ('cognome', '' /*class-type*/)  }}
                       @if ($errors->first('cognome'))
                          <ul>
@@ -66,24 +68,13 @@
                       @endif
             </div>
         </div>
-    <div class="multiple-input">
+       
         <div class="wrap-input blank">
-            {{  Form::label ('ragioneSociale', 'Nome Organizzazione' /*class-type*/)}}
-            {{  Form::text ('ragioneSociale', '' /*class-type*/)  }}
-            @if ($errors->first('ragioneSociale'))
+            {{  Form::label ('ivacf', 'Partita IVA' /*class-type*/)}}
+            {{  Form::text ('ivacf', '' /*class-type*/)  }}
+            @if ($errors->first('ivacf'))
                 <ul>
-                    @foreach ($errors->get('ragioneSociale') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-        </div>
-        <div class="wrap-input blank">
-            {{  Form::label ('ivaFiscale', 'Partita IVA' /*class-type*/)}}
-            {{  Form::text ('ivaFiscale', '' /*class-type*/)  }}
-            @if ($errors->first('ivaFiscale'))
-                <ul>
-                    @foreach ($errors->get('ivaFiscale') as $message)
+                    @foreach ($errors->get('ivacf') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -132,9 +123,21 @@
                 </ul>
                 @endif
         </div>
-   
+        
 
-    
+        <div class="multiple-input" style = "margin: 10px 0px;">
+            <div class="wrap-input blank" style = "margin: 10px 10px;">
+            {{  Form::label ('dataNascita', 'Data di Nascita' )}}
+            {{  Form::date ('dataNascita','' )  }}
+            @if ($errors->first('dataNascita'))
+                <ul>
+                    @foreach ($errors->get('dataNascita') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+            @endif
+            </div>
+            </div>
         <div class="wrap-input blank">
             {{  Form::label ('città', 'Città' /*class-type*/)}}
             {{  Form::text ('città', ''  /*class-type*/)}}
@@ -162,4 +165,4 @@
     </div>
 {{Form::close()}}
 </div>
-
+@endsection

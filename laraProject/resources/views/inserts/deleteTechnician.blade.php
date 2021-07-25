@@ -1,39 +1,37 @@
 @php 
-use App\Models\Resources\User;
-$tecnici = User::where('role','=','tecnico')->get();
+use App\User;
+$staff = User::where('role','=','tecnico')->get();
 @endphp
-<div id = "organizzazione-section" class = "form" style = "margin-left: 50px;">
+<div id = "tecnici-section" class = "form" style = "margin-left:50px;">
+{{ link_to_route('insert-technician', 'AGGIUNGI TECNICO')}}
+@foreach($staff as $staf)
 
-
-
-@foreach($tecnici as $tecnico)
         <div class = "utenti-liv-2" style = " padding: 0px 25px;">
             <div class = "row-direction" style = "display:flex; justify-content:space-between; align-items:center;">
-            <div style = "display:inline-block;">
-            <div style = "display:inline-block;">
-            <div style="margin-left:30px; margin-top:20px;">Ragione Sociale</div>
-            <div style="margin-left:30px; margin-top:10px;">{{$tecnico->ragioneSociale}}</div>
-            </div>
-            <div style = "display:inline-block;">
-            <div style="margin-left:30px; margin-top:20px;">Ragione Sociale</div>
-            <div style="margin-left:30px; margin-top:10px;">{{$tecnico->ragioneSociale}}</div>
-            </div>
-            <div style = "display:inline-block;" >
-            <div style="margin-left:30px; margin-top:20px;">UtenteId</div>
-            <div style="margin-left:30px; margin-top:10px;">{{$tecnico->utenteId}}</div>
-            </div>
+            <div>
+            <div style="margin-left:30px; margin-top:20px;">Nome</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$staf->nome}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@index', $tecnico->utenteId] ,  'method'=>'POST'])  !!}
+            <div style="margin-left:30px; margin-top:20px;">Cognome</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$staf->cognome}}</div>
+            </div>
+            <div>
+            <div style="margin-left:30px; margin-top:20px;">UtenteId</div>
+            <div style="margin-left:30px; margin-top:10px;">{{$staf->usersId}}</div>
+            </div>
+            <div>
+            {!!  Form::open(['action' => ['AdminController@eliminaTecnico', $staf->usersId] , 'files' => true, 'method'=>'POST', 'onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA UTENTE', ['class'=>'delete'])!!}
-            {!!  Form::close()  !!}
+                        {!!Form::submit('ELIMINA TECNICO', ['class'=>'delete'])!!}
+                    {!!  Form::close()  !!}
+            </div>
+            <div>
+            {{ link_to_route('modifica-technician', 'MODIFICA TECNICO', $parameters = ['usersId' => $staf->usersId], ['class'=>'default-btn'] )}}
             </div>
             </div>
             </div>
-            <br>
-            @endforeach
+       <br>
+       
+        @endforeach
         </div>
-    
-
-      

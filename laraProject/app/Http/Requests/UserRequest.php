@@ -3,6 +3,10 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use App\User; 
+
+
 
 class UserRequest extends FormRequest
 {
@@ -21,20 +25,24 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
+
+    
     public function rules()
     {
-        return ['username' =>'required|unique:users,username|max:25',
-                'password' =>'required|min:7|max:30',
+        //$id = $this->request->get('usersId');
+        //$user = User::find($this->usersId);
+        return ['username' =>'required|max:25', Rule::unique('users')->ignore($this->usersId, 'usersId'),
+                'password' =>'required|min:5|max:30',
                 'nome' =>'required|max:50|string',
                 'cognome' =>'required|max:50|string',
-                'ragioneSociale' => 'max:40',
-                'ivaFiscale' =>'required|unique:users,ivaFiscale',
+                'ivacf' =>'required',Rule::unique('users')->ignore($this->usersId, 'usersId') ,
                 'dataNascita' =>'date|before:today',
-                'email'=> 'required|email|unique:users,email|max:40',
-                'telefono'=> 'unique:users,telefono|digits: 10',
+                'email'=> 'required|email|max:40',Rule::unique('users')->ignore($this->usersId, 'usersId'),
+                'telefono'=> 'digits:10',
                 'via'=>'required|max:50',
-                'cap'=> 'digits:5',
+                'cap'=>'required|digits:5',
                 'città'=>'required|string|max:80',
+                
                 
             
         ];
