@@ -1,7 +1,7 @@
 <footer>
     <div class="container flex-columns flex-center">
           <div class="block">
-            <img src="{{asset ('/images/logos/eticket_logo_light.svg')}}" width="220px" height="auto"/>
+            <img src="{{asset ('/images/logos/text2020.svg')}}" width="400px" height="auto"/>
           </div>
           <div class="block">
             <ul class="footer-links">
@@ -13,7 +13,7 @@
             </ul>
           </div>
         <div class="site-info">
-            <h4>&copy; {{ date('Y') }} EasyTicket S.r.l. | P.IVA 00100011</h4>
+            <h4>&copy; {{ date('Y') }} DL Computers S.r.l. | P.IVA 0120100011</h4>
         </div>
     </div>
 </footer>
