@@ -109,7 +109,7 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::get('/evento/{id}/', 'PublicController@mostraEvento')->name('evento');
+Route::get('/evento/{id}/', 'PublicController@mostraProdotto')->name('evento');
 /*
 Route::get('/pagamento/{id}/', 'ClientController@pagaEvento')->name('pagamento');
 

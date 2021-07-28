@@ -6,7 +6,7 @@
     @include('helpers/cover-page', [
             'title' => 'Catalogo prodotti', 
             'description' => 'Seleziona il prodotto che vuoi visualizzare!',
-            'img_url' => '../storage/app/public/images/covers/catalogo-cover.jpg'])
+            'img_url' => '../public/images/robot.jpg'])
 
     <div class="container block">
     <div id="search-form" class="form card container">
@@ -20,20 +20,24 @@
                     <h1>La ricerca non ha prodotto nessun risultato!</h1>
                 </div>
             @else
-                <div class="event-list flex-columns">
+                <div class="prod-list flex-columns">
                     @foreach($prodotti as $prodotto)
-                        <div class="event">
-                            <div class="event-left">
-                                <div class="img-event">
+                     
+                        <div class="prod">
+                            <div class="prod-left">
+                                <div class="img-prod"style="border: 2px solid">
                                   
                                 </div>
-                                <div class="event-info flex-columns">
-                                    <h2>{{ $prodotto->nome }}, {{ $prodotto->descrizione}}</h2>
+                                <div class="prod-info flex-columns">
+                                    <h2>{{ $prodotto->nome }}{{ $prodotto->descrizione}}</h2>
+                                
+                                    <h2>{{ $prodotto->descrizione}}</h2>
+                                
                                     
                                 </div>
                             </div>
-                            <div class="event-right">
-                                {{ link_to_route('evento', 'VEDI EVENTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'btn default-btn'])}}
+                            <div class="prod-right">
+                                {{ link_to_route('evento', 'VEDI PRODOTTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'user-btn'])}}
                             </div>
                         </div>           
                 @endforeach

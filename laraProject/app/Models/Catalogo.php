@@ -37,6 +37,7 @@ class Catalogo extends Model
     public static function listaProdotti(){
         $prodotti = Product::all();
         return $prodotti;
+        
     }
 
     public static function ricercaPerDescrizione(SearchRequest $request){
@@ -50,6 +51,7 @@ class Catalogo extends Model
            }
            else if($counter == 0) return  $risultati=Product::where('descrizione','LIKE', $request->descrizione)->get();
        }
+       else $risultati=Product::where('descrizione',$request->descrizione);
     
 
     }

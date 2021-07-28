@@ -2,15 +2,15 @@
 html{
     --body-bg: #f5f5f5;
     --p-color: #000;
-    --nav-link-color : #1d69cb; 
-    --title-color: #1d69cb;
-    --link-color: #1d69cb;
+    --nav-link-color : #37718e; 
+    --title-color: #37718e;
+    --link-color: #37718e;
     --link-hover-color: #000;
     --container-bg: #ffffff;
-    --button-default-bg : #ffc100;
+    --button-default-bg : ;
     --button-default-text : #000;
-    --button-default-bg-hover : #ffd519;
-    --button-navuser-bg:#004064;
+    --button-default-bg-hover :#5f9eb8 ;
+    --button-navuser-bg:#37718e;
     --button-navuser-text : #000000;
     --button-navuser-bg-hover: #d3d3d3;
     --card-shadow : #85858530;
@@ -63,7 +63,7 @@ a.link:hover, a.link:focus{
 }
 
 del, .delete {
-    color: #de001e;
+    color: #37718e;
 }
 
 svg{
@@ -92,7 +92,7 @@ svg{
     padding: 15px 25px;
     color: #000;
     border-radius: 7px;
-    background-color: #ffc100;
+    background-color: #37718e;
     width: fit-content;
     width: -moz-fit-content;
 }
@@ -107,7 +107,7 @@ svg{
 }
 
 .abort-btn{
-    background-color: #de001e;
+    background-color: #37718e;
     color: white;
 }
 /* Elementi di base (pulsanti, textbox, tabelle, celle ecc.)*/
@@ -177,7 +177,7 @@ nav#main-menu ul li a.nav-link{
 }
 
 nav#main-menu ul li a.nav-link:hover, nav#main-menu ul li a.nav-link:focus{
-    color: #ffc100;
+    color: #37718e;
     text-decoration: none;
 }
 
@@ -187,7 +187,7 @@ nav#main-menu ul li a.nav-link::after{
     position: relative;
     width: 100%;
     height: 2px;
-    background-color:#ffc100;
+    background-color:#37718e;
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
     transition: transform 0.3s;
@@ -206,7 +206,7 @@ nav#main-menu ul li a.nav-link:hover::after,  nav#main-menu ul li a.nav-link:foc
 }
 
 a.login:hover, a.login:focus{
-    color: #ffc100;
+    color: #37718e;
     text-decoration: none;
 }
 
@@ -226,19 +226,20 @@ a.login span{
 }
 
 #masthead .header-link-icon:hover svg, #masthead .header-link-icon:focus svg, #theme-toggle.clicked.header-link-icon svg{
-    fill: #ffc100;
+    fill: #37718e;
 }
 /* Pulsanti */
 .default-btn{
+    width: 180px;
     padding: 12px 35px;
     margin: 10px;
     font-size: 1em;
     height: fit-content;
     height: -moz-fit-content;
-    color: var(--button-default-text);
+    color: white;
     border: none;
     border-radius: 30px;
-    background-color: var(--button-default-bg);
+    background-color: #37718e;
 }
 
 .default-btn:hover, .default-btn:focus{
@@ -270,7 +271,7 @@ button.user-nav-btn.active{
 /* Input */
 input[type="text"], input[type="date"],input[type="password"], select{
     height: 46px;
-    width: 100%;
+    width: 90%;
     font-size: 1.1rem;
     padding: 8px 10px;
     color: var(--p-color);
@@ -442,11 +443,11 @@ footer ul.footer-links li a:hover{
 
 /*Stile Alex*/
 
-.event-list{
+.prod-list{
     padding-top: 50px;
 }
 
-.event{
+.prod{
     padding-right: 40px;
     display: inherit;
     justify-content: space-between;
@@ -457,25 +458,26 @@ footer ul.footer-links li a:hover{
     margin: 10px 0;
 }
 
-.event:hover{
+.prod:hover{
     box-shadow: 0px 0px 3px 3px var(--card-shadow-hover);
 }
 
-.event div {
+.prod div {
     display: inherit;
 }
 
-.event .event-info{
+.prod .prod-info{
+    width: 65%;
     justify-content: center;
     margin-left: 20px;
 }
 
-.event .event-info h2,.event .event-info h4{
+.prod .prod-info h2,.prod .prod-info h4{
     margin: 10px 0;
     color: var(--p-color);
 }
 
-.img-event{
+.img-prod{
     width: 250px;
     height: 170px;
 }
@@ -965,6 +967,8 @@ svg.bi-x:hover path{
 
   .multiple-input{
       display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
 
   .multiple-input, .single-input{
@@ -1047,7 +1051,7 @@ ol#faq-list li::marker{
 }
  /*--------------*/
 
-.event .img-event img{
+.prod .img-prod img{
     width: 100%;
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
@@ -1100,7 +1104,7 @@ ol#faq-list li::marker{
     align-items: center;
 }
 
-.pagamento-div .event-info h2, .pagamento-div .event-info h4{
+.pagamento-div .prod-info h2, .pagamento-div .prod-info h4{
     margin: 10px 0;
 }
 
@@ -1442,7 +1446,57 @@ li{
     padding: 20px 40px;
     
 }
+.user-btn{
+    width: 180px;
+    height: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 12px;
+    height: fit-content;
+    height: -moz-fit-content;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #37718e;
 
+}
+.user-btn:hover, .user-btn:focus{
+    background-color: var(--button-default-bg-hover);
+    text-decoration: none;
+
+}
+#win-tutorial{
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding-top:150px;
+}
+
+
+.text-tutorial{
+    border-radius: 5px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    height: 60%;
+}
+.win-title{
+    background-color: #37718e;
+    height: 20%;
+}
+.title-text{
+    text-align: center;
+    color: white;
+}
 
 
 

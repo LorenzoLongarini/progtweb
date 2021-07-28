@@ -3,7 +3,10 @@ use App\Models\Resources\Product;
 $products = Product::all();
 @endphp
 <div id = "prodotti-section" class = "form" style = "margin-left:50px;">
-{{ link_to_route('insert-product', 'AGGIUNGI PRODOTTO')}}
+
+{{ link_to_route('insert-product', 'AGGIUNGI PRODOTTO', ['class'=>'user-btn'])}}
+
+
 @foreach($products as $product)
 
         <div class = "utenti-liv-2" style = " padding: 0px 25px;">
@@ -23,12 +26,12 @@ $products = Product::all();
             <div>
             {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA PRODOTTO', ['class'=>'delete'])!!}
+                        {!!Form::submit('ELIMINA PRODOTTO', ['class'=>'delete user-btn'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
-            {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId] )}}
-            {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId] )}}
+            {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
+            {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
             </div>
             </div>
             </div>

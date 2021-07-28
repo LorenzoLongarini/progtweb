@@ -10,6 +10,7 @@ use App\Models\Resources\User;
 use App\Models\Catalogo;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\SearchRequest;
+use App\Models\Resources\Product;
 
 class PublicController extends Controller
 {
@@ -69,15 +70,15 @@ class PublicController extends Controller
     public function selezionaProdotti(SearchRequest $request){ 
         return view('pages.catalogo')->with('prodotti', Catalogo::ricercaPerDescrizione($request));
     }
-/*
-    public function mostraEvento($id){
-        $evento = Product::where('productsId', $id)->get()->first();
-        if(is_null($evento)){
+
+    public function mostraProdotto($id){
+        $prodotto = Product::where('productsId', $id)->get()->first();
+        if(is_null($prodotto)){
             return redirect()->route('home');
         }
         else{
-        return view('pages.evento')->with('event', $evento);}
+        return view('pages.evento')->with('prodotto', $prodotto);}
     }
-*/
+
   
 }
