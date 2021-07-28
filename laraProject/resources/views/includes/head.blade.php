@@ -1,5 +1,5 @@
 <head>
-    <title>{{ config('app.name', 'EasyTickets') }} | @yield('page-title')</title>
+    <title>DL Computers | @yield('page-title')</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Vendita e commercializzazione di eventi in Italia">

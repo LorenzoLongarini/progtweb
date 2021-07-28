@@ -77,7 +77,7 @@ class PublicController extends Controller
             return redirect()->route('home');
         }
         else{
-        return view('pages.evento')->with('prodotto', $prodotto);}
+        return view('pages.prodotto')->with('prodotto', $prodotto);}
     }
 
   

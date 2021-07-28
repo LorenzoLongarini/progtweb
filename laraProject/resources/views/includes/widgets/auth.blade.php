@@ -25,11 +25,11 @@
                        @can("isAdmin")     
                        <a href="{{route('admin'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
                        @endcan
-                       @can("isClient")     
-                       <a href="{{route('client'). '#storico-acquisti'}}" class="login area-utente ">Area utente</a>
+                       @can("isStaff")     
+                       <a href="{{route('staff'). '#storico-acquisti'}}" class="login area-utente ">Area utente</a>
                        @endcan
-                       @can("isOrganiz")     
-                       <a href="{{route('organiz'). '#dashboard-panel'}}"  class="login area-utente">Area utente</a>
+                       @can("isTecn")     
+                       <a href="{{route('tecn'). '#dashboard-panel'}}"  class="login area-utente">Area utente</a>
                        @endcan
                     </li>
                 
