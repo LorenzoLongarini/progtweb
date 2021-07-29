@@ -15,13 +15,13 @@
                     <li>
                         <a class="nav-link" href="{{route('about')}}" >CHI SIAMO</a>
                     </li>
+                    <li>
+                        <a class="nav-link" href="{{route('centri')}}" >CENTRI ASSISTENZA</a>
+                    </li>
                 </ul>
             </nav>  
         </div>
         <div id="right-header">   
-         
-            @include('includes.widgets.search-catalog', ["searchBtn" => $searchBtn])
-
             @if($authBtn == true)
                 @include('includes.widgets.auth')
             @endif

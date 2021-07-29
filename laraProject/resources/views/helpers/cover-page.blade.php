@@ -1,4 +1,4 @@
-<@php
+@php
     if(empty($url))
         $url = "default.png"
 @endphp

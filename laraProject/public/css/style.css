@@ -1537,7 +1537,10 @@ li{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
+.txt-container{
+    border:2px solid;
+    padding:50px 70px;
+}
 
 
 

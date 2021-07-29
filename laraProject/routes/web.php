@@ -102,6 +102,7 @@ Route::post('/logout', 'Auth\LoginController@logout')
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 
 Route::view('/about', 'pages.about')->name('about');
+Route::view('/centri-assistenza', 'pages.centriAssistenza')->name('centri');
 
 Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
         ->name('lavora-con-noi');
