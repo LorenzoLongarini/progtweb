@@ -1,7 +1,65 @@
 @extends('layouts.public')
 
 @section('page-title', 'Centri Assistenza')
-<div>
-    <h2>Lombardia</h2>
-    <div class="txt-container">Centro assistenza in Via Lombardia 2  Tel/Cell 376517389 E-mail: ciao@entro.it</div>
+<div class="map-container">
+<div id="map"></div>
+<div id="info_div"></div>
 </div>
+
+
+<script>
+    function initMap() {
+        var myMapCenter = {lat: 42.57860, lng: 12.41839};
+    
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: myMapCenter,
+            zoom: 6
+        });
+    
+    
+        function markStore(storeInfo){
+            var marker = new google.maps.Marker({
+                map: map,
+                position: storeInfo.location,
+                title: storeInfo.name
+            });
+
+            marker.addListener('click', function(){
+                showStoreInfo(storeInfo);
+            });
+        }
+        function showStoreInfo(storeInfo){
+            var info_div = document.getElementById('info_div');
+            info_div.innerHTML = 'Store name: '
+                + storeInfo.name
+                + '<br>Via: ' + storeInfo.via;
+        }
+    
+        var stores = [
+            {
+                name: 'DL Computers',
+                location: {lat: 45.46168, lng: 9.18547},
+                via: 'Torino'
+            },
+            {
+                name: 'DL Computers',
+                location: {lat: 41.90336, lng: 12.47949},
+
+                via: 'Del Corso'
+            },
+          
+        ];
+    
+        stores.forEach(function(store){
+            markStore(store);
+        });
+    
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg9HtQuq71WPTBMkczWqBDZesO_xaUyv8&callback=initMap" async defer></script>
+
+
+  
+    
+
+

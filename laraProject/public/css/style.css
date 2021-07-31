@@ -1541,7 +1541,27 @@ li{
     border:2px solid;
     padding:50px 70px;
 }
+#map{
+	width: 900px;
+	max-width: 100%;
+	height: 500px;
+}
+#map{
+	width: 900px;
+	max-width: 100%;
+	height: 500px;
+}
+.map-container{
+    margin-top:150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-
+}
+#info_div{
+    border:2px solid;
+    width: 40%;
+    height: 500px;
+}
 
 

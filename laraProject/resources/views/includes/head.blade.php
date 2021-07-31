@@ -20,4 +20,5 @@
     <script src="{{ asset('js/credit-card.js') }}"></script>
     <script src="{{ asset('js/template.js') }}"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
