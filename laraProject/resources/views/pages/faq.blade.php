@@ -10,9 +10,9 @@
         'img_url' => '../storage/app/public/images/covers/faq-cover.jpg'])
 
 <div class="container flex-columns">
-<!--@can('isAdmin')-->
+@can('isAdmin')
     {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ')}}
-<!--@endcan-->
+@endcan
 
     @isset($faqs)
         <ol id="faq-list">

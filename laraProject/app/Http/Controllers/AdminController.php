@@ -234,17 +234,7 @@ class AdminController extends Controller {
         User::where('usersId', '=', $usersId)->delete();
         return redirect()->route('admin');
     }
-    /*
-    public function eliminaUtente2($utenteId){
-        User::where('utenteId','=' , $utenteId)->delete();
-        return redirect()->route('admin');
-    }
-
-    public function eliminaUtente3($utenteId){
-        //Evento::where('utenteId', '=', $utenteId)->delete();
-        User::where('utenteId', '=', $utenteId)->delete();
-        return redirect()->route('admin');
-    }
+  
 
     public function inserisciFaq(){
         return view ('pages.inserisciFaq');
@@ -279,63 +269,6 @@ class AdminController extends Controller {
         $faq->destroy($faqId);
         return redirect()->route('faq');
     }
-
-    public function aggiungiOrg(){
-        return view('pages.inserisciOrg');
-    }
-
-    public function salvaOrg(OrgRequest $request){
-        $org = new User;
-        $org->role = 'organizzatore';
-        $org->username = $request->username;
-        $org->password = Hash::make($request->password);
-        $org->nome = $request->nome;
-        $org->cognome = $request->cognome;
-        $org->ivaFiscale = $request->ivaFiscale;
-        $org->ragioneSociale = $request->ragioneSociale;
-        $org->email = $request->email;
-        $org->telefono = $request->telefono;
-        $org->via = $request->via;
-        $org->città = $request->città;
-        $org->cap = $request->cap;
-        $org->save();
-
-        return redirect()->route('admin');
-    }
-
-    public function modificaOrg($utenteId){
-        $user = User::find($utenteId);
-        return view('pages.ModificaOrg')->with('user', $user);
-    }
-
-    public function updateOrg(ModOrgRequest $request, $utenteId){
-        $org = User::find($utenteId);
-        $org->username = $request->username;
-        $org->password = Hash::make($request->password);
-        $org->nome = $request->nome;
-        $org->cognome = $request->cognome;
-        $org->ivaFiscale = $request->ivaFiscale;
-        $org->ragioneSociale = $request->ragioneSociale;
-        $org->email = $request->email;
-        $org->telefono = $request->telefono;
-        $org->via = $request->via;
-        $org->città = $request->città;
-        $org->cap = $request->cap;
-        $org->save();
-
-        return redirect()->route('admin');
-    }
-
-    public function organizzatoreStats(Request $request){
-        $orgStats = new OrgStats($request->utenteId);
-        
-        return response()->json([
-            "bigliettiVenduti" => $orgStats->bigliettiVendutiTotaleOrg(), 
-            "guadagnoTotale" => $orgStats->incassoTotaleOrg()
-            ]);
-    }
-
-   */ 
 
     
 }
