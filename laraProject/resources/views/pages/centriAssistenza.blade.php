@@ -3,7 +3,10 @@
 @section('page-title', 'Centri Assistenza')
 <div class="map-container">
 <div id="map"></div>
+<div class="text-ca">
+    <div id="ca-image" class="img-ca"></div>
 <div id="info_div"></div>
+</div>
 </div>
 
 
@@ -22,30 +25,53 @@
                 map: map,
                 position: storeInfo.location,
                 title: storeInfo.name
+
             });
 
             marker.addListener('click', function(){
                 showStoreInfo(storeInfo);
+                google.maps.event.clearListeners(marker, 'click');
             });
+           
         }
         function showStoreInfo(storeInfo){
             var info_div = document.getElementById('info_div');
+            var img = document.createElement("img");
+            var src = document.getElementById("ca-image");
+            img.src = "../public/images/white.jpg";
+            src.appendChild(img);
+
+            
+
+           
+            
+
+                
+            
+               
+            
+
+                
+
             info_div.innerHTML = 'Store name: '
                 + storeInfo.name
-                + '<br>Via: ' + storeInfo.via;
+                + '<br>Via: ' + storeInfo.via + '<br>Tel:' + storeInfo.telefono;
         }
     
         var stores = [
             {
                 name: 'DL Computers',
                 location: {lat: 45.46168, lng: 9.18547},
-                via: 'Torino'
+                via: 'Torino',
+                telefono:'32043040594'
             },
             {
                 name: 'DL Computers',
                 location: {lat: 41.90336, lng: 12.47949},
+                via: 'Del Corso',
+                telefono:'239349'
 
-                via: 'Del Corso'
+                
             },
           
         ];
