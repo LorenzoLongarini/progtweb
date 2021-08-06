@@ -16,7 +16,7 @@ class CreateMalfunctionsTable extends Migration
         Schema::create('malfunctions', function (Blueprint $table) {
             $table->bigIncrements('malfunctionsId')->unsigned()->index();
             $table->bigInteger('productsId')->unsigned()->index();
-            $table->foreign('productsId')->references('productsId')->on('products')->onDelete('cascade');
+            $table->foreign('productsId')->references('productsId')->on('products')->onDelete('set default');
             $table->text('problema', 500);
             $table->text('soluzione', 500);  
         });
