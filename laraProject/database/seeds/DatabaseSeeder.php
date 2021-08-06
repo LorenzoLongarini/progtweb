@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder {
         'cap'=>'19',
         'città'=>'Ferrara',
         'via'=>'Ferrara',
-        'password'=>Hash::make('tecnico')],
+        'password'=>Hash::make('staff')],
     ]);
     DB::table('products')->insert([
 

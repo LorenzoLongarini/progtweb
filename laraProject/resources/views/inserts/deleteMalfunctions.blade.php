@@ -20,7 +20,7 @@ $malfs = Malfunction::all();
             <div style="margin-left:30px; margin-top:10px;">{{$malf->soluzione}}</div>
             </div>
             <div>
-            {!!  Form::open(['action' => ['AdminController@eliminaMalf', $malf->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
+            {!!  Form::open(['action' => ['AdminController@eliminaMalf', $malf->productsId, $malf->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA MALFUNZIONAMENTO', ['class'=>'delete'])!!}
                     {!!  Form::close()  !!}

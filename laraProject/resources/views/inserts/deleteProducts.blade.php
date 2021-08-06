@@ -3,9 +3,9 @@ use App\Models\Resources\Product;
 $products = Product::all();
 @endphp
 <div id = "prodotti-section" class = "form" style = "margin-left:50px;">
-
+@can('isAdmin')
 {{ link_to_route('insert-product', 'AGGIUNGI PRODOTTO', ['class'=>'user-btn'])}}
-
+@endcan
 
 @foreach($products as $product)
 
@@ -24,13 +24,16 @@ $products = Product::all();
             <div style="margin-left:30px; margin-top:10px;">{{$product->dataCreazione}}</div>
             </div>
             <div>
+            @can('isAdmin')
             {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA PRODOTTO', ['class'=>'delete user-btn'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
+           
             {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
+            @endcan
             {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
             </div>
             </div>

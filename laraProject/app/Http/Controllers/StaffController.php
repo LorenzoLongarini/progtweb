@@ -26,6 +26,12 @@ class StaffController extends Controller {
     public function index() {
         return view('pages.user-staff');
     }
+
+    /*public function elencoProd(){
+        
+        return view('inserts.insertProduct');
+
+    }*/
 /*
     public function aggiungiEvento(){
 

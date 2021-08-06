@@ -107,8 +107,10 @@ class AdminController extends Controller {
         
     }
 
-    public function eliminaMalf($productsId){
-        Product::where('productsId', '=', $productsId)->delete();
+    public function eliminaMalf($productsId, $malfunctionsId){
+         Malfunction::where('productsId', '=', $productsId)
+        ->where('malfunctionsId', '=', $malfunctionsId)
+        ->delete();
         return redirect()->route('admin');
     }
 

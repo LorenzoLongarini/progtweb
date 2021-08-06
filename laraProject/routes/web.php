@@ -36,7 +36,7 @@ Route::get('user-admin/modify-malf/{malfunctionsId}', 'AdminController@modificaM
 
 Route::put('user-admin/modify-malf/{malfunctionsId}', 'AdminController@updateMalf')->name('modificaMalf.update');
 
-Route::delete('user-admin/elimina-malf/{malfunctionsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
+Route::delete('user-admin/elimina-malf/{malfunctionsId}/{productsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
 
 //tecnici
 Route::get('/user-admin/insert-technician', 'AdminController@inserisciTecnico')->name('insert-technician');
@@ -83,6 +83,8 @@ Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventi
 */
 Route::get('/user-staff', 'StaffController@index')
 ->name('staff');//->middleware('can:isStaff');
+
+//Route::get('/user-staff/all-products', 'StaffController@elencoProd')->name('all-products');
 /*
 Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')->name('modificaClient');
 
