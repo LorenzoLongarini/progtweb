@@ -6,7 +6,9 @@
 @section('page-content')
 <div class="prod-cover">
     <div class="prod-content">
-    <div class="prod-img"></div>
+    <div class="prod-img">
+    @include('helpers/img-event', ['attrs' => 'imagefrm', 'imgFile' => $prodotto->imgName])
+    </div>
     <div class="prod-text">
        <div><h2 style="font-size: 40px">{{$prodotto->nome}}</h2></div>
         <div><h3 style="font-size: 25px">descrizione breve </h3></div>
