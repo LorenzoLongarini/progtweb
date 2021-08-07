@@ -36,15 +36,25 @@ class AdminController extends Controller {
     }
 
     public function salvaProd(ProductRequest $request){
-            
+        
         $product = new Product;
+        if ($request->hasFile('imgName')){
+            $image = $request->file('imgName');
+            $imageName = $image->getClientOriginalName();
+        }else{
+            $imageName = NULL;
+        }
         $product->nome = $request->nome;
         $product->prezzo = $request->prezzo;
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
-        $product->problema = $request->problema;
-        $product->soluzione = $request->soluzione;
+        $product->descrizione = $request->descrizione;
+        $product->imgName = $imageName;
         $product->save();
+        if (!is_null($imageName)){
+            $destinationPath = public_path() . '/images/products';
+            $image->move($destinationPath, $imageName);
+        };
         return redirect()->route('admin');
 
     }
@@ -57,13 +67,26 @@ class AdminController extends Controller {
     }
 
     public function updateProd(ProductRequest $request, $productsId){
-
+        
+        if ($request->hasFile('imgName')){
+            $image = $request->file('imgName');
+            $imageName = $image->getClientOriginalName();
+        }else{
+            $imageName = NULL;
+        }
         $product = Product::find($productsId);
         $product->nome = $request->nome;
         $product->prezzo = $request->prezzo;
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
+        $product->descrizione = $request->descrizione;
+        $product->imgName = $imageName;
         $product->save();
+
+        if (!is_null($imageName)){
+            $destinationPath = public_path() . '/images/products';
+            $image->move($destinationPath, $imageName);
+        };
         return redirect()->route('admin');
         
     }

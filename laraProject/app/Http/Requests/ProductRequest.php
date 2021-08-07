@@ -28,6 +28,8 @@ class ProductRequest extends FormRequest
                 'prezzo' => 'required|numeric|min:0',
                 'noteTecniche' => 'required|max:500',
                 'modInstallaz' => 'required|max:500',
+                'descrizione' => 'required|max:500',
+                'imgName' => 'file|max:1024',
             
         ];
     }
