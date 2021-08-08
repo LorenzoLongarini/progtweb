@@ -109,6 +109,7 @@ class AdminController extends Controller {
         $malf->productsId = $Product->productsId;
         $malf->problema = $request->problema;
         $malf->soluzione = $request->soluzione;
+        $malf->nomeMalf = $request->nomeMalf;
         $malf->save();
         return redirect()->route('admin');
 
@@ -125,6 +126,7 @@ class AdminController extends Controller {
         $malfunct = Malfunction::find($malfunctionsId);
         $malfunct->problema = $request->problema;
         $malfunct->soluzione = $request->soluzione;
+        $malf->nomeMalf = $request->nomeMalf;
         $malfunct->save();
         return redirect()->route('admin');
         

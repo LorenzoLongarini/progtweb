@@ -3,7 +3,8 @@ use App\User;
 $staff = User::where('role','=','tecnico')->get();
 @endphp
 <div id = "tecnici-section" class = "form" style = "margin-left:50px;">
-{{ link_to_route('insert-technician', 'AGGIUNGI TECNICO')}}
+{{ link_to_route('insert-technician', 'AGGIUNGI TECNICO',  $parameters = [], ['class'=>'user-btn', 'style' => 'width: 150px;
+    margin-left: 400px;'])}}
 @foreach($staff as $staf)
 
         <div class = "utenti-liv-2" style = " padding: 0px 25px;">
@@ -23,11 +24,11 @@ $staff = User::where('role','=','tecnico')->get();
             <div>
             {!!  Form::open(['action' => ['AdminController@eliminaTecnico', $staf->usersId] , 'files' => true, 'method'=>'POST', 'onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA TECNICO', ['class'=>'delete'])!!}
+                        {!!Form::submit('ELIMINA TECNICO', ['class'=>'user-btn'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
-            {{ link_to_route('modifica-technician', 'MODIFICA TECNICO', $parameters = ['usersId' => $staf->usersId], ['class'=>'default-btn'] )}}
+            {{ link_to_route('modifica-technician', 'MODIFICA TECNICO', $parameters = ['usersId' => $staf->usersId], ['class'=>'user-btn'] )}}
             </div>
             </div>
             </div>

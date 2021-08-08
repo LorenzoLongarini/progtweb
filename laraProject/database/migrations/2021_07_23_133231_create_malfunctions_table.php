@@ -17,6 +17,7 @@ class CreateMalfunctionsTable extends Migration
             $table->bigIncrements('malfunctionsId')->unsigned()->index();
             $table->bigInteger('productsId')->unsigned()->index()->nullable();
             $table->foreign('productsId')->references('productsId')->onDelete('SET NULL')->on('products');
+            $table->text('nomeMalf', 30);
             $table->text('problema', 500);
             $table->text('soluzione', 500);  
         });

@@ -3,7 +3,10 @@
 @section('content')
 <div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
     {{  Form::open(array('route' => 'insert-product.store', 'files' => true))  }}
-   
+   <div>
+   {!!link_to_route('admin','<img src="../public/images/util-icons/arrow-left-circle.svg" ; alt="icon" />') !!}
+       
+   </div>
     <h2>Aggiungi Prodotto</h2>
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">

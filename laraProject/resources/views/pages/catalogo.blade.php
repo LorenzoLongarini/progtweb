@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="prod-right">
-                                {{ link_to_route('evento', 'VEDI PRODOTTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'user-btn'])}}
+                                {{ link_to_route('prodotto', 'VEDI PRODOTTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'user-btn'])}}
                             </div>
                         </div>           
                 @endforeach

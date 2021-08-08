@@ -3,7 +3,8 @@ use App\User;
 $staff = User::where('role','=','staff')->get();
 @endphp
 <div id = "staff-section" class = "form" style = "margin-left:50px;">
-{{ link_to_route('insert-staff', 'AGGIUNGI STAFF')}}
+{{ link_to_route('insert-staff', 'AGGIUNGI STAFF',  $parameters = [], ['class'=>'user-btn', 'style' => 'width: 150px;
+    margin-left: 400px;'])}}
 
 @foreach($staff as $staf)
 
@@ -24,11 +25,11 @@ $staff = User::where('role','=','staff')->get();
             <div>
             {!!  Form::open(['action' => ['AdminController@eliminaStaff', $staf->usersId] , 'files' => true, 'method'=>'POST', 'onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA MEMBRO STAFF', ['class'=>'delete'])!!}
+                        {!!Form::submit('ELIMINA MEMBRO STAFF', ['class'=>'user-btn'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
-            {{ link_to_route('modifica-staff', 'MODIFICA STAFF', $parameters = ['usersId' => $staf->usersId], ['class'=>'default-btn'] )}}
+            {{ link_to_route('modifica-staff', 'MODIFICA STAFF', $parameters = ['usersId' => $staf->usersId], ['class'=>'user-btn'] )}}
             </div>
             </div>
             </div>

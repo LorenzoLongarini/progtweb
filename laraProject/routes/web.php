@@ -92,7 +92,10 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::get('/evento/{id}/', 'PublicController@mostraProdotto')->name('evento');
+Route::get('/prodotto/{id}', 'PublicController@mostraProdotto')->name('prodotto');
+
+Route::get('/malfunzionamenti/{productsId}', 'PublicController@mostraMalfunzionamento')->name('malfunzionamento');
+
 
 //catlogo
 

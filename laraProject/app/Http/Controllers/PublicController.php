@@ -82,5 +82,11 @@ class PublicController extends Controller
         return view('pages.prodotto')->with('prodotto', $prodotto);}
     }
 
+    public function mostraMalfunzionamento($productsId){
+
+        $Product  = Product::find($productsId);
+        return view('pages.malfunzionamento')->with('product', $Product);
+    }
+
   
 }

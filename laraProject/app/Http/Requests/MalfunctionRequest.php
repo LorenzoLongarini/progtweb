@@ -24,7 +24,8 @@ class MalfunctionRequest extends FormRequest
      */
     public function rules()
     {
-        return ['problema' => 'required|max:500',
+        return ['nomeMalf' => 'required|max:30',
+                'problema' => 'required|max:500',
                 'soluzione' =>'required|max:500',
             
         ];

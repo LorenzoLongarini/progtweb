@@ -27,15 +27,10 @@
     <h3 style="margin:10px">GUIDA ALL'INSTALLAZIONE</h3>
     <p style="margin:10px">{{$prodotto->modInstallaz}}</p>
 </div>
-@can('isTecn')
-<div class="prod-desc">
-    <h3 style="margin:10px">MALFUNZIONAMENTI</h3>
-    <p style="margin:10px">{{$prodotto->modInstallaz}}</p>
-</div>
-<div class="prod-desc">
-    <h3 style="margin:10px">SOLUZIONI</h3>
-    <p style="margin:10px">{{$prodotto->modInstallaz}}</p>
-</div>
+@can('isAdmin')
+            <div>
+            {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $prodotto->productsId] , ['class'=>'user-btn'])}}
+            </div>
 @endcan
 
 
