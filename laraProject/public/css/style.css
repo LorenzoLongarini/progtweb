@@ -1582,3 +1582,8 @@ img{
     border-radius: 7px;
     border: 2px solid var(--input-border-color);
 }
+
+.user-btn{
+    display: flex;
+    justify-content: center;
+}

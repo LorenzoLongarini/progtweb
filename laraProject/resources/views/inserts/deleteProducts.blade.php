@@ -4,7 +4,7 @@ $products = Product::all();
 @endphp
 <div id = "prodotti-section" class = "form" style = "margin-left:50px;">
 @can('isAdmin')
-{{ link_to_route('insert-product', 'AGGIUNGI PRODOTTO', $parameters = [], ['class'=>'user-btn', 'style' => 'width: 150px;
+{{ link_to_route('insert-product', 'AGGIUNGI', $parameters = [], ['class'=>'user-btn', 'style' => 'width: 150px;
     margin-left: 400px;'])}}
     <br>
     <br>
@@ -27,12 +27,12 @@ $products = Product::all();
             @can('isAdmin')
             {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA PRODOTTO', ['class'=>'delete user-btn','style' => 'width: 170px;'])!!}
+                        {!!Form::submit('ELIMINA', ['class'=>'delete user-btn','style' => 'width: 170px;'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
            
-            {{ link_to_route('modificaProd', 'MODIFICA PRODOTTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'width: 130px;'] )}}
+            {{ link_to_route('modificaProd', 'MODIFICA', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'width: 130px;'] )}}
 </div>
 <div>
             {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
