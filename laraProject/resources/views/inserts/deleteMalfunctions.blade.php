@@ -6,7 +6,7 @@ $malfs = Malfunction::all();
 <div id = "malf-section" class = "form" style = "margin-left:50px;">
 @foreach($malfs as $malf)
 
-        <div class = "utenti-liv-2" style = " padding: 0px 25px;">
+        <div class = "utenti-liv-2" style = " padding: 0px 25px; width: 950px;">
             <div class = "row-direction" style = "display:flex; justify-content:space-between; align-items:center;">
             <div>
             <div style="margin-left:30px; margin-top:20px;">Id prodotto:</div>

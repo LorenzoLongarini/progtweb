@@ -28,7 +28,7 @@
     <p style="margin:10px">{{$prodotto->modInstallaz}}</p>
 </div>
 @can('isAdmin')
-            <div>
+            <div style = "display:flex;justify-content: center;">
             {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $prodotto->productsId] , ['class'=>'user-btn'])}}
             </div>
 @endcan
