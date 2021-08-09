@@ -16,8 +16,13 @@ $malfs = Malfunction::where('productsId', '=', $product->productsId)->get();
     </div>
 </div>
 </div>
-
+@if($malfs==NULL)
+<div>
+    NON SONO PRESENTI MALFUNZIONAMENTI
+</div>
+@endif
 @foreach($malfs as $malf)
+
 <div class="prod-text" style = "padding: 100px 300px;">
 <div><h4 style="font-size: 30px">{{$malf->nomeMalf}}</h4></div>
 </div>

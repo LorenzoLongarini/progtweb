@@ -26,7 +26,7 @@
                         <div class="prod">
                             <div class="prod-left">
                                 <div class="img-prod"style="border: 2px solid">
-                                  
+                                @include('helpers/img-event', ['attrs' => 'imagefrm', 'imgFile' => $prodotto->imgName])
                                 </div>
                                 <div class="prod-info flex-columns">
                                     <h2>{{ $prodotto->nome }}{{ $prodotto->descrizione}}</h2>
