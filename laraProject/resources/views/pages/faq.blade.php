@@ -11,29 +11,35 @@
 
 <div class="container flex-columns">
 @can('isAdmin')
-    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ')}}
+<div style = "display:flex; justify-content: center;">
+    {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ', $parameters = [],['class'=>'user-btn','style' => 'width: 180px;'] )}}
+    </div>
 @endcan
 
     @isset($faqs)
         <ol id="faq-list">
             @foreach($faqs as $faq)
                 <li>
-                    <div class="event-right">
-                    @can('isAdmin')  
-                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], ['class'=>'default-btn'] )}}
-                    {!!  Form::open(['action' => ['AdminController@eliminaFaq', $faq->faqId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
-                        {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA FAQ', ['class'=>'delete'])!!}
-                    {!!  Form::close()  !!}
-                    @endcan
-
-                        </div>
+                    
                     <div class="card-faq">
                         <h2>{{ $faq->domanda }}</h2>
                     </div>
-                    <div class="answer-box">
+                    <div class="answer-box" style = " padding: 5px 30px;">
                         <p>{{ $faq->risposta }}</p>
                     </div>
+                    <div class="event-right" style = " display: flex; justify-content: center;">
+                    @can('isAdmin')  
+                    <div>
+                    {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], ['class'=>'user-btn'] )}}
+                    </div>
+                    <div>
+                    {!!  Form::open(['action' => ['AdminController@eliminaFaq', $faq->faqId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
+                        {!!Form::hidden('_method','DELETE')!!}
+                        {!!Form::submit('ELIMINA FAQ', ['class'=>'user-btn'])!!}
+                    {!!  Form::close()  !!}
+                    @endcan
+</div>
+                        </div>
                 </li>
             @endforeach
         </ol>

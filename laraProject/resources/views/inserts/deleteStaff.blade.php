@@ -8,7 +8,7 @@ $staff = User::where('role','=','staff')->get();
 
 @foreach($staff as $staf)
 
-        <div class = "utenti-liv-2" style = " padding: 0px 25px;">
+        <div class = "utenti-liv-2" style = " padding: 0px 25px; width: 950px;">
             <div class = "row-direction" style = "display:flex; justify-content:space-between; align-items:center;">
             <div>
             <div style="margin-left:30px; margin-top:20px;">Nome</div>

@@ -1,12 +1,19 @@
 @extends('layouts.forms')
 
 @section('content')
-<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 1px;">
     {{  Form::open(array('route' => 'insert-staff.store', 'id' =>'insertStaff' , 'files' => true))  }}
+    <div style = "display:flex;">
+   <div>
+   {{ link_to_route('admin', 'INDIETRO', $parameters = [],['class'=>'user-btn','style' => 'width: 180px;'] )}}
+       
+   </div>
+   <div style = "position: relative;
+    left: 100px;">
    
     <h2>Inserisci un membro dello Staff</h2>
-        <div class="multiple-input">
-            <div class="wrap-input blank">
+    <div class="multiple-input" style = "margin: 10px 0px;">
+    <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('username', 'Username' )}}
             {{  Form::text ('username', '' )  }}
             @if ($errors->first('username'))
@@ -17,7 +24,7 @@
                 </ul>
                 @endif
             </div>
-            <div class="wrap-input blank">
+            <div class="wrap-input" style = "margin: 10px 10px;">
 
             {{  Form::label ('password', 'Password' /*class-type*/)}}
             {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
@@ -29,7 +36,7 @@
                 </ul>
                 @endif
             </div>
-            <div class="wrap-input blank">   
+            <div class="wrap-input" style = "margin: 10px 10px;"> 
                 
             {{  Form::label ('password_confirmation', 'Conferma Password' /*class-type*/)}}
             {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
@@ -42,8 +49,8 @@
                 @endif
             </div>
         </div>
-        <div class = "multiple-input">
-            <div class="wrap-input blank">
+        <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
              {{  Form::label ('nome', 'Nome'/*class-type*/)  }}
              {{  Form::text ('nome', '' /*class-type*/)  }}
                   @if ($errors->first('nome'))
@@ -56,7 +63,7 @@
              </div>
         
         
-             <div class="wrap-input blank">
+             <div class="wrap-input" style = "margin: 10px 10px;">
                  {{  Form::label ('cognome', 'Cognome '/*class-type*/)  }}
                  {{  Form::text ('cognome', '' /*class-type*/)  }}
                       @if ($errors->first('cognome'))
@@ -68,8 +75,8 @@
                       @endif
             </div>
         </div>
-       
-        <div class="wrap-input blank">
+        <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('ivacf', 'Partita IVA' /*class-type*/)}}
             {{  Form::text ('ivacf', '' /*class-type*/)  }}
             @if ($errors->first('ivacf'))
@@ -80,12 +87,10 @@
                 </ul>
             @endif
         </div>
-        </div>
-        <div class="multiple-input">
-            <div class="wrap-input blank">
-           
-            </div>
-        <div class="wrap-input blank">
+       
+       
+
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('email', 'Email' /*class-type*/)}}
             {{  Form::text ('email', '' /*class-type*/ ) }}
             @if ($errors->first('email'))
@@ -98,7 +103,8 @@
             </div>
         </div>
         
-        <div class="wrap-input blank">
+        <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('telefono', 'Telefono' /*class-type*/)}}
             {{  Form::text ('telefono', '' /*class-type*/ ) }}
             @if ($errors->first('telefono'))
@@ -109,28 +115,7 @@
                 </ul>
                 @endif
         </div>
-    
-       
-        <div class="multiple-input">
-        <div class="wrap-input blank">
-            {{  Form::label ('via', 'Via' /*class-type*/)  }}
-            {{  Form::text ('via','' /*class-type*/)  }}
-            @if ($errors->first('via'))
-                <ul>
-                    @foreach ($errors->get('via') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-                @endif
-        </div>
-        <div class="multiple-input" style = "margin: 10px 0px;">
-        <div class="wrap-input" style = "margin: 10px 10px;">
-            {{  Form::label ('sottocategoria', 'Ruolo' )}}
-            {{  Form::select ('sottocategoria', ['','telefonia', 'televisori', 'computers', 'stampanti'], '' )  }}
-        </div>
-
-        <div class="multiple-input" style = "margin: 10px 0px;">
-            <div class="wrap-input blank" style = "margin: 10px 10px;">
+        <div class="wrap-input blank" style = "margin: 10px 10px;">
             {{  Form::label ('dataNascita', 'Data di Nascita' )}}
             {{  Form::date ('dataNascita','' )  }}
             @if ($errors->first('dataNascita'))
@@ -141,8 +126,29 @@
                 </ul>
             @endif
             </div>
-            </div>
-        <div class="wrap-input blank">
+            <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('sottocategoria', 'Ruolo' )}}
+            {{  Form::select ('sottocategoria', ['','telefonia', 'televisori', 'computers', 'stampanti'], '' )  }}
+        </div>
+</div>
+    
+       
+<div class="multiple-input" style = "margin: 10px 0px;">
+<div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('via', 'Via' /*class-type*/)  }}
+            {{  Form::text ('via','' /*class-type*/)  }}
+            @if ($errors->first('via'))
+                <ul>
+                    @foreach ($errors->get('via') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+
+
+       
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('città', 'Città' /*class-type*/)}}
             {{  Form::text ('città', ''  /*class-type*/)}}
             @if ($errors->first('città'))
@@ -153,19 +159,23 @@
                 </ul>
                 @endif
         </div>
-        <div class="wrap-input blank">
+        <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('cap', 'Cap' /*class-type*/)}}
             {{  Form::text ('cap', ''  /*class-type*/)}}
            
         </div>
     </div>
 
+    <div style = "display:flex; justify-content:center">
     <div>
-    {{  Form::submit ('Conferma', ['class'=>''])}}
+    {{  Form::submit ('Conferma' , ['class'=>'default-btn'])}}
     </div>
 
     <div>
-    {{  Form::reset ('Annulla' /*class-type*/)}}
+    {{  Form::reset ('Annulla' , ['class'=>'default-btn'])}}
+    </div>
+    </div>
+    </div>
     </div>
 {{Form::close()}}
 </div>

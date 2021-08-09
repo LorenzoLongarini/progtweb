@@ -1,9 +1,14 @@
 @extends('layouts.forms')
 
 @section('content')
-<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 100px;">
+<div class="form" id = "eventi-section" style = "width: 850px; margin-left: 1px;">
     {{  Form::open(['action' => ['AdminController@updateMalf', $malfunction->malfunctionsId] ,'method'=>'POST'])  }}
-    
+    <div style = "display:flex;">
+   <div>
+   {{ link_to_route('admin', 'INDIETRO', $parameters = [],['class'=>'user-btn','style' => 'width: 180px;'] )}}
+       
+   </div>
+   <div style = "margin-left: 80px;">
    
     <h2>Modifica Malfunzionamento</h2>
     <div class="wrap-input" style = "margin: 10px 10px;">
@@ -53,6 +58,9 @@
     </div>
 </div>
     </div>
+    </div>
+    </div>
+
 {{Form::close()}}
 </div>
 @endsection
