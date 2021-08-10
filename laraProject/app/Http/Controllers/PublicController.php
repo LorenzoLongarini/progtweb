@@ -69,7 +69,7 @@ class PublicController extends Controller
         return view('pages.catalogo')->with('prodotti', Catalogo::listaProdotti());
     }
 
-    public function selezionaProdotti(SearchRequest $request){ 
+    public function selezionaProdotti(SearchRequest $request){
         return view('pages.catalogo')->with('prodotti', Catalogo::ricercaPerDescrizione($request));
     }
 

@@ -16,7 +16,7 @@
     </div>
     <div class="container block">
         @isset($prodotti)
-            @if((count($prodotti) < 1 )|| ($prodotti==null))
+            @if(count($prodotti) < 1 )
                 <div style="text-align:center">
                     <h1>La ricerca non ha prodotto nessun risultato!</h1>
                 </div>
@@ -42,8 +42,8 @@
                             </div>
                         </div>           
                 @endforeach
-            @endif 
+           @endif
          
-        @endisset
+       @endisset
     </div>
 @endsection
