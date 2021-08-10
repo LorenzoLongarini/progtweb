@@ -17,29 +17,29 @@
 
 <script>
     function initMap() {
-        var myMapCenter = {lat: 42.57860, lng: 12.41839};
+        var mapCA = {lat: 42.57860, lng: 12.41839};
     
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: myMapCenter,
+            center: mapCA,
             zoom: 6
         });
     
     
-        function markStore(storeInfo){
+        function markCenter(center){
             var marker = new google.maps.Marker({
                 map: map,
-                position: storeInfo.location,
-                title: storeInfo.name
+                position: center.location,
+                title: center.name
 
             });
 
             marker.addListener('click', function(){
-                showStoreInfo(storeInfo);
+                showStoreInfo(center);
                 
             });
            
         }
-        function showStoreInfo(storeInfo){
+        function showCenter(center){
             var info_div = document.getElementById('info_div');
             var intro= document.getElementById("intro-text");
             var imgMap = document.getElementById("img-map");
@@ -50,13 +50,13 @@
             info_div.innerHTML = 'Store name: '+ storeInfo.name + '<br>Via: ' + storeInfo.via + '<br>Tel:' + storeInfo.telefono;
             else
             src.appendChild(img);*/
-            info_div.innerHTML = 'Store name: '+ storeInfo.name + '<br>Via: ' + storeInfo.via + 
-            '<br>Tel:' + storeInfo.telefono + '<br>Mail:' + storeInfo.mail
-            + '<br>Responsabile:'+ storeInfo.responsabile + '<br>Orario di apertura:' + storeInfo.orario;
-            imgMap.src=storeInfo.img;
+            info_div.innerHTML = 'Store name: '+ center.name + '<br>Via: ' + center.via + 
+            '<br>Tel:' + center.telefono + '<br>Mail:' + center.mail
+            + '<br>Responsabile:'+ center.responsabile + '<br>Orario di apertura:' + center.orario;
+            imgMap.src=center.img;
         }
     
-        var stores = [
+        var centers = [
             {
                 name: 'DL Computers',
                 location: {lat: 45.46168, lng: 9.18547},
@@ -84,7 +84,7 @@
         ];
     
         stores.forEach(function(store){
-            markStore(store);
+            markCenter(store);
         });
     
     }
