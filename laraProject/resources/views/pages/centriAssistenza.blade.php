@@ -34,7 +34,7 @@
             });
 
             marker.addListener('click', function(){
-                showStoreInfo(center);
+                showCenter(center);
                 
             });
            
@@ -44,12 +44,7 @@
             var intro= document.getElementById("intro-text");
             var imgMap = document.getElementById("img-map");
             intro.style.display="none";
-            /*
-            img.src = "../public/images/white.jpg";
-            if(src.contains(img))
-            info_div.innerHTML = 'Store name: '+ storeInfo.name + '<br>Via: ' + storeInfo.via + '<br>Tel:' + storeInfo.telefono;
-            else
-            src.appendChild(img);*/
+           
             info_div.innerHTML = 'Store name: '+ center.name + '<br>Via: ' + center.via + 
             '<br>Tel:' + center.telefono + '<br>Mail:' + center.mail
             + '<br>Responsabile:'+ center.responsabile + '<br>Orario di apertura:' + center.orario;
@@ -83,8 +78,8 @@
           
         ];
     
-        stores.forEach(function(store){
-            markCenter(store);
+        centers.forEach(function(center){
+            markCenter(center);
         });
     
     }
