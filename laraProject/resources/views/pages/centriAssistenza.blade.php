@@ -38,24 +38,13 @@
             var info_div = document.getElementById('info_div');
             var img = document.createElement("img");
             var src = document.getElementById("ca-image");
+            /*
             img.src = "../public/images/white.jpg";
-            src.appendChild(img);
-
-            
-
-           
-            
-
-                
-            
-               
-            
-
-                
-
-            info_div.innerHTML = 'Store name: '
-                + storeInfo.name
-                + '<br>Via: ' + storeInfo.via + '<br>Tel:' + storeInfo.telefono;
+            if(src.contains(img))
+            info_div.innerHTML = 'Store name: '+ storeInfo.name + '<br>Via: ' + storeInfo.via + '<br>Tel:' + storeInfo.telefono;
+            else
+            src.appendChild(img);*/
+            info_div.innerHTML = 'Store name: '+ storeInfo.name + '<br>Via: ' + storeInfo.via + '<br>Tel:' + storeInfo.telefono;
         }
     
         var stores = [
@@ -63,13 +52,15 @@
                 name: 'DL Computers',
                 location: {lat: 45.46168, lng: 9.18547},
                 via: 'Torino',
-                telefono:'32043040594'
+                telefono:'32043040594',
+                responsabile:'Carlo'
             },
             {
                 name: 'DL Computers',
                 location: {lat: 41.90336, lng: 12.47949},
                 via: 'Del Corso',
-                telefono:'239349'
+                telefono:'239349',
+                responsabile:'Luca'
 
                 
             },
