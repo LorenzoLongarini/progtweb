@@ -7,6 +7,7 @@
             'title' => 'Catalogo prodotti', 
             'description' => 'Seleziona il prodotto che vuoi visualizzare!',
             'img_url' => '../public/images/robot.jpg'])
+    
 
     <div class="container block">
     <div id="search-form" class="form card container">
@@ -14,7 +15,7 @@
     </div>
     </div>
     <div class="container block">
-        @isset($prodotti)
+        @isset(prodotti)
             @if(count($prodotti) < 1)
                 <div style="text-align:center">
                     <h1>La ricerca non ha prodotto nessun risultato!</h1>
@@ -26,7 +27,7 @@
                         <div class="prod">
                             <div class="prod-left">
                                 <div class="img-prod"style="border: 2px solid">
-                                @include('helpers/img-event', ['attrs' => 'imagefrm', 'imgFile' => $prodotto->imgName])
+                                  
                                 </div>
                                 <div class="prod-info flex-columns">
                                     <h2>{{ $prodotto->nome }}{{ $prodotto->descrizione}}</h2>
