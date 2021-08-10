@@ -60,27 +60,7 @@ Route::put('user-admin/modify-staff/{usersId}', 'AdminController@updateStaff')->
 
 Route::delete('user-admin/elimina-staff/{usersId}', 'AdminController@eliminaStaff')->name('elimina-staff');
 
-
-/*
-Route::get('/user-level4/registerOrg', 'AdminController@aggiungiOrg')->name('aggiungiOrg');
-
-Route::post('/user-level4/registerOrg', 'AdminController@salvaOrg')->name('aggiungiOrg.store');
-
-Route::delete('user-level4/elimina-utenti2/{utenteId}', 'AdminController@eliminaUtente2')->name('eliminaUtente2');
-
-Route::delete('user-level4/elimina-utenti3/{utenteId}', 'AdminController@eliminaUtente3')->name('eliminaUtente3');
-
-Route::get('/user-level4/{utenteId}/modify', 'AdminController@modificaOrg')->name('modificaOrg');
-
-Route::put('/user-level4/{utenteId}/modify', 'AdminController@updateOrg')->name('modificaOrg.update');
-
-Route::get('/user-level2', 'ClientController@index')
-->name('client');//->middleware('can:isClient');
-
-Route::post('/user-level4', 'AdminController@organizzatoreStats')->name('organizzatoreStats');
-
-Route::post('/user-level3', 'OrganizzatoreController@EventiStats')->name('eventiStats');
-*/
+// staff
 Route::get('/user-staff', 'StaffController@index')
 ->name('staff');//->middleware('can:isStaff');
 
@@ -112,39 +92,20 @@ Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
 
-Route::get('/evento/{id}/', 'PublicController@mostraProdotto')->name('evento');
-/*
-Route::get('/pagamento/{id}/', 'ClientController@pagaEvento')->name('pagamento');
+Route::get('/prodotto/{id}', 'PublicController@mostraProdotto')->name('prodotto');
 
-Route::post('pagamento/{id}', 'ClientController@pagaBiglietto')->name('pagamento.store');
+Route::get('/malfunzionamenti/{productsId}', 'PublicController@mostraMalfunzionamento')->name('malfunzionamento');
 
-Route::get('/pagamento/acquisto/{id}/', 'ClientController@acquistaEvento')->name('acquisto');
 
-Route::get('/pagamento/acquisto/confermato/{id}/', 'ClientController@acquistoConfermato')->name('confermato');
+//catlogo
 
-Route::get('/pagamento/acquisto/confermato/riepilogo/{id}', 'ClientController@Riepilogo')->name('riepilogo');
-
-Route::get('/home/popolahome', 'PublicController@piuVenduti')->name('pVenduti');
-
-Route::get('/home/slider', 'PublicController@slider')->name('slider');
-*/
 Route::post('/catalogo', 'PublicController@selezionaProdotti')->name('cerca');
 
-Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
-
 Route::get('/catalogo', 'PublicController@mostraCatalogo')->name('catalogo');
-/*
-Route::get('/user-level3/aggiungiEvento', 'OrganizzatoreController@aggiungiEvento')
-        ->name('aggiungiEvento');
 
-Route::post('/user-level3/aggiungiEvento', 'OrganizzatoreController@salvaEvento')
-        ->name('aggiungiEvento.store');
+//faq
 
-Route::get('/evento/{id}/modificaEvento', 'OrganizzatoreController@modificaEvento')->name('modificaEvento');
-
-Route::put('/evento/{id}/modificaEvento', 'OrganizzatoreController@updateEvento')->name('modificaEvento.update');
-
-Route::delete('evento/{id}', 'OrganizzatoreController@eliminaEvento')->name('eliminaEvento');
+Route::get('/faq', 'PublicController@showSiteFaqs')->name('faq');
 
 Route::get('/faq/insert', 'AdminController@inserisciFaq')->name('inserisciFaq');
 
@@ -155,7 +116,9 @@ Route::get('/faq/{faqId}/modify', 'AdminController@modificaFaq')->name('modifica
 Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFaq.update');
 
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
-*/
+
+//registrazione
+
 Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
 
 Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');

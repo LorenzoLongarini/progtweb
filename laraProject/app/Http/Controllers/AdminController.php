@@ -36,15 +36,25 @@ class AdminController extends Controller {
     }
 
     public function salvaProd(ProductRequest $request){
-            
+        
         $product = new Product;
+        if ($request->hasFile('imgName')){
+            $image = $request->file('imgName');
+            $imageName = $image->getClientOriginalName();
+        }else{
+            $imageName = NULL;
+        }
         $product->nome = $request->nome;
         $product->prezzo = $request->prezzo;
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
-        $product->problema = $request->problema;
-        $product->soluzione = $request->soluzione;
+        $product->descrizione = $request->descrizione;
+        $product->imgName = $imageName;
         $product->save();
+        if (!is_null($imageName)){
+            $destinationPath = public_path() . '/images/products';
+            $image->move($destinationPath, $imageName);
+        };
         return redirect()->route('admin');
 
     }
@@ -57,13 +67,26 @@ class AdminController extends Controller {
     }
 
     public function updateProd(ProductRequest $request, $productsId){
-
+        
+        if ($request->hasFile('imgName')){
+            $image = $request->file('imgName');
+            $imageName = $image->getClientOriginalName();
+        }else{
+            $imageName = NULL;
+        }
         $product = Product::find($productsId);
         $product->nome = $request->nome;
         $product->prezzo = $request->prezzo;
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
+        $product->descrizione = $request->descrizione;
+        $product->imgName = $imageName;
         $product->save();
+
+        if (!is_null($imageName)){
+            $destinationPath = public_path() . '/images/products';
+            $image->move($destinationPath, $imageName);
+        };
         return redirect()->route('admin');
         
     }
@@ -86,6 +109,7 @@ class AdminController extends Controller {
         $malf->productsId = $Product->productsId;
         $malf->problema = $request->problema;
         $malf->soluzione = $request->soluzione;
+        $malf->nomeMalf = $request->nomeMalf;
         $malf->save();
         return redirect()->route('admin');
 
@@ -102,6 +126,7 @@ class AdminController extends Controller {
         $malfunct = Malfunction::find($malfunctionsId);
         $malfunct->problema = $request->problema;
         $malfunct->soluzione = $request->soluzione;
+        $malf->nomeMalf = $request->nomeMalf;
         $malfunct->save();
         return redirect()->route('admin');
         
@@ -234,17 +259,7 @@ class AdminController extends Controller {
         User::where('usersId', '=', $usersId)->delete();
         return redirect()->route('admin');
     }
-    /*
-    public function eliminaUtente2($utenteId){
-        User::where('utenteId','=' , $utenteId)->delete();
-        return redirect()->route('admin');
-    }
-
-    public function eliminaUtente3($utenteId){
-        //Evento::where('utenteId', '=', $utenteId)->delete();
-        User::where('utenteId', '=', $utenteId)->delete();
-        return redirect()->route('admin');
-    }
+  
 
     public function inserisciFaq(){
         return view ('pages.inserisciFaq');
@@ -279,63 +294,6 @@ class AdminController extends Controller {
         $faq->destroy($faqId);
         return redirect()->route('faq');
     }
-
-    public function aggiungiOrg(){
-        return view('pages.inserisciOrg');
-    }
-
-    public function salvaOrg(OrgRequest $request){
-        $org = new User;
-        $org->role = 'organizzatore';
-        $org->username = $request->username;
-        $org->password = Hash::make($request->password);
-        $org->nome = $request->nome;
-        $org->cognome = $request->cognome;
-        $org->ivaFiscale = $request->ivaFiscale;
-        $org->ragioneSociale = $request->ragioneSociale;
-        $org->email = $request->email;
-        $org->telefono = $request->telefono;
-        $org->via = $request->via;
-        $org->città = $request->città;
-        $org->cap = $request->cap;
-        $org->save();
-
-        return redirect()->route('admin');
-    }
-
-    public function modificaOrg($utenteId){
-        $user = User::find($utenteId);
-        return view('pages.ModificaOrg')->with('user', $user);
-    }
-
-    public function updateOrg(ModOrgRequest $request, $utenteId){
-        $org = User::find($utenteId);
-        $org->username = $request->username;
-        $org->password = Hash::make($request->password);
-        $org->nome = $request->nome;
-        $org->cognome = $request->cognome;
-        $org->ivaFiscale = $request->ivaFiscale;
-        $org->ragioneSociale = $request->ragioneSociale;
-        $org->email = $request->email;
-        $org->telefono = $request->telefono;
-        $org->via = $request->via;
-        $org->città = $request->città;
-        $org->cap = $request->cap;
-        $org->save();
-
-        return redirect()->route('admin');
-    }
-
-    public function organizzatoreStats(Request $request){
-        $orgStats = new OrgStats($request->utenteId);
-        
-        return response()->json([
-            "bigliettiVenduti" => $orgStats->bigliettiVendutiTotaleOrg(), 
-            "guadagnoTotale" => $orgStats->incassoTotaleOrg()
-            ]);
-    }
-
-   */ 
 
     
 }

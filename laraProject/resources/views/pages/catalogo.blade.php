@@ -26,7 +26,7 @@
                         <div class="prod">
                             <div class="prod-left">
                                 <div class="img-prod"style="border: 2px solid">
-                                  
+                                @include('helpers/img-event', ['attrs' => 'imagefrm', 'imgFile' => $prodotto->imgName])
                                 </div>
                                 <div class="prod-info flex-columns">
                                     <h2>{{ $prodotto->nome }}{{ $prodotto->descrizione}}</h2>
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="prod-right">
-                                {{ link_to_route('evento', 'VEDI PRODOTTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'user-btn'])}}
+                                {{ link_to_route('prodotto', 'VEDI PRODOTTO', $parameters = ['id' => $prodotto->productsId], $attributes = ['class' => 'user-btn'])}}
                             </div>
                         </div>           
                 @endforeach

@@ -1578,4 +1578,12 @@ img{
     max-height: 100%;
 }
 
+.text-area{
+    border-radius: 7px;
+    border: 2px solid var(--input-border-color);
+}
 
+.user-btn{
+    display: flex;
+    justify-content: center;
+}

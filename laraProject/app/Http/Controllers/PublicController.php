@@ -43,24 +43,26 @@ class PublicController extends Controller
         return view('pages.registrazione');
     }
 
+
     public function salvaUser(UserRequest $request){
+
         $user = new User;
         $user->nome = $request->nome;
-        $user->username = $request->username;
         $user->cognome = $request->cognome;
-        //s$user->ragioneSociale = $request->ragioneSociale;
-        $user->ivaFiscale = $request->ivaFiscale;
+        $user->ivacf = $request->ivacf;
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
+        $user->username = $request->username;
         $user->password = Hash::make($request->password);
         $user->telefono = $request->telefono;
         $user->via = $request->via;
         $user->cap = $request->cap;
         $user->città = $request->città;
+        $user->sottocategoria = '';
+        $user->role = 'tecnico';      
         $user->save();
-        
         return redirect()->route('home');
-
+        
     }
 
     public function mostraCatalogo(){
@@ -78,6 +80,12 @@ class PublicController extends Controller
         }
         else{
         return view('pages.prodotto')->with('prodotto', $prodotto);}
+    }
+
+    public function mostraMalfunzionamento($productsId){
+
+        $Product  = Product::find($productsId);
+        return view('pages.malfunzionamento')->with('product', $Product);
     }
 
   

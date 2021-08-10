@@ -1,7 +1,13 @@
-<!--@php
-    if (empty($imgName)) {
-        $imgName = 'default.jpg';
-    }   
-@endphp
 
-<img src="{{ asset('..\\storage\\app\\public\\images\\img_events\\') . $imgName}}">-->
+
+@php
+        if (empty($imgFile)) {
+            $imgFile = 'default.png';
+        }
+        if (null !== $attrs) {
+            $attrs = 'class="' . $attrs . '"';
+        }
+
+@endphp
+<img src="{{ asset('images/products/' . $imgFile) }}" style = "max-width: 100%;
+    height: auto;"{!! $attrs !!}>
