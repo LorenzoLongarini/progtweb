@@ -1220,7 +1220,7 @@ ol#faq-list li::marker{
 .utenti-liv-2{
     background-color: white;
     width: 850px;
-    height: 90px;
+
     border: transparent;
     box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
     border-radius: 10px;
@@ -1587,4 +1587,18 @@ img{
 .user-btn{
     display: flex;
     justify-content: center;
+}
+#text-container{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#img-container{
+    border: 2px solid;
+    margin-top:0;
+    width: 50%;
+    height: 50%;
 }
