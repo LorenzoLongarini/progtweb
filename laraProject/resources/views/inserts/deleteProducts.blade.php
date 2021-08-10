@@ -24,22 +24,22 @@ $products = Product::all();
             <div style="margin-left:30px; margin-top:20px;">Nome</div>
             <div style="margin-left:30px; margin-top:10px;">{{$product->nome}}</div>
             </div>
-            <div style = "display:flex;">
+            <div style = "display: flex;flex-direction:column;align-items:center">
                 <div>
-            <div style="display: flex;flex-direction:column;align-items:center">
+            
             @can('isAdmin')
             {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA', ['class'=>'delete user-btn','style' => ''])!!}
+                        {!!Form::submit('ELIMINA', ['class'=>'delete user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
            
-            {{ link_to_route('modificaProd', 'MODIFICA', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => ''] )}}
+            {{ link_to_route('modificaProd', 'MODIFICA', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;margin-top:0'] )}}
 </div>
-</div>
+
 <div>
-            {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
+            {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;margin-top:0;line-height:0.9'] )}}
             @endcan
         </div>
             </div>
