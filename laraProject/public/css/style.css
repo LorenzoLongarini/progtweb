@@ -1567,7 +1567,11 @@ li{
     border:2px solid;
     width: 40%;
     height: 500px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px #aaaaaa;
 }
+
 .img-ca{
     margin: 20px;
     border: 2px  solid;

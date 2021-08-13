@@ -6,12 +6,16 @@
 <div class="text-ca">
    <h3 id="intro-text" style="display:block;margin-top:50px">CLICCA SUL CENTRO ASSISTENZA PIU' VICINO A TE!</h3>
 <div id="text-container">
-    <div id="img-container">
+    <div id="img-container" style="display:none">
        <img style="max-width: 100%" id="img-map" src="" alt="">
     </div>
     <h3 id="info_div" style="gap:10px"></h3>
 </div>
 </div>
+</div>
+<div style="margin:10px">
+    <h3 >Lista Centri Assistenza</h3>
+
 </div>
 
 
@@ -43,7 +47,9 @@
             var info_div = document.getElementById('info_div');
             var intro= document.getElementById("intro-text");
             var imgMap = document.getElementById("img-map");
+            var imgCont = document.getElementById("img-container");
             intro.style.display="none";
+            imgCont.style.display="block";
            
             info_div.innerHTML = 'Store name: '+ center.name + '<br>Via: ' + center.via + 
             '<br>Tel:' + center.telefono + '<br>Mail:' + center.mail
