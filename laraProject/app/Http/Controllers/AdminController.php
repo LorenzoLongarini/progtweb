@@ -111,7 +111,7 @@ class AdminController extends Controller {
         $malf->soluzione = $request->soluzione;
         $malf->nomeMalf = $request->nomeMalf;
         $malf->save();
-        return redirect()->route('admin');
+        return redirect()->route('catalogo');
 
     }
 
@@ -126,9 +126,9 @@ class AdminController extends Controller {
         $malfunct = Malfunction::find($malfunctionsId);
         $malfunct->problema = $request->problema;
         $malfunct->soluzione = $request->soluzione;
-        $malf->nomeMalf = $request->nomeMalf;
+        $malfunct->nomeMalf = $request->nomeMalf;
         $malfunct->save();
-        return redirect()->route('admin');
+        return redirect()->route('catalogo');
         
     }
 
@@ -136,7 +136,19 @@ class AdminController extends Controller {
          Malfunction::where('productsId', '=', $productsId)
         ->where('malfunctionsId', '=', $malfunctionsId)
         ->delete();
-        return redirect()->route('admin');
+        return redirect()->route('catalogo');
+    }
+
+    public function selectMalfunction(Request $request){
+        
+        
+        $malfunction = new Malfunction($request->malfunctionsId);
+        
+        return response()->json([
+            "nomeMalf" => $malfunction->nomeMalf, 
+            "problema" => $malfunction->problema,
+            "soluzione" => $malfunction->soluzione
+            ]);
     }
 
     public function inserisciTecnico(){

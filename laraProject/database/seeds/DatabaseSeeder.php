@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder {
             'imgName'=>'bbbbbb'],
 
             [   'productsId'=>03,
-            'nome' => 'dildo',
+            'nome' => 'lavatrice',
             'prezzo'=>'18.4',
             'noteTecniche'=>'cccccccccccccc', 
             'descrizione'=>'cccccccccccccccc computer ccccccccccccccccc',
@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder {
             'imgName'=>'ccccccccccc'],
 
             [   'productsId'=>04,
-            'nome' => 'paolo',
+            'nome' => 'lavastoviglie',
             'prezzo'=>'11.4',
             'noteTecniche'=>'dddddddddddddddd', 
             'descrizione'=>'dddddddddddddddddddddddddd computer dddddddddddddddd dd',

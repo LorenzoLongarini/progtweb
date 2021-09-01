@@ -96,6 +96,8 @@ Route::get('/prodotto/{id}', 'PublicController@mostraProdotto')->name('prodotto'
 
 Route::get('/malfunzionamenti/{productsId}', 'PublicController@mostraMalfunzionamento')->name('malfunzionamento');
 
+Route::post('/malfunzionamenti', 'AdminController@selectMalfunction')->name('selectMalfunction');
+
 
 //catlogo
 

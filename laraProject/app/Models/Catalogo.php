@@ -22,21 +22,11 @@ class Catalogo extends Model
        
        
 
-       
-           
-          
-               
-           
-     
-       
-       
-
-       
-
     }
     public static function listaProdotti(){
-        if(Product::all()!= null)
+        if(Product::all()!= null){
         $prodotti = Product::all();
+        }
         return $prodotti;
      
 

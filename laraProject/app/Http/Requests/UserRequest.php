@@ -38,9 +38,9 @@ class UserRequest extends FormRequest
                 'ivacf' =>'required',Rule::unique('users')->ignore($this->usersId, 'usersId') ,
                 'dataNascita' =>'date|before:today',
                 'email'=> 'required|email|max:40',Rule::unique('users')->ignore($this->usersId, 'usersId'),
-                'telefono'=> 'digits:10',
+                'telefono'=> 'digits:10|numeric',
                 'via'=>'required|max:50',
-                'cap'=>'required|digits:5',
+                'cap'=>'required|digits:5|numeric',
                 'città'=>'required|string|max:80',
                 
                 
