@@ -1,11 +1,11 @@
 @php 
 use App\Models\Resources\Product;
-$products = Product::all();
+$products = Product::paginate(2);
 @endphp
 <div id = "prodotti-section" class = "form" style = "margin-left:50px;">
 @can('isAdmin')
-<div style="display: flex;justify-content:flex-start;align-items: center;gap:20px">
-    <h3>AGGIUNGI UN MEMBRO DELLO STAFF</h3>
+<div style="display: flex;justify-content:center;align-items: center;gap:20px">
+   
 {{ link_to_route('insert-product', 'AGGIUNGI', $parameters = [], ['class'=>'user-btn', 'style' => ''])}}
     <br>
     <br>
@@ -39,7 +39,7 @@ $products = Product::all();
 </div>
 
 <div>
-            {{ link_to_route('insert-malfunction', 'INSERISCI MALFUNZIONAMENTO', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;margin-top:0;line-height:0.9'] )}}
+            {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;margin-top:0;line-height:0.9'] )}}
             @endcan
         </div>
             </div>
@@ -48,4 +48,6 @@ $products = Product::all();
        <br>
        
         @endforeach
+        @include('pagination.paginator', ['paginator' => $products])
         </div>
+        

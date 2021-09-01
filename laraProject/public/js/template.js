@@ -66,7 +66,7 @@ function showSection(e) {
 
 function ConfirmDelete()
   {
-  var x = confirm("Sei sicuro? I dati verranno persi se procedi");
+  var x = confirm("Sei sicuro? Se procedi i dati andranno persi");
   if (x)
     return true;
   else

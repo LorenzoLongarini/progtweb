@@ -1,3 +1,5 @@
+
+
 @extends('layouts.forms')
 
 @section('content')
@@ -100,6 +102,7 @@
     </div>
     </div>
 </div>
+{{  Form::hidden ('_method', 'PUT')}}
 {{Form::close()}}
 </div>
 @endsection

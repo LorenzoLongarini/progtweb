@@ -5,7 +5,7 @@
     {{  Form::open(['action' => ['AdminController@salvaMalf', $product->productsId] ])  }}
     <div style = "display:flex;">
    <div>
-   {{ link_to_route('admin', 'INDIETRO', $parameters = [],['class'=>'user-btn','style' => 'width: 180px;'] )}}
+   {{ link_to_route('malfunzionamento', 'INDIETRO', $parameters = [$product->productsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
        
    </div>
    <div style = "margin-left: 80px;">

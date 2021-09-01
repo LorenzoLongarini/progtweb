@@ -510,8 +510,10 @@ footer ul.footer-links li a:hover{
 section#data-section{
     width: 100%;
     padding-top: 30px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
+
 .eventi-acquistati{
     display: flex;
     padding-top: 20px;
