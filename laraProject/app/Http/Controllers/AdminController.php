@@ -139,9 +139,9 @@ class AdminController extends Controller {
         return redirect()->route('catalogo');
     }
 
-    public function selectMalfunction(Request $request){
+    public function selectMalfunction(Request $request, $productsId){
         
-        
+        $Product = Product::find($productsId);
         $malfunction = new Malfunction($request->malfunctionsId);
         
         return response()->json([

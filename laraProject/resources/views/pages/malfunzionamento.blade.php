@@ -9,12 +9,13 @@ $pId = $product->productsId;
 @section('page-title', $product->nome)
 
 @section('page-content')
+<div id= "prodId" style  = "margin-bottom: 50px; visibility: hidden"><h2 id="prodd" style="font-size: 60px">{{$product->productsId}}</h2></div>
 <div class="prod-cover">
     <div class="prod-content" style = "display: flex;
     justify-content: center;">
     <div class="prod-text">
         <div style  = "margin-bottom: 50px;"><h2 style="font-size: 60px">{{$product->nome}}</h2></div>
-        <div id= "prodId" style  = "margin-bottom: 50px;"><h2 id="prodd" style="font-size: 60px">{{$product->productsId}}</h2></div>
+        
        <div ><h4 style="font-size: 20px">MALFUNZIONAMENTI</h4></div>
     </div>
 </div>
@@ -36,7 +37,7 @@ $pId = $product->productsId;
 <div class="multiple-input" style = "display: flex;
     justify-content: center;">
         <div class="wrap-input" style = "width: 50%;">
-        <select name="malfunctions" id="malfunctions">
+        <select name="malfunction" id="malfunctions">
             
             @if(count($malfs)!==0)
             @foreach( $malfs as $malf)
@@ -52,15 +53,15 @@ $pId = $product->productsId;
 <div class="prod-text" style = "padding: 100px 300px;">
 <div id = "nomeMalf"><h4 style="font-size: 30px" id = "nomeMalfh"><span></span></h4></div>
 </div>
-<div class="prod-desc" style = "margin-top: 20px;">
+<div class="prod-desc" id="prod-desc1" style = "margin-top: 20px;">
 
     <h3 style="margin:10px; display:flex; justify-content:center;">PROBLEMA</h3>
     
     <p id = "problema" style="margin:10px"><span></span></p>
 </div>
-<div class="prod-desc" style = "margin-top: 20px;">
+<div class="prod-desc" id="prod-desc2" style = "margin-top: 20px;">
     <h3 style="margin:10px; display:flex; justify-content:center;">SOLUZIONI</h3>
-    <p id = "soluzione"style="margin:10px"><span></span></p>
+    <p id = "soluzione" style="margin:10px"><span></span></p>
 </div>
 <div style = "display:flex; justify-content: center;
     margin-top: 40px;">
@@ -70,9 +71,8 @@ $pId = $product->productsId;
                         {!!Form::submit('ELIMINA', ['class'=>'user-btn'])!!}
                     {!!  Form::close()  !!}
             </div>
-            <div>
-            {{ link_to_route('modificaMalf', 'MODIFICA', $parameters = ['malfunctionsId' => $malf->malfunctionsId] , ['class'=>'user-btn'])}}
-            
+            <div class= "user-btn" id = "modificaMalf">
+            MODIFICA
             </div>
 </div>
 <br>
@@ -82,20 +82,19 @@ $pId = $product->productsId;
 $(function () {
     $('#malfunctions').change(function () {
         var id = $(this).children("option:selected").val();
-        var id2 = $(this).children("#prodId h2#prodd").val();
+        var id2 = $(this).find("#prodd").val();
         $.ajax({
-            url: "{{ route('selectMalfunction') }}"+ '/' + id2,
+            url: "{{ route('selectMalfunction', 'id2') }}",
             data: {
-                
                 "malfunctionsId": id,
                 "_token": "{{ csrf_token() }}"
             },
             type: 'POST',
             dataType: 'json',
             success: function (result) {
-                $('#nomeMalf h4#nomeMalf span').text(result.nomeMalf);
-                $('#prod-desc p#problema span').text(result.problema);
-                $('#prod-desc p#soluzione span').text(result.soluzione);
+                $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
+                $('#prod-desc1 p#problema span').text(result.problema);
+                $('#prod-desc2 p#soluzione span').text(result.soluzione);
             },
             error: function () {
                 alert('error');
@@ -104,6 +103,17 @@ $(function () {
     });
 });
 </script>
- 
+
+ <script>
+     //link alla modifica del malfunzionamento
+    $(function () {
+    $('#malfunctions').change(function () {
+     var id3 = $("#malfunctions option:selected").val();
+     $("#modificaMalf").click(function () {
+  window.location.href = "{{URL::to('modificaMalf', 'id3')}}"
+});
+});
+ });
+ </script>
 
 @endsection
