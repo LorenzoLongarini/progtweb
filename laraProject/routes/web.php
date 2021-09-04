@@ -82,7 +82,7 @@ Route::view('/about', 'pages.about')->name('about');
 Route::view('/centri-assistenza', 'pages.centriAssistenza')->name('centri');
 
 Route::view('/lavora-con-noi', 'pages.lavora-con-noi')
-        ->name('lavora-con-noi');
+        ->name('contatti');
 
 Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
         ->name('termini-e-condizioni');
