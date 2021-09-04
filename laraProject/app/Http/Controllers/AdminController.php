@@ -132,9 +132,8 @@ class AdminController extends Controller {
         
     }
 
-    public function eliminaMalf($productsId, $malfunctionsId){
-         Malfunction::where('productsId', '=', $productsId)
-        ->where('malfunctionsId', '=', $malfunctionsId)
+    public function eliminaMalf( $malfunctionsId){
+         Malfunction::where('malfunctionsId', '=', $malfunctionsId)
         ->delete();
         return redirect()->route('catalogo');
     }
@@ -142,7 +141,8 @@ class AdminController extends Controller {
     public function selectMalfunction(Request $request, $productsId){
         
         $Product = Product::find($productsId);
-        $malfunction = new Malfunction($request->malfunctionsId);
+        error_log('-----> ' . $request->malfunctionsId);
+        $malfunction = Malfunction::find($request->malfunctionsId);
         
         return response()->json([
             "nomeMalf" => $malfunction->nomeMalf, 

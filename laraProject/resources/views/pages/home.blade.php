@@ -46,26 +46,7 @@
         </div>
     </div>
 
-    <div class="container">
-    @isset($eventi)
-        <h1 class="title">Eventi a breve</h1>
-        <div class="last-event flex-rows">
-            @foreach($eventi as $evento)
-                <div class="event-card card">
-                    <div class="img-event-card">
-                        @include('helpers.img-event', ['imgName' => $evento->imgName])
-                    </div>
-                    <div class="content-event-card">
-                        <h2>{{ $evento->titolo }}</h2>
-                        <h3>{{ $evento->artista }}</h3>
-                        <h4>{{ $evento->data }}</h4>
-                    </div>
-                    {{ link_to_route('evento', 'VEDI EVENTO', $parameters = ['id' => $evento->eventoId], $attributes = ['class' => 'btn default-btn'])}}
-                </div>
-            @endforeach
-        </div>
-    @endisset
-    </div>
+    
 </div>
 </main>
 @endsection

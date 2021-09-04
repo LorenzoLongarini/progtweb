@@ -39,31 +39,7 @@ class PublicController extends Controller
         return view('pages.faq')->with('faqs', Faq::all());
     }
 
-    public function registraUser(){
-        return view('pages.registrazione');
-    }
-
-
-    public function salvaUser(UserRequest $request){
-
-        $user = new User;
-        $user->nome = $request->nome;
-        $user->cognome = $request->cognome;
-        $user->ivacf = $request->ivacf;
-        $user->dataNascita = $request->dataNascita;
-        $user->email = $request->email;
-        $user->username = $request->username;
-        $user->password = Hash::make($request->password);
-        $user->telefono = $request->telefono;
-        $user->via = $request->via;
-        $user->cap = $request->cap;
-        $user->città = $request->città;
-        $user->sottocategoria = '';
-        $user->role = 'tecnico';      
-        $user->save();
-        return redirect()->route('home');
-        
-    }
+   
 
     public function mostraCatalogo(){
         return view('pages.catalogo')->with('prodotti', Catalogo::listaProdotti());

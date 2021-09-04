@@ -7,7 +7,7 @@
 <div class="login-container flex-rows">
     <div class="brand">
         <img src="{{asset('./images/logos/logo-sito.svg')}}"/>
-        <h3 style="color: white">Accedi o crea un nuovo account</h3>
+        <h3 style="color: white">Accedi al tuo account</h3>
     </div>
     <div style="max-width: 373px">
         <div class="alert card">
@@ -46,7 +46,7 @@
                     </div>
                     {{ Form::close() }}
                     <div style="text-align:center; margin-top: 20px">
-                        <p>Non hai un account? <a class="link" href= "{{route('registraUser')}}" >Registrati</a></p>
+                        <p>Non hai un account? <a class="link" href= "{{route('lavora-con-noi')}}" >Contattaci</a></p>
                     </div>
             </div>
         </div>

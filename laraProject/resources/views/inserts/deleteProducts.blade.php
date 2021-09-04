@@ -1,6 +1,6 @@
 @php 
 use App\Models\Resources\Product;
-$products = Product::paginate(2);
+$products = Product::all();
 @endphp
 <div id = "prodotti-section" class = "form" style = "margin-left:50px;">
 @can('isAdmin')
@@ -30,16 +30,16 @@ $products = Product::paginate(2);
             @can('isAdmin')
             {!!  Form::open(['action' => ['AdminController@eliminaProd', $product->productsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA', ['class'=>'delete user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;'])!!}
+                        {!!Form::submit('ELIMINA', ['class'=>'delete user-btn','style' => 'text-align:center;width:200px;height:35px;'])!!}
                     {!!  Form::close()  !!}
             </div>
             <div>
            
-            {{ link_to_route('modificaProd', 'MODIFICA', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;margin-top:0'] )}}
+            {{ link_to_route('modificaProd', 'MODIFICA', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;width:200px;height:35px;margin-top:0'] )}}
 </div>
 
 <div>
-            {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;height:30px;width:200px;height:35px;margin-top:0;line-height:0.9'] )}}
+            {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn','style' => 'text-align:center;width:200px;height:35px;margin-top:0;line-height:0.9'] )}}
             @endcan
         </div>
             </div>
@@ -48,6 +48,6 @@ $products = Product::paginate(2);
        <br>
        
         @endforeach
-        @include('pagination.paginator', ['paginator' => $products])
+
         </div>
         

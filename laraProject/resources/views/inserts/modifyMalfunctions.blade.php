@@ -1,3 +1,4 @@
+
 @extends('layouts.forms')
 
 @section('content')
@@ -6,7 +7,7 @@
 
     <div style = "display:flex;">
    <div>
-   {{ link_to_route('malfunzionamento', 'INDIETRO', $parameters = [$malfunction->malfunctionsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
+   {{ link_to_route('malfunzionamento', 'INDIETRO', $parameters = [$malfunction->productsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
        
    </div>
    <div style = "margin-left: 80px;">
@@ -53,7 +54,12 @@
     {{  Form::submit ('Conferma' , ['class'=>'default-btn'])}}
     {{  Form::hidden ('_method', 'PUT')}}
     </div>
-
+    <div>
+            {!!  Form::open(['action' => ['AdminController@eliminaMalf',  $malfunction->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
+                        {!!Form::hidden('_method','DELETE')!!}
+                        {!!Form::submit('ELIMINA', ['class'=>'default-btn'])!!}
+                    {!!  Form::close()  !!}
+            </div>
     <div>
     {{  Form::reset ('Annulla' , ['class'=>'default-btn'])}}
     </div>
