@@ -61,7 +61,7 @@
                 @endif
         </div>
 </div>
-    </div>
+    
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('città', 'Città' /*class-type*/)}}
@@ -101,6 +101,7 @@
     </div>
     </div>
     </div>
+</div>
     {{  Form::hidden ('_method', 'PUT')}}
 {{Form::close()}}
 </div>

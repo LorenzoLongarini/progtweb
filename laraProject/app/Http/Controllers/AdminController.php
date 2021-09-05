@@ -82,7 +82,7 @@ class AdminController extends Controller {
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
         $product->descrizione = $request->descrizione;
-        $user->sottocategoria = $request->sottocategoria;
+        $product->sottocategoria = $request->sottocategoria;
         $product->imgName = $imageName;
         $product->save();
 
