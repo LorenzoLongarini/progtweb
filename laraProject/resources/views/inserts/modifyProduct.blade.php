@@ -15,7 +15,7 @@
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('nome', 'Nome Prodotto')}}
-            {{  Form::text ('nome', '' )  }}
+            {{  Form::text ('nome', $product->nome )  }}
             @if ($errors->first('nome'))
                 <ul>
                     @foreach ($errors->get('nome') as $message)
@@ -26,7 +26,7 @@
         </div>
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('prezzo', 'Prezzo')  }}
-            {{  Form::text ('prezzo', '')}}
+            {{  Form::text ('prezzo', $product->prezzo)}}
           @if ($errors->first('prezzo'))
                 <ul>
                     @foreach ($errors->get('prezzo') as $message)
@@ -39,7 +39,7 @@
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('noteTecniche', 'Note Tecniche')}}
-            {{  Form::textarea ('noteTecniche', '' , ['class'=>'text-area'])  }}
+            {{  Form::textarea ('noteTecniche', $product->noteTecniche , ['class'=>'text-area'])  }}
             @if ($errors->first('noteTecniche'))
                 <ul>
                     @foreach ($errors->get('noteTecniche') as $message)
@@ -51,7 +51,7 @@
         
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('modInstallaz', 'Modalità di Installazione')}}
-            {{  Form::textarea ('modInstallaz', '' , ['class'=>'text-area']) }}
+            {{  Form::textarea ('modInstallaz', $product->modInstallaz , ['class'=>'text-area']) }}
             @if ($errors->first('modInstallaz'))
                 <ul>
                     @foreach ($errors->get('modInstallaz') as $message)
@@ -65,7 +65,7 @@
 <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('descrizione', 'Descrizione')}}
-            {{  Form::textarea ('descrizione', '', ['class'=>'text-area'] ) }}
+            {{  Form::textarea ('descrizione', $product->descrizione, ['class'=>'text-area'] ) }}
             @if ($errors->first('descrizione'))
                 <ul>
                     @foreach ($errors->get('descrizione') as $message)

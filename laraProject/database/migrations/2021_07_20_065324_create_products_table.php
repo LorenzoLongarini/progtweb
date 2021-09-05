@@ -16,6 +16,8 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('productsId')->unsigned()->index();
             $table->string('nome', 50);
+            $table->set('sottocategoria', 
+            ['','telefonia', 'televisori', 'computers', 'stampanti'])->nullable();
             $table->float('prezzo');
             $table->text('noteTecniche', 500);
             $table->text('descrizione', 500);

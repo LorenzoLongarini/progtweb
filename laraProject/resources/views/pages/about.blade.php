@@ -54,7 +54,7 @@
 
                         </p>
                
-                        <div class="contatti">
+                        <div class="contatti" id="lavora-con-noi">
                                 <div class="item-contatti" style="display:flex;align-items:center;flex-direction:column"> 
                                        <div> <h3>Numero di telefono</h3> </div>
                                         <div><h3>0721-494589</h3> </div>

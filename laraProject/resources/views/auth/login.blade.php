@@ -11,7 +11,7 @@
     </div>
     <div style="max-width: 373px">
         <div class="alert card">
-            <p>Se rappresenti un organizzatore di eventi <a class="link" href="{{ route('about') . '#lavora-con-noi' }}">leggi le nostre modalità di adesione</a>.</p>
+            <p>Per maggiori informazioni <a class="link" href="{{ route('privacy') }}">leggi la normativa sulla privacy</a>.</p>
         </div>
         <div class="login-form card">
             <h2>Accedi</h2>
@@ -46,7 +46,7 @@
                     </div>
                     {{ Form::close() }}
                     <div style="text-align:center; margin-top: 20px">
-                        <p>Non hai un account? <a class="link" href= "{{route('lavora-con-noi')}}" >Contattaci</a></p>
+                        <p>Non hai un account? <a class="link" href= "{{route('about'). '#lavora-con-noi'}}" >Contattaci</a></p>
                     </div>
             </div>
         </div>

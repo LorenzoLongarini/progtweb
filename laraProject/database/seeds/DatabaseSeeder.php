@@ -58,7 +58,8 @@ class DatabaseSeeder extends Seeder {
             'noteTecniche'=>'aaaaaaaaaa', 
             'descrizione'=>'aaaaaaaaaaaaaa computer aaaaaa',
             'modInstallaz'=>'aaaaaaaaa',  
-            'imgName'=>'aaaaa'],
+            'imgName'=>'aaaaa',
+            'sottocategoria'=>'televisori'],
 
             [   'productsId'=>02,
             'nome' => 'telefono',
@@ -66,7 +67,8 @@ class DatabaseSeeder extends Seeder {
             'noteTecniche'=>'bbbbbbbbb', 
             'descrizione'=>'bbbbbbbbbbb computer bbbbbbbbbbb',
             'modInstallaz'=>'bbbbbbbbbbbbb',  
-            'imgName'=>'bbbbbb'],
+            'imgName'=>'bbbbbb',
+            'sottocategoria'=>''],
 
             [   'productsId'=>03,
             'nome' => 'lavatrice',
@@ -74,7 +76,8 @@ class DatabaseSeeder extends Seeder {
             'noteTecniche'=>'cccccccccccccc', 
             'descrizione'=>'cccccccccccccccc computer ccccccccccccccccc',
             'modInstallaz'=>'ccccccccccccccccccccc',  
-            'imgName'=>'ccccccccccc'],
+            'imgName'=>'ccccccccccc',
+            'sottocategoria'=>''],
 
             [   'productsId'=>04,
             'nome' => 'lavastoviglie',
@@ -82,7 +85,9 @@ class DatabaseSeeder extends Seeder {
             'noteTecniche'=>'dddddddddddddddd', 
             'descrizione'=>'dddddddddddddddddddddddddd computer dddddddddddddddd dd',
             'modInstallaz'=>'dddddddddddddddddddddd',  
-            'imgName'=>'ddddddddddddddddd'],
+            'imgName'=>'ddddddddddddddddd',
+            'sottocategoria'=>''],
+            
     ]);
     DB::table('assistence_centers')->insert([
 

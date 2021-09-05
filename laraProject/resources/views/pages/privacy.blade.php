@@ -10,7 +10,7 @@
         'img_url' => '../storage/app/public/images/covers/privacy-cover.jpg'])
         
 <article class="container block">
-    <p>Ultimo aggiornamento: 21 maggio 2021</p>
+    <p>Ultimo aggiornamento: 5 settembre 2021</p>
     <p>La presente Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti dice i tuoi diritti sulla privacy e come la legge ti protegge.</p>
     <p>Utilizziamo i tuoi dati personali per fornire e migliorare il Servizio. Utilizzando il Servizio, l'utente accetta la raccolta e l'utilizzo delle informazioni in conformità con la presente Informativa sulla privacy. Questa Informativa sulla privacy è stata creata con l'aiuto del <a class="link" href="https://www.privacypolicies.com/privacy-policy-generator/" target="_blank">Generatore di norme sulla privacy.</a></p>
     <h1 class="title">Interpretazione e definizioni</h1>
@@ -23,7 +23,7 @@
             <p><strong>Account</strong> indica un account univoco creato per l'utente per accedere al nostro Servizio o parti del nostro Servizio.</p>
         </li>
         <li>
-            <p><strong>Società</strong> (denominata "la Società", "Noi", "Noi" o "Nostro" nel presente Contratto) si riferisce a EasyTickets S.R.L., 12 Brecce Bianche, Ancona 60131.</p>
+            <p><strong>Società</strong> (denominata "la Società", "Noi", "Noi" o "Nostro" nel presente Contratto) si riferisce a DL Computer S.R.L., 12 Brecce Bianche, Ancona 60131.</p>
         </li>
         <li>
             <p><strong>I</strong> cookie sono piccoli file che vengono inseriti sul tuo computer, dispositivo mobile o qualsiasi altro dispositivo da un sito Web, contenente i dettagli della cronologia di navigazione dell'utente su quel sito web tra i suoi numerosi usi.</p>
@@ -47,7 +47,7 @@
             <p><strong>I dati</strong> di utilizzo si riferiscono ai dati raccolti automaticamente, generati dall'utilizzo del Servizio o dall'infrastruttura di servizio stessa (ad esempio, la durata di una visita di pagina).</p>
         </li>
         <li>
-            <p><strong>Il</strong> sito web si riferisce a EasyTickets, accessibile <a class="link" href="https://www.easytickets.com" rel="external nofollow noopener" target="_blank">da https://www.easytickets.com</a></p>
+            <p><strong>Il</strong> sito web si riferisce a DL Computers, accessibile <a class="link" href="https://www.dlcomputers.com" rel="external nofollow noopener" target="_blank">da https://www.dlcomputers.com</a></p>
         </li>
         <li>
             <p><strong>Per</strong> utente si intende l'individuo che accede o utilizza il Servizio, o la società o altra persona giuridica per conto della quale tale individuo accede o utilizza il Servizio, a seconda dei casi.</p>
@@ -182,7 +182,7 @@
     <h1 class="title">Contattaci</h1>
     <p>In caso di domande sulla presente Informativa sulla privacy, è possibile contattarci:</p>
     <ul>
-        <li>Via e-mail: supporto@easytickets.com</li>
+        <li>Via e-mail: supporto@dlcomputers.com</li>
     </ul>
 </article>
 @endsection

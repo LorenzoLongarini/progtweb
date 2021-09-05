@@ -15,7 +15,14 @@
     {{ link_to_route('inserisciFaq', 'AGGIUNGI FAQ', $parameters = [],['class'=>'user-btn','style' => 'width: 180px;'] )}}
     </div>
 @endcan
-
+@if(count($faqs) == 0)
+<br>
+<br>
+<div style = " display: flex;
+    justify-content: center;">
+<h2>NON SONO PRESENTI FAQ</h2>
+</div>
+@endif
     @isset($faqs)
         <ol id="faq-list">
             @foreach($faqs as $faq)
@@ -44,8 +51,6 @@
             @endforeach
         </ol>
     @endisset
-    @empty($faqs)
-        <h2>Niente da visualizzare</h2>
-    @endempty
+   
 </div>
 @endsection
