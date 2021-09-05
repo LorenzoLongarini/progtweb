@@ -318,6 +318,8 @@ class AdminController extends Controller {
         $assistenceCenter = new AssistenceCenter;
         $assistenceCenter->centersId = $request->centersId;
         $assistenceCenter->nome = $request->nome;
+        $assistenceCenter->città = $request->città;
+        $assistenceCenter->regione = $request->regione;
         $assistenceCenter->via = $request->via;
         $assistenceCenter->email = $request->email;
         $assistenceCenter->telefono = $request->telefono;
@@ -332,6 +334,8 @@ class AdminController extends Controller {
         $assistenceCenter = AssistenceCenter::find($centersId);
         
             $assistenceCenter->nome = $request->nome;
+            $assistenceCenter->città = $request->città;
+            $assistenceCenter->regione = $request->regione;
             $assistenceCenter->via = $request->via;
             $assistenceCenter->email = $request->email;
             $assistenceCenter->telefono = $request->telefono;

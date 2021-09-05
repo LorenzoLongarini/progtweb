@@ -8,9 +8,11 @@
    {{ link_to_route('admin', 'INDIETRO', $parameters = [$centers->centersId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
        
    </div>
-   <div style = "margin-left: 80px;">
+   <div style = "position: relative;
+    left: 100px;">
    
     <h2>Modifica centro assistenza</h2>
+    <div class="multiple-input" style = "margin: 10px 0px;">
     <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('nome', 'Nome')  }}
             {{  Form::text ('nome', $centers->nome)}}
@@ -33,6 +35,8 @@
                 </ul>
                 @endif
         </div>
+</div>
+<div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('via', 'Via')  }}
             {{  Form::text ('via', $centers->via)}}
@@ -55,7 +59,32 @@
                 </ul>
                 @endif
         </div>
-    
+</div>
+    </div>
+    <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('città', 'Città' /*class-type*/)}}
+            {{  Form::text ('città', '' /*class-type*/ ) }}
+            @if ($errors->first('città'))
+                <ul>
+                    @foreach ($errors->get('città') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        
+<div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('regione', 'Regione' /*class-type*/)  }}
+            {{  Form::text ('regione','' /*class-type*/)  }}
+            @if ($errors->first('regione'))
+                <ul>
+                    @foreach ($errors->get('regione') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
     </div>
     <div style = "display: flex;
     justify-content: center;">

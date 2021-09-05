@@ -210,7 +210,7 @@ class DatabaseSeeder extends Seeder {
             
     ]);
 
-    DB::table('assistence_centers')->insert([
+    DB::table('faqs')->insert([
         [
             'faqId'=>1,
             'domanda'=>'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.',

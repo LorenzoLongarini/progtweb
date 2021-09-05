@@ -25,6 +25,8 @@ class CenterRequest extends FormRequest
     {
         return [
             'nome' =>'required|max:50|string',
+            'città' =>'required|max:50|string',
+            'regione' =>'required|max:50|string',
             'via'=>'required|max:50',
             'email'=> 'required|email|max:40',
             'telefono'=> 'digits:10|numeric',

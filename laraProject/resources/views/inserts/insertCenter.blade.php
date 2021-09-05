@@ -27,8 +27,6 @@
              </div>
         
       
-        </div>
-        <div class="multiple-input" style = "margin: 10px 0px;">
         
 
         <div class="wrap-input" style = "margin: 10px 10px;">
@@ -57,17 +55,38 @@
                 @endif
         </div>
         
-            
-</div>
-    
-       
-<div class="multiple-input" style = "margin: 10px 0px;">
 <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('via', 'Via' /*class-type*/)  }}
             {{  Form::text ('via','' /*class-type*/)  }}
             @if ($errors->first('via'))
                 <ul>
                     @foreach ($errors->get('via') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+    </div>
+
+    <div class="multiple-input" style = "margin: 10px 0px;">
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('città', 'Città' /*class-type*/)}}
+            {{  Form::text ('città', '' /*class-type*/ ) }}
+            @if ($errors->first('città'))
+                <ul>
+                    @foreach ($errors->get('città') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+        </div>
+        
+<div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('regione', 'Regione' /*class-type*/)  }}
+            {{  Form::text ('regione','' /*class-type*/)  }}
+            @if ($errors->first('regione'))
+                <ul>
+                    @foreach ($errors->get('regione') as $message)
                     <li class="errors">{{ $message }}</li>
                     @endforeach
                 </ul>
