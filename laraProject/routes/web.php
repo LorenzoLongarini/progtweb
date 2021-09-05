@@ -28,7 +28,7 @@ Route::put('user-admin/modify-prod/{productsId}', 'AdminController@updateProd')-
 Route::delete('user-admin/elimina-prod/{productsId}', 'AdminController@eliminaProd')->name('elimina-prodotto');
 
 //malfunzionamenti
-Route::get('/user-admin/insert-malfunction/{productsId}', 'AdminController@inserisciMalf')->name('insert-malfunction');
+Route::get('user-admin/insert-malfunction/{productsId}', 'AdminController@inserisciMalf')->name('insert-malfunction');
 
 Route::post('user-admin/insert-malfunction/{productsId}', 'AdminController@salvaMalf')->name('insert-malfunction.store');
 
@@ -36,12 +36,12 @@ Route::get('user-admin/modify-malf/{malfunctionsId}', 'AdminController@modificaM
 
 Route::put('user-admin/modify-malf/{malfunctionsId}', 'AdminController@updateMalf')->name('modificaMalf.update');
 
-Route::delete('user-admin/elimina-malf/{malfunctionsId}/{productsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
+Route::delete('user-admin/modify-malf/{malfunctionsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
 
 //tecnici
 Route::get('/user-admin/insert-technician', 'AdminController@inserisciTecnico')->name('insert-technician');
 
-Route::post('user-admin/insert-technician', 'AdminController@salvaTecnico')->name('insert-technician.store');
+Route::post('/user-admin/insert-technician', 'AdminController@salvaTecnico')->name('insert-technician.store');
 
 Route::get('user-admin/modify-technician/{usersId}', 'AdminController@modificaTecnico')->name('modifica-technician');
 
@@ -76,12 +76,7 @@ Route::delete('user-admin/elimina-center/{centerId}', 'AdminController@eliminaCe
 Route::get('/user-staff', 'StaffController@index')
 ->name('staff');//->middleware('can:isStaff');
 
-//Route::get('/user-staff/all-products', 'StaffController@elencoProd')->name('all-products');
-/*
-Route::get('/user-level2/modify/{utenteId}', 'ClientController@modificaClient')->name('modificaClient');
 
-Route::put('/user-level2/modify/{utenteId}', 'ClientController@updateClient')->name('modificaClient.update');
-*/
 
 // Rotte per l'autenticazione
 Route::get('/login', 'Auth\LoginController@showLoginForm')
@@ -111,7 +106,7 @@ Route::get('/malfunzionamenti/{productsId}', 'PublicController@mostraMalfunziona
 Route::post('/malfunzionamenti/{productsId}', 'AdminController@selectMalfunction')->name('selectMalfunction');
 
 
-//catlogo
+//catalogo
 
 Route::post('/catalogo', 'PublicController@selezionaProdotti')->name('cerca');
 
@@ -131,11 +126,7 @@ Route::put('/faq/{faqId}/modify', 'AdminController@updateFaq')->name('modificaFa
 
 Route::delete('/faq/{faqId}', 'AdminController@eliminaFaq')->name('eliminaFaq');
 
-//registrazione
 
-Route::get('/registrati', 'publicController@registraUser')->name('registraUser');
-
-Route::post('/registrati', 'publicController@salvaUser')->name('registraUser.store');
 
 
 

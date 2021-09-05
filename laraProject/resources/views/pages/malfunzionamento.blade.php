@@ -9,7 +9,7 @@ $pId = $product->productsId;
 @section('page-title', $product->nome)
 
 @section('page-content')
-<div id= "prodId" style  = "margin-bottom: 50px; visibility: hidden"><h2 id="prodd" style="font-size: 60px">{{$product->productsId}}</h2></div>
+
 <div class="prod-cover">
     <div class="prod-content" style = "display: flex;
     justify-content: center;">
@@ -37,8 +37,8 @@ $pId = $product->productsId;
 <div class="multiple-input" style = "display: flex;
     justify-content: center;">
         <div class="wrap-input" style = "width: 50%;">
-        <select name="malfunction" id="malfunctions">
-            
+        <select name="malfunctions" id="malfunctions">
+        <option> ---Seleziona---</option>
             @if(count($malfs)!==0)
             @foreach( $malfs as $malf)
             <option value='{{ $malf->malfunctionsId }}'>{{ $malf->nomeMalf }}</option>
@@ -65,14 +65,9 @@ $pId = $product->productsId;
 </div>
 <div style = "display:flex; justify-content: center;
     margin-top: 40px;">
-            <div>
-            {!!  Form::open(['action' => ['AdminController@eliminaMalf', $malf->productsId, $malf->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
-                        {!!Form::hidden('_method','DELETE')!!}
-                        {!!Form::submit('ELIMINA', ['class'=>'user-btn'])!!}
-                    {!!  Form::close()  !!}
-            </div>
-            <div class= "user-btn" id = "modificaMalf">
-            MODIFICA
+            
+            <div class= "user-btn" >
+            <a href="" id = "modificaMalf">MODIFICA</a>
             </div>
 </div>
 <br>
@@ -81,10 +76,10 @@ $pId = $product->productsId;
 <script>
 $(function () {
     $('#malfunctions').change(function () {
-        var id = $(this).children("option:selected").val();
-        var id2 = $(this).find("#prodd").val();
+        var id = $(this).find("option:selected").val();
+        
         $.ajax({
-            url: "{{ route('selectMalfunction', 'id2') }}",
+            url: "{{ route('selectMalfunction', ['productsId' => $product->productsId]) }}",
             data: {
                 "malfunctionsId": id,
                 "_token": "{{ csrf_token() }}"
@@ -95,6 +90,7 @@ $(function () {
                 $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
                 $('#prod-desc1 p#problema span').text(result.problema);
                 $('#prod-desc2 p#soluzione span').text(result.soluzione);
+                $('#modificaMalf').attr('href', "http://" + window.location.hostname + "/progtweb/laraProject/public/user-admin/modify-malf/" + id);
             },
             error: function () {
                 alert('error');
@@ -104,16 +100,5 @@ $(function () {
 });
 </script>
 
- <script>
-     //link alla modifica del malfunzionamento
-    $(function () {
-    $('#malfunctions').change(function () {
-     var id3 = $("#malfunctions option:selected").val();
-     $("#modificaMalf").click(function () {
-  window.location.href = "{{URL::to('modificaMalf', 'id3')}}"
-});
-});
- });
- </script>
 
 @endsection
