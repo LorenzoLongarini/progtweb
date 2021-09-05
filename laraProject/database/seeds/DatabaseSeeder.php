@@ -239,7 +239,7 @@ class DatabaseSeeder extends Seeder {
             'regione' => 'Marche',
             'nome' => 'Centro numero uno',
             'via' => 'Ancona 12',
-            'telefono'=>'320494858',
+            'telefono'=>'3204948580',
             'email'=>'info@centrouno.it'
             
             ],

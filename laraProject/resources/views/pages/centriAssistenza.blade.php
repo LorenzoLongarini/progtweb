@@ -1,6 +1,40 @@
 @extends('layouts.public')
+@php
+ use App\Models\Resources\AssistenceCenter;
 
+ $centers= AssistenceCenter::all();
+    
+@endphp
 @section('page-title', 'Centri Assistenza')
+<div class="centers-container">
+<div class="title-centers"><h3>I NOSTRI CENTRI DI ASSISTENZA</h3></div>
+<div  style="height: 800px;width:100%;margin-top:100px;display:flex;flex-direction:column;justify-content:space-between;align-items:center">
+    @foreach ($centers as $center)
+    <div class="center">
+        <div class="center-name"><div style="font-size: 30px;font-weight:700"><h3>{{$center->nome}} </h3></div><div class="divider"></div></div>
+        
+        <div class="center-desc">
+        <div><h4 style="font-size: 15px;color:black;font-weight:700">{{$center->regione}}</h4></div>
+        <div><h4 style="font-size: 10px;color:black;font-weight:700">{{$center->città}}</h4></div>
+        <div><h4 style="font-size: 8px;color:black;font-weight:700">{{$center->via}}</h4></div>
+        <div>{{$center->telefono}}</div>
+        <div>{{$center->email}}</div>
+        </div>
+    </div>
+    @endforeach
+</div>
+
+
+</div>
+    
+
+
+
+
+
+
+
+<!--
 <div class="map-container">
 <div id="map"></div>
 <div class="text-ca">
@@ -13,10 +47,7 @@
 </div>
 </div>
 </div>
-<div style="margin:10px">
-    <h3 >Lista Centri Assistenza</h3>
 
-</div>
 
 
 <script>
@@ -68,7 +99,7 @@
                 orario:'8.00-17.00',
                 img:'../public/images/white.jpg'
 
-            },
+            },  
             {
                 name: 'DL Computers',
                 location: {lat: 41.90336, lng: 12.47949},
@@ -91,7 +122,7 @@
     }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg9HtQuq71WPTBMkczWqBDZesO_xaUyv8&callback=initMap" async defer></script>
-
+-->
 
   
     

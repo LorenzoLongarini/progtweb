@@ -62,8 +62,8 @@ $user = Auth::user();
     <p id = "problema" style="margin:10px"><span></span></p>
 </div>
 <div class="prod-desc" id="prod-desc2" style = "margin-top: 20px;">
-    <h3 style="margin:10px; display:flex; justify-content:center;">SOLUZIONI</h3>
-    <p id = "soluzione" style="margin:10px"><span></span></p>
+    <h3 style="margin:10px; display:flex; justify-content:center">SOLUZIONI</h3>
+    <div style=""><p id = "soluzione" style="margin:10px;text-align:justify"><span></span></p></div>
 </div>
 <div style = "display:flex; justify-content: center;
     margin-top: 40px;">
@@ -92,7 +92,7 @@ $(function () {
             url: "{{ route('selectMalfunction', ['productsId' => $product->productsId]) }}",
             data: {
                 "malfunctionsId": id,
-                "_token": "{{ csrf_token() }}"
+                "_token": "{{ csrf_token() }}"        
             },
             type: 'POST',
             dataType: 'json',
