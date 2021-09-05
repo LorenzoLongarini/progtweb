@@ -10,7 +10,7 @@
         <button  id="tecnici" class="user-nav-btn">Tecnici</button>
     </li>
     <li class="user-nav-link">
-        <button  class="user-nav-btn">Centri assistenza</button>
+        <button id="centri-assistenza"  class="user-nav-btn">Centri assistenza</button>
     </li>
     
     

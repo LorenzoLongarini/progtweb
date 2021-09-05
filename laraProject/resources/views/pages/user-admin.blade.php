@@ -6,5 +6,6 @@
     @include('inserts.deleteProducts')
     @include('inserts.deleteTechnician')
     @include('inserts.deleteStaff')
+    @include('inserts.deleteCenter')
     
 @endsection

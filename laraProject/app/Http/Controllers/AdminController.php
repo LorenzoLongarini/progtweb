@@ -7,11 +7,13 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\FaqRequest;
 use App\Http\Requests\ProductRequest;
+use App\Http\Requests\AssistenceCenterRequest;
 use App\Http\Requests\ModOrgRequest;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\MalfunctionRequest;
 use App\Models\Resources\Faq;
 use App\Models\Resources\Malfunction;
+use App\Models\Resources\AssistenceCenter;
 use App\User;
 use App\Models\Resources\Product;
 use App\Models\Statistics\OrgStats;
@@ -306,6 +308,56 @@ class AdminController extends Controller {
         $faq->destroy($faqId);
         return redirect()->route('faq');
     }
+
+    //centri assistenza
+    public function salvaCentro(AssistenceCenterRequest $request){
+            
+        $assistenceCenter = new AssistenceCenter;
+        $assistenceCenter->centersId = $request->centersId;
+        $assistenceCenter->nome = $request->nome;
+        $assistenceCenter->via = $request->via;
+        $assistenceCenter->email = $request->email;
+        $assistenceCenter->telefono = $request->telefono;
+      
+             
+        $assistenceCenter->save();
+        return redirect()->route('admin');
+
+    }
+    public function updateCentro(AssistenceCenterRequest $request, $centersId){
+
+        $assistenceCenter = AssistenceCenter::find($centersId);
+        
+            $assistenceCenter->nome = $request->nome;
+            $assistenceCenter->via = $request->via;
+            $assistenceCenter->email = $request->email;
+            $assistenceCenter->telefono = $request->telefono;
+          
+                 
+            $assistenceCenter->save();
+            return redirect()->route('admin');
+    
+        
+       
+        
+    }
+    public function eliminaCentro($centerId){
+        AssistenceCenter::where('centersId', '=', $centerId)->delete();
+        return redirect()->route('admin');
+    }
+
+    public function modificaCentro($centerId){
+
+        $assistenceCenter = AssistenceCenter::find($centerId);
+        return view('inserts.modifyCenter')->with('centers', $assistenceCenter);
+
+    }
+    public function inserisciCentro(){
+        
+        return view('inserts.insertCenter');
+
+    }
+
 
     
 }
