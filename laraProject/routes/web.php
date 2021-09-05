@@ -28,24 +28,24 @@ Route::put('user-admin/modify-prod/{productsId}', 'AdminController@updateProd')-
 Route::delete('user-admin/elimina-prod/{productsId}', 'AdminController@eliminaProd')->name('elimina-prodotto');
 
 //malfunzionamenti
-Route::get('user-admin/insert-malfunction/{productsId}', 'AdminController@inserisciMalf')->name('insert-malfunction');
+Route::get('/insert-malfunction/{productsId}', 'AdminController@inserisciMalf')->name('insert-malfunction');
 
-Route::post('user-admin/insert-malfunction/{productsId}', 'AdminController@salvaMalf')->name('insert-malfunction.store');
+Route::post('/insert-malfunction/{productsId}', 'AdminController@salvaMalf')->name('insert-malfunction.store');
 
-Route::get('user-admin/modify-malf/{malfunctionsId}', 'AdminController@modificaMalf')->name('modificaMalf');
+Route::get('/modify-malf/{malfunctionsId}', 'AdminController@modificaMalf')->name('modificaMalf');
 
-Route::put('user-admin/modify-malf/{malfunctionsId}', 'AdminController@updateMalf')->name('modificaMalf.update');
+Route::put('/modify-malf/{malfunctionsId}', 'AdminController@updateMalf')->name('modificaMalf.update');
 
-Route::delete('user-admin/modify-malf/{malfunctionsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
+Route::delete('/modify-malf/{malfunctionsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
 
 //tecnici
 Route::get('/user-admin/insert-technician', 'AdminController@inserisciTecnico')->name('insert-technician');
 
 Route::post('/user-admin/insert-technician', 'AdminController@salvaTecnico')->name('insert-technician.store');
 
-Route::get('user-admin/modify-technician/{usersId}', 'AdminController@modificaTecnico')->name('modifica-technician');
+Route::get('/user-admin/modify-technician/{usersId}', 'AdminController@modificaTecnico')->name('modifica-technician');
 
-Route::put('user-admin/modify-technician/{usersId}', 'AdminController@updateTecnico')->name('modifica-technician.update');
+Route::put('/user-admin/modify-technician/{usersId}', 'AdminController@updateTecnico')->name('modifica-technician.update');
 
 Route::delete('user-admin/elimina-technician/{usersId}', 'AdminController@eliminaTecnico')->name('elimina-technician');
 

@@ -54,20 +54,22 @@
     {{  Form::submit ('Conferma' , ['class'=>'default-btn'])}}
     {{  Form::hidden ('_method', 'PUT')}}
     </div>
+    
     <div>
+    {{  Form::reset ('Annulla' , ['class'=>'default-btn'])}}
+    </div>
+
+    {{  Form::hidden ('_method', 'PUT')}}
+{{Form::close()}}
+<div>
             {!!  Form::open(['action' => ['AdminController@eliminaMalf',  $malfunction->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA', ['class'=>'default-btn'])!!}
                     {!!  Form::close()  !!}
             </div>
-    <div>
-    {{  Form::reset ('Annulla' , ['class'=>'default-btn'])}}
-    </div>
+</div>
 </div>
     </div>
     </div>
     </div>
-    {{  Form::hidden ('_method', 'PUT')}}
-{{Form::close()}}
-</div>
 @endsection
