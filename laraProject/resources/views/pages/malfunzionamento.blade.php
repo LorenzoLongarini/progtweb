@@ -62,8 +62,8 @@ $user = Auth::user();
     <p id = "problema" style="margin:10px"><span></span></p>
 </div>
 <div class="prod-desc" id="prod-desc2" style = "margin-top: 20px;">
-    <h3 style="margin:10px; display:flex; justify-content:center;">SOLUZIONI</h3>
-    <p id = "soluzione" style="margin:10px"><span></span></p>
+    <h3 style="margin:10px; display:flex; justify-content:center">SOLUZIONI</h3>
+    <div style=""><p id = "soluzione" style="margin:10px;text-align:justify"><span></span></p></div>
 </div>
 <div style = "display:flex; justify-content: center;
     margin-top: 40px;">
@@ -92,14 +92,14 @@ $(function () {
             url: "{{ route('selectMalfunction', ['productsId' => $product->productsId]) }}",
             data: {
                 "malfunctionsId": id,
-                "_token": "{{ csrf_token() }}"
+                "_token": "{{ csrf_token() }}"        
             },
             type: 'POST',
             dataType: 'json',
             success: function (result) {
                 $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
                 $('#prod-desc1 p#problema span').text(result.problema);
-                $('#prod-desc2 p#soluzione span').text(result.soluzione);
+                $('#prod-desc2 div p#soluzione  span').text(result.soluzione);
                 $('#modificaMalf').attr('href', "http://" + window.location.hostname + "/progtweb/laraProject/public/user-admin/modify-malf/" + id);
             },
             error: function () {
