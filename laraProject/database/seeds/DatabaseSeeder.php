@@ -238,7 +238,7 @@ class DatabaseSeeder extends Seeder {
             'città' => 'Ancona',
             'regione' => 'Marche',
             'nome' => 'Centro numero uno',
-            'via' => 'Ancona 12',
+            'via' => 'Scrima 12',
             'telefono'=>'3204948580',
             'email'=>'info@centrouno.it'
             
@@ -248,7 +248,7 @@ class DatabaseSeeder extends Seeder {
             'nome' => 'Centro numero due',
             'città' => 'Milano',
             'regione' => 'Lombardia',
-            'via' => 'Milano 45',
+            'via' => ' Anfossi 45',
             'telefono'=>'3256785800',
             'email'=>'info@centrodue.it'
         ],
@@ -257,7 +257,7 @@ class DatabaseSeeder extends Seeder {
             'città' => 'Firenze',
             'regione' => 'Toscana',
             'nome' => 'Centro numero tre',
-            'via' => 'Firenze 25',
+            'via' => 'Colombo 25',
             'telefono'=>'3223485878',
             'email'=>'info@centrotre.it'],
 
@@ -265,7 +265,7 @@ class DatabaseSeeder extends Seeder {
             'città' => 'Napoli',
             'regione' => 'Campania',
             'nome' => 'Centro numero quattro',
-            'via' => 'Napoli 19',
+            'via' => 'Garibaldi 19',
             'telefono'=>'3763485878',
             'email'=>'info@centroquattro.it'],
     ]);
