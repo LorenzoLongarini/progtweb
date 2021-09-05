@@ -18,11 +18,11 @@ $centers = AssistenceCenter::all();
                 <div style="margin-left:30px; margin-top:10px;">{{$center->nome}}</div>
                 </div>
                 <div>
-                <div style="margin-left:30px; margin-top:20px;"></div>
+                <div style="margin-left:30px; margin-top:20px;">Id</div>
                 <div style="margin-left:30px; margin-top:10px;">{{$center->centersId}}</div>
                 </div>
                 <div>
-                <div style="margin-left:30px; margin-top:20px;">UtenteId</div>
+                <div style="margin-left:30px; margin-top:20px;">Via</div>
                 <div style="margin-left:30px; margin-top:10px;">{{$center->via}}</div>
                 </div>
                 <div style = "display:flex;">
