@@ -14,9 +14,9 @@
         <div class="center-name"><div style="font-size: 30px;font-weight:700"><h3>{{$center->nome}} </h3></div><div class="divider"></div></div>
         
         <div class="center-desc">
-        <div><h4 style="font-size: 15px;color:black;font-weight:700">{{$center->regione}}</h4></div>
-        <div><h4 style="font-size: 10px;color:black;font-weight:700">{{$center->città}}</h4></div>
-        <div><h4 style="font-size: 8px;color:black;font-weight:700">{{$center->via}}</h4></div>
+        <div><h4 style="font-size: 20px;color:black;font-weight:700">{{$center->regione}}</h4></div>
+        <div><h4 style="font-size: 15px;color:black;font-weight:700">{{$center->città}}</h4></div>
+        <div><h4 style="font-size: 15px;color:black;font-weight:700">{{$center->via}}</h4></div>
         <div>{{$center->telefono}}</div>
         <div>{{$center->email}}</div>
         </div>
