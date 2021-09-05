@@ -60,6 +60,18 @@ Route::put('user-admin/modify-staff/{usersId}', 'AdminController@updateStaff')->
 
 Route::delete('user-admin/elimina-staff/{usersId}', 'AdminController@eliminaStaff')->name('elimina-staff');
 
+// centri assistenza
+Route::post('user-admin/insert-center', 'AdminController@salvaCentro')->name('insert-centro.store');
+
+Route::get('/user-admin/insert-center', 'AdminController@inserisciCentro')->name('insert-center');
+
+Route::get('user-admin/modify-center/{centerId}', 'AdminController@modificaCentro')->name('modifica-centro');
+
+Route::put('user-admin/modify-center/{centerId}', 'AdminController@updateCentro')->name('modifica-centro.update');
+
+Route::delete('user-admin/elimina-center/{centerId}', 'AdminController@eliminaCentro')->name('elimina-centro');
+
+
 // staff
 Route::get('/user-staff', 'StaffController@index')
 ->name('staff');//->middleware('can:isStaff');

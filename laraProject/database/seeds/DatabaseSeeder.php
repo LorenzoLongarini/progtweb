@@ -84,5 +84,34 @@ class DatabaseSeeder extends Seeder {
             'modInstallaz'=>'dddddddddddddddddddddd',  
             'imgName'=>'ddddddddddddddddd'],
     ]);
+    DB::table('assistence_centers')->insert([
+
+        [   'centersId'=>01,
+            'nome' => 'Centro numero uno',
+            'via' => 'Ancona 12',
+            'telefono'=>'320494858',
+            'email'=>'info@centrouno.it'
+            
+            ],
+
+            [   'centersId'=>02,
+            'nome' => 'Centro numero due',
+            'via' => 'Milano 45',
+            'telefono'=>'3256785800',
+            'email'=>'info@centrodue.it'
+        ],
+
+            [    'centersId'=>03,
+            'nome' => 'Centro numero tre',
+            'via' => 'Firenze 25',
+            'telefono'=>'3223485878',
+            'email'=>'info@centrotre.it'],
+
+            [  'centersId'=>04,
+            'nome' => 'Centro numero quattro',
+            'via' => 'Napoli 19',
+            'telefono'=>'3763485878',
+            'email'=>'info@centroquattro.it'],
+    ]);
 }
 }
