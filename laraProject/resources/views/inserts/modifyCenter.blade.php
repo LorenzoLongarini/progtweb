@@ -5,6 +5,7 @@
     {{  Form::open(['action' => ['AdminController@updateCentro', $centers->centersId] ,'method'=>'POST'])  }}
 
     <div style = "display:flex;"> 
+    
    {{ link_to_route('admin', 'INDIETRO', $parameters = [$centers->centersId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
        
    </div>
