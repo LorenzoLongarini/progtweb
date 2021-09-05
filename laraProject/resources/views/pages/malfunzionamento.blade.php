@@ -74,7 +74,7 @@ $user = Auth::user();
             </div>
             @endcan
             @can('isStaff')
-            @if($user->sottocategoria == $product->sottocategoria)
+            @if($user->sottocategoria == $product->sottocategoria || $user->sottocategoria == '')
             <div class= "user-btn" >
             <a href="" id = "modificaMalf">MODIFICA</a>
             </div>
@@ -88,7 +88,7 @@ $user = Auth::user();
 $(function () {
     $('#malfunctions').change(function () {
         var id = $(this).find("option:selected").val();
-        
+        if(id!=='0'){
         $.ajax({
             url: "{{ route('selectMalfunction', ['productsId' => $product->productsId]) }}",
             data: {
@@ -107,6 +107,7 @@ $(function () {
                 alert('error');
             }
         });
+    }
     });
 });
 </script>
