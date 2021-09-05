@@ -2,7 +2,7 @@
 use App\Models\Resources\Malfunction;
 use Illuminate\Support\Facades\DB;
 $malfs = Malfunction::where('productsId', '=', $product->productsId)->get();
-$pId = $product->productsId;
+$user = Auth::user();
 @endphp
 @extends('layouts.public')
 
@@ -23,7 +23,10 @@ $pId = $product->productsId;
 <div style="display: flex;justify-content:center;align-items: center;gap:20px; margin-top: 40px;">
 @can('isAdmin')
             {{ link_to_route('insert-malfunction', 'AGGIUNGI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
-            @endcan
+ @endcan
+@can('isStaff')
+            {{ link_to_route('insert-malfunction', 'AGGIUNGI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
+@endcan
         </div>
 @if(count($malfs)==0)
 <br>
@@ -38,7 +41,7 @@ $pId = $product->productsId;
     justify-content: center;">
         <div class="wrap-input" style = "width: 50%;">
         <select name="malfunctions" id="malfunctions">
-        <option> ---Seleziona---</option>
+        <option value = 0> ---Seleziona---</option>
             @if(count($malfs)!==0)
             @foreach( $malfs as $malf)
             <option value='{{ $malf->malfunctionsId }}'>{{ $malf->nomeMalf }}</option>
@@ -55,7 +58,7 @@ $pId = $product->productsId;
 </div>
 <div class="prod-desc" id="prod-desc1" style = "margin-top: 20px;">
 
-    <h3 style="margin:10px; display:flex; justify-content:center;">PROBLEMA</h3>
+    <h3 style="margin:10px; display:flex; justify-content:center;">PROBLEMA </h3>
     
     <p id = "problema" style="margin:10px"><span></span></p>
 </div>
@@ -65,10 +68,18 @@ $pId = $product->productsId;
 </div>
 <div style = "display:flex; justify-content: center;
     margin-top: 40px;">
-            
+            @can('isAdmin')
             <div class= "user-btn" >
             <a href="" id = "modificaMalf">MODIFICA</a>
             </div>
+            @endcan
+            @can('isStaff')
+            @if($user->sottocategoria == $product->sottocategoria)
+            <div class= "user-btn" >
+            <a href="" id = "modificaMalf">MODIFICA</a>
+            </div>
+            @endif
+            @endcan
 </div>
 <br>
 <br>
