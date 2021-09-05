@@ -76,7 +76,7 @@
 
     <div class="single-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
-            {{  Form::label ('imgName', 'Copertina' /*class-type*/)  }}
+            {{  Form::label ('imgName', 'Copertina')  }}
             {{  Form::file ('imgName')  }}
             @if ($errors->first('imgName'))
                 <ul>
@@ -85,6 +85,10 @@
                     @endforeach
                 </ul>
                 @endif
+        </div>
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('sottocategoria', 'Sottocategoria' )}}
+            {{  Form::select ('sottocategoria', ['','telefonia', 'televisori', 'computers', 'stampanti'], '' )  }}
         </div>
     </div>
 </div>

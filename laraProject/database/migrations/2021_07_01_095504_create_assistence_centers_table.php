@@ -16,6 +16,8 @@ class CreateAssistenceCentersTable extends Migration
         Schema::create('assistence_centers', function (Blueprint $table) {
             $table->bigIncrements('centersId')->unsigned()->index();
             $table->text('nome', 30);
+            $table->text('città',30);
+            $table->text('regione', 30);
             $table->text('via', 30);
             $table->text('email', 30);
             $table->double('telefono', 10);

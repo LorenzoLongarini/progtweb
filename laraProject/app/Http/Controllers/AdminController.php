@@ -82,6 +82,7 @@ class AdminController extends Controller {
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
         $product->descrizione = $request->descrizione;
+        $user->sottocategoria = $request->sottocategoria;
         $product->imgName = $imageName;
         $product->save();
 
@@ -174,7 +175,8 @@ class AdminController extends Controller {
         $user->cap = $request->cap;
         $user->città = $request->città;
         $user->sottocategoria = '';
-        $user->role = 'tecnico';      
+        $user->role = 'tecnico';    
+        $user->centersId = $request->centersId;  
         $user->save();
         return redirect()->route('admin');
 
@@ -202,7 +204,8 @@ class AdminController extends Controller {
         $user->cap = $request->cap;
         $user->città = $request->città;
         $user->sottocategoria = '';
-        $user->role = 'tecnico';      
+        $user->role = 'tecnico'; 
+        $user->centersId = $request->centersId;      
         $user->save();
         return redirect()->route('admin');
         

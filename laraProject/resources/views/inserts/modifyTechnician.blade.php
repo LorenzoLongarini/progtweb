@@ -29,7 +29,7 @@
             </div>
             <div class="wrap-input" style = "margin: 10px 10px;">
 
-            {{  Form::label ('password', 'Password' /*class-type*/)}}
+            {{  Form::label ('password', 'Password' )}}
             {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
@@ -41,7 +41,7 @@
             </div>
             <div class="wrap-input" style = "margin: 10px 10px;"> 
                 
-            {{  Form::label ('password_confirmation', 'Conferma Password' /*class-type*/)}}
+            {{  Form::label ('password_confirmation', 'Conferma Password' )}}
             {{  Form::password ('password', array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
@@ -67,7 +67,7 @@
         
         
              <div class="wrap-input" style = "margin: 10px 10px;">
-                 {{  Form::label ('cognome', 'Cognome '/*class-type*/)  }}
+                 {{  Form::label ('cognome', 'Cognome ')  }}
                  {{  Form::text ('cognome', $users->cognome)  }}
                       @if ($errors->first('cognome'))
                          <ul>
@@ -117,6 +117,11 @@
                     @endforeach
                 </ul>
                 @endif
+        </div>
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            {{  Form::label ('centersId', 'Centro' )}}
+            {{  Form::text ('centersId', $users->centersId ) }}
+            
         </div>
         <div class="wrap-input blank" style = "margin: 10px 10px;">
             {{  Form::label ('dataNascita', 'Data di Nascita' )}}
@@ -182,6 +187,7 @@
     </div>
     </div>
     </div>
+    {{  Form::hidden ('_method', 'PUT')}}
 {{Form::close()}}
 </div>
 @endsection

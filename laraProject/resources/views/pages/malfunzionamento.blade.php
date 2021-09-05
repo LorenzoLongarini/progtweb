@@ -99,8 +99,8 @@ $(function () {
             success: function (result) {
                 $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
                 $('#prod-desc1 p#problema span').text(result.problema);
-                $('#prod-desc2 div p#soluzione  span').text(result.soluzione);
-                $('#modificaMalf').attr('href', "http://" + window.location.hostname + "/progtweb/laraProject/public/user-admin/modify-malf/" + id);
+                $('#prod-desc2 p#soluzione span').text(result.soluzione);
+                $('#modificaMalf').attr('href', "http://" + window.location.hostname + "/progtweb/laraProject/public/modify-malf/" + id);
             },
             error: function () {
                 alert('error');

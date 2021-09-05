@@ -15,6 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('usersId')->unsigned()->index();
+            $table->bigInteger('centersId')->unsigned()->index()->nullable();
+            $table->foreign('centersId')->references('centersId')->onDelete('SET NULL')->on('assistence_centers');
             $table->string('nome', 50)->nullable();
             $table->string('cognome', 50)->nullable();
             $table->string('ivacf', 40);

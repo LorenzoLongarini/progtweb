@@ -31,7 +31,8 @@ class UserRequest extends FormRequest
     {
         //$id = $this->request->get('usersId');
         //$user = User::find($this->usersId);
-        return ['username' =>'required|max:25', Rule::unique('users')->ignore($this->usersId, 'usersId'),
+        return [
+                'username' =>'required|max:25', Rule::unique('users')->ignore($this->usersId, 'usersId'),
                 'password' =>'required|min:5|max:30',
                 'nome' =>'required|max:50|string',
                 'cognome' =>'required|max:50|string',
@@ -41,6 +42,7 @@ class UserRequest extends FormRequest
                 'telefono'=> 'digits:10|numeric',
                 'via'=>'required|max:50',
                 'cap'=>'required|digits:5|numeric',
+                'centersId'=>'numeric',
                 'città'=>'required|string|max:80',
                 
                 
