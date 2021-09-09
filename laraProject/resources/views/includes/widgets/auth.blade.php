@@ -33,6 +33,28 @@
         </div>
         </div>
                 @endauth
+                @can("isTecn")     
+                       <a href="{{route('tecn'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
+                       @endcan
+                       
+                    </li>
+                
+                </div>
+            </ul>
+        </div>
+        </div>
+                @endauth
+                @can("isStaff")     
+                       <a href="{{route('staff'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
+                       @endcan
+                       
+                    </li>
+                
+                </div>
+            </ul>
+        </div>
+        </div>
+                @endauth
                 @guest
                     <a href="{{route('login')}}" class="login" title="Accedi al tuo account">
                         <span>Accedi</span> 
