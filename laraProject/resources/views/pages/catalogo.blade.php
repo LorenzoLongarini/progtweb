@@ -30,9 +30,12 @@
                                 @include('helpers.img-event',['attrs' => 'imagefrm', 'imgFile' => $prodotto->imgName])
                                 </div>
                                 <div class="prod-info flex-columns">
-                                    <h2>{{ $prodotto->nome }}{{ $prodotto->descrizione}}</h2>
+                                    <div><h2>{{ $prodotto->nome }}</h2></div>
+                                        
+                                    <div style="width:680px;height:1px;background-color:black"></div>
+                                    <div><h2>{{ $prodotto->descrizione}}</h2></div>
                                 
-                                    <h2>{{ $prodotto->descrizione}}</h2>
+                                    
                                 
                                     
                                 </div>
