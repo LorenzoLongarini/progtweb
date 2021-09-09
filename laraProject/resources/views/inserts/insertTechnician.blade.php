@@ -118,7 +118,13 @@
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('centersId', 'Centro' )}}
             {{  Form::text ('centersId', '' ) }}
-            
+            @if ($errors->first('centersId'))
+                <ul>
+                    @foreach ($errors->get('centersId') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+            @endif
         </div>
         <div class="wrap-input blank" style = "margin: 10px 10px;">
             {{  Form::label ('dataNascita', 'Data di Nascita' )}}

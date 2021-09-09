@@ -42,7 +42,7 @@ class UserRequest extends FormRequest
                 'telefono'=> 'digits:10|numeric',
                 'via'=>'required|max:50',
                 'cap'=>'required|digits:5|numeric',
-                'centersId'=>'numeric',
+                'centersId'=>'required|numeric',
                 'città'=>'required|string|max:80',
                 
                 

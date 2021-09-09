@@ -82,7 +82,7 @@ class AdminController extends Controller {
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
         $product->descrizione = $request->descrizione;
-        $user->sottocategoria = $request->sottocategoria;
+        $product->sottocategoria = $request->sottocategoria;
         $product->imgName = $imageName;
         $product->save();
 
@@ -144,7 +144,6 @@ class AdminController extends Controller {
     public function selectMalfunction(Request $request, $productsId){
         
         $Product = Product::find($productsId);
-        error_log('-----> ' . $request->malfunctionsId);
         $malfunction = Malfunction::find($request->malfunctionsId);
         
         return response()->json([
@@ -169,7 +168,7 @@ class AdminController extends Controller {
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);;
         $user->telefono = $request->telefono;
         $user->via = $request->via;
         $user->cap = $request->cap;
@@ -198,7 +197,7 @@ class AdminController extends Controller {
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);;
         $user->telefono = $request->telefono;
         $user->via = $request->via;
         $user->cap = $request->cap;
@@ -232,7 +231,7 @@ class AdminController extends Controller {
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);;
         $user->telefono = $request->telefono;
         $user->via = $request->via;
         $user->cap = $request->cap;
@@ -260,7 +259,7 @@ class AdminController extends Controller {
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);;
         $user->telefono = $request->telefono;
         $user->via = $request->via;
         $user->cap = $request->cap;
