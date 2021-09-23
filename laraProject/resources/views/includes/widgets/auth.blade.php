@@ -32,7 +32,7 @@
             </ul>
         </div>
         </div>
-                @endauth
+               
                 @can("isTecn")     
                        <a href="{{route('tecn'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
                        @endcan
@@ -43,7 +43,7 @@
             </ul>
         </div>
         </div>
-                @endauth
+                
                 @can("isStaff")     
                        <a href="{{route('staff'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
                        @endcan

@@ -17,9 +17,9 @@ class LoginController extends Controller
         switch ($role) {
             case 'admin': return '/user-admin';
                 break;
-            case 'staff': return '/user-staff';
+            case 'staff': return '/';
                 break;
-            case 'tecnico': return '/user-tecnico';
+            case 'tecnico': return '/';
                 break;
             default: return '/';
         };

@@ -16,10 +16,7 @@ class Catalogo extends Model
             if($counter==1)
              return str_replace("*","",$descrizione);
             else return $descrizione;
-
-            
         }else return;
-       
        
 
     }
@@ -46,7 +43,7 @@ class Catalogo extends Model
            }
            else if($counter == 0) return  $risultati=Product::where('descrizione','LIKE', $request->descrizione)->get();
        }
-       else $risultati=Product::where('descrizione',$request->descrizione);
+       
     
 
     }
