@@ -41,9 +41,12 @@ class UserRequest extends FormRequest
                 'email'=> 'required|email|max:40',Rule::unique('users')->ignore($this->usersId, 'usersId'),
                 'telefono'=> 'digits:10|numeric',
                 'via'=>'required|max:50',
-                'cap'=>'required|digits:5|numeric',
+                'cap'=>'required|digits:5',
                 'centersId'=>'required|numeric',
                 'città'=>'required|string|max:80',
+                'sottocategoria'=>""
+                
+                
                 
                 
             

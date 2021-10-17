@@ -133,7 +133,14 @@ use App\Models\Enums\Sottocategoria;
             </div>
             <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('sottocategoria', 'Ruolo' )}}
-            {{  Form::select ('sottocategoria', ['','telefonia', 'televisori', 'computers', 'stampanti'], $users->sottocategoria )  }}
+            {{  Form::select ('sottocategoria', ['','telefonia'=>'telefonia', 'televisori'=>'televisori', 'computers'=>'computers', 'stampanti'=>'stampanti'], $users->sottocategoria )  }}
+            @if ($errors->first('sottocategoria'))
+            <ul>
+                @foreach ($errors->get('sottocategoria') as $message)
+                <li class="errors">{{ $message }}</li>
+                @endforeach
+            </ul>
+            @endif
         </div>
 </div>
     

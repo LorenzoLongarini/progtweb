@@ -115,6 +115,7 @@
                 </ul>
                 @endif
         </div>
+        
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('centersId', 'Centro' )}}
             {{  Form::text ('centersId', '' ) }}

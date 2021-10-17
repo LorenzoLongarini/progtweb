@@ -127,9 +127,17 @@
             @endif
             </div>
             <div class="wrap-input" style = "margin: 10px 10px;">
-            {{  Form::label ('sottocategoria', 'Ruolo' )}}
-            {{  Form::select ('sottocategoria', ['','telefonia', 'televisori', 'computers', 'stampanti'], '' )  }}
-        </div>
+                {{  Form::label ('sottocategoria', 'Ruolo' )}}
+                {{  Form::select ('sottocategoria', ['','telefonia'=>'telefonia', 'televisori'=>'televisori', 'computers'=>'computers', 'stampanti'=>'stampanti'], '' )  }}
+                
+                @if ($errors->first('sottocategoria'))
+                <ul>
+                    @foreach ($errors->get('sottocategoria') as $message)
+                    <li class="errors">{{ $message }}</li>
+                    @endforeach
+                </ul>
+            @endif
+            </div>
 </div>
     
        
@@ -162,6 +170,13 @@
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('cap', 'Cap' )}}
             {{  Form::text ('cap', '' )}}
+            @if ($errors->first('cap'))
+            <ul>
+                @foreach ($errors->get('cap') as $message)
+                <li class="errors">{{ $message }}</li>
+                @endforeach
+            </ul>
+            @endif
            
         </div>
     </div>

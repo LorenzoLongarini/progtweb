@@ -22,7 +22,7 @@ use App\Models\Statistics\EventoStats;
 class AdminController extends Controller {
 
     public function __construct() {
-       // $this->middleware('can:isAdmin');
+       $this->middleware('can:isAdmin');
     }
 
     public function index(){
@@ -223,7 +223,7 @@ class AdminController extends Controller {
     }
 
     public function salvaStaff(UserRequest $request){
-            
+
         $user = new User;
         $user->nome = $request->nome;
         $user->cognome = $request->cognome;
@@ -240,6 +240,7 @@ class AdminController extends Controller {
         $user->role = 'staff';      
         $user->save();
         return redirect()->route('admin');
+       
 
     }
 

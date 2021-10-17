@@ -20,7 +20,7 @@ use App\Http\Controllers\Auth\LoginController;
 class StaffController extends Controller {
 
     public function __construct() {
-        //$this->middleware('can:isStaff');
+        $this->middleware('can:isStaff');
     }
 
     public function index() {
