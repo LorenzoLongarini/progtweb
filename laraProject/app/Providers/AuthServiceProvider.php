@@ -39,11 +39,6 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('isTecn', function ($user) {
             return $user->hasRole('tecnico');
         });
-        /*
-       Gate::define('CanModificaEvento', function($user, Evento $evento){
-           
-            return $evento->utenteId === $user->utenteId;
-        });
-        */
+      
     }
 }
