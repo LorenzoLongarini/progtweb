@@ -21,6 +21,7 @@ class Catalogo extends Model
 
     }
     public static function listaProdotti(){
+        $paged=1;
         if(Product::all()!= null){
         $prodotti = Product::all();
         }
@@ -35,13 +36,14 @@ class Catalogo extends Model
     public static function ricercaPerDescrizione(SearchRequest $request){
        $counter= substr_count($request->descrizione,"*");
        $strDesc= str_replace("*","",$request->descrizione);
-       if($counter <=1)
+    
        {
            if($counter==1)
            {
-             return $risultati=Product::where('descrizione','LIKE','%' . $strDesc . '%' )->get();
+             return $risultati=Product::whereRaw('descrizione REGEXP'. '\'' .  '[[:<:]]'. $strDesc.'\'')->get();
            }
-           else if($counter == 0) return  $risultati=Product::where('descrizione','LIKE', $request->descrizione)->get();
+           else if($counter == 0) 
+           return  $risultati=Product::whereRaw('descrizione REGEXP'. '\'' .  '[[:<:]]'. $request->descrizione. '[[:>:]]'.'\'')->get();
        }
        
     

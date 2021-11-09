@@ -33,9 +33,7 @@
         </div>
         </div>
                
-                @can("isTecn")     
-                       <a href="{{route('tecn'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
-                       @endcan
+                
                        
                     </li>
                 
@@ -44,9 +42,7 @@
         </div>
         </div>
                 
-                @can("isStaff")     
-                       <a href="{{route('staff'). '#dashboard-panel'}}"  class="login area-utente ">Area utente</a>
-                       @endcan
+                
                        
                     </li>
                 

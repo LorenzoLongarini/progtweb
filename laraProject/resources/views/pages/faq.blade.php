@@ -26,15 +26,17 @@
     @isset($faqs)
         <ol id="faq-list">
             @foreach($faqs as $faq)
-                <li>
-                    
+                <li >
+                   <div class="item-faq">
                     <div class="card-faq">
-                        <h2>{{ $faq->domanda }}</h2>
+                        <u><h2>Domanda:</h2></u>
+                        <p>{{ $faq->domanda }}</p>
                     </div>
-                    <div class="answer-box" style = " padding: 5px 30px;">
+                    <div class="answer-box">
+                        <u><h2>Risposta:</h2></u>
                         <p>{{ $faq->risposta }}</p>
                     </div>
-                    <div class="event-right" style = " display: flex; justify-content: center;">
+                  
                     @can('isAdmin')  
                     <div>
                     {{ link_to_route('modificaFaq', 'MODIFICA FAQ', $parameters = ['faqId' => $faq->faqId], ['class'=>'user-btn'] )}}
@@ -44,13 +46,20 @@
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA FAQ', ['class'=>'user-btn'])!!}
                     {!!  Form::close()  !!}
+                   
+                    </div>
                     @endcan
-</div>
-                        </div>
+                        
+                    </div> 
                 </li>
+           
             @endforeach
-        </ol>
-    @endisset
+            
+        
    
-</div>
+        </ol>
+@endisset
+    </div>
+
+
 @endsection

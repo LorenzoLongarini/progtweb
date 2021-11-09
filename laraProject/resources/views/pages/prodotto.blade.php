@@ -28,11 +28,28 @@
     <h3 style="margin:10px">GUIDA ALL'INSTALLAZIONE</h3>
     <p style="margin:10px">{{$prodotto->modInstallaz}}</p>
 </div>
-@auth
+@can('isStaff')
+    
+ 
+     
+
+
             <div style = "display:flex;justify-content: center;">
             {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $prodotto->productsId] , ['class'=>'user-btn'])}}
             </div>
-@endauth
+       
+@endcan
+@can('isAdmin')
+    
+ 
+     
+
+
+            <div style = "display:flex;justify-content: center;">
+            {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $prodotto->productsId] , ['class'=>'user-btn'])}}
+            </div>
+       
+@endcan
 
 @guest
 <br>

@@ -25,10 +25,13 @@ class AssistenceCenterRequest extends FormRequest
     public function rules()
     {
         return [
+                
                 'nome' => 'required|max:500',
                 'via' =>'required|max:50',
                 'telefono' =>'required|digits:10',
-                'email'=>'required|max:50'
+                'email'=>'required|email|max:50',
+                'città'=>'required|max:20|alpha',
+                'regione'=>'required|max:20|alpha'
             
         ];
     }

@@ -1,3 +1,4 @@
+
 @extends('layouts.public', ["search" => false])
 
 @section('page-title', 'Cerca il prodotto!')
@@ -34,6 +35,7 @@
                                         
                                     <div style="width:680px;height:1px;background-color:black"></div>
                                     <div><h2>{{ $prodotto->descrizione}}</h2></div>
+                                    
                                 
                                     
                                 
@@ -46,8 +48,10 @@
                         </div>           
                 @endforeach
            @endif
-         
+           
        @endisset
+       
     </div>
+  
     
 @endsection

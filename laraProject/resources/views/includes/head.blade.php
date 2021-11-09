@@ -1,6 +1,7 @@
 <head>
     <title>DL Computers | @yield('page-title')</title>
     <meta charset="UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Vendita e commercializzazione di eventi in Italia">
     <meta name="keywords" content="Italia, biglietti, eventi, concerti">
@@ -17,8 +18,9 @@
     <link rel="mask-icon" href="{{ asset('images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>	
-    <script src="{{ asset('js/credit-card.js') }}"></script>
+    
     <script src="{{ asset('js/template.js') }}"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="{{asset('css/bootstrap-icon.css')}}">
 
 </head>

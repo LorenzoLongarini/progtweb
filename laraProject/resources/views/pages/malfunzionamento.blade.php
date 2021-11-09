@@ -24,8 +24,10 @@ $user = Auth::user();
             {{ link_to_route('insert-malfunction', 'AGGIUNGI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
  @endcan
 @can('isStaff')
-            {{ link_to_route('insert-malfunction', 'AGGIUNGI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
-@endcan
+@if(Auth::user()->sottocategoria == $product->sottocategoria)
+            {{ link_to_route('insert-malfunction-staff', 'AGGIUNGI', $parameters = ['productsId' => $product->productsId],['class'=>'user-btn'] )}}
+@endif
+            @endcan
         </div>
 @if(count($malfs)==0)
 <br>
@@ -39,7 +41,8 @@ $user = Auth::user();
 <div class="multiple-input" style = "display: flex;
     justify-content: center;">
         <div class="wrap-input" style = "width: 50%;">
-        <select name="malfunctions" id="malfunctions">
+        @can('isStaff')
+        <select name="malfunctions" id="malfunctions-staff">
         <option value = 0> ---Seleziona---</option>
             @if(count($malfs)!==0)
             @foreach( $malfs as $malf)
@@ -47,6 +50,18 @@ $user = Auth::user();
              @endforeach
              @endif
         </select>
+        @endcan
+        @can('isAdmin')
+        <select name="malfunctions" id="malfunctions-admin">
+            <option value = 0> ---Seleziona---</option>
+                @if(count($malfs)!==0)
+                @foreach( $malfs as $malf)
+                <option value='{{ $malf->malfunctionsId }}'>{{ $malf->nomeMalf }}</option>
+                 @endforeach
+                 @endif
+            </select>
+            @endcan
+                
             
         </div>
     </div>
@@ -72,12 +87,12 @@ $user = Auth::user();
             <a href="" id = "modificaMalf">MODIFICA</a>
             </div>
             @endcan
-            @can('isStaff')
-            @if($user->sottocategoria == $product->sottocategoria || $user->sottocategoria == '')
+             @can('isStaff')
+           @if(Auth::user()->sottocategoria == $product->sottocategoria)
             <div class= "user-btn" >
             <a href="" id = "modificaMalf">MODIFICA</a>
             </div>
-            @endif
+           @endif
             @endcan
 </div>
 <br>
@@ -85,11 +100,11 @@ $user = Auth::user();
 @endif
 <script>
 $(function () {
-    $('#malfunctions').change(function () {
+    $('#malfunctions-staff').change(function () {
         var id = $(this).find("option:selected").val();
         if(id!=='0'){
         $.ajax({
-            url: "{{ route('selectMalfunction', ['productsId' => $product->productsId]) }}",
+            url: "{{ route('selectMalfunction-staff', ['productsId' => $product->productsId]) }}",
             data: {
                 "malfunctionsId": id,
                 "_token": "{{ csrf_token() }}"        
@@ -100,7 +115,7 @@ $(function () {
                 $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
                 $('#prod-desc1 p#problema span').text(result.problema);
                 $('#prod-desc2 p#soluzione span').text(result.soluzione);
-                $('#modificaMalf').attr('href', "http://tweb2.dii.univpm.it/~grp_54/laraProject/public/modify-malf/" + id);
+                $('#modificaMalf').attr('href', //route(nomerotta)"/progtweb/laraProject/public/modify-malf-staff/" + id);
             },
             error: function () {
                 alert('error');
@@ -110,6 +125,33 @@ $(function () {
     });
 });
 </script>
+<script>
+    $(function () {
+        $('#malfunctions-admin').change(function () {
+            var id = $(this).find("option:selected").val();
+            if(id!=='0'){
+            $.ajax({
+                url: "{{ route('selectMalfunction', ['productsId' => $product->productsId]) }}",
+                data: {
+                    "malfunctionsId": id,
+                    "_token": "{{ csrf_token() }}"        
+                },
+                type: 'POST',
+                dataType: 'json',
+                success: function (result) {
+                    $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
+                    $('#prod-desc1 p#problema span').text(result.problema);
+                    $('#prod-desc2 p#soluzione span').text(result.soluzione);
+                    $('#modificaMalf').attr('href', "/progtweb/laraProject/public/modify-malf/" + id);
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        }
+        });
+    });
+    </script>
 
 
 @endsection

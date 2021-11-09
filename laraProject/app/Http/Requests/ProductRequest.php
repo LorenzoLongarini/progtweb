@@ -30,6 +30,7 @@ class ProductRequest extends FormRequest
                 'modInstallaz' => 'required|max:500',
                 'descrizione' => 'required|max:500',
                 'imgName' => 'file|max:1024',
+                'sottocategoria'=>''
             
         ];
     }

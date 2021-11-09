@@ -51,6 +51,7 @@ class AdminController extends Controller {
         $product->noteTecniche = $request->noteTecniche;
         $product->modInstallaz = $request->modInstallaz;
         $product->descrizione = $request->descrizione;
+        $product->sottocategoria = $request->sottocategoria;
         $product->imgName = $imageName;
         $product->save();
         if (!is_null($imageName)){
@@ -154,8 +155,12 @@ class AdminController extends Controller {
     }
 
     public function inserisciTecnico(){
+        $centers=AssistenceCenter::all(['centersId','regione']);
         
-        return view('inserts.insertTechnician');
+        return view('inserts.insertTechnician',compact('centers'));
+        
+
+
 
     }
 
@@ -184,7 +189,8 @@ class AdminController extends Controller {
     public function modificaTecnico($usersId){
 
         $user = User::find($usersId);
-        return view('inserts.modifyTechnician')->with('users', $user);
+        $centers=AssistenceCenter::all(['centersId','regione']);
+        return view('inserts.modifyTechnician',compact('centers'))->with('users', $user);
 
     }
 
@@ -237,7 +243,8 @@ class AdminController extends Controller {
         $user->cap = $request->cap;
         $user->città = $request->città;
         $user->sottocategoria = $request->sottocategoria;
-        $user->role = 'staff';      
+        $user->role = 'staff';  
+        
         $user->save();
         return redirect()->route('admin');
        
@@ -260,12 +267,13 @@ class AdminController extends Controller {
         $user->dataNascita = $request->dataNascita;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = Hash::make($request->password);;
+        $user->password = Hash::make($request->password);
         $user->telefono = $request->telefono;
         $user->via = $request->via;
         $user->cap = $request->cap;
         $user->città = $request->città;
         $user->sottocategoria = $request->sottocategoria;
+        
         $user->role = 'staff';      
         $user->save();
         return redirect()->route('admin');
@@ -316,7 +324,7 @@ class AdminController extends Controller {
     public function salvaCentro(AssistenceCenterRequest $request){
             
         $assistenceCenter = new AssistenceCenter;
-        $assistenceCenter->centersId = $request->centersId;
+       
         $assistenceCenter->nome = $request->nome;
         $assistenceCenter->città = $request->città;
         $assistenceCenter->regione = $request->regione;
@@ -332,7 +340,8 @@ class AdminController extends Controller {
     public function updateCentro(AssistenceCenterRequest $request, $centersId){
 
         $assistenceCenter = AssistenceCenter::find($centersId);
-        
+
+            
             $assistenceCenter->nome = $request->nome;
             $assistenceCenter->città = $request->città;
             $assistenceCenter->regione = $request->regione;
@@ -360,6 +369,7 @@ class AdminController extends Controller {
 
     }
     public function inserisciCentro(){
+      
         
         return view('inserts.insertCenter');
 

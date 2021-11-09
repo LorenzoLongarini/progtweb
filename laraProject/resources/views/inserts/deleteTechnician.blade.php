@@ -18,6 +18,10 @@ $staff = User::where('role','=','tecnico')->get();
             <div style="margin-left:30px; margin-top:10px;">{{$staf->cognome}}</div>
             </div>
             <div>
+                <div style="margin-left:30px; margin-top:20px;">CentroId</div>
+                <div style="margin-left:30px; margin-top:10px;">{{$staf->centersId}}</div>
+                </div>
+            <div>
             <div style="margin-left:30px; margin-top:20px;">UtenteId</div>
             <div style="margin-left:30px; margin-top:10px;">{{$staf->usersId}}</div>
             </div>

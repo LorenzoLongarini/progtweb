@@ -38,6 +38,17 @@ Route::put('/modify-malf/{malfunctionsId}', 'AdminController@updateMalf')->name(
 
 Route::delete('/modify-malf/{malfunctionsId}', 'AdminController@eliminaMalf')->name('elimina-malfunction');
 
+//malf staff
+Route::get('/insert-malfunction-staff/{productsId}', 'StaffController@inserisciMalf')->name('insert-malfunction-staff');
+
+Route::post('/insert-malfunction-staff/{productsId}', 'StaffController@salvaMalf')->name('insert-malfunction-staff.store');
+
+Route::get('/modify-malf-staff/{malfunctionsId}', 'StaffController@modificaMalf')->name('modificaMalf-staff');
+
+Route::put('/modify-malf-staff/{malfunctionsId}', 'StaffController@updateMalf')->name('modificaMalf-staff.update');
+
+Route::delete('/modify-malf-staff/{malfunctionsId}', 'StaffController@eliminaMalf')->name('elimina-malfunction-staff');
+
 //tecnici
 Route::get('/user-admin/insert-technician', 'AdminController@inserisciTecnico')->name('insert-technician');
 
@@ -102,6 +113,10 @@ Route::view('/termini-e-condizioni', 'pages.termini-e-condizioni')
 Route::get('/prodotto/{id}', 'PublicController@mostraProdotto')->name('prodotto');
 
 Route::get('/malfunzionamenti/{productsId}', 'PublicController@mostraMalfunzionamento')->name('malfunzionamento');
+//Malf
+
+
+Route::post('/malfunzionamenti-staff/{productsId}', 'StaffController@selectMalfunction')->name('selectMalfunction-staff');
 
 Route::post('/malfunzionamenti/{productsId}', 'AdminController@selectMalfunction')->name('selectMalfunction');
 

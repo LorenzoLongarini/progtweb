@@ -12,6 +12,7 @@
     left: 100px;">
    
     <h2>Inserisci un centro assistenza</h2>
+    
   
         <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">

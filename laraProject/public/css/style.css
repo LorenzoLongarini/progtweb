@@ -1726,4 +1726,111 @@ img{
     height: 160px;
     width: 85%;
 }
+.item-faq{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: justify;
+   background-color: white;
+   box-shadow: 2px 2px 0px 0px;
+   border-radius: 10px;
+   
+}
+.card-faq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 10px 10px 0 0;
+    text-align: justify;
+}
+.answer-box{
+    border: 1px solid;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    
+    
+}
+.answer-box p{
+    margin: 20px;
+
+}
+.card-faq p{
+    font-weight: 700;
+    font-size: 20px;
+    margin: 20px;
+
+}
+#email{
+    width: 90%;
+}
+#centers{
+    width: 100px;
+}
+.tutorial-text-win{
+    text-align: justify;
+    font-size: 20px;
+    margin: 15px;
+}
+.list-text{
+    list-style-type: square;
+    font-size: 20px;
+    margin: 15px;
+    text-align: justify;
+}
+.cont-win-t{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: justify;
+}
+#modificaMalf{
+    color: white;
+
+}
+#modificaMalf:hover{
+    text-decoration: none;
+
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    
+}
+#qm-icon{
+    width: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#icon-btn{
+width: 60%;
+}
+.img-qm{
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}
+#qm-icon:hover{
+    
+    cursor: pointer;
+}
+.staff-win{
+    
+    text-align: justify;
+    font-size: 20px;
+    margin: 15px;
+}
+
+
+
 

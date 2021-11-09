@@ -16,6 +16,7 @@
     </div>
         
         <div class="center-desc">
+        <div><h4 style="font-size: 20px;color:black;font-weight:700">{{$center->centersId}}</h4></div>
         <div><h4 style="font-size: 20px;color:black;font-weight:700">{{$center->regione}}</h4></div>
         <div><h4 style="font-size: 15px;color:black;font-weight:700">{{$center->città}}</h4></div>
         <div><h4 style="font-size: 15px;color:black;font-weight:700">{{$center->via}}</h4></div>

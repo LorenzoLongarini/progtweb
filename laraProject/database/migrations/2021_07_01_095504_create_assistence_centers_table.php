@@ -14,7 +14,7 @@ class CreateAssistenceCentersTable extends Migration
     public function up()
     {
         Schema::create('assistence_centers', function (Blueprint $table) {
-            $table->bigIncrements('centersId')->unsigned()->index();
+            $table->bigIncrements('centersId')->unsigned()->index();//->references('centersId')->onDelete('cascade')->on('users');
             $table->text('nome', 30);
             $table->text('città',30);
             $table->text('regione', 30);

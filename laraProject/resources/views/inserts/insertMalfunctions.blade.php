@@ -2,7 +2,14 @@
 
 @section('content')
 <div class="form" id = "eventi-section" style = "width: 850px; margin-left: 1px;">
+    @can('isAdmin')
+        
+ 
     {{  Form::open(['action' => ['AdminController@salvaMalf', $product->productsId] ])  }}
+    @endcan
+    @can('isStaff')
+    {{  Form::open(['action' => ['StaffController@salvaMalf', $product->productsId] ])  }}
+    @endcan
     <div style = "display:flex;">
    <div>
    {{ link_to_route('malfunzionamento', 'INDIETRO', $parameters = [$product->productsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}

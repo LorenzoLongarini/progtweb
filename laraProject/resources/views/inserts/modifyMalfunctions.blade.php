@@ -3,8 +3,14 @@
 
 @section('content')
 <div class="form" id = "eventi-section" style = "width: 850px; margin-left: 1px;">
+    @can('isStaff')
+        
+   
+    {{  Form::open(['action' => ['StaffController@updateMalf', $malfunction->malfunctionsId] ,'method'=>'POST'])  }}
+    @endcan
+    @can('isAdmin')
     {{  Form::open(['action' => ['AdminController@updateMalf', $malfunction->malfunctionsId] ,'method'=>'POST'])  }}
-
+    @endcan
     <div style = "display:flex;">
    <div>
    {{ link_to_route('malfunzionamento', 'INDIETRO', $parameters = [$malfunction->productsId],['class'=>'user-btn','style' => 'width: 180px;'] )}}
@@ -62,10 +68,29 @@
     {{  Form::hidden ('_method', 'PUT')}}
 {{Form::close()}}
 <div>
+    @can('isStaff')
+        
+  
+            {!!  Form::open(['action' => ['StaffController@eliminaMalf',  $malfunction->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
+                        {!!Form::hidden('_method','DELETE')!!}
+                        {!!Form::submit('ELIMINA', ['class'=>'default-btn'])!!}
+                    {!!  Form::close()  !!}
+    @endcan
+    @can('isAdmin')
+        
+  
             {!!  Form::open(['action' => ['AdminController@eliminaMalf',  $malfunction->malfunctionsId] , 'files' => true, 'method'=>'POST','onsubmit' => 'return ConfirmDelete()'])  !!}
                         {!!Form::hidden('_method','DELETE')!!}
                         {!!Form::submit('ELIMINA', ['class'=>'default-btn'])!!}
                     {!!  Form::close()  !!}
+    @endcan
+
+
+
+
+
+
+
             </div>
 </div>
 </div>

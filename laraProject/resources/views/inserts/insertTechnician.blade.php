@@ -12,6 +12,7 @@
     left: 100px;">
    
     <h2>Inserisci un Tecnico</h2>
+    
     <div class="multiple-input" style = "margin: 10px 0px;">
     <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('username', 'Username' )}}
@@ -75,8 +76,8 @@
                       @endif
             </div>
         </div>
-        <div class="multiple-input" style = "margin: 10px 0px;">
-        <div class="wrap-input" style = "margin: 10px 10px;">
+        <div class="multiple-input" style = "margin: 10px 0px;margin-right:40px">
+        <div class="wrap-input" style = "margin: 10px 10px;width:70%">
             {{  Form::label ('ivacf', 'Partita IVA' /*class-type*/)}}
             {{  Form::text ('ivacf', '' /*class-type*/)  }}
             @if ($errors->first('ivacf'))
@@ -101,7 +102,18 @@
                 </ul>
                 @endif
             </div>
+            <div style="display: flex;flex-direction:column">
+        <label for="centersId">Centri</label>
+       <select name="centersId" id="centers">
+        @isset($centers)
+        @foreach ($centers as $center)
+           <option value={{$center->centersId}}>{{$center->regione}}</option>
+           @endforeach
+           @endisset 
+       </select>
         </div>
+    </div>
+
         
         <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
@@ -115,18 +127,7 @@
                 </ul>
                 @endif
         </div>
-        
-        <div class="wrap-input" style = "margin: 10px 10px;">
-            {{  Form::label ('centersId', 'Centro' )}}
-            {{  Form::text ('centersId', '' ) }}
-            @if ($errors->first('centersId'))
-                <ul>
-                    @foreach ($errors->get('centersId') as $message)
-                    <li class="errors">{{ $message }}</li>
-                    @endforeach
-                </ul>
-            @endif
-        </div>
+       
         <div class="wrap-input blank" style = "margin: 10px 10px;">
             {{  Form::label ('dataNascita', 'Data di Nascita' )}}
             {{  Form::date ('dataNascita','' )  }}
@@ -179,6 +180,22 @@
                 @endif
         </div>
     </div>
+        
+           
+       
+       
+      
+           
+     
+           
+         
+       
+        <div class="wrap-input" style = "margin: 10px 10px;">
+            
+               
+        </div>
+      
+    
 
     <div style = "display:flex; justify-content:center">
     <div>

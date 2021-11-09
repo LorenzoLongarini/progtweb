@@ -38,12 +38,12 @@ class UserRequest extends FormRequest
                 'cognome' =>'required|max:50|string',
                 'ivacf' =>'required',Rule::unique('users')->ignore($this->usersId, 'usersId') ,
                 'dataNascita' =>'date|before:today',
-                'email'=> 'required|email|max:40',Rule::unique('users')->ignore($this->usersId, 'usersId'),
+                'email'=> 'required|email|max:20',Rule::unique('users')->ignore($this->usersId, 'usersId'),
                 'telefono'=> 'digits:10|numeric',
                 'via'=>'required|max:50',
                 'cap'=>'required|digits:5',
-                'centersId'=>'required|numeric',
-                'città'=>'required|string|max:80',
+                'centersId'=>'required',
+                'città'=>'required|max:20|alpha',
                 'sottocategoria'=>""
                 
                 

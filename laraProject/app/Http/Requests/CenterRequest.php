@@ -24,9 +24,10 @@ class CenterRequest extends FormRequest
     public function rules()
     {
         return [
+            'centersId'=>'numeric',
             'nome' =>'required|max:50|string',
-            'città' =>'required|max:50|string',
-            'regione' =>'required|max:50|string',
+            'città' =>'required|max:50|alpha',
+            'regione' =>'required|max:50|alpha',
             'via'=>'required|max:50',
             'email'=> 'required|email|max:40',
             'telefono'=> 'digits:10|numeric',
