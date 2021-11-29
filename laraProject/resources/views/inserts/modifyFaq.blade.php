@@ -12,7 +12,7 @@
     <div class="multiple-input" style = "margin: 10px 0px;">
     <div class="wrap-input" style = "margin: 10px 10px;">
         {{  Form::label('domanda', 'Domanda')}}
-        {{  Form::textarea('domanda', '', ['class'=>'text-area'])}}
+        {{  Form::textarea('domanda', $faq->domanda, ['class'=>'text-area'])}}
         @if ($errors->first('domanda'))
                 <ul>
                     @foreach ($errors->get('domanda') as $message)
@@ -24,7 +24,7 @@
 
         <div class="wrap-input" style = "margin: 10px 10px;">
         {{  Form::label('risposta',  'Risposta')}}
-        {{  Form::textarea('risposta', '', ['class'=>'text-area'])}}
+        {{  Form::textarea('risposta', $faq->risposta, ['class'=>'text-area'])}}
         @if ($errors->first('risposta'))
                 <ul>
                     @foreach ($errors->get('risposta') as $message)

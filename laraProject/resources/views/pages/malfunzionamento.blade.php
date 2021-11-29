@@ -15,7 +15,7 @@ $user = Auth::user();
     justify-content: center;">
     <div class="prod-text">
        <div ><h4 style="font-size: 40px">MALFUNZIONAMENTI</h4></div>
-       <div style  = "margin-bottom: 50px;margin-top:20px"><h2 style="font-size: 60px">{{$product->nome}}</h2></div>
+       <div style  = "margin-bottom: 50px;margin-top:20vw"><h2 style="font-size: 30px">Nome prodotto: <br>{{$product->nome}}</h2></div>
     </div>
 </div>
 </div>
