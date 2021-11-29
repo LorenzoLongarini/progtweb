@@ -97,13 +97,7 @@ $user = Auth::user();
             <a href="" id = "modificaMalf">MODIFICA</a>
             </div>
             @endcan
-             @can('isStaff')
-           @if(Auth::user()->sottocategoria == $product->sottocategoria)
-            <div class= "user-btn" >
-            <a href="" id = "modificaMalf">MODIFICA</a>
-            </div>
-           @endif
-            @endcan
+             
 </div>
 <br>
 <br>
@@ -152,7 +146,7 @@ $(function () {
                     $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
                     $('#prod-desc1 p#problema span').text(result.problema);
                     $('#prod-desc2 p#soluzione span').text(result.soluzione);
-                    $('#modificaMalf').attr('href', "/progtweb/laraProject/public/modify-malf/" + id);
+                    
                 },
                 error: function () {
                     alert('error');

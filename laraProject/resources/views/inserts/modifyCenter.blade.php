@@ -65,7 +65,7 @@
     <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('città', 'Città' /*class-type*/)}}
-            {{  Form::text ('città', '' /*class-type*/ ) }}
+            {{  Form::text ('città', $centers->città /*class-type*/ ) }}
             @if ($errors->first('città'))
                 <ul>
                     @foreach ($errors->get('città') as $message)
@@ -77,7 +77,7 @@
         
 <div class="wrap-input" style = "margin: 10px 10px;">
             {{  Form::label ('regione', 'Regione' /*class-type*/)  }}
-            {{  Form::text ('regione','' /*class-type*/)  }}
+            {{  Form::text ('regione',$centers->regione /*class-type*/)  }}
             @if ($errors->first('regione'))
                 <ul>
                     @foreach ($errors->get('regione') as $message)

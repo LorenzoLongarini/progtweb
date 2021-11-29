@@ -44,7 +44,7 @@ use App\Models\Enums\Sottocategoria;
             <div class="wrap-input" style = "margin: 10px 10px;"> 
                 
             {{  Form::label ('password_confirmation', 'Conferma Password' )}}
-            {{  Form::password ('password', array('placeholder'=>'password', 'class'=>'form-control' ) )  }}
+            {{  Form::password ('password', array('placeholder'=>'password', 'class'=>'form-control' ))  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)
