@@ -470,11 +470,13 @@ footer ul.footer-links li a:hover{
     width: 65%;
     justify-content: center;
     margin-left: 20px;
+    overflow-x: scroll;
 }
 
 .prod .prod-info h2,.prod .prod-info h4{
     margin: 10px 0;
     color: var(--p-color);
+    overflow-x: scroll;
 }
 
 .img-prod{
@@ -1527,7 +1529,7 @@ li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 300px;
+    width: 50vw;
    
 
 }
@@ -1537,6 +1539,7 @@ li{
     margin-top:80px;
     height: 200px;
     border: 2px solid;
+    overflow-x: scroll;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
