@@ -32,7 +32,7 @@ use App\Models\Enums\Sottocategoria;
             <div class="wrap-input" style = "margin: 10px 10px;">
 
             {{  Form::label ('password', 'Password' )}}
-            {{  Form::password ('password',array('placeholder'=>'Password', 'class'=>'form-control','value'=>$users->password ) )  }}
+            {{  Form::password ('password',array('placeholder'=>'Password', 'class'=>'form-control' ) )  }}
             @if ($errors->first('password'))
                 <ul>
                     @foreach ($errors->get('password') as $message)
@@ -57,7 +57,7 @@ use App\Models\Enums\Sottocategoria;
         <div class="multiple-input" style = "margin: 10px 0px;">
         <div class="wrap-input" style = "margin: 10px 10px;">
              {{  Form::label ('nome', 'Nome')  }}
-             {{  Form::text ('nome', $users->nome )  }}
+             {{  Form::text ('nome', $users->password)  }}
                   @if ($errors->first('nome'))
                       <ul>
                          @foreach ($errors->get('nome') as $message)
