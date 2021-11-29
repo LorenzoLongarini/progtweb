@@ -50,6 +50,17 @@
             </div>
        
 @endcan
+@can('isTecn')
+    
+ 
+     
+
+
+            <div style = "display:flex;justify-content: center;">
+            {{ link_to_route('malfunzionamento', 'VISUALIZZA MALFUNZIONAMENTI', $parameters = ['productsId' => $prodotto->productsId] , ['class'=>'user-btn'])}}
+            </div>
+       
+@endcan
 
 @guest
 <br>

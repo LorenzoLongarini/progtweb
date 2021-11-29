@@ -115,7 +115,7 @@ Route::get('/prodotto/{id}', 'PublicController@mostraProdotto')->name('prodotto'
 Route::get('/malfunzionamenti/{productsId}', 'PublicController@mostraMalfunzionamento')->name('malfunzionamento');
 //Malf
 
-
+Route::post('/malfunzionamenti-tecn/{productsId}', 'TecnController@selectMalfunction')->name('selectMalfunction-tecn');
 Route::post('/malfunzionamenti-staff/{productsId}', 'StaffController@selectMalfunction')->name('selectMalfunction-staff');
 
 Route::post('/malfunzionamenti/{productsId}', 'AdminController@selectMalfunction')->name('selectMalfunction');

@@ -61,6 +61,16 @@ $user = Auth::user();
                  @endif
             </select>
             @endcan
+            @can('isTecn')
+            <select name="malfunctions" id="malfunctions-tecn">
+                <option value = 0> ---Seleziona---</option>
+                    @if(count($malfs)!==0)
+                    @foreach( $malfs as $malf)
+                    <option value='{{ $malf->malfunctionsId }}'>{{ $malf->nomeMalf }}</option>
+                     @endforeach
+                     @endif
+                </select>
+                @endcan
                 
             
         </div>
@@ -115,7 +125,7 @@ $(function () {
                 $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
                 $('#prod-desc1 p#problema span').text(result.problema);
                 $('#prod-desc2 p#soluzione span').text(result.soluzione);
-                $('#modificaMalf').attr('href', //route(nomerotta)"/progtweb/laraProject/public/modify-malf-staff/" + id);
+                $('#modificaMalf').attr('href', "/progtweb/laraProject/public/modify-malf-staff/" + id);
             },
             error: function () {
                 alert('error');
@@ -143,6 +153,34 @@ $(function () {
                     $('#prod-desc1 p#problema span').text(result.problema);
                     $('#prod-desc2 p#soluzione span').text(result.soluzione);
                     $('#modificaMalf').attr('href', "/progtweb/laraProject/public/modify-malf/" + id);
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        }
+        });
+    });
+    </script>
+    <script>
+    $(function () {
+        $('#malfunctions-tecn').change(function () {
+            var id = $(this).find("option:selected").val();
+            if(id!=='0'){
+            $.ajax({
+                url: "{{ route('selectMalfunction-tecn', ['productsId' => $product->productsId]) }}",
+                data: {
+                    "malfunctionsId": id,
+                    "_token": "{{ csrf_token() }}"        
+                },
+                type: 'POST',
+                dataType: 'json',
+                success: function (result) {
+                    $('#nomeMalf h4#nomeMalfh span').text(result.nomeMalf);
+                    $('#prod-desc1 p#problema span').text(result.problema);
+                    $('#prod-desc2 p#soluzione span').text(result.soluzione);
+                    
+                    
                 },
                 error: function () {
                     alert('error');
